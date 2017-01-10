@@ -1,0 +1,28 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*user-select: none;*/
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+li{
+  list-style: none;
+}
+:focus{
+  outline: none;
+}
+
+.flex-space{
+  flex: 1;
+}
+.round{
+  border-radius: 50%;
+}
+.full-width{
+  width: 100%;
+}

@@ -1,0 +1,309 @@
+/* ---------------- fonts ---------------- */
+@font-face {
+  font-family: Gilroy;
+  src: url(../font/Gilroy_ExtraBold.otf);
+}
+@font-face {
+  font-family: Gotham_Narrow;
+  src: url(../font/Gotham_Narrow_Book.otf);
+}
+@font-face {
+  font-family: Gotham_Narrow;
+  src: url(../font/Gotham_Narrow_Bold.otf);
+  font-weight: bold;
+}
+/*@font-face {
+  font-family: Gotham_Narrow;
+  src: url(../font/Gotham_Narrow_Light.otf);
+  font-weight: light;
+}*/
+html{
+  font-family: Gotham_Narrow;
+  font-size: 16px;
+  font-size: calc(8px + .8vw);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+.title-text{
+  font-family: Gilroy;
+}
+
+/* ---------------- common ---------------- */
+body{
+  color: #222;
+}
+.title-text{
+  font-size: 2.5em;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.sub-text{
+  color: #999;
+}
+section{
+  padding: 100px;
+}
+.line{
+  background: #005EFE;
+  border: none;
+}
+.link-arrow:after{
+  content: '>';
+  padding-left: 5px;
+}
+
+/* ---------------- header ---------------- */
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  padding: 20px 100px;
+  background: #fff;
+  z-index: 10;
+}
+
+.nav-item{
+  display: inline-block;
+  font-size: .8em;
+  margin: 8px 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+/* ---------------- intro ---------------- */
+.intro{
+  padding: 220px 100px 180px;
+}
+.intro .title-text{
+  letter-spacing: .1em;
+}
+.intro .line{
+  margin: 30px 0 20px;
+  width: 60px;
+  height: 4px;
+}
+.intro .sub-text{
+  font-size: 1.2em;
+  max-width: 20em;
+}
+.resume{
+  display: inline-block;
+  padding: 4px 0;
+  margin-top: .5em;
+  font-weight: bold;
+  color: #005EFE;
+  text-transform: capitalize;
+}
+/* ---------------- project ---------------- */
+.project{
+  display: flex;
+  align-items: center;
+}
+.project-info, .project-img-wrap{
+  flex: 1 0 50%;
+}
+
+.project-type{
+  margin-bottom: 8px;
+  font-size: 1em;
+  color: #005EFE;
+  font-weight: bold;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+}
+.project-detail{
+  display: flex;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.project .line{
+  margin: 8px 40px 16px 0;
+  width: 100px;
+  height: 4px;
+}
+.project .sub-text{
+  flex: 1;
+  font-size: .9em;
+}
+.project-button{
+  display: block;
+  margin: 8px 0 20px;
+  padding: 4px 0;
+  color: #005EFE;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+/* ---------------- individual project ---------------- */
+.project-2 .project-info,
+.project-4 .project-info{
+  order: 2;
+}
+
+.project-1{
+  background-image: url(../img/project-bg-rect.png);
+  background-repeat: no-repeat;
+  background-size: 50vw;
+  background-position: 40vw 100px;
+}
+.project-1 .project-img{
+  width: 100%;
+  position: relative;
+  top: -50px;
+  left: 10%;
+  box-shadow: 0 0 10px rgba(0,0,0,.3);
+}
+
+.project-2 .project-img{
+  width: 140%;
+  position: relative;
+  left: -40%;
+}
+
+.project-3{
+  background-image: url(../img/project-bg-circle.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 120%;
+}
+.project-3 .project-img{
+  width: 100%;
+}
+
+.project-4{
+  background-image: url(../img/project-bg-rect.png);
+  background-repeat: no-repeat;
+  background-size: 50vw;
+  background-position: 5vw 100px;
+}
+.project-4 .project-img{
+  width: 120%;
+  position: relative;
+  top: -50px;
+  left: -20%;
+}
+
+/* ---------------- prototype ---------------- */
+.prototype-title-wrap{
+  max-width: 30em;
+  margin: 50px auto;
+  text-align: center;
+  background: linear-gradient(transparent 45%, #212121 46%, #212121 54%, transparent 55%);
+}
+.prototype-title-text{
+  padding: 0 1.2em;
+  background: #fff;
+  font-size: 1.1em;
+  font-weight: bold;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+.prototype-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+.prototype-wrap{
+  flex: 1 0;
+  background: #F5FAFF;
+  height: 400px;
+  margin: 15px;
+}
+.prototype-wrap-mobile{
+  flex-basis: 30%;
+}
+.prototype-wrap-desktop{
+  flex-basis: 60%;
+}
+/* ---------------- footer ---------------- */
+footer{
+  text-align: center;
+}
+
+
+
+/* ---------------- responsive ---------------- */
+@media screen and (max-width: 1000px){
+  html {
+    font-size: 16px;
+  }
+
+  .project-detail{
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 800px){
+  .title-text{
+    font-size: 2em;
+  }
+  section{
+    padding: 100px 40px;
+  }
+  header{
+    padding: 20px 40px;
+  }
+  .intro{
+    padding: 200px 40px 150px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .project{
+    flex-direction: column;
+  }
+  .project-img-wrap{
+    order: 10;
+  }
+  .project .sub-text{
+    font-size: 1em;
+  }
+  .project .project-img{
+    width: 100%;
+    position: static;
+    box-shadow: none;
+  }
+  .project-2 .project-img,
+  .project-4 .project-img{
+    position: static;
+    width: 120%;
+    transform: translateX(-10%);
+  }
+  .project-4{
+    background-image: none;
+  }
+
+  .project-1{
+    background-image: url(../img/project-bg-circle.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -20%;
+  }
+  .project-3{
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 480px){
+  header{
+    padding: 20px 12px;
+  }
+  .logo{
+    width: 36px;
+  }
+  .nav-item{
+    margin: 8px;
+  }
+
+  .prototype-title-wrap{
+    background: none;
+  }
+  .prototype-title-text{
+    padding: 0;
+  }
+}
