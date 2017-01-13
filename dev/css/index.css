@@ -220,12 +220,33 @@ header{
 .prototype-wrap-desktop{
   flex-basis: 60%;
 }
-/* ---------------- footer ---------------- */
-footer{
+
+/* ---------------- about ---------------- */
+#about{
   text-align: center;
 }
 
-
+/* ---------------- footer ---------------- */
+footer{
+  display: flex;
+  margin-bottom: 30px;
+  padding: 40px 100px 0;
+  align-items: center;
+  font-size: 16px;
+  color: #777;
+}
+.footer-text{
+  flex: 1;
+}
+.footer-link{
+  display: inline-block;
+  padding: 8px;
+  margin: 16px;
+  text-transform: uppercase;
+}
+.footer-link:hover{
+  color: #000;
+}
 
 /* ---------------- responsive ---------------- */
 @media screen and (max-width: 1000px){
@@ -245,14 +266,21 @@ footer{
   section{
     padding: 100px 40px;
   }
-  header{
+  header, footer{
     padding: 20px 40px;
   }
   .intro{
     padding: 200px 40px 150px;
   }
 }
-
+@media screen and (max-width: 700px) {
+  footer{
+    flex-direction: column;
+  }
+  .footer-text{
+    order: 2;
+  }
+}
 @media screen and (max-width: 600px) {
   .project{
     flex-direction: column;

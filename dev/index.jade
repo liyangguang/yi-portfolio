@@ -12,9 +12,9 @@ html.no-js(lang='')
         img.logo(src='img/logo.png')
         .flex-space
         nav
-            a.nav-item(href="#design") design
-            a.nav-item(href="#prototype") prototype
-            a.nav-item(href="#about") about
+            a.nav-item.design(href="#design") design
+            a.nav-item.prototype(href="#prototype") prototype
+            a.nav-item.about(href="#about") about
 
     section.intro
         h1.title-text hello,
@@ -80,9 +80,11 @@ html.no-js(lang='')
         h1 about me
 
     footer
-        .footer-icons
-            a.footer-icons
-            a.footer-icons
-        p.footer-copyright 2017 Yi Nie. All right reserved.
+        p.footer-text Designed and Coded by Yi Nie.
+        .footer-links
+            a.footer-link(href="https://www.linkedin.com/in/yinie", target="_blank") linkedin
+            a.footer-link(href="#", target="_blank") behance
+            a.footer-link(href="mailto:yinie-ux@gmail.com", target="_blank") email
 
+    script(src="https://code.jquery.com/jquery-2.2.4.min.js", integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=", crossorigin="anonymous")
     script(src='js/script.js')
