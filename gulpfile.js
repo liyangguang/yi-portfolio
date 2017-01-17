@@ -6,6 +6,7 @@ var sourcemaps = require('gulp-sourcemaps');
 // css
 var postcss = require('gulp-postcss');
 var concat = require('gulp-concat');
+var cssimport = require("gulp-cssimport");
 
 // jade
 var pug = require('gulp-pug');
@@ -25,17 +26,20 @@ gulp.task('build-html', function() {
 
 gulp.task('build-css', function() {
   return gulp.src([
-      'dev/**/*.css'
+      'dev/**/*.css',
+      '!dev/css/common.css',
     ])
     .pipe(sourcemaps.init())
-      .pipe(postcss([
-        require('postcss-short'),
-        require('postcss-cssnext'),
-        require('cssnano')
-      ]))
-      .pipe(concat('style.css'))
+    .pipe(cssimport())
+    .pipe(postcss([
+      require('postcss-import'),
+      require('postcss-short'),
+      require('postcss-cssnext'),
+      require('cssnano')
+    ]))
+    // .pipe(concat('style.css'))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('app/css'));
+    .pipe(gulp.dest('app'));
 });
 
 gulp.task('build-js', function() {

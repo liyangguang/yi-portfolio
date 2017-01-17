@@ -15,6 +15,7 @@
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-concat": "^2.6.0",
+    "gulp-cssimport": "^5.0.0",
     "gulp-gjslint": "^0.1.5",
     "gulp-iife": "^0.3.0",
     "gulp-postcss": "^6.1.1",
@@ -22,6 +23,7 @@
     "gulp-sourcemaps": "^1.6.0",
     "postcss": "^5.1.2",
     "postcss-cssnext": "^2.7.0",
+    "postcss-import": "^9.1.0",
     "postcss-short": "^1.4.0"
   }
 }
