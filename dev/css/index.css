@@ -1,25 +1,27 @@
-/* common and font */
 @import 'common.css';
-.title-text{
-  font-family: Gilroy;
-}
 
 /* ---------------- page common ---------------- */
+section{
+  padding: 100px;
+}
+@media screen and (max-width: 800px){
+  section{
+    padding: 100px 40px;
+  }
+}
+
 .title-text{
   font-size: 2.5em;
-  letter-spacing: .05em;
-  text-transform: uppercase;
-  font-weight: bold;
+}
+@media screen and (max-width: 800px){
+  .title-text{
+    font-size: 2em;
+  }
 }
 a.title-text{
   display: block;
 }
-.sub-text{
-  color: #999;
-}
-section{
-  padding: 100px;
-}
+
 .line{
   background: #005EFE;
   border: none;
@@ -31,10 +33,12 @@ section{
 
 /* ---------------- intro ---------------- */
 .intro{
-  padding: 220px 100px 180px;
+  margin: 100px 0 50px;
 }
-.intro .title-text{
-  letter-spacing: .1em;
+@media screen and (max-width: 800px){
+  .intro{
+    margin: 80px 0 30px;
+  }
 }
 .intro .line{
   margin: 30px 0 20px;
@@ -42,8 +46,8 @@ section{
   height: 4px;
 }
 .intro .sub-text{
-  font-size: 1.2em;
-  max-width: 20em;
+  font-size: 1.1em;
+  max-width: 40em;
 }
 .resume{
   display: inline-block;
@@ -67,9 +71,7 @@ section{
   margin-bottom: 8px;
   font-size: 1em;
   color: #005EFE;
-  font-weight: bold;
   letter-spacing: .3em;
-  text-transform: uppercase;
 }
 .project-detail{
   display: flex;
@@ -155,9 +157,6 @@ section{
   padding: 0 1.2em;
   background: #fff;
   font-size: 1.1em;
-  font-weight: bold;
-  letter-spacing: .2em;
-  text-transform: uppercase;
 }
 .prototype-container{
   display: flex;
@@ -176,29 +175,7 @@ section{
   flex-basis: 60%;
 }
 
-/* ---------------- about ---------------- */
-#about{
-  text-align: center;
-}
-
 /* ---------------- responsive ---------------- */
-@media screen and (max-width: 1000px){
-  html {
-    font-size: 16px;
-  }
-}
-
-@media screen and (max-width: 800px){
-  .title-text{
-    font-size: 2em;
-  }
-  section{
-    padding: 100px 40px;
-  }
-  .intro{
-    padding: 200px 40px 150px;
-  }
-}
 @media screen and (max-width: 600px) {
   .project{
     flex-direction: column;

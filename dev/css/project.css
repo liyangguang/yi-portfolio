@@ -1,0 +1,106 @@
+:root{
+  --main: #005EFE;
+}
+
+/* page common */
+@import 'common.css';
+
+section{
+  padding: 80px 100px;
+  padding: 80px calc(50vw - 500px);
+}
+@media screen and (max-width: 1000px){
+  section{
+    padding: 50px 40px;
+  }
+}
+
+.bg-shading{
+  background: #F5FAFF;
+}
+.number{
+  color: var(--main);
+  font-size: 1.8em;
+  font-weight: normal;
+}
+.section-type{
+  font-size: .8em;
+  text-align: center;
+  color: var(--main);
+  letter-spacing: .3em;
+}
+h1{
+  font-size: 2em;
+  text-transform: capitalize;
+  text-align: center;
+  font-weight: normal;
+  margin: .3em;
+}
+h2{
+  font-weight: normal;
+  margin: 1em 0 .3em;
+  text-transform: capitalize;
+}
+h2:before{
+  content: '';
+  display: block;
+  height: 4px;
+  width: 100px;
+  background: var(--main);
+  margin-bottom: .5em;
+}
+h1 + p {
+  text-align: center;
+}
+ul{
+  margin: 20px;
+}
+
+/* intro */
+.intro{
+  width: 80%;
+  margin: 100px auto 0;
+}
+
+.project-title{
+  font-size: 2.5em;
+}
+@media screen and (max-width: 800px){
+  .intro{
+    width: 100%;
+    margin: 80px auto 0;
+  }
+  .project-title{
+    font-size: 2em;
+  }
+}
+.project-cover{
+  width: 100%;
+  transform: scale(1.2);
+}
+
+.section-info{
+  padding-top: 200px;
+  font-size: .9em;
+}
+.section-info .flex-row{
+  align-items: flex-start;
+}
+.info-title{
+  color: #222;
+}
+
+
+.quote-wrap{
+  margin: 2em 0;
+}
+.quote-wrap > p{
+  padding-left: 1.5em;
+}
+p.quote-title{
+  padding-left: .8em;
+  font-size: 1.2em;
+  border-left: 4px solid var(--main);
+  font-weight: light;
+  margin: .3em 0;
+}

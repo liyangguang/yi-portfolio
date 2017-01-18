@@ -12,21 +12,22 @@ html.no-js(lang='')
         img.logo(src='img/logo.png')
         .flex-space
         nav
-            a.nav-item.design(href="#design") design
-            a.nav-item.prototype(href="#prototype") prototype
-            a.nav-item.about(href="#about") about
+            a.nav-item.font-gilroy.about(href="#home") home
+            a.nav-item.font-gilroy.design(href="#design") design
+            a.nav-item.font-gilroy.prototype(href="#prototype") prototype
 
-    section.intro
-        h1.title-text hello,
-        h1.title-text I'm Yi Nie
+    section.intro#home
+        h1.title-text.font-gilroy hello,
+        h1.title-text.font-gilroy I'm Yi Nie
         hr.line
-        p.sub-text I create digital products with creativity, mothodology and passion.
+        p.sub-text I'm a Product designer based in Bay Area
+        p.sub-text When I’m not designing, I enjoy painting, making and learning new things
         a.resume.link-arrow(href="#") resume
 
     section.project.project-1#design
         .project-info
-            p.project-type product design
-            p.title-text photo management mobile app
+            p.project-type.font-gilroy product design
+            h1.title-text.font-gilroy photo management mobile app
             .project-detail
                 .line
                 p.sub-text Redesign deal profile page of Base CRM mobile app to help sales people keep track of their deals
@@ -36,19 +37,19 @@ html.no-js(lang='')
 
     section.project.project-2
         .project-info
-            p.project-type product design
-            a.title-text(href="works/credible_dashboard.html") credible offer dashboard
+            p.project-type.font-gilroy product design
+            a.title-text.font-gilroy(href="projects/credible_dashboard.html") credible offer dashboard
             .project-detail
                 .line
                 p.sub-text Redesign deal profile page of Base CRM mobile app to help sales people keep track of their deals
-                    a.project-button.link-arrow(href="works/credible_dashboard.html") read more
+                    a.project-button.link-arrow(href="projects/credible_dashboard.html") read more
         .project-img-wrap
             img.project-img(src="img/cover_credible_dashboard.png")
 
     section.project.project-3
         .project-info
-            p.project-type product design
-            p.title-text base mobile crm redesign
+            p.project-type.font-gilroy product design
+            h1.title-text.font-gilroy base mobile crm redesign
             .project-detail
                 .line
                 p.sub-text Redesign deal profile page of Base CRM mobile app to help sales people keep track of their deals
@@ -58,8 +59,8 @@ html.no-js(lang='')
 
     section.project.project-4
         .project-info
-            p.project-type product design
-            p.title-text ngo registration process
+            p.project-type.font-gilroy product design
+            h1.title-text.font-gilroy ngo registration process
             .project-detail
                 .line
                 p.sub-text Redesign deal profile page of Base CRM mobile app to help sales people keep track of their deals
@@ -69,22 +70,24 @@ html.no-js(lang='')
 
     section#prototype
         .prototype-title-wrap
-            span.prototype-title-text prototype and animation
+            span.prototype-title-text.font-gilroy prototype and animation
         .prototype-container
             .prototype-wrap.prototype-wrap-mobile
             .prototype-wrap.prototype-wrap-desktop
             .prototype-wrap.prototype-wrap-desktop
             .prototype-wrap.prototype-wrap-mobile
 
-    section#about
-        h1 about me
-
     footer
-        p.footer-text Designed and Coded by Yi Nie.
         .footer-links
-            a.footer-link(href="https://www.linkedin.com/in/yinie", target="_blank") linkedin
-            a.footer-link(href="#", target="_blank") behance
-            a.footer-link(href="mailto:yinie-ux@gmail.com", target="_blank") email
+            h1 I'm currently looking for full-time opportunity in Bay Area.
+            .flex-row.flex-row-even.center
+                a.flex-item(href="https://www.linkedin.com/in/yinie", target="_blank") linkedin
+                a.flex-item(href="#", target="_blank") behance
+                a.flex-item(href="mailto:yinie-ux@gmail.com", target="_blank") email
+        .footer-copy.flex-row
+            p.flex-space Designed and Coded by Yi Nie.
+            p Want to see more? Visit 
+                a(href="../v2/index.html", target="_blank") my old portfolio
 
     script(src="https://code.jquery.com/jquery-2.2.4.min.js", integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=", crossorigin="anonymous")
     script(src='js/script.js')
