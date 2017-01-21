@@ -1,7 +1,3 @@
-:root{
-  --main: #005EFE;
-}
-
 /* page common */
 @import 'common.css';
 

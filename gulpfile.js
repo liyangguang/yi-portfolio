@@ -20,7 +20,7 @@ var browserSync = require('browser-sync');
 
 gulp.task('build-html', function() {
   return gulp.src('dev/**/*.jade')
-    .pipe(pug({pretty: true}))
+    .pipe(pug({pretty: false}))
     .pipe(gulp.dest('app'));
 });
 
