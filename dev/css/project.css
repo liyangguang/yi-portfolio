@@ -100,3 +100,24 @@ p.quote-title{
   font-weight: light;
   margin: .3em 0;
 }
+
+.footer-nav-wrap{
+  margin: 3em 0;
+}
+.footer-nav-left,
+.footer-nav-right{
+  margin: 0;
+}
+.footer-nav-right{
+  text-align: right;
+}
+.footer-nav-arrow{
+  color: #777;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: .8em;
+}
+.footer-nav-name{
+  color: #333;
+  text-transform: capitalize;
+}
