@@ -18,6 +18,10 @@ section{
   color: var(--main);
   font-size: 1.8em;
   font-weight: normal;
+  margin-right: 8px;
+}
+.number.no-space{
+  margin: 0;
 }
 .section-type{
   font-size: .8em;
@@ -29,13 +33,16 @@ h1{
   font-size: 2em;
   text-transform: capitalize;
   text-align: center;
-  font-weight: normal;
+  font-weight: light;
   margin: .3em;
 }
 h2{
   font-weight: normal;
   margin: 1em 0 .3em;
   text-transform: capitalize;
+}
+h2.extra-space{
+  margin-top: 3em;
 }
 h2:before{
   content: '';
@@ -51,11 +58,23 @@ h1 + p {
 ul{
   margin: 20px;
 }
+.bold-small{
+  font-weight: bold;
+  color: #222;
+}
+
+.flex-container{
+  display: flex;
+  align-items: center;
+}
+.flex-item{
+  margin: 20px;
+}
 
 /* intro */
 .intro{
   width: 80%;
-  margin: 100px auto 0;
+  margin: 50px auto;
 }
 
 .project-title{
@@ -70,15 +89,28 @@ ul{
     font-size: 2em;
   }
 }
+
 .project-cover{
   width: 100%;
-  transform: scale(1.2);
+  transform: scale(1.5) translateY(100px);
 }
-
 .section-info{
   padding-top: 200px;
   font-size: .9em;
 }
+
+@media screen and (max-width: 1200px){
+  .project-cover{
+    transform: scale(1.2) translateY(50px);
+  }
+  .section-info{
+    padding-top: 100px;
+  }
+  .intro{
+    padding-bottom: 20px;
+  }
+}
+
 .section-info .flex-row{
   align-items: flex-start;
 }
@@ -86,6 +118,38 @@ ul{
   color: #222;
 }
 
+@media screen and (max-width: 600px){
+  .flex-3icons{
+    flex-direction: column;
+  }
+  .flex-3icons .flex-item{
+    max-width: 200px;
+  }
+}
+
+@media screen and (max-width: 800px){
+  .flex-3steps{
+    flex-direction: column;
+  }
+  .flex-3steps .flex-item{
+    max-width: 500px;
+  }
+  .flex-3steps .step-triangle{
+    transform: rotate(90deg);
+  }
+}
+
+.flex-order{
+  order: 2;
+}
+@media screen and (max-width: 800px){
+  .flex-container-2items.flex-container{
+    flex-direction: column;
+  }
+  .flex-container-2items .flex-order{
+    order: 0;
+  }
+}
 
 .quote-wrap{
   margin: 2em 0;
@@ -120,4 +184,11 @@ p.quote-title{
 .footer-nav-name{
   color: #333;
   text-transform: capitalize;
+}
+
+.step-triangle{
+  height: 20px;
+  width: 20px;
+  border: 10px solid transparent;
+  border-left: 10px solid var(--main);
 }

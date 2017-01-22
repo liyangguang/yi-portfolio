@@ -6,26 +6,26 @@ html.no-js(lang='')
     title Credible Offer Dashboard Redesign - Yi Nie - UX designer, Prototyper
     meta(name='description', content='')
     meta(name='viewport', content='width=device-width, initial-scale=1')
-    link(rel='stylesheet', href='../css/project.css')
+    link(rel='stylesheet', href='/css/project.css')
   body
     header
         a(href="/index.html")
-            img.logo(src='../img/logo.png')
+            img.logo(src='/img/logo.png')
         .flex-space
         nav
-            a.nav-item.font-gilroy.about(href="../index.html") home
-            a.nav-item.font-gilroy.design(href="../index.html#design") design
-            a.nav-item.font-gilroy.prototype(href="../index.html#prototype") prototype
+            a.nav-item.font-gilroy.about(href="/index.html") home
+            a.nav-item.font-gilroy.design(href="/index.html#design") design
+            a.nav-item.font-gilroy.prototype(href="/index.html#prototype") prototype
             
     //- intro
     section.intro.center
         h1.project-title.font-gilroy credible offer dashboard redesign
         p.project-subtitle Which student loan refinancing option should I choose?
-        img.project-cover(src="../img/credible/cover.png")
+        img.project-cover(src="/img/credible/header.png")
 
     //- info
     section.bg-shading.section-info
-        .flex-row.flex-row-even
+        .flex-container.flex-container-2items
             .flex-item
                 p.font-gilroy.info-title overview
                 p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quis, malesuada fringilla metus. Aenean viverra felis sed diam interdum, a tincidunt ligula bibendum. Morbi scelerisque convalli eget
@@ -39,8 +39,7 @@ html.no-js(lang='')
         h1 which offer should I choose?
         p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quis, malesuada fringilla metus. Aenean viverra felis sed diam interdum, a tincidunt ligula bibendum.
         .section-img-wrap
-            img(src="../img/credible/problem_ui.png")
-            img(src="../img/credible/problem_person.png")
+            img.full-width(src="/img/credible/problem.png")
 
     //- research
     section.bg-shading
@@ -60,15 +59,15 @@ html.no-js(lang='')
     section.bg-arrow
         p.section-type.font-gilroy user research
         h1 how do people make choices?
-        .flex-row.center.flex-row-even
+        .flex-container.flex-3icons
             .flex-item
-                img.full-width(src="../img/credible/a.png")
+                img.full-width(src="/img/credible/solution-icon1.png")
                 p.bold-small Include current loan information
             .flex-item
-                img.full-width(src="../img/credible/a.png")
+                img.full-width(src="/img/credible/solution-icon2.png")
                 p.bold-small Improve usability of filters
             .flex-item
-                img.full-width(src="../img/credible/a.png")
+                img.full-width(src="/img/credible/solution-icon3.png")
                 p.bold-small Archive options not interested
 
     //- design goal 1
@@ -80,77 +79,81 @@ html.no-js(lang='')
             li How should we
 
     //- design goal 1 - img
-    section.flex-row.bg-shading
+    section.flex-container.bg-shading.flex-3steps
         .flex-item
             p.iteration-title
-                span.number 1
+                span.number.no-space 1
                 | st iteration
-            img.iteration-img(src="../img/credible/a.png")
-        img.iteration-arrow(src="../img/credible/a.png")
+            img.full-width(src="/img/credible/design1-iteration1.png")
+        .step-triangle
         .flex-item
             p.iteration-title
-                span.number 2
+                span.number.no-space 2
                 | nd iteration
-            img.iteration-img(src="../img/credible/a.png")
-        img.iteration-arrow(src="../img/credible/a.png")
+            img.full-width(src="/img/credible/design1-iteration2.png")
+        .step-triangle
         .flex-item
             p.iteration-title
-                span.number 3
+                span.number.no-space 3
                 | rd iteration
-            img.iteration-img(src="../img/credible/a.png")
+            img.full-width(src="/img/credible/design1-iteration3.png")
 
     //- design goal 2
     section
         h2 Improve the usability of filters
-        img.full-width(src="../img/credible/a.png")
-        .flex-row
-            .flex-item
+        .flex-container.flex-container-2items
+            .flex-item.flex-order
                 p.bold-small
                     span.number 1
                     | Slider v.s. Input
                 p em ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quipsum dolor sit amet, consectetur adipiscing elit. Cras nunc torto
             .flex-item
+                img.full-width(src="/img/credible/design2-filter1.png")
+        .flex-container.flex-container-2items
+            .flex-item
                 p.bold-small
                     span.number 2
                     | Checkbox, Dropdown or Radio
                 p em ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quipsum dolor sit amet, consectetur adipiscing elit. Cras nunc torto
+            .flex-item
+                img.full-width(src="/img/credible/design2-filter2.png")
 
     //- design goal 3
     section
         h2 archive and compare offers
-        .flex-row
-            .flex-item
-                img.full-width(src="../img/credible/a.png")
-            .flex-item
+        .flex-container.flex-container-2items
+            .flex-item.flex-order
                 p.bold-small
                     span.number 1
                     | Archive offers that users are not interested in
                 p ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at erosit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quip
-        .flex-row
+            .flex-item
+                img.full-width(src="/img/credible/design3-archive.png")
+        .flex-container.flex-container-2items
             .flex-item
                 p.bold-small
                     span.number 2
                     | Archive offers that users are not interested in
                 p ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at erosit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quip
             .flex-item
-                img.full-width(src="../img/credible/a.png")
+                img.full-width(src="/img/credible/design3-compare.png")
     
     //- usability testing
     section.bg-shading
         p.section-type.font-gilroy usability testing
         h1 listen to user's voice and keep iterating
 
-        h2 test overview
+        h2.extra-space test overview
         ul
             li Participants found the ...
             li Participants still have...
 
-        h2 iteration
-        .flex-row.flex-row-even
+        h2.extra-space iteration
+        .flex-container.flex-container-2items
             .flex-item
-                img.full-width(src="../img/credible/a.png")
+                img.full-width(src="/img/credible/test-iteration1.png")
             .flex-item
-                img.full-width(src="../img/credible/a.png")
+                img.full-width(src="/img/credible/test-iteration2.png")
         p etur adipiscing elit. Cras nunc tortor, aliquam at erosit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros 
 
     //- visual
@@ -158,21 +161,12 @@ html.no-js(lang='')
         p.section-type.font-gilroy visual design
         h1 refresh the look
         p etur adipiscing elit. Cras nunc tortor, aliquam at erosit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros 
-        
-        h2 add a title here
-        .flex-row.flex-row-even
-            .flex-item
-                img.full-width(src="../img/credible/a.png")
-                p.bold-small Before
-            .flex-item
-                img.full-width(src="../img/credible/a.png")
-                p.bold-small After
-        
-        h2 the new dashboard interface
-        img.full-width(src="../img/credible/a.png")
 
-        h2 style guide
-        img.full-width(src="../img/credible/style_guide.png")
+        h2.extra-space new dashboard
+        img.full-width(src="/img/credible/final-full.png", style="margin-top: 1em;")
+
+        h2.extra-space style guide
+        img.full-width(src="/img/credible/final-guide.png")
 
     section.bg-shading
         p.section-type.font-gilroy the end
@@ -180,7 +174,7 @@ html.no-js(lang='')
         p Taking advantages of t, consectetur adipiscing elit. Cras nunc tortor, aliquam at erosit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros 
 
     footer
-        .footer-nav-wrap.flex-row
+        .footer-nav-wrap.flex-container
             a(href="#").flex-item.footer-nav-left
                 p.footer-nav-arrow < previous
                 p.footer-nav-name photo management app
@@ -188,7 +182,7 @@ html.no-js(lang='')
             a(href="#").flex-item.footer-nav-right
                 p.footer-nav-arrow next >
                 p.footer-nav-name photo management app
-        .footer-copy.flex-row
+        .footer-copy.flex-container
             p.flex-space Designed and Coded by Yi Nie.
             p Want to see more? Visit 
-                a(href="../v2/index.html", target="_blank") my old portfolio
+                a(href="/v2/index.html", target="_blank") my old portfolio

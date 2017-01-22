@@ -216,8 +216,8 @@ a.title-text{
   .project{
     flex-direction: column;
   }
-  .project-img-wrap{
-    order: 10;
+  .project .project-info{
+    order: 0;
   }
   .project .sub-text{
     font-size: 1em;
