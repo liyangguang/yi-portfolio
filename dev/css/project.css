@@ -30,7 +30,7 @@ section{
   letter-spacing: .3em;
 }
 h1{
-  font-size: 2em;
+  font-size: 1.8em;
   text-transform: capitalize;
   text-align: center;
   font-weight: light;
@@ -54,6 +54,7 @@ h2:before{
 }
 h1 + p {
   text-align: center;
+  margin-bottom: 3em;
 }
 ul{
   margin: 20px;
@@ -63,12 +64,20 @@ ul{
   color: #222;
 }
 
+.dark{
+  color: #222;
+}
+
 .flex-container{
   display: flex;
   align-items: center;
 }
 .flex-item{
   margin: 20px;
+}
+
+.img-with-shadow{
+  transform: scale(1.2);
 }
 
 /* intro */
@@ -119,22 +128,22 @@ ul{
 }
 
 @media screen and (max-width: 600px){
-  .flex-3icons{
+  .flex-container-3-icons{
     flex-direction: column;
   }
-  .flex-3icons .flex-item{
+  .flex-container-3-icons .flex-item{
     max-width: 200px;
   }
 }
 
 @media screen and (max-width: 800px){
-  .flex-3steps{
+  .flex-container-3-steps{
     flex-direction: column;
   }
-  .flex-3steps .flex-item{
+  .flex-container-3-steps .flex-item{
     max-width: 500px;
   }
-  .flex-3steps .step-triangle{
+  .flex-container-3-steps .step-triangle{
     transform: rotate(90deg);
   }
 }
@@ -143,11 +152,14 @@ ul{
   order: 2;
 }
 @media screen and (max-width: 800px){
-  .flex-container-2items.flex-container{
+  .flex-container-2-items.flex-container{
     flex-direction: column;
   }
-  .flex-container-2items .flex-order{
+  .flex-container-2-items .flex-order{
     order: 0;
+  }
+  .flex-container-2-items .step-triangle{
+    transform: rotate(90deg);
   }
 }
 
