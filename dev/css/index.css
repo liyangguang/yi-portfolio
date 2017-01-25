@@ -258,7 +258,7 @@ a.title-text{
 }
 .footer-link{
   display: inline-block;
-  margin: 2em;
+  margin: 1em 2em;
   text-transform: uppercase;
 }
 
