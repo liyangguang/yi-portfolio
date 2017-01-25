@@ -1,0 +1,367 @@
+doctype html
+html.no-js(lang='')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    title Photo Management App Design - Yi Nie - UX designer, Prototyper
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='/css/project.css')
+  body
+    header
+        a(href="/index.html")
+            img.logo(src='/img/logo.png')
+        .flex-space
+        nav
+            a.nav-item.font-gilroy.about(href="/index.html") home
+            a.nav-item.font-gilroy.design(href="/index.html#design") design
+            a.nav-item.font-gilroy.prototype(href="/index.html#prototype") prototype
+            
+    //- intro
+    section.intro.center
+        h1.project-title.font-gilroy photo management mobile app
+        p.project-subtitle It always takes me several hours to organize my photos
+        img.project-cover-mobile(src="/img/photo/header.png")
+
+    //- info
+    section.bg-shading.section-info
+        .flex-container.flex-container-2-items.flex-top
+            .flex-item
+                p.font-gilroy.info-title overview
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quis, malesuada fringilla metus. Aenean viverra felis sed diam interdum, a tincidunt ligula bibendum. Morbi scelerisque convalli eget
+            .flex-item
+                p.font-gilroy.info-title my role
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Crass ipsum a posuere. Integer volutpat ex non scelerisque pellentesque. Donec quis tortor aliquet, fringilla purus
+
+    //- problem
+    section
+        p.section-type.font-gilroy reframe the problem
+        h2 why a mobile photo management app?
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quis, malesuada fringilla metus. Aenean viverra felis sed diam interdum, a tincidunt ligula bibendum.
+        .flex-container.flex-container-2-items
+            .flex-item
+                p.bold.dark Questions I asked
+                ul
+                    li Why mobile?
+                    li Why mobile?
+            .step-triangle
+            .flex-item
+                p.bold.dark Research questions
+                ul
+                    li Why mobile?
+                    li Why mobile?
+
+    //- research
+    section.bg-shading
+        p.section-type.font-gilroy user research
+        h2 find the common pain points
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quis, malesuada fringilla metus. Aenean viverra felis sed diam interdum, a tincidunt ligula bibendum.
+        .flex-container.flex-container-2-items
+            .flex-item
+                img.full-width(src="/img/photo/research.png")
+            .flex-item
+                p
+                    | Lorem ipsum dolor sit amet, consectetur 
+                    b adipiscing 
+                    | elit. Cras nunc tortor, aliquam at eros quis, 
+                    b malesuada 
+                    | fringilla metus. Aenean viverra felis sed diam interdum, a tincidunt ligula bibendum.
+
+    //- competitor
+    section#competitor
+        p.section-type.font-gilroy competitor analysis
+        h2 understand existing products
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quis, malesuada fringilla metus. Aenean viverra felis sed diam interdum, a tincidunt ligula bibendum.
+        .flex-container.flex-container-4-items.flex-streth
+            .flex-item.tab.active(data-tab='1')
+                img.competitor-icon.full-width(src="/img/photo/competitor1-icon.png")
+                p.dark Google Photos
+            .flex-item.tab(data-tab='2')
+                img.competitor-icon.full-width(src="/img/photo/competitor2-icon.png")
+                p.dark iOS Photos
+            .flex-item.tab(data-tab='3')
+                img.competitor-icon.full-width(src="/img/photo/competitor3-icon.png")
+                p.dark Slidebox
+            .flex-item.tab(data-tab='4')
+                img.competitor-icon.full-width(src="/img/photo/competitor4-icon.png")
+                p.dark Quickpics
+        .tab-content.tab-content-1.flex-container.flex-container-2-items
+            .flex-item
+                p.bold.light-blue Positives:
+                ul
+                    li Auto back-up1
+                    li Image recognition
+                p.bold.light-blue Negatives:
+                ul
+                    li Information architecture are not clear
+            .flex-item
+                img.full-width(src="/img/photo/competitor1-ia.png")
+        .tab-content.tab-content-2.flex-container.flex-container-2-items(style="display:none")
+            .flex-item
+                p.bold.light-blue Positives:
+                ul
+                    li Auto back-up2
+                    li Image recognition
+                p.bold.light-blue Negatives:
+                ul
+                    li Information architecture are not clear
+            .flex-item
+                img.full-width(src="/img/photo/competitor2-ia.png")
+        .tab-content.tab-content-3.flex-container.flex-container-2-items(style="display:none")
+            .flex-item
+                p.bold.light-blue Positives:
+                ul
+                    li Auto back-up3
+                    li Image recognition
+                p.bold.light-blue Negatives:
+                ul
+                    li Information architecture are not clear
+        .tab-content.tab-content-4.flex-container.flex-container-2-items(style="display:none")
+            .flex-item
+                p.bold.light-blue Positives:
+                ul
+                    li Auto back-up4
+                    li Image recognition
+                p.bold.light-blue Negatives:
+                ul
+                    li Information architecture are not clear
+            .flex-item
+                img.full-width(src="/img/photo/competitor4-ia.png")
+
+    //- synthesis
+    section.bg-shading
+        p.section-type.font-gilroy research synthesis
+        h2 putting findings together
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quis, malesuada fringilla metus. Aenean viverra felis sed diam interdum, a tincidunt ligula bibendum.
+        .flex-container.flex-container-2-items
+            .flex-item
+                p.bold.dark Research insights
+                ul
+                    li Why mobile?
+                    li Why mobile?
+            .step-triangle
+            .flex-item
+                p.bold.dark Design guidelines
+                ul
+                    li Why mobile?
+                    li Why mobile?
+
+    //- ideation
+    section.bg-arrow#ideation
+        p.section-type.font-gilroy initial ideation
+        h2 design goals and key consideration
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quis, malesuada fringilla metus. Aenean viverra felis sed diam interdum, a tincidunt ligula bibendum.
+        .flex-container.flex-container-3-items.flex-streth
+            .flex-item.tab.active(data-tab='1')
+                img.idea-icon.full-width(src="/img/photo/idea1-icon.png")
+                p.dark Organizing photos efficiently
+            .flex-item.tab(data-tab='2')
+                img.idea-icon.full-width(src="/img/photo/idea2-icon.png")
+                p.dark Viewing photos in various ways
+            .flex-item.tab(data-tab='3')
+                img.idea-icon.full-width(src="/img/photo/idea3-icon.png")
+                p.dark Searching photos easily
+        .tab-content.tab-content-1.flex-container
+            .flex-item
+                img.full-width(src="/img/photo/idea1-1.png")
+                p.bold.light-blue Timeline View1
+                p
+                    span.bold Pros: 
+                    span Photos are blabla blabla blabla blabla
+                p
+                    span.bold Cons: 
+                    span Photos are blabla blabla blabla blabla
+            .flex-item
+                img.full-width(src="/img/photo/idea1-2.png")
+                p.bold.light-blue Timeline View
+                p
+                    span.bold Pros: 
+                    span Photos are blabla blabla blabla blabla
+                p
+                    span.bold Cons: 
+                    span Photos are blabla blabla blabla blabla
+            .flex-item
+                img.full-width(src="/img/photo/idea1-3.png")
+                p.bold.light-blue Timeline View
+                p
+                    span.bold Pros: 
+                    span Photos are blabla blabla blabla blabla
+                p
+                    span.bold Cons: 
+                    span Photos are blabla blabla blabla blabla
+            .flex-item
+                img.full-width(src="/img/photo/idea1-4.png")
+                p.bold.light-blue Timeline View
+                p
+                    span.bold Pros: 
+                    span Photos are blabla blabla blabla blabla
+                p
+                    span.bold Cons: 
+                    span Photos are blabla blabla blabla blabla
+            .flex-item
+                img.full-width(src="/img/photo/idea1-5.png")
+                p.bold.light-blue Timeline View
+                p
+                    span.bold Pros: 
+                    span Photos are blabla blabla blabla blabla
+                p
+                    span.bold Cons: 
+                    span Photos are blabla blabla blabla blabla
+        .tab-content.tab-content-2.flex-container(style="display:none")
+            .flex-item
+                img.full-width(src="/img/photo/idea2-1.png")
+                p.bold.light-blue Timeline View2
+                p
+                    span.bold Pros: 
+                    span Photos are blabla blabla blabla blabla
+                p
+                    span.bold Cons: 
+                    span Photos are blabla blabla blabla blabla
+            .flex-item
+                img.full-width(src="/img/photo/idea2-2.png")
+                p.bold.light-blue Timeline View
+                p
+                    span.bold Pros: 
+                    span Photos are blabla blabla blabla blabla
+                p
+                    span.bold Cons: 
+                    span Photos are blabla blabla blabla blabla
+            .flex-item
+                img.full-width(src="/img/photo/idea2-3.png")
+                p.bold.light-blue Timeline View
+                p
+                    span.bold Pros: 
+                    span Photos are blabla blabla blabla blabla
+                p
+                    span.bold Cons: 
+                    span Photos are blabla blabla blabla blabla
+        .tab-content.tab-content-3.flex-container(style="display:none")
+            .flex-item
+                img.full-width(src="/img/photo/idea3-1.png")
+                p.bold.light-blue Timeline View3
+                p
+                    span.bold Pros: 
+                    span Photos are blabla blabla blabla blabla
+                p
+                    span.bold Cons: 
+                    span Photos are blabla blabla blabla blabla
+            .flex-item
+                img.full-width(src="/img/photo/idea3-2.png")
+                p.bold.light-blue Timeline View
+                p
+                    span.bold Pros: 
+                    span Photos are blabla blabla blabla blabla
+                p
+                    span.bold Cons: 
+                    span Photos are blabla blabla blabla blabla
+            .flex-item
+                img.full-width(src="/img/photo/idea3-3.png")
+                p.bold.light-blue Timeline View
+                p
+                    span.bold Pros: 
+                    span Photos are blabla blabla blabla blabla
+                p
+                    span.bold Cons: 
+                    span Photos are blabla blabla blabla blabla
+
+    //- information architecture
+    section.bg-shading
+        p.section-type.font-gilroy information architecture
+        h2 clear hierarchy of information
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quis, malesuada fringilla metus. Aenean viverra felis sed diam interdum, a tincidunt ligula bibendum.
+        img.full-width(src="/img/photo/ia.png")
+
+    //- visual and interaction
+    section
+        p.section-type.font-gilroy design details
+        h2 manage your photos effortlessly
+
+        .flex-container.flex-column
+            .flex-item
+                img.img-bleeding(src="/img/photo/design1.png", style="margin-bottom: -5%;")
+            .flex-item
+                p.bold.dark
+                    span.number 1
+                    | Different view modes to meet different users' needs
+                p em ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quipsum dolor sit amet, consectetur adipiscing elit. Cras nunc torto
+
+        .flex-container.flex-container-2-items
+            .flex-item.flex-order
+                p.bold.dark
+                    span.number 2
+                    | Photo organization on your swipe
+                p em ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quipsum dolor sit amet, consectetur adipiscing elit. Cras nunc torto
+            .flex-item
+                img.full-width(src="/img/photo/design2.png")
+        .flex-container.flex-container-2-items
+            .flex-item
+                p.bold.dark
+                    span.number 3
+                    | Multiple photos selecting and organizing
+                p em ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quipsum dolor sit amet, consectetur adipiscing elit. Cras nunc torto
+            .flex-item
+                img.full-width(src="/img/photo/design3.png")
+        .flex-container.flex-container-2-items
+            .flex-item.flex-order
+                p.bold.dark
+                    span.number 4
+                    | Batching similar photos
+                p em ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quipsum dolor sit amet, consectetur adipiscing elit. Cras nunc torto
+            .flex-item
+                img.full-width(src="/img/photo/design4.png")
+        .flex-container.flex-container-2-items
+            .flex-item
+                p.bold.dark
+                    span.number 5
+                    | Photos tab and settings tab
+                p em ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quipsum dolor sit amet, consectetur adipiscing elit. Cras nunc torto
+            .flex-item
+                img.full-width(src="/img/photo/design5.png")
+
+    //- prototype
+    section.bg-shading
+        p.section-type.font-gilroy prototype
+        h2 click through prototype
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quis, malesuada fringilla metus. Aenean viverra felis sed diam interdum, a tincidunt ligula bibendum.
+        a.primary-button.primary-button-one-line(href="https://marvelapp.com/e22jc2", target="_blank") prototype link
+
+    //- the end
+    section
+        p.section-type.font-gilroy the end
+        h2 thanks for reading?
+        p Taking advantages of t, consectetur adipiscing elit. Cras nunc tortor, aliquam at erosit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros 
+        a.primary-button.primary-button-one-line(href="/files/photo.pdf", target="_blank") view document
+
+    footer
+        .footer-nav-wrap.flex-container
+            a(href="/projects/.html").flex-item.footer-nav-left
+                p.footer-nav-arrow < previous
+                p.footer-nav-name photo management app
+            .flex-space
+            a(href="/projects/.html").flex-item.footer-nav-right
+                p.footer-nav-arrow next >
+                p.footer-nav-name photo management app
+        .footer-copy.flex-container
+            p.flex-space Designed and Coded by Yi Nie.
+            p Want to see more? Visit 
+                a(href="/index_old.html", target="_blank") my old portfolio
+
+    script(src="https://code.jquery.com/jquery-2.2.4.min.js", integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=", crossorigin="anonymous")
+    script.
+        console.log('Hi, I\'m Yi Nie. Welcome to my site!');
+
+        $(function() {
+            $('#ideation .tab').click(function(){
+                $(this).addClass('active');
+                $(this).siblings().removeClass('active');
+                $('#ideation .tab-content').hide();
+                $('#ideation .tab-content-' + $(this).attr('data-tab')).show();
+            });
+
+            $('#competitor .tab').click(function(){
+                $(this).addClass('active');
+                $(this).siblings().removeClass('active');
+                $('#competitor .tab-content').hide();
+                $('#competitor .tab-content-' + $(this).attr('data-tab')).show();
+            });
+        });

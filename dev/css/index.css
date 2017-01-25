@@ -26,10 +26,6 @@ a.title-text{
   background: var(--main);
   border: none;
 }
-.link-arrow:after{
-  content: '>';
-  padding-left: 5px;
-}
 
 /* ---------------- intro ---------------- */
 .intro{
@@ -95,7 +91,12 @@ a.title-text{
 .project-detail{
   display: flex;
   align-items: flex-start;
-  margin-top: 20px;
+  margin: 20px 0;
+}
+@media screen and (max-width: 800px) {
+  .project-detail{
+    flex-direction: column;
+  }
 }
 
 .project .line{
@@ -106,14 +107,6 @@ a.title-text{
 .project .sub-text{
   flex: 1;
   font-size: .9em;
-}
-.project-button{
-  display: block;
-  margin: 8px 0 20px;
-  padding: 4px 0;
-  color: var(--main);
-  font-weight: bold;
-  text-transform: capitalize;
 }
 
 /* ---------------- individual project ---------------- */
