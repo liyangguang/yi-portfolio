@@ -3,7 +3,7 @@ html.no-js(lang='')
   head
     meta(charset='utf-8')
     meta(http-equiv='x-ua-compatible', content='ie=edge')
-    title Credible Offer Dashboard Redesign - Yi Nie - UX designer, Prototyper
+    title Illustrations - Yi Nie - UX designer, Prototyper
     meta(name='description', content='')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     link(rel='stylesheet', href='/css/project.css')
@@ -19,64 +19,64 @@ html.no-js(lang='')
             
     //- intro
     section.intro.center
-        h1.project-title.font-gilroy illustration
+        h1.font-gilroy illustration
         p.project-subtitle As a designer, I enjoy creating illustrations. And use they to communicate ideas in efficient and friendly way.
 
     section
         h2 business organization icon set
-        .flex-container
-            .flex-item.flex-item-icon
+        .flex-container.illustration-6-item
+            .flex-item
                 img.full-width(src="/img/illustration/business1.png")
-            .flex-item.flex-item-icon
+            .flex-item
                 img.full-width(src="/img/illustration/business2.png")
-            .flex-item.flex-item-icon
+            .flex-item
                 img.full-width(src="/img/illustration/business3.png")
-            .flex-item.flex-item-icon
+            .flex-item
                 img.full-width(src="/img/illustration/business4.png")
-            .flex-item.flex-item-icon
+            .flex-item
                 img.full-width(src="/img/illustration/business5.png")
-            .flex-item.flex-item-icon
+            .flex-item
                 img.full-width(src="/img/illustration/business6.png")
 
     section
         h2 life icon set
-        .flex-container
-            .flex-item.flex-item-icon
+        .flex-container.illustration-6-item
+            .flex-item
                 img.full-width(src="/img/illustration/life1.png")
-            .flex-item.flex-item-icon
+            .flex-item
                 img.full-width(src="/img/illustration/life2.png")
-            .flex-item.flex-item-icon
+            .flex-item
                 img.full-width(src="/img/illustration/life3.png")
-            .flex-item.flex-item-icon
+            .flex-item
                 img.full-width(src="/img/illustration/life4.png")
-            .flex-item.flex-item-icon
+            .flex-item
                 img.full-width(src="/img/illustration/life5.png")
-            .flex-item.flex-item-icon
+            .flex-item
                 img.full-width(src="/img/illustration/life6.png")
 
     section
         h2 UX process icon set
-        .flex-container
-            .flex-item.flex-item-icon
+        .flex-container.illustration-8-item
+            .flex-item
                 img.full-width(src="/img/illustration/process1.png")
-            .flex-item.flex-item-icon
+            .flex-item
                 img.full-width(src="/img/illustration/process2.png")
-            .flex-item.flex-item-icon
+            .flex-item
                 img.full-width(src="/img/illustration/process3.png")
-            .flex-item.flex-item-icon
+            .flex-item
                 img.full-width(src="/img/illustration/process4.png")
-            .flex-item.flex-item-icon
+            .flex-item
                 img.full-width(src="/img/illustration/process5.png")
-            .flex-item.flex-item-icon
+            .flex-item
                 img.full-width(src="/img/illustration/process6.png")
-            .flex-item.flex-item-icon
+            .flex-item
                 img.full-width(src="/img/illustration/process7.png")
-            .flex-item.flex-item-icon
+            .flex-item
                 img.full-width(src="/img/illustration/process8.png")
 
     section
         h2 user type avatars
-        .flex-container.flex-container-2-items
+        .flex-container.illustration-4-item
             .flex-item
                 img.full-width(src="/img/illustration/user1.png")
             .flex-item
@@ -88,19 +88,46 @@ html.no-js(lang='')
 
     section
         h2 other illustrations
-        .flex-container
-            div
-                img.full-width(src="/img/illustration/fun1.png", style="max-width: 500px; margin: 10px;")
-            div
-                img.full-width(src="/img/illustration/fun2.png", style="max-width: 500px; margin: 10px;")
-            div
-                img.full-width(src="/img/illustration/fun3.png", style="max-width: 500px; margin: 10px;")
+        .flex-container.illustration-3-item
+            .flex-item
+                img.full-width(src="/img/illustration/fun1.png")
+            .flex-item
+                img.full-width(src="/img/illustration/fun2.png")
+            .flex-item
+                img.full-width(src="/img/illustration/fun3.png")
 
     footer
         .footer-copy.flex-container
             p.flex-space Designed and Coded by Yi Nie.
             p Want to see more? Visit 
                 a(href="/index_old.html", target="_blank") my old portfolio
+
+    style.
+        .illustration-6-item,
+        .illustration-8-item,
+        .illustration-4-item,
+        .illustration-3-item{
+            flex-wrap: wrap;
+        }
+        .illustration-6-item .flex-item{
+            min-width: 120px;
+            max-width: 250px;
+            padding: 10px 30px;
+        }
+        .illustration-8-item .flex-item{
+            min-width: 120px;
+            max-width: 200px;
+            padding: 10px 20px;
+        }
+        .illustration-4-item .flex-item{
+            min-width: 200px;
+            max-width: 400px;
+            padding: 40px;
+        }
+        .illustration-3-item .flex-item{
+            flex: 1 0 300px;
+            padding: 10px;
+        }
 
     script.
         console.log('Hi, I\'m Yi Nie. Welcome to my site!');

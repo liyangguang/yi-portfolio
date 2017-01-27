@@ -19,22 +19,16 @@ section{
   }
 }
 
-.primary-button.primary-button-one-line{
-  display: block;
-  text-align: center;
+ul{
+  margin: 20px;
 }
-
 .bg-shading{
   background: #F5FAFF;
 }
-.number{
-  color: var(--main);
-  font-size: 1.8em;
-  font-weight: normal;
-  margin-right: 8px;
-}
-.number.no-space{
-  margin: 0;
+
+/*font*/
+h1{
+  font-size: 2.5em;
 }
 .section-type{
   font-size: .8em;
@@ -54,9 +48,6 @@ h3{
   margin: 1em 0 .3em;
   text-transform: capitalize;
 }
-h3.extra-space{
-  margin-top: 3em;
-}
 h3:before{
   content: '';
   display: block;
@@ -72,92 +63,72 @@ h2 + p {
   text-align: center;
   margin-bottom: 3em;
 }
-ul{
-  margin: 20px;
-}
 .bold{
   font-weight: bold;
 }
 .dark{
   color: #222;
 }
-p.light-blue{
+.light-blue{
   color: #20ABE3;
 }
+.number{
+  color: var(--main);
+  font-size: 1.8em;
+  font-weight: normal;
+  margin-right: 8px;
+}
 
+/*flex*/
 .flex-container{
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
 }
-.flex-container.flex-top{
+.flex-container.top{
   align-items: flex-start;
 }
-.flex-column{
+.flex-container.column{
   flex-direction: column;
+}
+.flex-container .flex-item{
+  flex-basis: 50%;
 }
 .flex-item{
   padding: 20px;
 }
-.flex-item-icon{
-  min-width: 120px;
-  max-width: 250px;
-}
-.flex-container-more-space .flex-item{
-  padding: 5%;
-}
-.flex-container-less-space .flex-item{
-  padding: 10px;
-}
-.flex-force-even > *{
-  flex-grow: 1;
-}
-.flex-container.flex-streth{
-  align-items: stretch;
-}
 
+/*img*/
 .img-with-shadow{
   transform: scale(1.2);
 }
-.img-bleeding{
-  width: 100%;
-  transform: scale(1.1);
-  margin: 5% 0;
-}
 
-/* intro */
+/* intro section */
 .intro{
   width: 80%;
   margin: 50px auto 0;
-}
-
-.project-title{
-  font-size: 2.5em;
 }
 @media screen and (max-width: 800px){
   .intro{
     width: 100%;
     margin: 80px auto 0;
   }
-  .project-title{
+  h1{
     font-size: 2em;
   }
 }
 
+/*cover img*/
 .project-cover-mobile{
-  width: 100%;
   transform: scale(1.8) translateY(120px);
 }
 .project-cover-desktop{
-  width: 100%;
   transform: scale(1.5) translateY(100px);
 }
 .section-info{
   padding-top: 200px;
   font-size: .9em;
 }
-
 @media screen and (max-width: 1200px){
   .project-cover-mobile{
     transform: scale(1.6) translateY(60px);
@@ -173,54 +144,24 @@ p.light-blue{
   }
 }
 
-.section-info .flex-row{
-  align-items: flex-start;
-}
-.info-title{
-  color: #222;
-}
-
-@media screen and (max-width: 600px){
-  .flex-container-3-icons{
-    flex-direction: column;
-  }
-  .flex-container-3-icons > .flex-item{
-    max-width: 200px;
-  }
-}
-
-@media screen and (max-width: 800px){
-  .flex-container-3-steps{
-    flex-direction: column;
-  }
-  .flex-container-3-steps .flex-item{
-    max-width: 500px;
-  }
-  .flex-container-3-steps .step-triangle{
-    transform: rotate(90deg);
-  }
-}
-
 .flex-order{
   order: 2;
 }
-.flex-container-4-items > .flex-item{
-  flex-basis: 25%
-}
-.flex-container-3-items > .flex-item{
-  flex-basis: 33%
-}
-.flex-container-2-items > .flex-item{
-  flex-basis: 50%;
+.step-triangle{
+  height: 20px;
+  width: 20px;
+  border: 10px solid transparent;
+  border-left: 10px solid var(--main);
+  align-self: center;
 }
 @media screen and (max-width: 800px){
-  .flex-container-2-items.flex-container{
+  .flex-container.direction{
     flex-direction: column;
   }
-  .flex-container-2-items .flex-order{
+  .flex-container.direction .flex-order{
     order: 0;
   }
-  .flex-container-2-items .step-triangle{
+  .flex-container.direction .step-triangle{
     transform: rotate(90deg);
   }
 }
@@ -237,7 +178,7 @@ p.light-blue{
 .tab.active:after{
   content: '';
   position: absolute;
-  bottom: -21px;
+  bottom: -0;
   left: 50%;
   transform: translateX(-50%);
   display: block;
@@ -266,20 +207,6 @@ p.light-blue{
   }
 }
 
-.quote-wrap{
-  margin: 2em 0;
-}
-.quote-wrap > p{
-  padding-left: 1.5em;
-}
-p.quote-title{
-  padding-left: .8em;
-  font-size: 1.2em;
-  border-left: 4px solid var(--main);
-  font-weight: light;
-  margin: .3em 0;
-}
-
 .footer-nav-wrap{
   margin: 3em 0;
 }
@@ -299,22 +226,4 @@ p.quote-title{
 .footer-nav-name{
   color: #333;
   text-transform: capitalize;
-}
-
-.step-triangle{
-  height: 20px;
-  width: 20px;
-  border: 10px solid transparent;
-  border-left: 10px solid var(--main);
-}
-
-
-.competitor-icon{
-  max-width: 80px;
-}
-.idea-icon{
-  max-width: 150px;
-}
-#ideation .tab-content{
-  font-size: .8em;
 }

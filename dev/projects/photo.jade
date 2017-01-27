@@ -19,26 +19,26 @@ html.no-js(lang='')
             
     //- intro
     section.intro.center
-        h1.project-title.font-gilroy photo management mobile app
+        h1.font-gilroy photo management mobile app
         p.project-subtitle It always takes me several hours to organize my photos
-        img.project-cover-mobile(src="/img/photo/header.png")
+        img.project-cover-mobile.full-width(src="/img/photo/header.png")
 
     //- info
     section.bg-shading.section-info
-        .flex-container.flex-container-2-items.flex-top
+        .flex-container.direction.top.even-2
             .flex-item
-                p.font-gilroy.info-title overview
+                p.font-gilroy.dark overview
                 p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quis, malesuada fringilla metus. Aenean viverra felis sed diam interdum, a tincidunt ligula bibendum. Morbi scelerisque convalli eget
             .flex-item
-                p.font-gilroy.info-title my role
-                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Crass ipsum a posuere. Integer volutpat ex non scelerisque pellentesque. Donec quis tortor aliquet, fringilla purus
+                p.font-gilroy.dark my role
+                p Lorem ipsum dolor sit amet, cons purus
 
     //- problem
     section
         p.section-type.font-gilroy reframe the problem
         h2 why a mobile photo management app?
         p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quis, malesuada fringilla metus. Aenean viverra felis sed diam interdum, a tincidunt ligula bibendum.
-        .flex-container.flex-container-2-items
+        .flex-container.direction.top.even-2
             .flex-item
                 p.bold.dark Questions I asked
                 ul
@@ -50,13 +50,14 @@ html.no-js(lang='')
                 ul
                     li Why mobile?
                     li Why mobile?
+                    li Why mobile?
 
     //- research
     section.bg-shading
         p.section-type.font-gilroy user research
         h2 find the common pain points
         p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quis, malesuada fringilla metus. Aenean viverra felis sed diam interdum, a tincidunt ligula bibendum.
-        .flex-container.flex-container-2-items
+        .flex-container.direction
             .flex-item
                 img.full-width(src="/img/photo/research.png")
             .flex-item
@@ -72,20 +73,20 @@ html.no-js(lang='')
         p.section-type.font-gilroy competitor analysis
         h2 understand existing products
         p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quis, malesuada fringilla metus. Aenean viverra felis sed diam interdum, a tincidunt ligula bibendum.
-        .flex-container.flex-container-4-items.flex-streth
+        .flex-container.tab-4-container
             .flex-item.tab.active(data-tab='1')
-                img.competitor-icon.full-width(src="/img/photo/competitor1-icon.png")
+                img.full-width(src="/img/photo/competitor1-icon.png")
                 p.dark Google Photos
             .flex-item.tab(data-tab='2')
-                img.competitor-icon.full-width(src="/img/photo/competitor2-icon.png")
+                img.full-width(src="/img/photo/competitor2-icon.png")
                 p.dark iOS Photos
             .flex-item.tab(data-tab='3')
-                img.competitor-icon.full-width(src="/img/photo/competitor3-icon.png")
+                img.full-width(src="/img/photo/competitor3-icon.png")
                 p.dark Slidebox
             .flex-item.tab(data-tab='4')
-                img.competitor-icon.full-width(src="/img/photo/competitor4-icon.png")
+                img.full-width(src="/img/photo/competitor4-icon.png")
                 p.dark Quickpics
-        .tab-content.tab-content-1.flex-container.flex-container-2-items
+        .tab-content.tab-content-1.flex-container.direction.even-2
             .flex-item
                 p.bold.light-blue Positives:
                 ul
@@ -96,7 +97,7 @@ html.no-js(lang='')
                     li Information architecture are not clear
             .flex-item
                 img.full-width(src="/img/photo/competitor1-ia.png")
-        .tab-content.tab-content-2.flex-container.flex-container-2-items(style="display:none")
+        .tab-content.tab-content-2.flex-container.direction.even-2(style="display:none")
             .flex-item
                 p.bold.light-blue Positives:
                 ul
@@ -107,7 +108,7 @@ html.no-js(lang='')
                     li Information architecture are not clear
             .flex-item
                 img.full-width(src="/img/photo/competitor2-ia.png")
-        .tab-content.tab-content-3.flex-container.flex-container-2-items(style="display:none")
+        .tab-content.tab-content-3.flex-container.direction.even-2(style="display:none")
             .flex-item
                 p.bold.light-blue Positives:
                 ul
@@ -116,7 +117,7 @@ html.no-js(lang='')
                 p.bold.light-blue Negatives:
                 ul
                     li Information architecture are not clear
-        .tab-content.tab-content-4.flex-container.flex-container-2-items(style="display:none")
+        .tab-content.tab-content-4.flex-container.direction.even-2(style="display:none")
             .flex-item
                 p.bold.light-blue Positives:
                 ul
@@ -133,7 +134,7 @@ html.no-js(lang='')
         p.section-type.font-gilroy research synthesis
         h2 putting findings together
         p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quis, malesuada fringilla metus. Aenean viverra felis sed diam interdum, a tincidunt ligula bibendum.
-        .flex-container.flex-container-2-items
+        .flex-container.direction.top.even-2
             .flex-item
                 p.bold.dark Research insights
                 ul
@@ -151,15 +152,15 @@ html.no-js(lang='')
         p.section-type.font-gilroy initial ideation
         h2 design goals and key consideration
         p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quis, malesuada fringilla metus. Aenean viverra felis sed diam interdum, a tincidunt ligula bibendum.
-        .flex-container.flex-container-3-items.flex-streth
+        .flex-container.tab-3-container
             .flex-item.tab.active(data-tab='1')
-                img.idea-icon.full-width(src="/img/photo/idea1-icon.png")
+                img.full-width(src="/img/photo/idea1-icon.png")
                 p.dark Organizing photos efficiently
             .flex-item.tab(data-tab='2')
-                img.idea-icon.full-width(src="/img/photo/idea2-icon.png")
+                img.full-width(src="/img/photo/idea2-icon.png")
                 p.dark Viewing photos in various ways
             .flex-item.tab(data-tab='3')
-                img.idea-icon.full-width(src="/img/photo/idea3-icon.png")
+                img.full-width(src="/img/photo/idea3-icon.png")
                 p.dark Searching photos easily
         .tab-content.tab-content-1.flex-container
             .flex-item
@@ -276,16 +277,16 @@ html.no-js(lang='')
         p.section-type.font-gilroy design details
         h2 manage your photos effortlessly
 
-        .flex-container.flex-column
+        .flex-container.column
             .flex-item
-                img.img-bleeding(src="/img/photo/design1.png", style="margin-bottom: -5%;")
+                img.full-width(src="/img/photo/design1.png")
             .flex-item
                 p.bold.dark
                     span.number 1
                     | Different view modes to meet different users' needs
                 p em ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quipsum dolor sit amet, consectetur adipiscing elit. Cras nunc torto
 
-        .flex-container.flex-container-2-items
+        .flex-container.direction
             .flex-item.flex-order
                 p.bold.dark
                     span.number 2
@@ -293,7 +294,7 @@ html.no-js(lang='')
                 p em ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quipsum dolor sit amet, consectetur adipiscing elit. Cras nunc torto
             .flex-item
                 img.full-width(src="/img/photo/design2.png")
-        .flex-container.flex-container-2-items
+        .flex-container.direction
             .flex-item
                 p.bold.dark
                     span.number 3
@@ -301,7 +302,7 @@ html.no-js(lang='')
                 p em ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quipsum dolor sit amet, consectetur adipiscing elit. Cras nunc torto
             .flex-item
                 img.full-width(src="/img/photo/design3.png")
-        .flex-container.flex-container-2-items
+        .flex-container.direction
             .flex-item.flex-order
                 p.bold.dark
                     span.number 4
@@ -309,7 +310,7 @@ html.no-js(lang='')
                 p em ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quipsum dolor sit amet, consectetur adipiscing elit. Cras nunc torto
             .flex-item
                 img.full-width(src="/img/photo/design4.png")
-        .flex-container.flex-container-2-items
+        .flex-container.direction
             .flex-item
                 p.bold.dark
                     span.number 5
@@ -323,14 +324,14 @@ html.no-js(lang='')
         p.section-type.font-gilroy prototype
         h2 click through prototype
         p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quis, malesuada fringilla metus. Aenean viverra felis sed diam interdum, a tincidunt ligula bibendum.
-        a.primary-button.primary-button-one-line(href="https://marvelapp.com/e22jc2", target="_blank") prototype link
+        a.primary-button.primary-button-one-line(href="https://marvelapp.com/e22jc2", target="_blank", style="display: block; text-align: center;") prototype link
 
     //- the end
     section
         p.section-type.font-gilroy the end
         h2 thanks for reading?
         p Taking advantages of t, consectetur adipiscing elit. Cras nunc tortor, aliquam at erosit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros 
-        a.primary-button.primary-button-one-line(href="/files/photo.pdf", target="_blank") view document
+        a.primary-button.primary-button-one-line(href="/files/photo.pdf", target="_blank", style="display: block; text-align: center;") view document
 
     footer
         .footer-nav-wrap.flex-container
@@ -345,6 +346,37 @@ html.no-js(lang='')
             p.flex-space Designed and Coded by Yi Nie.
             p Want to see more? Visit 
                 a(href="/index_old.html", target="_blank") my old portfolio
+
+    style.
+        #ideation .tab-content{
+          font-size: .8em;
+        }
+        .tab-content-1{
+            flex-wrap:wrap;
+        }
+        .tab-content .flex-item{
+            max-width: 200px;
+        }
+        .tab-content-1 .flex-item{
+            max-width: 190px;
+        }
+
+        .tab-3-container,
+        .tab-4-container{
+            align-items: stretch;
+        }
+        .tab-3-container .flex-item{
+          flex-basis: 33%;
+        }
+        .tab-3-container .flex-item img{
+          max-width: 150px;
+        }
+        .tab-4-container .flex-item{
+          flex-basis: 25%;
+        }
+        .tab-4-container .flex-item img{
+          max-width: 100px;
+        }
 
     script(src="https://code.jquery.com/jquery-2.2.4.min.js", integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=", crossorigin="anonymous")
     script.
