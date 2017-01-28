@@ -21,62 +21,64 @@ html.no-js(lang='')
     section.intro.center
         h1.project-title.font-gilroy credible offer dashboard redesign
         p.project-subtitle Which student loan refinancing option should I choose?
-        img.project-cover(src="/img/credible/header.png")
+        img.project-cover-desktop(src="/img/dashboard/header.png")
 
     //- info
     section.bg-shading.section-info
-        .flex-container.flex-container-2-items
+        .flex-container.flex-container-2-items.flex-top
             .flex-item
                 p.font-gilroy.info-title overview
-                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quis, malesuada fringilla metus. Aenean viverra felis sed diam interdum, a tincidunt ligula bibendum. Morbi scelerisque convalli eget
+                p Credible is a marketplace for student loan refianacing. We partner with multiple lenders so that users can get their personalized rates without filling all thest tedious application form. I redesign Credible’s dashboard to help users make better decisions when they are choosing their loan options.
             .flex-item
                 p.font-gilroy.info-title my role
-                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Crass ipsum a posuere. Integer volutpat ex non scelerisque pellentesque. Donec quis tortor aliquet, fringilla purus
+                p Independently conducted user research and usability test, created low-fidelity wireframes and high-fidelity visual design.
 
     //- problem
     section
         p.section-type.font-gilroy the problem
-        h1 which offer should I choose?
-        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quis, malesuada fringilla metus. Aenean viverra felis sed diam interdum, a tincidunt ligula bibendum.
+        h2 which offer should I choose?
+        p Credible is a marketplace for student loan refianacing. It helps borrowers get personalized rates from muliple lenders. it is great that they receive several offers. But these offers are all different and provide different benefits. 
+        p How to design the offer dashboard to help users find the best offer?
         .section-img-wrap
-            img.full-width(src="/img/credible/problem.png")
+            img.full-width(src="/img/dashboard/problem.png")
 
     //- research
     section.bg-shading
         p.section-type.font-gilroy user research
-        h1 how do people make choices?
-        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quis, malesuada fringilla metus. Aenean viverra felis sed diam interdum, a tincidunt ligula bibendum.
+        h2 how do people make choices?
+        p In order to better meet users’ need, it is important to understand how people make their choice among several options. So I conducted user interview to gather insights about what is the process of choosing a product and what factors will influnce their desicion making.
+        .quote-wrap
+            p.quote-title "The refinancing offer should be better than my current loan"
+            p.bold.dark Need current loan information for reference
+            p For student loan refiancing users, they have very clear goal that the refianacing offer should offer more benefit than their current loan. So user need their current loan information for reference.  
         .quote-wrap
             p.quote-title "I can only pay up to $600 a month"
-            p.bold-small Filter the options with fixed criteria in mind
-            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quis
-        .quote-wrap
-            p.quote-title "I can only pay up to $600 a month"
-            p.bold-small Filter the options with fixed criteria in mind
-            p Lorem ipsum do ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquamlor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quis
+            p.bold.dark Before choosing the product, people always have fixed criteria in mind. For example, their income situation will determine the maximize monlty payment. Some users are clear that they don’t want to choose vairable rate because they don’t want to take the risk of APR getting higher.
 
     //- design overview
     section.bg-arrow
-        p.section-type.font-gilroy user research
-        h1 how do people make choices?
+        p.section-type.font-gilroy Solutions
+        h2 Design Goals and Key Consideration
         .flex-container.flex-container-3-icons.center
             .flex-item
-                img.full-width(src="/img/credible/solution-icon1.png")
+                img.full-width(src="/img/dashboard/solution-icon1.png")
                 p.dark Include current loan information
             .flex-item
-                img.full-width(src="/img/credible/solution-icon2.png")
+                img.full-width(src="/img/dashboard/solution-icon2.png")
                 p.dark Improve usability of filters
             .flex-item
-                img.full-width(src="/img/credible/solution-icon3.png")
+                img.full-width(src="/img/dashboard/solution-icon3.png")
                 p.dark Archive options not interested
 
     //- design goal 1
     section
-        h2 Where does current loan information live?
-        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at e
+        h3 Where does current loan information live?
+        p Structure and information architecture of the offer dashboard really affects how users process the information and where should current loan information live? So I decide to think about the how the page is structured instead of figuring out all the details of design at one time. I took these questions into consideration to make sure users can understand and navagate through dashboard easily.
         ul
-            li How should we
-            li How should we
+            li Use tab structure for different loan type navagation
+            li Put filter above offers insteand of on left
+            li Show new updates of the dashboard and current loan informations on top
+
 
     //- design goal 1 - img
     section.flex-container.bg-shading.flex-container-3-steps
@@ -84,110 +86,115 @@ html.no-js(lang='')
             p.iteration-title
                 span.number.no-space 1
                 | st iteration
-            img.full-width(src="/img/credible/design1-iteration1.png")
+            img.full-width(src="/img/dashboard/design1-iteration1.png")
         .step-triangle
         .flex-item
             p.iteration-title
                 span.number.no-space 2
                 | nd iteration
-            img.full-width(src="/img/credible/design1-iteration2.png")
+            img.full-width(src="/img/dashboard/design1-iteration2.png")
         .step-triangle
         .flex-item
             p.iteration-title
                 span.number.no-space 3
                 | rd iteration
-            img.full-width(src="/img/credible/design1-iteration3.png")
+            img.full-width(src="/img/dashboard/design1-iteration3.png")
 
     //- design goal 2
     section
-        h2 Improve the usability of filters
+        h3 Improve the usability of filters
         .flex-container.flex-container-2-items
             .flex-item.flex-order
-                p.bold-small
+                p.bold.dark
                     span.number 1
-                    | Slider v.s. Input
-                p em ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quipsum dolor sit amet, consectetur adipiscing elit. Cras nunc torto
+                    | Slider v.s. input
+                p The “term” and “monthly payment” filter works well because the slider gives users a clear visual clue of what it is and how to use it immediately. But it takes a while for users to adjust the filter to a specific range, especially for “monthly payment”. So I decide to keep using the slider pattern but also give users the ability to input they desire number directly.
             .flex-item
-                img.img-with-shadow.full-width(src="/img/credible/design2-filter1.png")
+                img.img-with-shadow.full-width(src="/img/dashboard/design2-filter1.png")
         .flex-container.flex-container-2-items
             .flex-item
-                p.bold-small
+                p.bold.dark
                     span.number 2
-                    | Checkbox, Dropdown or Radio
-                p em ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quipsum dolor sit amet, consectetur adipiscing elit. Cras nunc torto
+                    | Checkbox, dropdown or radio
+                p To solve the problem that when users unchecked both of the check box of rate type, there will be nothing in the offer table, I explored several ways from check box,  radio button, drop down to the current one and decide on the current solution because it is easiest to understand and apply.    
             .flex-item
-                img.img-with-shadow.full-width(src="/img/credible/design2-filter2.png")
+                img.img-with-shadow.full-width(src="/img/dashboard/design2-filter2.png")
 
     //- design goal 3
     section
-        h2 archive and compare offers
+        h3 archive and compare offers
         .flex-container.flex-container-2-items
             .flex-item.flex-order
-                p.bold-small
+                p.bold.dark
                     span.number 1
                     | Archive offers that users are not interested in
-                p ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at erosit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quip
+                p As mentioned in the research, after users filter the offers with their criteria, they can mark the offers as “not interested” then the offer will be put into the archived category. If users have change their mind and they can still outback the offers from the archived offers.
             .flex-item
-                img.img-with-shadow.full-width(src="/img/credible/design3-archive.png")
+                img.img-with-shadow.full-width(src="/img/dashboard/design3-archive.png")
         .flex-container.flex-container-2-items
             .flex-item
-                p.bold-small
+                p.bold.dark
                     span.number 2
                     | Archive offers that users are not interested in
-                p ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at erosit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quip
+                p Users can expand several offers to view the details instead of only one. For the offer detailed information, the main challenge for me is to provide useful information but also save space as much as possible then users can view and compare offer details without scrolling up and down. I delete the “What the rate includes/excludes” section because the information has already been covered by the discount filter and “Discount and Benefit” section.aliquam at erosit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quip
             .flex-item
-                img.img-with-shadow.full-width(src="/img/credible/design3-compare.png")
+                img.img-with-shadow.full-width(src="/img/dashboard/design3-compare.png")
     
     //- usability testing
     section.bg-shading
         p.section-type.font-gilroy usability testing
-        h1 listen to user's voice and keep iterating
+        h2 listen to user's voice and keep iterating
 
-        h2.extra-space test overview
+        h3.extra-space test overview
         ul
-            li Participants found the ...
-            li Participants still have...
+            li The participant found the overall page structure clear and easy to navigate. 
+            li The participant still have to think for a while about how to use “discount filter”. He played with it for serval times to understand how the filter works.  First he didn’t know which column this filter was related with before he apply the filter. Second, he doesn’t really understand the what is “loyalty” mean without further explanation.
+            li The participant likes the idea that he can archive the ideas he doesn’t like but he thought the “not interested” button call too much attention. 
 
-        h2.extra-space iteration
+        h3.extra-space iteration
         .flex-container.flex-container-2-items
             .flex-item
-                img.img-with-shadow.full-width(src="/img/credible/test-iteration1.png")
+                img.img-with-shadow.full-width(src="/img/dashboard/test-iteration1.png")
             .step-triangle
             .flex-item
-                img.img-with-shadow.full-width(src="/img/credible/test-iteration2.png")
-        p etur adipiscing elit. Cras nunc tortor, aliquam at erosit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros 
+                img.img-with-shadow.full-width(src="/img/dashboard/test-iteration2.png")
+        p First, I changed the label to “APR discount” and Loyalty to “current customers”so that first time users can understand what this filter is related to. The I started to really think about users mental model that users would like to choose offers with discount so they wish they could know there are discounts first. But sometimes maybe they don’t want to use autopay or they are not current customers of a lender, which means then users will use filter to eliminate the ones they don’t meet requirements.  So I decide to make the default settings check both of the box and show the discount information, and then users can uncheck the one they don’t meet requirements 
 
     //- visual
     section
         p.section-type.font-gilroy visual design
-        h1 refresh the look
-        p etur adipiscing elit. Cras nunc tortor, aliquam at erosit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros 
+        h2 refresh the look
+        p I took advantage of current Credible branding elements and illustrate an alternate visual design which feels clean, modern, approachable and trustworthy. 
 
-        h2.extra-space new dashboard
-        img.full-width(src="/img/credible/final-full.png", style="margin-top: 1em;")
+        h3.extra-space new dashboard
+        img.full-width(src="/img/dashboard/final-full.png", style="margin-top: 1em;")
 
-        h2.extra-space style guide
+        h3.extra-space style guide
         p here's the style guide
 
 
     section.bg-shading
-        img.full-width(src="/img/credible/final-guide.png")
+        img.full-width(src="/img/dashboard/final-guide.png")
 
     section
         p.section-type.font-gilroy the end
-        h1 thanks for reading?
-        p Taking advantages of t, consectetur adipiscing elit. Cras nunc tortor, aliquam at erosit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros 
+        h2 thanks for reading?
+        p Whoo, this is a really long post, and this is not all of the project. There are some detailed interaction desicions I didn’t cover in this page but you still can find them in the full doucment. This is only one of the small project when I was worked at Credible. If you are interested in more work, contact me to learn more!  
+
 
     footer
         .footer-nav-wrap.flex-container
-            a(href="#").flex-item.footer-nav-left
+            a(href="/projects/.html").flex-item.footer-nav-left
                 p.footer-nav-arrow < previous
                 p.footer-nav-name photo management app
             .flex-space
-            a(href="#").flex-item.footer-nav-right
+            a(href="/projects/.html").flex-item.footer-nav-right
                 p.footer-nav-arrow next >
                 p.footer-nav-name photo management app
         .footer-copy.flex-container
             p.flex-space Designed and Coded by Yi Nie.
             p Want to see more? Visit 
-                a(href="/v2/index.html", target="_blank") my old portfolio
+                a(href="/index_old.html", target="_blank") my old portfolio
+
+    script.
+        console.log('Hi, I\'m Yi Nie. Welcome to my site!');

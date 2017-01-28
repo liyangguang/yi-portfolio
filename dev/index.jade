@@ -23,55 +23,57 @@ html.no-js(lang='')
         hr.line
         p.sub-text I'm a Product Designer based in Bay Area.
         p.sub-text When I’m not designing, I enjoy 
-            a.intro-link(href="#") painting
-            | , 
-            a.intro-link(href="#") making
+            a.intro-link(href="/projects/illustration.html") illustrating
             |  and 
             a.intro-link(href="#") learning new things
             | .
-        a.resume.link-arrow(href="#") resume
+        a.primary-button(href="#") resume
 
     section.project.project-1#design
         .project-info
             p.project-type.font-gilroy product design
-            h1.title-text.font-gilroy photo management mobile app
+            a.title-text.font-gilroy(href="/projects/photo.html") photo management mobile app
             .project-detail
                 .line
                 p.sub-text Redesign deal profile page of Base CRM mobile app to help sales people keep track of their deals
-                    a.project-button.link-arrow(href="#") read more
+                    br
+                    a.primary-button(href="/projects/photo.html") read more
         .project-img-wrap
             img.project-img(src="/img/photo/cover_photo_app.png")
 
     section.project.project-2
         .project-info
             p.project-type.font-gilroy product design
-            a.title-text.font-gilroy(href="projects/credible_dashboard.html") credible offer dashboard
+            a.title-text.font-gilroy(href="/projects/credible_dashboard.html") credible offer dashboard
             .project-detail
                 .line
                 p.sub-text Redesign deal profile page of Base CRM mobile app to help sales people keep track of their deals
-                    a.project-button.link-arrow(href="projects/credible_dashboard.html") read more
+                    br
+                    a.primary-button(href="/projects/credible_dashboard.html") read more
         .project-img-wrap
-            img.project-img(src="/img/credible/cover.png")
+            img.project-img(src="/img/dashboard/cover.png")
 
     section.project.project-3
         .project-info
             p.project-type.font-gilroy product design
-            h1.title-text.font-gilroy base mobile crm redesign
+            a.title-text.font-gilroy(href="/projects/.html") base mobile crm redesign
             .project-detail
                 .line
                 p.sub-text Redesign deal profile page of Base CRM mobile app to help sales people keep track of their deals
-                    a.project-button.link-arrow(href="#") read more
+                    br
+                    a.primary-button(href="/projects/.html") read more
         .project-img-wrap
             img.project-img(src="/img/base/cover_base_crm.png")
 
     section.project.project-4
         .project-info
             p.project-type.font-gilroy product design
-            h1.title-text.font-gilroy ngo registration process
+            a.title-text.font-gilroy(href="/projects/.html") ngo registration process
             .project-detail
                 .line
                 p.sub-text Redesign deal profile page of Base CRM mobile app to help sales people keep track of their deals
-                    a.project-button.link-arrow(href="#") read more
+                    br
+                    a.primary-button(href="/projects/photo.html") read more
         .project-img-wrap
             img.project-img(src="/img/ngo/cover_ngo_registration.png")
 
@@ -96,13 +98,27 @@ html.no-js(lang='')
         .footer-index.center
             h1 I'm looking for full-time opportunities in Bay Area!
             div
-                a.footer-link(href="https://www.linkedin.com/in/yinie", target="_blank") linkedin
-                a.footer-link(href="https://www.behance.net/yinieux90c0", target="_blank") behance
-                a.footer-link(href="mailto:yinie-ux@gmail.com", target="_blank") email
-        .footer-copy.flex-container
+                a.footer-link.intro-link(href="https://www.linkedin.com/in/yinie", target="_blank") linkedin
+                a.footer-link.intro-link(href="https://www.behance.net/yinieux90c0", target="_blank") behance
+                a.footer-link.intro-link(href="mailto:yinie-ux@gmail.com", target="_blank") email
+        .footer-copy
             p.flex-space Designed and Coded by Yi Nie.
             p Want to see more? Visit 
-                a(href="../v2/index.html", target="_blank") my old portfolio
+                a(href="/index_old.html", target="_blank") my old portfolio
 
     script(src="https://code.jquery.com/jquery-2.2.4.min.js", integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=", crossorigin="anonymous")
-    script(src='js/script.js')
+    script.
+        console.log('Hi, I\'m Yi Nie. Welcome to my site!');
+
+        $(function() {
+            $('a[href*="#"]:not([href="#"])').click(function() {
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                    if (target.length) {
+                        $('html, body').animate({ scrollTop: target.offset().top }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });

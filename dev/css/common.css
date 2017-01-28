@@ -41,7 +41,7 @@ html{
     font-size: 16px;
   }
 }
-*{
+*, *:after, *:before{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -73,6 +73,19 @@ p, li{
 }
 .center{
   text-align: center;
+}
+
+.primary-button{
+  display: inline-block;
+  margin: 8px 0;
+  padding: 4px 0;
+  color: var(--main);
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.primary-button:after{
+  content: '>';
+  padding-left: 5px;
 }
 
 /* ---------------- header ---------------- */
@@ -125,7 +138,7 @@ footer{
   }
 }
 @media screen and (max-width: 480px){
-  header{
+  header, footer{
     padding: 20px 12px;
   }
   .logo{

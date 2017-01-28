@@ -1,14 +1,27 @@
 /* page common */
 @import 'common.css';
+:root{
+  --darkbg: #2D3E5A;
+}
 
 section{
   padding: 80px 100px;
   padding: 80px calc(50vw - 500px);
 }
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1200px){
+  section{
+    padding: 60px 100px;
+  }
+}
+@media screen and (max-width: 800px){
   section{
     padding: 50px 40px;
   }
+}
+
+.primary-button.primary-button-one-line{
+  display: block;
+  text-align: center;
 }
 
 .bg-shading{
@@ -29,22 +42,22 @@ section{
   color: var(--main);
   letter-spacing: .3em;
 }
-h1{
+h2{
   font-size: 1.8em;
   text-transform: capitalize;
   text-align: center;
   font-weight: light;
   margin: .3em;
 }
-h2{
+h3{
   font-weight: normal;
   margin: 1em 0 .3em;
   text-transform: capitalize;
 }
-h2.extra-space{
+h3.extra-space{
   margin-top: 3em;
 }
-h2:before{
+h3:before{
   content: '';
   display: block;
   height: 4px;
@@ -52,38 +65,71 @@ h2:before{
   background: var(--main);
   margin-bottom: .5em;
 }
-h1 + p {
+p, li{
+  font-weight: lighter;
+}
+h2 + p {
   text-align: center;
   margin-bottom: 3em;
 }
 ul{
   margin: 20px;
 }
-.bold-small{
+.bold{
   font-weight: bold;
-  color: #222;
 }
-
 .dark{
   color: #222;
+}
+p.light-blue{
+  color: #20ABE3;
 }
 
 .flex-container{
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.flex-container.flex-top{
+  align-items: flex-start;
+}
+.flex-column{
+  flex-direction: column;
 }
 .flex-item{
-  margin: 20px;
+  padding: 20px;
+}
+.flex-item-icon{
+  min-width: 120px;
+  max-width: 250px;
+}
+.flex-container-more-space .flex-item{
+  padding: 5%;
+}
+.flex-container-less-space .flex-item{
+  padding: 10px;
+}
+.flex-force-even > *{
+  flex-grow: 1;
+}
+.flex-container.flex-streth{
+  align-items: stretch;
 }
 
 .img-with-shadow{
   transform: scale(1.2);
 }
+.img-bleeding{
+  width: 100%;
+  transform: scale(1.1);
+  margin: 5% 0;
+}
 
 /* intro */
 .intro{
   width: 80%;
-  margin: 50px auto;
+  margin: 50px auto 0;
 }
 
 .project-title{
@@ -99,7 +145,11 @@ ul{
   }
 }
 
-.project-cover{
+.project-cover-mobile{
+  width: 100%;
+  transform: scale(1.8) translateY(120px);
+}
+.project-cover-desktop{
   width: 100%;
   transform: scale(1.5) translateY(100px);
 }
@@ -109,7 +159,10 @@ ul{
 }
 
 @media screen and (max-width: 1200px){
-  .project-cover{
+  .project-cover-mobile{
+    transform: scale(1.6) translateY(60px);
+  }
+  .project-cover-desktop{
     transform: scale(1.2) translateY(50px);
   }
   .section-info{
@@ -131,7 +184,7 @@ ul{
   .flex-container-3-icons{
     flex-direction: column;
   }
-  .flex-container-3-icons .flex-item{
+  .flex-container-3-icons > .flex-item{
     max-width: 200px;
   }
 }
@@ -151,6 +204,15 @@ ul{
 .flex-order{
   order: 2;
 }
+.flex-container-4-items > .flex-item{
+  flex-basis: 25%
+}
+.flex-container-3-items > .flex-item{
+  flex-basis: 33%
+}
+.flex-container-2-items > .flex-item{
+  flex-basis: 50%;
+}
 @media screen and (max-width: 800px){
   .flex-container-2-items.flex-container{
     flex-direction: column;
@@ -160,6 +222,47 @@ ul{
   }
   .flex-container-2-items .step-triangle{
     transform: rotate(90deg);
+  }
+}
+
+.tab{
+  opacity: .6;
+  cursor: pointer;
+  text-align: center;
+}
+.tab.active{
+  opacity: 1;
+  position: relative;
+}
+.tab.active:after{
+  content: '';
+  position: absolute;
+  bottom: -21px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  height: 2em;
+  width: 2em;
+  border: 1em solid transparent;
+  border-bottom: 1em solid var(--darkbg);
+}
+.tab-content{
+  align-items: flex-start;
+  background: var(--darkbg);
+  margin: 0 -500px -80px;
+  padding: 2em 500px;
+}
+.tab-content *{
+  color: #fff;
+}
+@media screen and (max-width: 1200px){
+  .tab-content{
+    margin: 0 -500px -60px;
+  }
+}
+@media screen and (max-width: 800px){
+  .tab-content{
+    margin: 0 -500px -40px;
   }
 }
 
@@ -203,4 +306,15 @@ p.quote-title{
   width: 20px;
   border: 10px solid transparent;
   border-left: 10px solid var(--main);
+}
+
+
+.competitor-icon{
+  max-width: 80px;
+}
+.idea-icon{
+  max-width: 150px;
+}
+#ideation .tab-content{
+  font-size: .8em;
 }
