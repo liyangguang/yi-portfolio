@@ -181,6 +181,7 @@ a.title-text{
   display: flex;
   align-items: flex-end;
   overflow: hidden;
+  position: relative;
 }
 
 .prototype-wrap-mobile{
@@ -204,6 +205,31 @@ a.title-text{
   box-shadow: 0 0 3em rgba(0,0,0,.3);
 }
 
+.prototype-info{
+  display: flex;
+  position: absolute;
+  top: 0;bottom: 0;left: 0;right: 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: rgba(0,0,0,0);
+  opacity: 0;
+  transition: .4s background, opacity ease;
+}
+.prototype-info:hover{
+  background: rgba(0,0,0,.8);
+  opacity: 1;
+}
+.prototype-title{
+  color: #fff;
+  text-transform: capitalize;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+.prototype-tool {
+  color: #fff;
+  font-size: .8em;
+}
 /* ---------------- responsive ---------------- */
 @media screen and (max-width: 600px) {
   .project{
