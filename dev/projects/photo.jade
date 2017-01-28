@@ -37,42 +37,42 @@ html.no-js(lang='')
     section
         p.section-type.font-gilroy reframe the problem
         h2 why a mobile photo management app?
-        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quis, malesuada fringilla metus. Aenean viverra felis sed diam interdum, a tincidunt ligula bibendum.
+        p The first brainstorming session of my process is always asking a lot of questions. Asking questions and analyze them can help me better understand the context and figure out next steps.  On the other hand asking a lot “why” questions helps me to better understand users needs and reframe research questions.
         .flex-container.direction.top.even-2
             .flex-item
                 p.bold.dark Questions I asked
                 ul
-                    li Why mobile?
-                    li Why mobile?
+                    li Why mobile? What do users want to achieve? 
+                    li What are the scenarios that users use photo management application on phone? Where and When? 
+                    li How do users manage their photos now? 
+                    li Do they use any similar products? 
+                    li What are their pain points that haven’t been covered by current products?
             .step-triangle
             .flex-item
                 p.bold.dark Research questions
                 ul
-                    li Why mobile?
-                    li Why mobile?
-                    li Why mobile?
+                    li What devices do you have to take and store or photos? 
+                    li What kind of photos do you usually take?
+                    li How do you manag your photos now?
+                    li Do you use any photo management or eidt application? 
+                    li Can you walk me through how you use these application last time?
 
     //- research
     section.bg-shading
         p.section-type.font-gilroy user research
         h2 find the common pain points
-        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quis, malesuada fringilla metus. Aenean viverra felis sed diam interdum, a tincidunt ligula bibendum.
+        p  After conducted 6 user interviews. I wrote different users interview notes on different colored sticky notes and organized them according to different functions of photo organize application. This helps me to better understand what is the main pain point and what are the different needs of different users, so that I can balance and trade off when making decisions.
         .flex-container.direction
             .flex-item
                 img.full-width(src="/img/photo/research.png")
             .flex-item
-                p
-                    | Lorem ipsum dolor sit amet, consectetur 
-                    b adipiscing 
-                    | elit. Cras nunc tortor, aliquam at eros quis, 
-                    b malesuada 
-                    | fringilla metus. Aenean viverra felis sed diam interdum, a tincidunt ligula bibendum.
+                p After doing an affinity diagram of the interview notes, I mapped out the basic functions and found that the most common pain point is that users need an efficient and effective way to organize and search photos but they all have different using context and motivations behind it.
 
     //- competitor
     section#competitor
         p.section-type.font-gilroy competitor analysis
         h2 understand existing products
-        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quis, malesuada fringilla metus. Aenean viverra felis sed diam interdum, a tincidunt ligula bibendum.
+        p I conducted Competitive Analysis to help me understand current market place. What are the issues that these products didn’t covered and identity potential market opportunity. I chose Google Photo, Apple Photo, QuickPics, Slidebox according to online reviews. During the competitor Analysis, I tried these application, listed out their main functions, mapped out their information architecture, took notes of their UI and IxD design.
         .flex-container.tab-4-container
             .flex-item.tab.active(data-tab='1')
                 img.full-width(src="/img/photo/competitor1-icon.png")
@@ -90,42 +90,53 @@ html.no-js(lang='')
             .flex-item
                 p.bold.light-blue Positives:
                 ul
-                    li Auto back-up1
-                    li Image recognition
+                    li Auto Back up
+                    li Image Recognition: users are able to directly search subject in their photos
+                    li Multiple search ways: places people
+                    li Easy sharing: could share via links
                 p.bold.light-blue Negatives:
                 ul
-                    li Information architecture are not clear
+                    li Information Architecture and tab labels are not clear enough for users
+                    li Auto stylized photo and auto classification are not accurate for pro users
+                    li Only one way to view photos.  
             .flex-item
                 img.full-width(src="/img/photo/competitor1-ia.png")
         .tab-content.tab-content-2.flex-container.direction.even-2(style="display:none")
             .flex-item
                 p.bold.light-blue Positives:
                 ul
-                    li Auto back-up2
-                    li Image recognition
+                    li Add geology information to each photo
+                    li Map view is useful for users who like traveling
+                    li Preview bar at the bottom of slideshow mode is easy for user to navigate through different photos
+                    li Categorize photo into selfies screen shots, etc
                 p.bold.light-blue Negatives:
                 ul
-                    li Information architecture are not clear
+                    li Search by time can only search by month 
+                    li Map view can only be accessed through the place tags and users can only view the certain area, they can’t zoom in or zoom out.
             .flex-item
                 img.full-width(src="/img/photo/competitor2-ia.png")
         .tab-content.tab-content-3.flex-container.direction.even-2(style="display:none")
             .flex-item
                 p.bold.light-blue Positives:
                 ul
-                    li Auto back-up3
-                    li Image recognition
+                    li The application provide user enough flexibility to organize photos
+                    li Use tags to organize photos 
+                    li Multiple way to sort photos 
                 p.bold.light-blue Negatives:
                 ul
-                    li Information architecture are not clear
+                    li Renaming all photo names are time consuming
+                    li “Home” and “Tags“ tab will switch to each other when users tabbing it
         .tab-content.tab-content-4.flex-container.direction.even-2(style="display:none")
             .flex-item
                 p.bold.light-blue Positives:
                 ul
-                    li Auto back-up4
-                    li Image recognition
+                    li Convenient and easy way to add photos into albums
+                    li Use gesture to delete photos 
                 p.bold.light-blue Negatives:
                 ul
-                    li Information architecture are not clear
+                    li Only show unsorted photos. Users have to view other photos in albums
+                    li Users can only put these photos into different albums, there is no more actions users can take
+                    li Albums can’t sync with local storage 
             .flex-item
                 img.full-width(src="/img/photo/competitor4-ia.png")
 
@@ -133,19 +144,24 @@ html.no-js(lang='')
     section.bg-shading
         p.section-type.font-gilroy research synthesis
         h2 putting findings together
-        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quis, malesuada fringilla metus. Aenean viverra felis sed diam interdum, a tincidunt ligula bibendum.
+        p After the interview notes  analysis and competitor analysis, I synthesize all the information I had now, which can help me with initial ideation. I listed out the research insights, generated some design guidelines.
         .flex-container.direction.top.even-2
             .flex-item
                 p.bold.dark Research insights
                 ul
-                    li Why mobile?
-                    li Why mobile?
+                    li Different users have different habit of viewing and finding their photos like by trip and by events
+                    li Most users would like to do complex edition of the photos using third applications. They may do basic editing like rotate and crop in the photo management tool
+                    li Most users like to share photos with others 
+                    li Sync and back up of photos are important. Many users have more than one devices 
+                    li How to organize photos efficiently is not well designed by most of the application but it is important for users   
             .step-triangle
             .flex-item
                 p.bold.dark Design guidelines
                 ul
-                    li Why mobile?
-                    li Why mobile?
+                    li Provide different view mode according to different users’ habit like map view or timeline view
+                    li Provide very basic edit tool instead of complex editing options 
+                    li Provide convenient and easy way to share
+                    li Provide auto sync and back up between multiple devices
 
     //- ideation
     section.bg-arrow#ideation
@@ -165,111 +181,112 @@ html.no-js(lang='')
         .tab-content.tab-content-1.flex-container
             .flex-item
                 img.full-width(src="/img/photo/idea1-1.png")
-                p.bold.light-blue Timeline View1
+                p.bold.light-blue Timeline View
                 p
                     span.bold Pros: 
-                    span Photos are blabla blabla blabla blabla
+                    span Photos are organized by events so that users can find view and share with friends easier
+
                 p
                     span.bold Cons: 
-                    span Photos are blabla blabla blabla blabla
+                    span Can’t view every photo with one glance
             .flex-item
                 img.full-width(src="/img/photo/idea1-2.png")
-                p.bold.light-blue Timeline View
+                p.bold.light-blue Device
                 p
                     span.bold Pros: 
-                    span Photos are blabla blabla blabla blabla
+                    span It’s easier for users who have multiple devices to organize their photos
                 p
                     span.bold Cons: 
-                    span Photos are blabla blabla blabla blabla
+                    span Not useful for user who owns one device
             .flex-item
                 img.full-width(src="/img/photo/idea1-3.png")
-                p.bold.light-blue Timeline View
+                p.bold.light-blue One Photo One Line
                 p
                     span.bold Pros: 
-                    span Photos are blabla blabla blabla blabla
+                    span Users can view their photos without tapping on pics, integrate gesture for quick interaction
                 p
                     span.bold Cons: 
-                    span Photos are blabla blabla blabla blabla
+                    span Can only view a few photos at one time
             .flex-item
                 img.full-width(src="/img/photo/idea1-4.png")
-                p.bold.light-blue Timeline View
+                p.bold.light-blue Map View
                 p
                     span.bold Pros: 
-                    span Photos are blabla blabla blabla blabla
+                    span Photos are organized in map view providing better experience for users who like traveling
                 p
                     span.bold Cons: 
-                    span Photos are blabla blabla blabla blabla
+                    span Can’t view every photo with one glance
             .flex-item
                 img.full-width(src="/img/photo/idea1-5.png")
-                p.bold.light-blue Timeline View
+                p.bold.light-blue Time Order
                 p
                     span.bold Pros: 
-                    span Photos are blabla blabla blabla blabla
+                    span Users are familiar with the UI pattern. they can find photos via time 
                 p
                     span.bold Cons: 
-                    span Photos are blabla blabla blabla blabla
+                    span Hard to find photos for user who took a lot photos
         .tab-content.tab-content-2.flex-container(style="display:none")
             .flex-item
                 img.full-width(src="/img/photo/idea2-1.png")
-                p.bold.light-blue Timeline View2
+                p.bold.light-blue Image Search
                 p
                     span.bold Pros: 
-                    span Photos are blabla blabla blabla blabla
+                    span  Users can find subject easily by typing the word
                 p
                     span.bold Cons: 
-                    span Photos are blabla blabla blabla blabla
+                    span Require accurate image recognition technology 
             .flex-item
                 img.full-width(src="/img/photo/idea2-2.png")
                 p.bold.light-blue Timeline View
                 p
                     span.bold Pros: 
-                    span Photos are blabla blabla blabla blabla
+                    span Search result is displayed in different categories, users can choose from the results
                 p
                     span.bold Cons: 
-                    span Photos are blabla blabla blabla blabla
+                    span Users need to find the exact photo by themselves within each category 
             .flex-item
                 img.full-width(src="/img/photo/idea2-3.png")
-                p.bold.light-blue Timeline View
+                p.bold.light-blue Specify Search Requirements
                 p
                     span.bold Pros: 
-                    span Photos are blabla blabla blabla blabla
+                    span Users input type and time before search via keywords to get more accurate result
                 p
                     span.bold Cons: 
-                    span Photos are blabla blabla blabla blabla
+                    span Users need to input more information 
         .tab-content.tab-content-3.flex-container(style="display:none")
             .flex-item
                 img.full-width(src="/img/photo/idea3-1.png")
-                p.bold.light-blue Timeline View3
+                p.bold.light-blue Photo Batch
                 p
                     span.bold Pros: 
-                    span Photos are blabla blabla blabla blabla
+                    span Put similar photos together and users can select one or two from several photos
                 p
                     span.bold Cons: 
-                    span Photos are blabla blabla blabla blabla
+                    span Require image recognition technology 
             .flex-item
                 img.full-width(src="/img/photo/idea3-2.png")
-                p.bold.light-blue Timeline View
+                p.bold.light-blue Swipe to Organize 
                 p
                     span.bold Pros: 
-                    span Photos are blabla blabla blabla blabla
+                    span Users can swipe right to delete the photo and swipe left to add photo to an existing albums. Provide efficient interaction 
                 p
                     span.bold Cons: 
-                    span Photos are blabla blabla blabla blabla
+                    span Users can only control one photo each time
             .flex-item
                 img.full-width(src="/img/photo/idea3-3.png")
-                p.bold.light-blue Timeline View
+                p.bold.light-blue Select Mode
                 p
                     span.bold Pros: 
-                    span Photos are blabla blabla blabla blabla
+                    span Users can select several photos tighter and add them to albums or delete. Users can control multiple photos at one time
                 p
                     span.bold Cons: 
-                    span Photos are blabla blabla blabla blabla
+                    span Sometimes user still need to view the detail of photos via slideshow mode 
 
     //- information architecture
     section.bg-shading
         p.section-type.font-gilroy information architecture
         h2 clear hierarchy of information
-        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quis, malesuada fringilla metus. Aenean viverra felis sed diam interdum, a tincidunt ligula bibendum.
+        p With these ideas in mind, then I started to consider how these ideas can fit into the system. I created three different information architecture  and sketched out key screens.  In this way, I’m able to see how the ideas I came up can fit into different IA and what are the pros and cons of different system. Then I made paper prototype and did usability test.
         img.full-width(src="/img/photo/ia.png")
 
     //- visual and interaction
@@ -284,14 +301,14 @@ html.no-js(lang='')
                 p.bold.dark
                     span.number 1
                     | Different view modes to meet different users' needs
-                p em ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quipsum dolor sit amet, consectetur adipiscing elit. Cras nunc torto
+                p The application can provide five different view for different user needs. The default comfortable view, traditional grid view, map view for travelers and event view for users who took photos during event.
 
         .flex-container.direction
             .flex-item.flex-order
                 p.bold.dark
                     span.number 2
                     | Photo organization on your swipe
-                p em ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quipsum dolor sit amet, consectetur adipiscing elit. Cras nunc torto
+                p Use swipe and long press to delete and select photo so that users don’t need to enter the slideshow mode. Users also have the flexibility to customize their own gesture preference to boost their own flow.
             .flex-item
                 img.full-width(src="/img/photo/design2.png")
         .flex-container.direction
@@ -299,7 +316,7 @@ html.no-js(lang='')
                 p.bold.dark
                     span.number 3
                     | Multiple photos selecting and organizing
-                p em ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quipsum dolor sit amet, consectetur adipiscing elit. Cras nunc torto
+                p Grid View is efficient to organize several photo together. In select mode, users can select multiple photos, share, download, and delete at one time. Existing albums will display at the bottom of the page so that users can add these photos into albums at one time.
             .flex-item
                 img.full-width(src="/img/photo/design3.png")
         .flex-container.direction
@@ -307,7 +324,7 @@ html.no-js(lang='')
                 p.bold.dark
                     span.number 4
                     | Batching similar photos
-                p em ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quipsum dolor sit amet, consectetur adipiscing elit. Cras nunc torto
+                p From user research, some users like to take several picture at one time and select one or two from them. The “batch” feature can help them do it efficiently. The similar photos will be combined and users can select one or two then tapping “Done”. The selected picture will be saved and other picture will be deleted.
             .flex-item
                 img.full-width(src="/img/photo/design4.png")
         .flex-container.direction
@@ -315,7 +332,7 @@ html.no-js(lang='')
                 p.bold.dark
                     span.number 5
                     | Photos tab and settings tab
-                p em ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quipsum dolor sit amet, consectetur adipiscing elit. Cras nunc torto
+                p In the photos tab, users can view all the photos and albums. They can also change view mode and select multiple photo with same interaction. In the setting page, user can set up whether they want to use cellular data to back up photos. Considering some photos are taken by DSLR and file size is large, users can set the image quality to view on mobile, which can influence the usage of cellular data and loading speed. Users can also set their own gesture preferences.
             .flex-item
                 img.full-width(src="/img/photo/design5.png")
 
@@ -323,14 +340,14 @@ html.no-js(lang='')
     section.bg-shading
         p.section-type.font-gilroy prototype
         h2 click through prototype
-        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros quis, malesuada fringilla metus. Aenean viverra felis sed diam interdum, a tincidunt ligula bibendum.
+        p Try the clickable prototype.
         a.primary-button.primary-button-one-line(href="https://marvelapp.com/e22jc2", target="_blank", style="display: block; text-align: center;") prototype link
 
     //- the end
     section
         p.section-type.font-gilroy the end
         h2 thanks for reading?
-        p Taking advantages of t, consectetur adipiscing elit. Cras nunc tortor, aliquam at erosit amet, consectetur adipiscing elit. Cras nunc tortor, aliquam at eros 
+        p Glad you made it! This is really a long post but there are still some details I didn’t show here such as three information architecture variations and usability test brief. If you are interested, check the full document here. 
         a.primary-button.primary-button-one-line(href="/files/photo.pdf", target="_blank", style="display: block; text-align: center;") view document
 
     footer

@@ -117,6 +117,7 @@ footer{
 .footer-copy{
   display: flex;
 }
+
 .footer-copy p{
   margin: 8px 0;
 }
