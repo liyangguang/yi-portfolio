@@ -119,10 +119,7 @@ h2 + p {
 }
 
 /*cover img*/
-.project-cover-mobile{
-  transform: scale(1.8) translateY(120px);
-}
-.project-cover-desktop{
+.project-cover{
   transform: scale(1.5) translateY(100px);
 }
 .section-info{
@@ -130,10 +127,7 @@ h2 + p {
   font-size: .9em;
 }
 @media screen and (max-width: 1200px){
-  .project-cover-mobile{
-    transform: scale(1.6) translateY(60px);
-  }
-  .project-cover-desktop{
+  .project-cover{
     transform: scale(1.2) translateY(50px);
   }
   .section-info{

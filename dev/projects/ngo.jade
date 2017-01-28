@@ -1,0 +1,54 @@
+doctype html
+html.no-js(lang='')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    title NGO Registration Process - Yi Nie - UX designer, Prototyper
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='/css/project.css')
+  body
+    header
+        a(href="/index.html")
+            img.logo(src='/img/logo.png')
+        .flex-space
+        nav
+            a.nav-item.font-gilroy.about(href="/index.html") home
+            a.nav-item.font-gilroy.design(href="/index.html#design") design
+            a.nav-item.font-gilroy.prototype(href="/index.html#prototype") prototype
+            
+    //- intro
+    section.intro.center
+        h1.font-gilroy NGO Registration Process
+        p.project-subtitle 
+        img.project-cover.full-width(src="/img/ngo/cover_ngo_registration.png")
+
+    //- info
+    section.bg-shading.section-info
+        .flex-container.direction.top.even-2
+            .flex-item
+                p.font-gilroy.dark overview
+                p 
+            .flex-item
+                p.font-gilroy.dark my role
+                p 
+
+    section
+        p.section-type.font-gilroy coming soon
+
+    footer
+        .footer-nav-wrap.flex-container
+            a(href="/projects/base.html").flex-item.footer-nav-left
+                p.footer-nav-arrow < previous
+                p.footer-nav-name base mobile crm redesign
+            .flex-space
+            a(href="/projects/photo.html").flex-item.footer-nav-right
+                p.footer-nav-arrow next >
+                p.footer-nav-name photo management mobile app
+        .footer-copy.flex-container
+            p.flex-space Designed and Coded by Yi Nie.
+            p Want to see more? Visit 
+                a(href="/index_old.html", target="_blank") my old portfolio
+
+    script.
+        console.log('Hi, I\'m Yi Nie. Welcome to my site!');

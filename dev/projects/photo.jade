@@ -21,7 +21,7 @@ html.no-js(lang='')
     section.intro.center
         h1.font-gilroy photo management mobile app
         p.project-subtitle It always takes me several hours to organize my photos
-        img.project-cover-mobile.full-width(src="/img/photo/header.png")
+        img.project-cover.project-cover-bleeding.full-width(src="/img/photo/header.png")
 
     //- info
     section.bg-shading.section-info
@@ -126,6 +126,8 @@ html.no-js(lang='')
                 ul
                     li Renaming all photo names are time consuming
                     li “Home” and “Tags“ tab will switch to each other when users tabbing it
+            .flex-item
+                img.full-width(src="/img/photo/competitor2-ia.png")
         .tab-content.tab-content-4.flex-container.direction.even-2(style="display:none")
             .flex-item
                 p.bold.light-blue Positives:
@@ -338,43 +340,53 @@ html.no-js(lang='')
 
     //- prototype
     section.bg-shading
-        p.section-type.font-gilroy prototype
-        h2 click through prototype
-        p Try the clickable prototype.
-        a.primary-button.primary-button-one-line(href="https://marvelapp.com/e22jc2", target="_blank", style="display: block; text-align: center;") prototype link
+        p.section-type.font-gilroy extra
+        h2 want to learn more?
+        p Try the prototype or view the full documentation to learn more about this prototype.
+        .flex-container
+            a.primary-button.primary-button-one-line(href="https://marvelapp.com/e22jc2", target="_blank") prototype link
+            a.primary-button.primary-button-one-line(href="/files/photo.pdf", target="_blank") view document
 
     //- the end
     section
         p.section-type.font-gilroy the end
-        h2 thanks for reading?
+        h2 thanks for reading
         p Glad you made it! This is really a long post but there are still some details I didn’t show here such as three information architecture variations and usability test brief. If you are interested, check the full document here. 
-        a.primary-button.primary-button-one-line(href="/files/photo.pdf", target="_blank", style="display: block; text-align: center;") view document
 
     footer
         .footer-nav-wrap.flex-container
-            a(href="/projects/.html").flex-item.footer-nav-left
+            a(href="/projects/ngo.html").flex-item.footer-nav-left
                 p.footer-nav-arrow < previous
-                p.footer-nav-name photo management app
+                p.footer-nav-name ngo registration process
             .flex-space
-            a(href="/projects/.html").flex-item.footer-nav-right
+            a(href="/projects/credible_dashboard.html").flex-item.footer-nav-right
                 p.footer-nav-arrow next >
-                p.footer-nav-name photo management app
+                p.footer-nav-name credible offer dashboard
         .footer-copy.flex-container
             p.flex-space Designed and Coded by Yi Nie.
             p Want to see more? Visit 
                 a(href="/index_old.html", target="_blank") my old portfolio
 
     style.
+        .project-cover-bleeding{
+          transform: scale(1.8) translateY(120px);
+        }
+        @media screen and (max-width: 1200px){
+          .project-cover-bleeding{
+            transform: scale(1.6) translateY(60px);
+          }
+        }
+
         #ideation .tab-content{
           font-size: .8em;
         }
         .tab-content-1{
             flex-wrap:wrap;
         }
-        .tab-content .flex-item{
+        #ideation .tab-content .flex-item{
             max-width: 200px;
         }
-        .tab-content-1 .flex-item{
+        #ideation .tab-content-1 .flex-item{
             max-width: 190px;
         }
 
