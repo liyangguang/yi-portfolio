@@ -19,18 +19,18 @@ html.no-js(lang='')
             
     //- intro
     section.intro.center
-        h1.project-title.font-gilroy credible offer dashboard redesign
+        h1.font-gilroy credible offer dashboard redesign
         p.project-subtitle Which student loan refinancing option should I choose?
-        img.project-cover-desktop(src="/img/dashboard/header.png")
+        img.project-cover-desktop.full-width(src="/img/dashboard/header.png")
 
     //- info
     section.bg-shading.section-info
-        .flex-container.flex-container-2-items.flex-top
+        .flex-container.direction.top.even-2
             .flex-item
-                p.font-gilroy.info-title overview
+                p.font-gilroy.dark overview
                 p Credible is a marketplace for student loan refianacing. We partner with multiple lenders so that users can get their personalized rates without filling all thest tedious application form. I redesign Credible’s dashboard to help users make better decisions when they are choosing their loan options.
             .flex-item
-                p.font-gilroy.info-title my role
+                p.font-gilroy.dark my role
                 p Independently conducted user research and usability test, created low-fidelity wireframes and high-fidelity visual design.
 
     //- problem
@@ -59,7 +59,7 @@ html.no-js(lang='')
     section.bg-arrow
         p.section-type.font-gilroy Solutions
         h2 Design Goals and Key Consideration
-        .flex-container.flex-container-3-icons.center
+        .flex-container.three-points.center.top
             .flex-item
                 img.full-width(src="/img/dashboard/solution-icon1.png")
                 p.dark Include current loan information
@@ -81,7 +81,7 @@ html.no-js(lang='')
 
 
     //- design goal 1 - img
-    section.flex-container.bg-shading.flex-container-3-steps
+    section.flex-container.iterations.bg-shading
         .flex-item
             p.iteration-title
                 span.number.no-space 1
@@ -103,7 +103,7 @@ html.no-js(lang='')
     //- design goal 2
     section
         h3 Improve the usability of filters
-        .flex-container.flex-container-2-items
+        .flex-container.direction
             .flex-item.flex-order
                 p.bold.dark
                     span.number 1
@@ -111,7 +111,7 @@ html.no-js(lang='')
                 p The “term” and “monthly payment” filter works well because the slider gives users a clear visual clue of what it is and how to use it immediately. But it takes a while for users to adjust the filter to a specific range, especially for “monthly payment”. So I decide to keep using the slider pattern but also give users the ability to input they desire number directly.
             .flex-item
                 img.img-with-shadow.full-width(src="/img/dashboard/design2-filter1.png")
-        .flex-container.flex-container-2-items
+        .flex-container.direction
             .flex-item
                 p.bold.dark
                     span.number 2
@@ -123,7 +123,7 @@ html.no-js(lang='')
     //- design goal 3
     section
         h3 archive and compare offers
-        .flex-container.flex-container-2-items
+        .flex-container.direction
             .flex-item.flex-order
                 p.bold.dark
                     span.number 1
@@ -131,7 +131,7 @@ html.no-js(lang='')
                 p As mentioned in the research, after users filter the offers with their criteria, they can mark the offers as “not interested” then the offer will be put into the archived category. If users have change their mind and they can still outback the offers from the archived offers.
             .flex-item
                 img.img-with-shadow.full-width(src="/img/dashboard/design3-archive.png")
-        .flex-container.flex-container-2-items
+        .flex-container.direction
             .flex-item
                 p.bold.dark
                     span.number 2
@@ -145,14 +145,14 @@ html.no-js(lang='')
         p.section-type.font-gilroy usability testing
         h2 listen to user's voice and keep iterating
 
-        h3.extra-space test overview
+        h3 test overview
         ul
             li The participant found the overall page structure clear and easy to navigate. 
             li The participant still have to think for a while about how to use “discount filter”. He played with it for serval times to understand how the filter works.  First he didn’t know which column this filter was related with before he apply the filter. Second, he doesn’t really understand the what is “loyalty” mean without further explanation.
             li The participant likes the idea that he can archive the ideas he doesn’t like but he thought the “not interested” button call too much attention. 
 
-        h3.extra-space iteration
-        .flex-container.flex-container-2-items
+        h3 iteration
+        .flex-container.direction
             .flex-item
                 img.img-with-shadow.full-width(src="/img/dashboard/test-iteration1.png")
             .step-triangle
@@ -166,10 +166,10 @@ html.no-js(lang='')
         h2 refresh the look
         p I took advantage of current Credible branding elements and illustrate an alternate visual design which feels clean, modern, approachable and trustworthy. 
 
-        h3.extra-space new dashboard
+        h3 new dashboard
         img.full-width(src="/img/dashboard/final-full.png", style="margin-top: 1em;")
 
-        h3.extra-space style guide
+        h3 style guide
         p here's the style guide
 
 
@@ -195,6 +195,47 @@ html.no-js(lang='')
             p.flex-space Designed and Coded by Yi Nie.
             p Want to see more? Visit 
                 a(href="/index_old.html", target="_blank") my old portfolio
+
+    style.
+        .quote-wrap{
+          margin: 2em 0;
+        }
+        .quote-wrap > p{
+          padding-left: 1.5em;
+        }
+        p.quote-title{
+          padding-left: .8em;
+          font-size: 1.2em;
+          border-left: 4px solid #005EFE;
+          font-weight: lighter;
+          margin: .3em 0;
+        }
+
+        .number.no-space{
+            margin: 0;
+        }
+
+        .three-points .flex-item{
+            max-width: 300px;
+        }
+        @media screen and (max-width: 600px){
+          .flex-container.three-points{
+            flex-direction: column;
+            align-items: center;
+          }
+        }
+        
+        .iterations .flex-item{
+            max-width: 600px;
+        }
+        @media screen and (max-width: 1100px){
+          .iterations{
+            flex-direction: column;
+          }
+          .iterations .step-triangle{
+            transform: rotate(90deg);
+          }
+        }
 
     script.
         console.log('Hi, I\'m Yi Nie. Welcome to my site!');
