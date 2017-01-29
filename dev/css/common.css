@@ -58,6 +58,10 @@ a:hover{
 p, li{
   color: #999;
 }
+video{
+  max-width: 100%;
+}
+
 :focus{
   outline: none;
 }
