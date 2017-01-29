@@ -99,7 +99,9 @@ header{
   background: #fff;
   z-index: 10;
 }
-
+.logo{
+  width: 50px;
+}
 .nav-item{
   display: inline-block;
   font-size: .8em;
