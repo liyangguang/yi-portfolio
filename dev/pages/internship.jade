@@ -6,11 +6,11 @@ html.no-js(lang='')
     title Credible Internship - Yi Nie - UX designer, Prototyper
     meta(name='description', content='')
     meta(name='viewport', content='width=device-width, initial-scale=1')
-    link(rel='stylesheet', href='/css/project.css')
+    link(rel='stylesheet', href='/styles/project.css')
   body
     header
         a(href="/index.html")
-            img.logo(src='/img/logo.png')
+            img.logo(src='/assets/logo.png')
         .flex-space
         nav
             a.nav-item.font-gilroy.about(href="/index.html") home
@@ -21,7 +21,7 @@ html.no-js(lang='')
     section.intro.center
         h1.font-gilroy credible labs inc. internship
         //- p.project-subtitle 
-        img.project-cover.full-width(src="/img/internship/header.png")
+        img.project-cover.full-width(src="/assets/internship/header.png")
 
     //- info
     section.bg-shading.section-info
@@ -38,14 +38,14 @@ html.no-js(lang='')
         p.section-type.font-gilroy the challenge
         h2 efficiency is not the real problem
         p This is a redesigning of the web version of sign up form. Credible's current form follows most of the best practice of web form design (single column design, breaking down into 3 steps, labels on the top left, etc.) The current form is already pretty efficient, so in order to have more users finish the form, maybe efficiency is not the real problem.
-        img.full-width(src="/img/internship/challenge.png")
+        img.full-width(src="/assets/internship/challenge.png")
 
     //- research
     section.bg-shading
         p.section-type.font-gilroy understand users
         h2 people are afraid of forms
         p I took a step back and start to ask myself very basic questions like: Why people are not willing to finish the form? - Because I don't like forms. Why don't people like forms? - Because it reminds of tons of tedious paperwork. Below are the search results of word "form" on Google image. These forms are always very long, difficult to understand, requires you a lot of sensitive data. But most of our current web forms still use this kind of format (a rectangular field with labels on it), which will give users these bad feelings subconsciously.
-        img.full-width(src="/img/internship/understand-user.png")
+        img.full-width(src="/assets/internship/understand-user.png")
 
     //- solutions
     section.bg-arrow
@@ -56,12 +56,12 @@ html.no-js(lang='')
         h3 nature language input form
         p Natural language input form converts traditional web form into several uncompleted sentences. A whole sentence provide a humanity feel, comparing with rectangle input fields and labels.
         video(autoplay, loop, preload="auto")
-            source(src="/img/internship/NLF-video.mp4")
+            source(src="/assets/internship/NLF-video.mp4")
 
         h3 conversational UI
         p Using conversational UI creates a better emotional connection with users, which makes users feel like we are here to help them. On the other hand, navigating through different fields is painful on mobile and conversational form can solve this problem too. Though, it may not be an  efficient way to input data.
         video(autoplay, loop, preload="auto")
-            source(src="/img/internship/CF-video.mp4")
+            source(src="/assets/internship/CF-video.mp4")
 
     //- next
     section.bg-shading
@@ -85,30 +85,30 @@ html.no-js(lang='')
         .flex-container
             .flex-item
                 video(autoplay, loop, preload="auto")
-                    source(src="/img/internship/mobile-nav-before-video.mp4")
+                    source(src="/assets/internship/mobile-nav-before-video.mp4")
             .flex-item
                 video(autoplay, loop, preload="auto")
-                    source(src="/img/internship/mobile-nav-after-video.mp4")
+                    source(src="/assets/internship/mobile-nav-after-video.mp4")
 
         h3 Personal Loan Email Template 
         p The old Credible personal loan email template is pretty outdated. The visual style and layout is not consistent with other product's email template. I redesigned and developed Credible's personal email template to make sure it speaking to Credible's visual language and provide valuable information to users.
         br
         p.bold Before
-        img.full-width.center(src="/img/internship/email-before.png", style="max-width: 200px; display: block; margin: 0 auto;")
+        img.full-width.center(src="/assets/internship/email-before.png", style="max-width: 200px; display: block; margin: 0 auto;")
         p.bold After
         .flex-container.top
             .flex-item
-                img.full-width(src="/img/internship/email-after1.png")
+                img.full-width(src="/assets/internship/email-after1.png")
             .flex-item
-                img.full-width(src="/img/internship/email-after2.png")
+                img.full-width(src="/assets/internship/email-after2.png")
             .flex-item
-                img.full-width(src="/img/internship/email-after3.png")
+                img.full-width(src="/assets/internship/email-after3.png")
             .flex-item
-                img.full-width(src="/img/internship/email-after4.png")
+                img.full-width(src="/assets/internship/email-after4.png")
 
         h3 credible home page redesign
         p I redesigned the credible home page to bring a fresh look and a better visual design.
-        img.full-width(src="/img/internship/homepage-redesign@1x.png", style="max-width: 500px; display: block; margin: 1em auto; box-shadow: 0 0 10px rgba(0,0,0,.5);")
+        img.full-width(src="/assets/internship/homepage-redesign@1x.png", style="max-width: 500px; display: block; margin: 1em auto; box-shadow: 0 0 10px rgba(0,0,0,.5);")
 
         h3 Improve designer - engineer Collaboration Process
         p Last but not least, when I joined Credible, the design team used PhotoShop to deliver designs to engineers for inspection. But none of the designers are using PhotoShop as their primary design tool. We all have to convert sketch file to AI files and then save as PSD files. And sometimes PSD files could be very big and often crash. I introduced a spec tool - Zeplin to both design and engineer team and it improves the collaboration very well. Both design and engineer team are very happy to use it.

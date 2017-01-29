@@ -6,11 +6,11 @@ html.no-js(lang='')
     title Photo Management App Design - Yi Nie - UX designer, Prototyper
     meta(name='description', content='')
     meta(name='viewport', content='width=device-width, initial-scale=1')
-    link(rel='stylesheet', href='/css/project.css')
+    link(rel='stylesheet', href='/styles/project.css')
   body
     header
         a(href="/index.html")
-            img.logo(src='/img/logo.png')
+            img.logo(src='/assets/logo.png')
         .flex-space
         nav
             a.nav-item.font-gilroy.about(href="/index.html") home
@@ -21,7 +21,7 @@ html.no-js(lang='')
     section.intro.center
         h1.font-gilroy photo management mobile app
         p.project-subtitle It always takes me several hours to organize my photos
-        img.project-cover.full-width(src="/img/photo/header.png")
+        img.project-cover.full-width(src="/assets/photo/header.png")
 
     //- info
     section.bg-shading.section-info
@@ -64,7 +64,7 @@ html.no-js(lang='')
         p  After conducted 6 user interviews. I took notes on different colored sticky notes for each interview and organized them according to different functions of photo organizing application.
         .flex-container.direction
             .flex-item
-                img.full-width(src="/img/photo/research.png")
+                img.full-width(src="/assets/photo/research.png")
             .flex-item
                 p Affinity diagram of the interview notes helps me to better understand what is the main pain point and what are the different needs of different users. I found that the most common pain point is users need an efficient and effective way to organize and search photos but they all have different using context and motivations behind it.
 
@@ -75,16 +75,16 @@ html.no-js(lang='')
         p Competitive analysis helps me understand the current marketplace and what are the issues that these products didn't cover, then identify potential market opportunity. I chose Google Photo, Apple Photo, QuickPics, Slidebox according to online reviews. During the competitor Analysis, I tried these applications, listed out their main functions, mapped out their information architecture, took notes of their UI and IxD design.
         .flex-container.tab-4-container
             .flex-item.tab.active(data-tab='1')
-                img.full-width(src="/img/photo/competitor1-icon.png")
+                img.full-width(src="/assets/photo/competitor1-icon.png")
                 p.dark Google Photos
             .flex-item.tab(data-tab='2')
-                img.full-width(src="/img/photo/competitor2-icon.png")
+                img.full-width(src="/assets/photo/competitor2-icon.png")
                 p.dark iOS Photos
             .flex-item.tab(data-tab='3')
-                img.full-width(src="/img/photo/competitor3-icon.png")
+                img.full-width(src="/assets/photo/competitor3-icon.png")
                 p.dark Slidebox
             .flex-item.tab(data-tab='4')
-                img.full-width(src="/img/photo/competitor4-icon.png")
+                img.full-width(src="/assets/photo/competitor4-icon.png")
                 p.dark Quickpics
         .tab-content.tab-content-1.flex-container.direction.even-2
             .flex-item
@@ -100,7 +100,7 @@ html.no-js(lang='')
                     li Auto stylized photo and auto classification are not accurate for pro users
                     li Only one way to view photos
             .flex-item
-                img.full-width(src="/img/photo/competitor1-ia.png")
+                img.full-width(src="/assets/photo/competitor1-ia.png")
         .tab-content.tab-content-2.flex-container.direction.even-2(style="display:none")
             .flex-item
                 p.bold.light-blue Positives:
@@ -114,7 +114,7 @@ html.no-js(lang='')
                     li Search by time can only search by month 
                     li Map view can only be accessed through the place tags and users can only view the certain area, they can't zoom in or zoom out.
             .flex-item
-                img.full-width(src="/img/photo/competitor2-ia.png")
+                img.full-width(src="/assets/photo/competitor2-ia.png")
         .tab-content.tab-content-3.flex-container.direction.even-2(style="display:none")
             .flex-item
                 p.bold.light-blue Positives:
@@ -127,7 +127,7 @@ html.no-js(lang='')
                     li Renaming all photo names are time consuming
                     li "Home" and "Tags" tab will switch to each other when users tabbing it
             .flex-item
-                img.full-width(src="/img/photo/competitor3-ia.png")
+                img.full-width(src="/assets/photo/competitor3-ia.png")
         .tab-content.tab-content-4.flex-container.direction.even-2(style="display:none")
             .flex-item
                 p.bold.light-blue Positives:
@@ -140,7 +140,7 @@ html.no-js(lang='')
                     li Users can only put these photos into different albums, there is no more actions users can take
                     li Albums can't sync with local storage 
             .flex-item
-                img.full-width(src="/img/photo/competitor4-ia.png")
+                img.full-width(src="/assets/photo/competitor4-ia.png")
 
     //- synthesis
     section.bg-shading
@@ -171,17 +171,17 @@ html.no-js(lang='')
         h2 design goals and key consideration
         .flex-container.tab-3-container
             .flex-item.tab.active(data-tab='1')
-                img.full-width(src="/img/photo/idea1-icon.png")
+                img.full-width(src="/assets/photo/idea1-icon.png")
                 p.dark Organizing photos efficiently
             .flex-item.tab(data-tab='2')
-                img.full-width(src="/img/photo/idea2-icon.png")
+                img.full-width(src="/assets/photo/idea2-icon.png")
                 p.dark Viewing photos in various ways
             .flex-item.tab(data-tab='3')
-                img.full-width(src="/img/photo/idea3-icon.png")
+                img.full-width(src="/assets/photo/idea3-icon.png")
                 p.dark Searching photos easily
         .tab-content.tab-content-1.flex-container
             .flex-item
-                img.full-width(src="/img/photo/idea1-1.png")
+                img.full-width(src="/assets/photo/idea1-1.png")
                 p.bold.light-blue Timeline View
                 p.small
                     span.bold Pros: 
@@ -191,7 +191,7 @@ html.no-js(lang='')
                     span.bold Cons: 
                     span Can't view every photo with one glance
             .flex-item
-                img.full-width(src="/img/photo/idea1-2.png")
+                img.full-width(src="/assets/photo/idea1-2.png")
                 p.bold.light-blue Device categories
                 p.small
                     span.bold Pros: 
@@ -200,7 +200,7 @@ html.no-js(lang='')
                     span.bold Cons: 
                     span Not useful for user who owns one device
             .flex-item
-                img.full-width(src="/img/photo/idea1-3.png")
+                img.full-width(src="/assets/photo/idea1-3.png")
                 p.bold.light-blue One Photo One Line
                 p.small
                     span.bold Pros: 
@@ -209,7 +209,7 @@ html.no-js(lang='')
                     span.bold Cons: 
                     span Can only view a few photos at one time
             .flex-item
-                img.full-width(src="/img/photo/idea1-4.png")
+                img.full-width(src="/assets/photo/idea1-4.png")
                 p.bold.light-blue Map View
                 p.small
                     span.bold Pros: 
@@ -218,7 +218,7 @@ html.no-js(lang='')
                     span.bold Cons: 
                     span Can't view every photo with one glance
             .flex-item
-                img.full-width(src="/img/photo/idea1-5.png")
+                img.full-width(src="/assets/photo/idea1-5.png")
                 p.bold.light-blue Time Order
                 p.small
                     span.bold Pros: 
@@ -228,7 +228,7 @@ html.no-js(lang='')
                     span Hard to find photos for user who took a lot of photos
         .tab-content.tab-content-2.flex-container(style="display:none")
             .flex-item
-                img.full-width(src="/img/photo/idea2-1.png")
+                img.full-width(src="/assets/photo/idea2-1.png")
                 p.bold.light-blue Image Search
                 p.small
                     span.bold Pros: 
@@ -237,7 +237,7 @@ html.no-js(lang='')
                     span.bold Cons: 
                     span Require accurate image recognition technology 
             .flex-item
-                img.full-width(src="/img/photo/idea2-2.png")
+                img.full-width(src="/assets/photo/idea2-2.png")
                 p.bold.light-blue Timeline View
                 p.small
                     span.bold Pros: 
@@ -246,7 +246,7 @@ html.no-js(lang='')
                     span.bold Cons: 
                     span Users need to find the exact photo by themselves within each category 
             .flex-item
-                img.full-width(src="/img/photo/idea2-3.png")
+                img.full-width(src="/assets/photo/idea2-3.png")
                 p.bold.light-blue Specify Search Requirements
                 p.small
                     span.bold Pros: 
@@ -256,7 +256,7 @@ html.no-js(lang='')
                     span Users need to input more information 
         .tab-content.tab-content-3.flex-container(style="display:none")
             .flex-item
-                img.full-width(src="/img/photo/idea3-1.png")
+                img.full-width(src="/assets/photo/idea3-1.png")
                 p.bold.light-blue Photo Batch
                 p.small
                     span.bold Pros: 
@@ -265,7 +265,7 @@ html.no-js(lang='')
                     span.bold Cons: 
                     span Require image recognition technology 
             .flex-item
-                img.full-width(src="/img/photo/idea3-2.png")
+                img.full-width(src="/assets/photo/idea3-2.png")
                 p.bold.light-blue Swipe to Organize 
                 p.small
                     span.bold Pros: 
@@ -274,7 +274,7 @@ html.no-js(lang='')
                     span.bold Cons: 
                     span Users can only control one photo each time
             .flex-item
-                img.full-width(src="/img/photo/idea3-3.png")
+                img.full-width(src="/assets/photo/idea3-3.png")
                 p.bold.light-blue Select Mode
                 p.small
                     span.bold Pros: 
@@ -288,7 +288,7 @@ html.no-js(lang='')
         p.section-type.font-gilroy information architecture
         h2 clear hierarchy of information
         p With these ideas in mind, I started to consider how these ideas can fit into the system. I created three different information architecture  and sketched out key screens. In this way, I'm able to see how the ideas I came up can fit into different IA and what are the pros and cons of different structures. Then I made paper prototypes and conducted usability tests.
-        img.full-width(src="/img/photo/ia.png")
+        img.full-width(src="/assets/photo/ia.png")
 
     //- visual and interaction
     section
@@ -297,7 +297,7 @@ html.no-js(lang='')
 
         .flex-container.column
             .flex-item
-                img.full-width(src="/img/photo/design1.png")
+                img.full-width(src="/assets/photo/design1.png")
             .flex-item
                 p.bold.dark
                     span.number 1
@@ -311,7 +311,7 @@ html.no-js(lang='')
                     | Photo organization on your swipe
                 p Use swipe and long press to delete and select photo so that users don't need to enter the slideshow mode. Users also have the flexibility to customize their own gesture preference to boost their own flow.
             .flex-item
-                img.full-width(src="/img/photo/design2.png")
+                img.full-width(src="/assets/photo/design2.png")
         .flex-container.direction
             .flex-item
                 p.bold.dark
@@ -319,7 +319,7 @@ html.no-js(lang='')
                     | Multiple photos selecting and organizing
                 p Grid View is efficient when organizing several photos together. In select mode, users can select multiple photos, share, download, and delete at one time. Existing albums will display at the bottom of the page so that users can add these photos into albums at one time.
             .flex-item
-                img.full-width(src="/img/photo/design3.png")
+                img.full-width(src="/assets/photo/design3.png")
         .flex-container.direction
             .flex-item.flex-order
                 p.bold.dark
@@ -327,7 +327,7 @@ html.no-js(lang='')
                     | Batching similar photos
                 p From user research, some users like to take several pictures at one time and select one or two from them. The "batch" feature can help them do it efficiently. The similar photos will be combined and users can select one or two then tap "Done". The selected picture will be saved and other picture will be deleted.
             .flex-item
-                img.full-width(src="/img/photo/design4.png")
+                img.full-width(src="/assets/photo/design4.png")
         .flex-container.direction
             .flex-item
                 p.bold.dark
@@ -335,7 +335,7 @@ html.no-js(lang='')
                     | Photos tab and settings tab
                 p In the photos tab, users can view all the photos and albums. In the settings page, users can set up whether they want to use cellular data to back up photos. Considering some photos are taken by DSLR and file size is large, users can set the image quality to view on mobile, which can influence the usage of cellular data and loading speed. Users can also set their own gesture preferences.
             .flex-item
-                img.full-width(src="/img/photo/design5.png")
+                img.full-width(src="/assets/photo/design5.png")
 
     //- learn more
     section.bg-shading
@@ -344,15 +344,15 @@ html.no-js(lang='')
         p There are still some details I didn't show here. If you are interested, check the full document here or try the prototype.
         .flex-container
             a.primary-button(href="https://marvelapp.com/e22jc2", target="_blank") prototype link
-            a.primary-button(href="/files/photo.pdf", target="_blank") view document
+            a.primary-button(href="/assets/photo/photo.pdf", target="_blank") view document
 
     footer
         .footer-nav-wrap.flex-container
-            a(href="/projects/ngo.html").flex-item.footer-nav-left
+            a(href="/pages/ngo.html").flex-item.footer-nav-left
                 p.footer-nav-arrow < previous
                 p.footer-nav-name NGO registration process
             .flex-space
-            a(href="/projects/credible_dashboard.html").flex-item.footer-nav-right
+            a(href="/pages/credible_dashboard.html").flex-item.footer-nav-right
                 p.footer-nav-arrow next >
                 p.footer-nav-name credible offer dashboard
         .footer-copy.flex-container

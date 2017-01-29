@@ -116,7 +116,7 @@ a.title-text{
 }
 
 .project-1{
-  background-image: url(../img/project-bg-rect.png);
+  background-image: url(../assets/project-bg-rect.png);
   background-repeat: no-repeat;
   background-size: 50vw;
   background-position: 40vw 100px;
@@ -136,7 +136,7 @@ a.title-text{
 }
 
 .project-3{
-  background-image: url(../img/project-bg-circle.png);
+  background-image: url(../assets/project-bg-circle.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 120%;
@@ -146,7 +146,7 @@ a.title-text{
 }
 
 .project-4{
-  background-image: url(../img/project-bg-rect.png);
+  background-image: url(../assets/project-bg-rect.png);
   background-repeat: no-repeat;
   background-size: 50vw;
   background-position: 5vw 100px;
@@ -186,7 +186,7 @@ a.title-text{
 
 .prototype-wrap-mobile{
   flex-basis: 150px;
-  background-image: url(../img/phone_frame.png);
+  background-image: url(../assets/prototypes/phone_frame.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center bottom;
@@ -257,7 +257,7 @@ a.title-text{
   }
 
   .project-1{
-    background-image: url(../img/project-bg-circle.png);
+    background-image: url(../assets/project-bg-circle.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: -20%;
