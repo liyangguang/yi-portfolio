@@ -7,7 +7,6 @@ var sourcemaps = require('gulp-sourcemaps');
 var postcss = require('gulp-postcss');
 var concat = require('gulp-concat');
 var cssimport = require("gulp-cssimport");
-var autoprefixer = require('gulp-autoprefixer');
 
 // jade
 var pug = require('gulp-pug');
@@ -38,10 +37,6 @@ gulp.task('build-css', function() {
       require('postcss-cssnext'),
       require('cssnano')
     ]))
-    // .pipe(autoprefixer({
-    //     browsers: ['> 0%'],
-    //     cascade: false
-    // }))
     // .pipe(concat('style.css'))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('app'));
