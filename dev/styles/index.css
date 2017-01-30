@@ -74,12 +74,10 @@ a.title-text{
 }
 
 /* ---------------- project ---------------- */
-.project{
-  display: flex;
-  align-items: center;
-}
 .project-info, .project-img-wrap{
-  flex: 1 0 50%;
+  display: inline-block;
+  width: 50%;
+  vertical-align: middle;
 }
 
 .project-type{
@@ -99,20 +97,10 @@ a.title-text{
   }
 }
 
-.project .line{
-  margin: 8px 40px 16px 0;
-  width: 100px;
-  height: 4px;
-}
-.project .sub-text{
-  flex: 1;
-  font-size: .9em;
-}
-
 /* ---------------- individual project ---------------- */
 .project-2 .project-info,
 .project-4 .project-info{
-  order: 2;
+  float: right;
 }
 
 .project-1{
@@ -157,6 +145,34 @@ a.title-text{
   top: -50px;
   left: -20%;
 }
+
+@media screen and (max-width: 600px) {
+  .project-info, .project-img-wrap{
+    display: block;
+    width: 100%;
+  }
+  .project .project-info{
+    float: none;
+  }
+  .project .sub-text{
+    font-size: 1em;
+  }
+  .project .project-img{
+    width: 100%;
+    position: static;
+    box-shadow: none;
+  }
+}
+.project .line{
+  margin: 8px 40px 16px 0;
+  width: 100px;
+  height: 4px;
+}
+.project .sub-text{
+  flex: 1;
+  font-size: .9em;
+}
+
 
 /* ---------------- prototype ---------------- */
 .prototype-title-wrap{
@@ -232,20 +248,6 @@ a.title-text{
 }
 /* ---------------- responsive ---------------- */
 @media screen and (max-width: 600px) {
-  .project{
-    flex-direction: column;
-  }
-  .project .project-info{
-    order: 0;
-  }
-  .project .sub-text{
-    font-size: 1em;
-  }
-  .project .project-img{
-    width: 100%;
-    position: static;
-    box-shadow: none;
-  }
   .project-2 .project-img,
   .project-4 .project-img{
     position: static;
