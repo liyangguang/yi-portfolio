@@ -101,7 +101,7 @@ h2 + p {
 .flex-container{
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .flex-container.top{
   align-items: flex-start;
