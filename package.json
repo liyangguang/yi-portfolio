@@ -14,6 +14,7 @@
     "browser-sync": "^2.14.0",
     "cssnano": "^3.7.4",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
     "gulp-babel": "^6.1.2",
     "gulp-concat": "^2.6.0",
     "gulp-cssimport": "^5.0.0",
