@@ -1,0 +1,1 @@
+{"version":3,"sources":["js/scripts.js"],"names":["console","log"],"mappings":";;AAAAA,QAAQC,GAAR,CAAY,gDAAZ","file":"scripts.js","sourcesContent":["console.log('Hi, I\\'m Yi Nie. Welcome to my portfolio site!');"]}

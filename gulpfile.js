@@ -6,10 +6,11 @@ var sourcemaps = require('gulp-sourcemaps');
 // css
 var postcss = require('gulp-postcss');
 var concat = require('gulp-concat');
-var cssimport = require("gulp-cssimport");
-var autoprefixer = require('gulp-autoprefixer');
+var autoprefixer = require('autoprefixer');
+var cssimport = require('postcss-import')
+var cssnext = require('postcss-cssnext')
 
-// jade
+// pug
 var pug = require('gulp-pug');
 
 // js
@@ -20,32 +21,25 @@ var babel = require('gulp-babel');
 var browserSync = require('browser-sync');
 
 gulp.task('build-html', function() {
-  return gulp.src('dev/**/*.jade')
-    .pipe(pug({pretty: false}))
+  return gulp.src(['dev/**/*.pug', '!dev/_*.pug'])
+    .pipe(pug({pretty: true}))
     .pipe(gulp.dest('app'));
 });
 
 gulp.task('build-css', function() {
-  return gulp.src([
-      'dev/**/*.css',
-      '!dev/css/common.css',
-    ])
+  return gulp.src(['dev/css/_base.css', 'dev/**/*.css'])
     .pipe(sourcemaps.init())
-    .pipe(cssimport())
     .pipe(postcss([
-      require('postcss-import'),
-      require('postcss-short'),
-      require('postcss-cssnext'),
-      require('cssnano')
+      cssimport(),
+      cssnext(),
+      autoprefixer({browsers: ['> 5%']})
+      // require('cssnano')
     ]))
-    .pipe(autoprefixer({
-      browsers: ['> 0%'],
-      cascade: false
-    }))
-    // .pipe(concat('style.css'))
+    .pipe(concat('styles.css'))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('app'));
+    .pipe(gulp.dest('app/css'));
 });
+
 
 gulp.task('build-js', function() {
   return gulp.src(['dev/**/*.js'])
@@ -53,8 +47,8 @@ gulp.task('build-js', function() {
     .pipe(babel({
       presets: ['es2015']
     }))
-    .pipe(concat('script.js'))
-    .pipe(iife({useStrict: true}))
+    .pipe(concat('scripts.js'))
+    // .pipe(iife({useStrict: true}))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('app/js'));
 });
@@ -68,7 +62,7 @@ gulp.task('serve', ['build-html', 'build-css', 'build-js'], function() {
 
   gulp.watch(['dev/**/*.css'], ['build-css']);
   gulp.watch(['dev/**/*.js'], ['build-js']);
-  gulp.watch(['dev/**/*.jade'], ['build-html']);
+  gulp.watch(['dev/**/*.pug'], ['build-html']);
   gulp.watch('app/**/*.*').on('change', browserSync.reload);
 });
 

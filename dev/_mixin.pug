@@ -1,0 +1,20 @@
+mixin base(title)
+  doctype html
+  html
+    head
+      meta(charset='utf-8')
+      meta(http-equiv='x-ua-compatible', content='ie=edge')
+      title= title
+      meta(name='description', content='')
+      meta(name='viewport', content='width=device-width, initial-scale=1')
+      link(rel='stylesheet', href='/css/styles.css')
+      script(defer, src='/js/scripts.js')
+    body
+      header.site-header: .container._body-width
+        a.logo-link(href="/index.html")
+          img(src='/assets/logo.png')
+        nav.site-nav
+          a.item(href="/index.html") projects
+          a.item(href="/sideworks.html") side works
+          a.item(target="_blank", href="/resume-Yi-Nie.pdf") resume
+      block

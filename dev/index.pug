@@ -1,0 +1,19 @@
+include _mixin.pug
++base('Yi Nie - Product Designer')
+    section.home-intro._body-width
+        h1.title._gilroy-title hello,<br>I'm Yi Nie
+        p.description I'm a Product Designer based in San Francisco.
+        p.description I create delightful experience with empathy.
+        a._primary-link(target="_blank", href="/resume-Yi-Nie.pdf") resume
+
+    section.home-project.-project-1._body-width
+        .home-project-content
+            p.type mobile app
+            h2._gilroy-title: a.title(href="/pages/photo.html") photo management mobile app
+            .home-project-info: .wrap
+                p.text Designed a mobile application to help people manage their photo effortlessly
+                a._primary-link(href="/pages/photo.html") read more
+        .home-project-preview.-mobile
+            img.screen(src="/assets/photo/cover_photo_app.png")
+
+    include _footer.pug

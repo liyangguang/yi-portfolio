@@ -1,0 +1,47 @@
+@import './_variables';
+
+.home-intro{
+  padding: 5em 0 8em;
+
+  & > .title{
+    font-size: 2.5em;
+
+    &:after{
+      @apply --line;
+    }
+  }
+
+  & > .description{
+    font-size: 1.2em;
+  }
+}
+.home-project{
+  display: flex;
+  align-items: center;
+
+  &:nth-child(odd) > .home-project-content{
+    order: 1;
+  }
+
+  & > div{
+    flex: 1 0 0;
+    padding: 20px;
+  }
+}
+
+.home-project-content{
+  & > .type{
+    margin-bottom: 8px;
+    font-size: 1em;
+    color: #005efe;
+    letter-spacing: .3em;
+  }
+}
+
+.home-project-info{
+  display: flex;
+
+  &:before{
+    @apply --line;
+  }
+}

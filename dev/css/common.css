@@ -1,0 +1,93 @@
+@import './_variables';
+
+/* ---------------- helper ---------------- */
+._body-width{
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+._flex-space{
+  flex-grow: 1;
+}
+._round{
+  border-radius: 50%;
+}
+._full-width{
+  width: 100%;
+}
+._gilroy-title{
+  font-family: 'Gilroy', 'Gotham_Narrow', 'Helvetica', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+._primary-link{
+  display: inline-block;
+  margin: 8px 0;
+  padding: 4px 0;
+  color: var(--main);
+  font-weight: bold;
+  text-transform: capitalize;
+}
+._primary-link:after{
+  content: '>';
+  padding-left: 5px;
+}
+
+/* ---------------- site header ---------------- */
+.site-header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  z-index: 10;
+
+  & > .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+  }
+}
+
+.logo-link{
+  display: block;
+  width: 50px;
+
+  & > img{
+    width: 100%;
+    vertical-align: middle;
+  }
+}
+
+.site-nav{
+  text-transform: uppercase;
+  font-size: .8em;
+  letter-spacing: .2em;
+
+  & > .item{
+    display: inline-block;
+    margin: 8px 20px;
+  }
+}
+
+body{
+  padding-top: 100px;
+}
+
+/* ---------------- site footer ---------------- */
+.site-footer{
+  margin-bottom: 30px;
+  padding: 40px 100px 0;
+  align-items: center;
+
+  & > .promo{
+    text-align: center;
+  }
+
+  & > .credit{
+    display: flex;
+    justify-content: space-between;
+  }
+}
