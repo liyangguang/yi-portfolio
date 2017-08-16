@@ -1,7 +1,8 @@
 @import './_variables';
 
 .home-intro{
-  padding: 5em 0 8em;
+  padding: 5em 0 12em;
+  position: relative;
 
   & > .title{
     font-size: 2.5em;
@@ -18,8 +19,13 @@
 .home-project{
   display: flex;
   align-items: center;
+  position: relative;
+  padding-top: 160px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 
-  &:nth-child(odd) > .home-project-content{
+  &:nth-child(even) > .home-project-content{
     order: 1;
   }
 
@@ -27,21 +33,162 @@
     flex: 1 0 0;
     padding: 20px;
   }
+
+  &:hover .home-project-preview{
+    transform: scale(1.05);
+  }
+
 }
+
 
 .home-project-content{
   & > .type{
-    margin-bottom: 8px;
     font-size: 1em;
     color: #005efe;
     letter-spacing: .3em;
+    text-transform: uppercase;
   }
 }
 
 .home-project-info{
   display: flex;
+  margin-top: 1em;
 
   &:before{
     @apply --line;
+    margin-right: 10px;
+    margin-top: 10px;
   }
+}
+
+.home-project-preview {
+  position: relative;
+  text-align: center;
+  transition: transform 1s ease;
+
+  & > .screen{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &.-mobile{
+    & > .frame {
+      width: 50%;
+    }
+
+    & > .screen{
+      width: 37%;
+      top: 13%;
+    }
+  }
+
+  &.-desktop{
+    & > .frame {
+      transform: scale(1.4) translate(0%, 10%);
+    }
+
+    & > .screen{
+      width: 90%;
+      top: 10%;
+    }
+  }
+}
+/***************** contacts icon animation ********************/
+
+.contact:hover{
+  & #flag{
+    transform: rotate(-90deg);
+  }
+
+  & #mail{
+    animation: mail alternate .8s ease-in-out infinite;
+  }
+
+  & #balloon{
+    animation: floating alternate 2s ease-in-out infinite;
+  }
+
+  & .bubble{
+    opacity: 1;
+  }
+
+  & .dot1{
+    animation: dot1 1s ease-in-out infinite;
+  }
+
+  & .dot2{
+    animation: dot2 1s ease-in-out infinite;
+  }
+
+  & .dot3{
+    animation: dot3 1s ease-in-out infinite;
+  }
+}
+
+.contact{
+  & #flag{
+    transition: transform .5s ease;
+    transform-origin: 9% 117%;
+  }
+  & .bubble{
+    transition: opacity .5s ease;
+  }
+}
+
+@keyframes mail{
+  from { transform: translate(18px, 20px); }
+  to   { transform: translate(29px, 20px); }
+}
+@keyframes floating{
+  from { transform: translate(65px, 25px); }
+  to   { transform: translate(75px, 20px); }
+}
+@keyframes dot1{
+  from { opacity: 0; }
+  10%  { opacity: 0; }
+  20%  { opacity: 1; }
+  90%  { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+@keyframes dot2{
+  from { opacity: 0; }
+  40%  { opacity: 0; }
+  50%  { opacity: 1; }
+  90%  { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+@keyframes dot3{
+  from { opacity: 0; }
+  70%  { opacity: 0; }
+  80%  { opacity: 1; }
+  90%  { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+/***************** backgrounds ********************/
+.home-project{
+  &.-project-1{ background-image: url(/assets/_bg/bg1.png); }
+  &.-project-2{ background-image: url(/assets/_bg/bg2.png); }
+  &.-project-3{ background-image: url(/assets/_bg/bg3.png); }
+  &.-project-4{ background-image: url(/assets/_bg/bg4.png); }
+}
+
+.flying-bg{
+  @apply --bg;
+
+  & > img {
+    position: absolute;
+  }
+
+  & > .shape-1 { top: 5%; left: 43%; }
+  & > .shape-2 { top: 10%; left: 80%; }
+  & > .shape-3 { top: 60%; left: 46%; }
+  & > .shape-4 { top: 71%; left: 74%; }
+  & > .shape-5 { left: 29%; top: 16%; }
+  & > .shape-6 { left: 0; top: 60%; }
+  & > .shape-7 { top: 80%; left: 30%; }
+  & > .shape-8 { left: 95%; top: 63%; }
 }
