@@ -44,6 +44,10 @@
     letter-spacing: .3em;
     text-transform: uppercase;
   }
+  & .title{
+    font-size: 1.3em;
+    line-height: 1.2;
+  }
 }
 
 .home-project-info{

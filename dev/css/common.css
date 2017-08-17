@@ -69,6 +69,7 @@
   text-transform: uppercase;
   font-size: .8em;
   letter-spacing: .2em;
+  font-weight: 500;
 
   & > .item{
     display: inline-block;

@@ -133,7 +133,8 @@ video, img{
 .site-nav{
   text-transform: uppercase;
   font-size: .8em;
-  letter-spacing: .2em
+  letter-spacing: .2em;
+  font-weight: 500
 }
 
 .site-nav > .item{
@@ -225,6 +226,11 @@ body{
   color: #005efe;
   letter-spacing: .3em;
   text-transform: uppercase
+}
+
+.home-project-content .title{
+  font-size: 1.3em;
+  line-height: 1.2
 }
 
 .home-project-info{
@@ -572,12 +578,15 @@ body{
     width: 80%;
     background: #fff;
     max-width: 900px;
-    padding: 30px 20px
+    padding: 60px 50px 20px
 }
 
 .side-banner > .content > .small-title{
     color: #005EFE;
-    text-transform: uppercase
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: .8em;
+    letter-spacing: 5px
 }
 
 .side-banner > .content > .big-title{
@@ -610,7 +619,9 @@ body{
     text-transform: uppercase;
     text-align: center;
     font-weight: 500;
-    margin-bottom: 40px
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    letter-spacing: 3px
 }
 
 .side-container{
@@ -709,10 +720,11 @@ body{
 }
 
 .side-beyond > .title{
-    font-weight: 400;
+    font-weight: 500;
     text-transform: uppercase;
     font-size: 1.2em;
-    margin: .8em 0 .3em
+    margin: .8em 0 .3em;
+    letter-spacing: 3px
 }
 
 .side-beyond > .description{
