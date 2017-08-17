@@ -1,22 +1,6 @@
-doctype html
-html.no-js(lang='')
-  head
-    meta(charset='utf-8')
-    meta(http-equiv='x-ua-compatible', content='ie=edge')
-    title Photo Management App Design - Yi Nie - UX designer, Prototyper
-    meta(name='description', content='')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    link(rel='stylesheet', href='/css/project.css')
-  body
-    header
-        a(href="/index.html")
-            img.logo(src='/assets/logo.png')
-        .flex-space
-        nav
-            a.nav-item.font-gilroy.about(href="/index.html") home
-            a.nav-item.font-gilroy.design(href="/index.html#design") design
-            a.nav-item.font-gilroy.prototype(href="/index.html#prototype") prototype
-            
+include ../_mixin.pug
++base('Photo management app - Yi Nie - Product Designer', true)
+
     //- intro
     section.intro.center
         h1.font-gilroy photo management mobile app
@@ -348,17 +332,16 @@ html.no-js(lang='')
 
     footer
         .footer-nav-wrap.flex-container
-            a(href="/pages/ngo.html").flex-item.footer-nav-left
+            a(href="/projects/credible_cosigner.html").flex-item.footer-nav-left
                 p.footer-nav-arrow < previous
-                p.footer-nav-name NGO registration process
+                p.footer-nav-name Credible Cosigner Pre-qualification
             .flex-space
-            a(href="/pages/credible_dashboard.html").flex-item.footer-nav-right
+            a(href="/projects/credible_dashboard.html").flex-item.footer-nav-right
                 p.footer-nav-arrow next >
                 p.footer-nav-name credible offer dashboard
         .footer-copy.flex-container
             p.flex-space Designed and Coded by Yi Nie.
-            p Want to see more? Visit 
-                a(href="/index_old.html", target="_blank") my old portfolio
+            a(target="_blank" href="mailto:yinie.ux@gmail.com") yinie.ux@gmail.com
 
     style.
         .project-cover{
@@ -399,23 +382,3 @@ html.no-js(lang='')
         .tab-4-container .flex-item img{
           max-width: 100px;
         }
-
-    script(src="https://code.jquery.com/jquery-2.2.4.min.js", integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=", crossorigin="anonymous")
-    script.
-        console.log('Hi, I\'m Yi Nie. Welcome to my site!');
-
-        $(function() {
-            $('#ideation .tab').click(function(){
-                $(this).addClass('active');
-                $(this).siblings().removeClass('active');
-                $('#ideation .tab-content').hide();
-                $('#ideation .tab-content-' + $(this).attr('data-tab')).show();
-            });
-
-            $('#competitor .tab').click(function(){
-                $(this).addClass('active');
-                $(this).siblings().removeClass('active');
-                $('#competitor .tab-content').hide();
-                $('#competitor .tab-content-' + $(this).attr('data-tab')).show();
-            });
-        });

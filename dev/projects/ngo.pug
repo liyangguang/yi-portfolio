@@ -1,22 +1,6 @@
-doctype html
-html.no-js(lang='')
-  head
-    meta(charset='utf-8')
-    meta(http-equiv='x-ua-compatible', content='ie=edge')
-    title NGO Registration Process - Yi Nie - UX designer, Prototyper
-    meta(name='description', content='')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    link(rel='stylesheet', href='/css/project.css')
-  body
-    header
-        a(href="/index.html")
-            img.logo(src='/assets/logo.png')
-        .flex-space
-        nav
-            a.nav-item.font-gilroy.about(href="/index.html") home
-            a.nav-item.font-gilroy.design(href="/index.html#design") design
-            a.nav-item.font-gilroy.prototype(href="/index.html#prototype") prototype
-            
+include ../_mixin.pug
++base('NGO Registration Process - Yi Nie - Product Designer', true)
+
     //- intro
     section.intro.center
         h1.font-gilroy NGO Registration Process
@@ -38,17 +22,16 @@ html.no-js(lang='')
 
     footer
         .footer-nav-wrap.flex-container
-            a(href="/pages/base.html").flex-item.footer-nav-left
+            a(href="/projects/basecrm.html").flex-item.footer-nav-left
                 p.footer-nav-arrow < previous
                 p.footer-nav-name base mobile CRM redesign
             .flex-space
-            a(href="/pages/photo.html").flex-item.footer-nav-right
+            a(href="/projects/photo.html").flex-item.footer-nav-right
                 p.footer-nav-arrow next >
                 p.footer-nav-name photo management mobile app
         .footer-copy.flex-container
             p.flex-space Designed and Coded by Yi Nie.
-            p Want to see more? Visit 
-                a(href="/index_old.html", target="_blank") my old portfolio
+            a(target="_blank" href="mailto:yinie.ux@gmail.com") yinie.ux@gmail.com
 
     script.
         console.log('Hi, I\'m Yi Nie. Welcome to my site!');

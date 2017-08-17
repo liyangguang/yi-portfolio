@@ -102,8 +102,9 @@ video, img{
   top: 0;
   left: 0;
   right: 0;
-  background: #fff;
-  z-index: 10
+  background: transparent;
+  z-index: 10;
+  transition: box-shadow .5s ease
 }
 
 .site-header > .container{
@@ -115,11 +116,13 @@ video, img{
   -webkit-box-pack: justify;
           justify-content: space-between;
   padding: 20px;
+  transition: padding .5s ease;
 }
 
 .logo-link{
   display: block;
-  width: 50px
+  width: 50px;
+  transition: width .5s ease
 }
 
 .logo-link > img{
@@ -142,12 +145,30 @@ body{
   padding-top: 100px;
 }
 
+.site-header.-collapse{
+  box-shadow: 0 0 5px #ddd;
+  background: #fff
+
+}
+
+.site-header.-collapse > .container{
+  padding: 8px 20px;
+}
+
+.site-header.-collapse > .container > .logo-link{
+  width: 30px;
+}
+
 /* ---------------- site footer ---------------- */
 
 .site-footer{
   margin: 100px 0 20px;
-  text-align: center;
   font-size: .8em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
 }
 
 .home-intro{
@@ -179,11 +200,10 @@ body{
   -webkit-box-align: center;
           align-items: center;
   position: relative;
-  padding-top: 160px;
+  padding-top: 200px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center
-
 }
 
 .home-project:nth-child(even) > .home-project-content{
@@ -195,11 +215,6 @@ body{
   -webkit-box-flex: 1;
           flex: 1 0 0;
   padding: 20px
-}
-
-.home-project:hover .home-project-preview{
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05)
 }
 
 .home-project-content{
@@ -226,48 +241,85 @@ body{
   height: 3px;
   margin: 20px 0;
   background: #005EFE;
+  -webkit-box-flex: 1;
+          flex: 1 0 15%;
   margin-right: 10px;
-  margin-top: 10px
+  margin-top: 14px
 }
 
 .home-project-preview {
   position: relative;
   text-align: center;
-  transition: -webkit-transform 1s ease;
-  transition: transform 1s ease;
-  transition: transform 1s ease, -webkit-transform 1s ease
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease
+}
+
+.home-project-preview > .frame,
+  .home-project-preview > .frame-shadow{
+  position: absolute;
+  left: 50%
+}
+
+.home-project-preview > .frame-shadow{
+  opacity: 0;
+  transition: opacity .5s ease
 }
 
 .home-project-preview > .screen{
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%)
+  border: 1px solid #ddd;
+  position: relative;
+  z-index: 1
 }
 
 .home-project-preview.-mobile{
 }
 
-.home-project-preview.-mobile > .frame{
-  width: 50%
+.home-project-preview.-mobile > .frame,
+    .home-project-preview.-mobile > .frame-shadow{
+  width: 50%;
+  top: -7%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%)
 }
 
 .home-project-preview.-mobile > .screen{
-  width: 37%;
-  top: 13%
+  width: 42%
+}
+
+.home-project-preview.-mobile:hover{
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px)
+}
+
+.home-project-preview.-mobile:hover .frame-shadow{
+  opacity: 1
 }
 
 .home-project-preview.-desktop{
+  -webkit-transform: translateX(-6%);
+          transform: translateX(-6%)
 }
 
-.home-project-preview.-desktop > .frame{
-  -webkit-transform: scale(1.4) translate(0%, 10%);
-          transform: scale(1.4) translate(0%, 10%)
+.home-project-preview.-desktop > .frame,
+    .home-project-preview.-desktop > .frame-shadow{
+  -webkit-transform: translateX(-50%) scale(1.32);
+          transform: translateX(-50%) scale(1.32);
+  width: 100%;
+  top: 9%
 }
 
 .home-project-preview.-desktop > .screen{
-  width: 90%;
-  top: 10%
+  width: 100%
+}
+
+.home-project-preview.-desktop:hover{
+  -webkit-transform: translate(-6%, -5px);
+          transform: translate(-6%, -5px)
+}
+
+.home-project-preview.-desktop:hover .frame-shadow{
+  opacity: 1
 }
 
 .home-contacts{
@@ -305,7 +357,7 @@ body{
 
 .home-contacts-container > .contact > svg{
   display: block;
-  margin-bottom: 10px
+  margin-bottom: 16px
 }
 
 /***************** contacts icon animation ********************/
@@ -503,36 +555,93 @@ body{
   left: 95%;
   top: 63%
 }
-.other-section{
+.side-banner{
+    background-color: #F1F6FF;
+    text-align: center;
+    padding: 7em 1em 0;
+    margin-top: -100px;
     position: relative
 }
 
-.other-section:before{
+.side-banner > .content{
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    -webkit-transform: translate(-50%, 50%);
+            transform: translate(-50%, 50%);
+    width: 80%;
+    background: #fff;
+    max-width: 900px;
+    padding: 30px 20px
+}
+
+.side-banner > .content > .small-title{
+    color: #005EFE;
+    text-transform: uppercase
+}
+
+.side-banner > .content > .big-title{
+    text-transform: uppercase;
+    font-size: 1.8em;
+    font-weight: 400
+}
+
+.side-banner > .content > .more{
+    font-size: .9em
+}
+
+.side-section{
+    position: relative
+}
+
+.side-section:before{
     content: '';
     width: 120px;
     height: 3px;
     margin: 20px 0;
     background: #005EFE;
     display: block;
-    margin: 100px auto 30px;
+    margin: 160px auto 30px;
     width: 2px;
     height: 60px
 }
 
-.other-section > .title{
+.side-section > .title{
     text-transform: uppercase;
     text-align: center;
-    font-weight: normal
+    font-weight: 500;
+    margin-bottom: 40px
 }
 
-.other-container{
+.side-container{
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     flex-wrap: wrap;
 }
 
-.other-prototype{
+.side-container.-column-3{
+}
+
+.side-container.-column-3 > .side-project{
+    -webkit-box-flex: 1;
+            flex: 1 0 calc(33% - 40px)
+}
+
+.side-container.-column-2{
+}
+
+.side-container.-column-2 > .side-project{
+    -webkit-box-flex: 1;
+            flex: 1 0 calc(50% - 40px)
+}
+
+.side-project{
+    text-align: center;
+    margin: 20px;
+}
+
+.side-prototype{
     position: relative;
     background: #F5FAFF;
     padding: 60px 40px 0;
@@ -545,18 +654,19 @@ body{
             align-items: flex-end
 }
 
-.other-prototype.-desktop{
+.side-prototype.-desktop{
     -webkit-box-flex: 1;
             flex: 1 0 calc(70% - 40px)
 }
 
-.other-prototype.-mobile{
+.side-prototype.-mobile{
     -webkit-box-flex: 1;
             flex: 1 0 calc(30% - 40px)
 }
 
-.other-prototype > .mask{
-    display: none;
+.side-prototype > .mask{
+    opacity: 0;
+    transition: opacity .5s ease;
     position: absolute;
     background: rgba(0, 0, 0, .8);
     top: 0;
@@ -565,7 +675,7 @@ body{
     right: 0
 }
 
-.other-prototype > .mask > .info{
+.side-prototype > .mask > .info{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -576,76 +686,94 @@ body{
     font-size: .8em
 }
 
-.other-prototype > .mask > .info > .title{
+.side-prototype > .mask > .info > .title{
+    font-size: 1.2em;
     font-weight: normal
 }
 
-.other-prototype:hover > .mask{
-    display: block
+.side-prototype:hover > .mask{
+    opacity: 1
 }
 
-.other-container.-column-3{
-}
-
-.other-container.-column-3 > .other-project{
+.side-beyond{
+    box-shadow: 0 0 10px #ddd;
+    padding: 16px;
     -webkit-box-flex: 1;
-            flex: 1 0 calc(33% - 40px)
-}
-
-.other-container.-column-2{
-}
-
-.other-container.-column-2 > .other-project{
-    -webkit-box-flex: 1;
-            flex: 1 0 calc(50% - 40px)
-}
-
-.other-project{
+            flex: 1 0 calc(50% - 40px);
     text-align: center;
-    margin: 20px;
+    margin: 20px
 }
 
-.other-container.-icons{
+.side-beyond > .img{
+    width: 100%
 }
 
-.other-container.-icons > .other-project > img{
+.side-beyond > .title{
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    margin: .8em 0 .3em
+}
+
+.side-beyond > .description{
+    font-size: .8em;
+    margin: 0 1em
+}
+
+.side-beyond > .link{
+    text-transform: capitalize;
+    color: #005EFE;
+    font-size: .8em;
+    font-weight: 500;
+    margin-top: .5em
+}
+
+.side-container.-icons{
+}
+
+.side-container.-icons > .side-project > img{
     max-width: 160px
 }
 
-.other-container.-illustrations{
+.side-container.-illustrations{
 }
 
-.other-container.-illustrations > .other-project > img{
-    max-width: 300px
+.side-container.-illustrations > .side-project > img{
+    max-width: 350px
 }
 
-.other-bg{
+.side-bg{
     position: absolute;
     z-index: -1
 }
 
-.other-bg.-section-1{
+.side-bg.-section-1{
     right: -8%;
     top: 3%
 }
 
-.other-bg.-section-2{
+.side-bg.-section-2{
     left: -10%;
     top: 3%
 }
 
-.other-bg.-section-3{
+.side-bg.-section-3{
     right: -8%;
     top: 3%
 }
 
-.other-bg.-section-4{
+.side-bg.-section-4{
     left: -8%;
     top: 3%
 }
 
-.other-bg.-section-5{
-    right: -8%;
+.side-bg.-section-5{
+    left: -12%;
+    top: 80%
+}
+
+.side-bg.-section-6{
+    right: -10%;
     bottom: -3%
 }
 

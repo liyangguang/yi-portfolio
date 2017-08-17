@@ -1,27 +1,11 @@
-doctype html
-html.no-js(lang='')
-  head
-    meta(charset='utf-8')
-    meta(http-equiv='x-ua-compatible', content='ie=edge')
-    title Base Mobile CRM Redesign - Yi Nie - UX designer, Prototyper
-    meta(name='description', content='')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    link(rel='stylesheet', href='/css/project.css')
-  body
-    header
-        a(href="/index.html")
-            img.logo(src='/assets/logo.png')
-        .flex-space
-        nav
-            a.nav-item.font-gilroy.about(href="/index.html") home
-            a.nav-item.font-gilroy.design(href="/index.html#design") design
-            a.nav-item.font-gilroy.prototype(href="/index.html#prototype") prototype
-            
+include ../_mixin.pug
++base('Base Mobile CRM Redesign - Yi Nie - Product Designer', true)
+
     //- intro
     section.intro.center
         h1.font-gilroy Base Mobile CRM Redesign
         p.project-subtitle What's the status of my deals?
-        img.project-cover.full-width(src="/assets/base/cover_base_crm.png")
+        img.project-cover.full-width(src="/assets/basecrm/cover_base_crm.png")
 
     //- info
     section.bg-shading.section-info
@@ -34,8 +18,7 @@ html.no-js(lang='')
                 p It's an individual project. I conducted user research, designed the interfaces and interactions from sketch to hi-fidelity mock, and created interaction prototypes.
     
     section
-        h2 coming soon
-        a.primary-button.center(href="/assets/dashboard/base-design-doc.pdf", target="_blank", style="display: block") view document
+        a.primary-button.center(href="/assets/basecrm/base-design-doc.pdf", target="_blank", style="display: block") view document
 
     footer
         .footer-nav-wrap.flex-container
@@ -43,13 +26,9 @@ html.no-js(lang='')
                 p.footer-nav-arrow < previous
                 p.footer-nav-name credible offer dashboard
             .flex-space
-            a(href="/projects/ngo.html").flex-item.footer-nav-right
+            a(href="/projects/credible_cosigner.html").flex-item.footer-nav-right
                 p.footer-nav-arrow next >
-                p.footer-nav-name NGO registration process
+                p.footer-nav-name credible cosigner pre-qualification
         .footer-copy.flex-container
             p.flex-space Designed and Coded by Yi Nie.
-            p Want to see more? Visit 
-                a(href="/index_old.html", target="_blank") my old portfolio
-
-    script.
-        console.log('Hi, I\'m Yi Nie. Welcome to my site!');
+            a(target="_blank" href="mailto:yinie.ux@gmail.com") yinie.ux@gmail.com

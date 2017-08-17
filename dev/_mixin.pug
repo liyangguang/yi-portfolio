@@ -1,4 +1,4 @@
-mixin base(title)
+mixin base(title, old)
     doctype html
     html
         head
@@ -7,7 +7,10 @@ mixin base(title)
             title= title
             meta(name='description', content='')
             meta(name='viewport', content='width=device-width, initial-scale=1')
-            link(rel='stylesheet', href='/css/styles.css')
+            if old
+                link(rel='stylesheet', href='/css/project.css')
+            else
+                link(rel='stylesheet', href='/css/styles.css')
             script(defer, src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js')
             script(defer, src='/js/scripts.js')
         body
@@ -23,6 +26,7 @@ mixin base(title)
 mixin footer
     footer.site-footer
         p Designed and Coded by Yi Nie.
+        a(target="_blank" href="mailto:yinie.ux@gmail.com") yinie.ux@gmail.com
 
 mixin svg-email
     <svg width="216px" height="210px" viewBox="0 0 216 210" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -120,11 +124,9 @@ mixin svg-dribbble
                     <g id="balloon" transform="translate(65.000000, 25.000000)">
                         <path d="M13.4145818,63.5248232 L58.8296501,62.4307076 C58.8296501,62.4307076 53.3422894,68.5469718 49.8937189,73.53107 C46.4451484,78.5151681 44.1341477,83.6696024 44.1341477,83.6696024 L28.0062058,83.6696024 C28.0062058,83.6696024 25.7945255,78.9414386 22.0343414,73.7502358 C18.2741573,68.559033 13.4145818,63.5248232 13.4145818,63.5248232 Z" id="Combined-Shape" stroke="#005EFE" stroke-width="1.5" fill="#FFFFFF" transform="translate(36.122116, 73.050155) rotate(-2.000000) translate(-36.122116, -73.050155) "></path>
                         <g id="Rectangle-4" transform="translate(37.373936, 103.125332) rotate(-2.000000) translate(-37.373936, -103.125332) ">
-                            <use fill="#C6DFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
                             <path stroke="#005EFE" stroke-width="1.5" d="M25.9229769,96.9834636 L25.9229769,103.541331 C25.9229769,107.64896 29.257072,110.984035 33.3663456,110.984035 L41.3815264,110.984035 C45.4936039,110.984035 48.8248952,107.652486 48.8248952,103.541331 L48.8248952,96.9834636 C48.8248952,96.0334944 48.0625439,95.2666292 47.1234202,95.2666292 L27.6244519,95.2666292 C26.6847994,95.2666292 25.9229769,96.033583 25.9229769,96.9834636 Z"></path>
                         </g>
                         <g id="Rectangle-3" transform="translate(37.066498, 94.321447) rotate(-2.000000) translate(-37.066498, -94.321447) ">
-                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-2"></use>
                             <rect stroke="#005EFE" stroke-width="1.5" x="23.8555624" y="92.7187228" width="26.4218703" height="3.20544842" rx="1.60272421"></rect>
                         </g>
                         <path d="M36.8649972,100.179841 C36.8649972,97.9772983 33.9705989,96.1917846 30.4001775,96.1917846 C26.8297562,96.1917846 23.9353578,97.9772983 23.9353578,100.179841" id="Oval-6" stroke="#005EFE" stroke-width="1.5" transform="translate(30.400178, 98.185813) scale(1, -1) rotate(2.000000) translate(-30.400178, -98.185813) "></path>

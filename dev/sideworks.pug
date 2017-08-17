@@ -1,73 +1,103 @@
 include _mixin.pug
 +base('Yi Nie - Product Designer')
+    .side-banner
+        img.bg(src="/assets/_bg/side-banner.png")
+        .content
+            p.small-title side works
+            h1.big-title Learning through Making
+            p.more Sometimes making some random things - animation, prototyping, illustration, drawing is a good way to keep creative and learn new skills.
     main._body-width
-        section.other-section
+        section.side-section
             h1.title prototypes and animations
-            img.other-bg.-section-1(src="/assets/_bg/other-bg1.png")
-            .other-container.-prototype
-                .other-prototype.-mobile
-                    video(autoplay, loop, preload="auto")
-                        source(src="/assets/prototypes/yelp_1080p.mp4")
-                    .mask
-                        .info
-                            h2.title recipe prototype
-                            p.tool Tool - Framer.js
-                .other-prototype.-desktop
-                    video(autoplay, loop, preload="auto")
-                        source(src="/assets/prototypes/paper_plane_1080p.mp4")
-                    .mask
-                        .info
-                            h2.title paper plane
-                            p.tool Coding - SVG animation
-                .other-prototype.-desktop
-                    video(autoplay, loop, preload="auto")
-                        source(src="/assets/prototypes/simple_task_1080p.mp4")
-                    .mask
-                        .info
-                            h2.title todo app interaction
-                            p.tool Coding - HTML, CSS, JavaScript
-                .other-prototype.-mobile
-                    video(autoplay, loop, preload="auto")
-                        source(src="/assets/prototypes/snooze_prototype.mp4")
-                    .mask
-                        .info
-                            h2.title alarm snoozing interaction
-                            p.tool Tool - Principle
+            img.side-bg.-section-1(src="/assets/_bg/side-bg1.png")
+            .side-container.-prototype
+                .side-prototype.-mobile
+                    video(autoplay, loop, preload="auto"): source(src="/assets/prototypes/yelp_1080p.mp4")
+                    .mask: .info
+                        h2.title recipe prototype
+                        p.tool Tool - Framer.js
+                .side-prototype.-desktop
+                    video(autoplay, loop, preload="auto"): source(src="/assets/prototypes/paper_plane_1080p.mp4")
+                    .mask: .info
+                        h2.title paper plane
+                        p.tool Coding - SVG animation
+                .side-prototype.-desktop
+                    video(autoplay, loop, preload="auto"): source(src="/assets/prototypes/simple_task_1080p.mp4")
+                    .mask: .info
+                        h2.title todo app interaction
+                        p.tool Coding - HTML, CSS, JavaScript
+                .side-prototype.-mobile
+                    video(autoplay, loop, preload="auto"): source(src="/assets/prototypes/snooze_prototype.mp4")
+                    .mask: .info
+                        h2.title alarm snoozing interaction
+                        p.tool Tool - Principle
 
-        section.other-section.-section-2
+        section.side-section
             h1.title icons
-            img.other-bg.-section-2(src="/assets/_bg/other-bg2.png")
-            .other-container.-column-3.-icons
-                .other-project
-                    img._full-width(src="/assets/illustration/business1.png")
-                .other-project
-                    img._full-width(src="/assets/illustration/business2.png")
-                .other-project
-                    img._full-width(src="/assets/illustration/business3.png")
-                .other-project
-                    img._full-width(src="/assets/illustration/life2.png")
-                .other-project
-                    img._full-width(src="/assets/illustration/life3.png")
-                .other-project
-                    img._full-width(src="/assets/illustration/life4.png")
-                .other-project
-                    img._full-width(src="/assets/illustration/process1.png")
-                .other-project
-                    img._full-width(src="/assets/illustration/process2.png")
-                .other-project
-                    img._full-width(src="/assets/illustration/process3.png")
+            img.side-bg.-section-2(src="/assets/_bg/side-bg2.png")
+            .side-container.-column-3.-icons
+                .side-project: img._full-width(src="/assets/illustration/business1.png")
+                .side-project: img._full-width(src="/assets/illustration/business2.png")
+                .side-project: img._full-width(src="/assets/illustration/business3.png")
+                .side-project: img._full-width(src="/assets/illustration/life2.png")
+                .side-project: img._full-width(src="/assets/illustration/life3.png")
+                .side-project: img._full-width(src="/assets/illustration/life4.png")
+                .side-project: img._full-width(src="/assets/illustration/process1.png")
+                .side-project: img._full-width(src="/assets/illustration/process2.png")
+                .side-project: img._full-width(src="/assets/illustration/process3.png")
 
-        section.other-section.-section-3
+        section.side-section
             h1.title illustrations       
-            img.other-bg.-section-3(src="/assets/_bg/other-bg3.png") 
-            .other-container.-column-2.-illustrations
-                .other-project
-                    img._full-width(src="/assets/illustration/user1.png")
-                .other-project
-                    img._full-width(src="/assets/illustration/fun1.png")
-                .other-project
-                    img._full-width(src="/assets/illustration/fun2.png")
-                .other-project
-                    img._full-width(src="/assets/illustration/fun3.png")
+            img.side-bg.-section-3(src="/assets/_bg/side-bg3.png") 
+            .side-container.-column-2.-illustrations
+                .side-project: img._full-width(src="/assets/illustration/user1.png")
+                .side-project: img._full-width(src="/assets/illustration/fun1.png")
+                .side-project: img._full-width(src="/assets/illustration/fun2.png")
+                .side-project: img._full-width(src="/assets/illustration/fun3.png")
+
+        section.side-section
+            h1.title design beyond screens
+            img.side-bg.-section-4(src="/assets/_bg/side-bg4.png")
+            .side-container.-beyond
+                .side-beyond
+                    img.img(src="/assets/beyond/take-a-step-back.jpg")
+                    h2.title take a step back
+                    p.description Combine traditional tools - white board and marker with digital tool to streamline creative process.
+                    a.link(target="_blank", href="https://vimeo.com/147277038") watch demo video
+                .side-beyond
+                    img.img(src="/assets/beyond/your-world-you-way.jpg")
+                    h2.title your world you way
+                    p.description Concept of curiosity driven learning experience for Children’s Museum.
+                    a.link(target="_blank", href="https://www.youtube.com/watch?v=FNBE-fclpBs") watch demo video
+                
+
+        section.side-section
+            h1.title lettering
+            img.side-bg.-section-5(src="/assets/_bg/side-bg5.png")
+            .side-container.-column-3
+                .side-project: img._full-width(src="/assets/lettering/1.png")
+                .side-project: img._full-width(src="/assets/lettering/2.png")
+                .side-project: img._full-width(src="/assets/lettering/3.png")
+                .side-project: img._full-width(src="/assets/lettering/4.png")
+                .side-project: img._full-width(src="/assets/lettering/5.png")
+                .side-project: img._full-width(src="/assets/lettering/6.png")
+                .side-project: img._full-width(src="/assets/lettering/7.png")
+                .side-project: img._full-width(src="/assets/lettering/8.png")
+                .side-project: img._full-width(src="/assets/lettering/9.png")
+
+        section.side-section
+            h1.title drawing
+            img.side-bg.-section-6(src="/assets/_bg/side-bg6.png")
+            .side-container.-column-3
+                .side-project: img._full-width(src="/assets/drawing/1.png")
+                .side-project: img._full-width(src="/assets/drawing/2.png")
+                .side-project: img._full-width(src="/assets/drawing/3.png")
+                .side-project: img._full-width(src="/assets/drawing/4.png")
+                .side-project: img._full-width(src="/assets/drawing/5.png")
+                .side-project: img._full-width(src="/assets/drawing/6.png")
+                .side-project: img._full-width(src="/assets/drawing/7.png")
+                .side-project: img._full-width(src="/assets/drawing/8.png")
+                .side-project: img._full-width(src="/assets/drawing/9.png")
+
 
         +footer
