@@ -58,7 +58,7 @@ video, img{
 ._body-width{
   width: 100%;
   max-width: 1280px;
-  padding: 0 20px;
+  padding: 0 60px;
   margin: 0 auto;
 }
 
@@ -115,7 +115,7 @@ video, img{
           align-items: center;
   -webkit-box-pack: justify;
           justify-content: space-between;
-  padding: 20px;
+  padding: 20px 60px;
   transition: padding .5s ease;
 }
 
@@ -153,7 +153,7 @@ body{
 }
 
 .site-header.-collapse > .container{
-  padding: 8px 20px;
+  padding: 8px 60px;
 }
 
 .site-header.-collapse > .container > .logo-link{
