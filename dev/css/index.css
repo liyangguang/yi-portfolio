@@ -8,6 +8,7 @@
     font-size: 2.5em;
 
     &:after{
+      display: block;
       @apply --line;
     }
   }
@@ -55,6 +56,7 @@
   margin-top: 1em;
 
   &:before{
+    display: block;
     @apply --line;
     margin-right: 10px;
     margin-top: 10px;
@@ -94,36 +96,48 @@
     }
   }
 }
+
+.home-contacts{
+  text-align: center;
+  margin-top: 120px;
+
+  & > .title{
+    text-transform: uppercase;
+    margin-bottom: 40px;
+
+    &:before, &:after{
+      @apply --line;
+      display: inline-block;
+      margin: 20px;
+      vertical-align: middle;
+    }
+  }
+
+}
+
+.home-contacts-container{
+  display: flex;
+  justify-content: space-around;
+
+  & > .contact{
+    text-transform: uppercase;
+
+    & > svg{
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+}
+
 /***************** contacts icon animation ********************/
-
 .contact:hover{
-  & #flag{
-    transform: rotate(-90deg);
-  }
-
-  & #mail{
-    animation: mail alternate .8s ease-in-out infinite;
-  }
-
-  & #balloon{
-    animation: floating alternate 2s ease-in-out infinite;
-  }
-
-  & .bubble{
-    opacity: 1;
-  }
-
-  & .dot1{
-    animation: dot1 1s ease-in-out infinite;
-  }
-
-  & .dot2{
-    animation: dot2 1s ease-in-out infinite;
-  }
-
-  & .dot3{
-    animation: dot3 1s ease-in-out infinite;
-  }
+  & #flag{ transform: rotate(-90deg); }
+  & #mail{ animation: mail alternate .8s ease-in-out infinite; }
+  & #balloon{ animation: floating alternate 1s ease-in-out infinite; }
+  & .bubble{ opacity: 1; }
+  & .dot1{ animation: dot1 1s ease-in-out infinite; }
+  & .dot2{ animation: dot2 1s ease-in-out infinite; }
+  & .dot3{ animation: dot3 1s ease-in-out infinite; }
 }
 
 .contact{
@@ -170,10 +184,10 @@
 
 /***************** backgrounds ********************/
 .home-project{
-  &.-project-1{ background-image: url(/assets/_bg/bg1.png); }
-  &.-project-2{ background-image: url(/assets/_bg/bg2.png); }
-  &.-project-3{ background-image: url(/assets/_bg/bg3.png); }
-  &.-project-4{ background-image: url(/assets/_bg/bg4.png); }
+  &.-project-1{ background-image: url(/assets/_bg/home-bg1.png); }
+  &.-project-2{ background-image: url(/assets/_bg/home-bg2.png); }
+  &.-project-3{ background-image: url(/assets/_bg/home-bg3.png); }
+  &.-project-4{ background-image: url(/assets/_bg/home-bg4.png); }
 }
 
 .flying-bg{

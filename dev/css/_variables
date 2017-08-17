@@ -3,9 +3,8 @@
 
   --line: {
     content: '';
-    display: block;
     width: 120px;
-    height: 5px;
+    height: 3px;
     margin: 20px 0;
     background: var(--main);
   }

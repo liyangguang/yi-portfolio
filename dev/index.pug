@@ -7,14 +7,14 @@ include _mixin.pug
             p.description I create delightful experience with empathy.
             a._primary-link(target="_blank", href="/resume-Yi-Nie.pdf") resume
             .flying-bg
-                img.shape-1(src="/assets/_bg/small1.png")
-                img.shape-2(src="/assets/_bg/small2.png")
-                img.shape-3(src="/assets/_bg/small3.png")
-                img.shape-4(src="/assets/_bg/small4.png")
-                img.shape-5(src="/assets/_bg/small5.png")
-                img.shape-6(src="/assets/_bg/small6.png")
-                img.shape-7(src="/assets/_bg/small7.png")
-                img.shape-8(src="/assets/_bg/small8.png")
+                img.shape-1(src="/assets/_bg/home-small1.png")
+                img.shape-2(src="/assets/_bg/home-small2.png")
+                img.shape-3(src="/assets/_bg/home-small3.png")
+                img.shape-4(src="/assets/_bg/home-small4.png")
+                img.shape-5(src="/assets/_bg/home-small5.png")
+                img.shape-6(src="/assets/_bg/home-small6.png")
+                img.shape-7(src="/assets/_bg/home-small7.png")
+                img.shape-8(src="/assets/_bg/home-small8.png")
 
         section.home-project.-project-1
             .home-project-content
@@ -39,10 +39,15 @@ include _mixin.pug
                 img.screen(src="/assets/photo/_preview.png")
 
         section.home-contacts
-            .contact
-                +svg-email
-            .contact
-                +svg-dribbble
-            .contact
-                +svg-linkedin
+            h2.title contact me
+            .home-contacts-container
+                a.contact
+                    +svg-email
+                    | email
+                a.contact
+                    +svg-dribbble
+                    | dribbble
+                a.contact
+                    +svg-linkedin
+                    | linkedin
         +footer

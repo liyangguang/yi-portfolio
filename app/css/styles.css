@@ -41,6 +41,7 @@ a{
   color: inherit;
   opacity: .8;
   transition: .2s opacity ease;
+  cursor: pointer;
 }
 a:hover{
   opacity: 1;
@@ -57,7 +58,7 @@ video, img{
 ._body-width{
   width: 100%;
   max-width: 1280px;
-  padding: 20px;
+  padding: 0 20px;
   margin: 0 auto;
 }
 
@@ -144,23 +145,9 @@ body{
 /* ---------------- site footer ---------------- */
 
 .site-footer{
-  margin-bottom: 30px;
-  padding: 40px 100px 0;
-  -webkit-box-align: center;
-          align-items: center
-}
-
-.site-footer > .promo{
+  margin: 100px 0 20px;
   text-align: center;
-  margin: 3em 0;
-}
-
-.site-footer > .credit{
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-          justify-content: space-between;
+  font-size: .8em;
 }
 
 .home-intro{
@@ -173,10 +160,10 @@ body{
 }
 
 .home-intro > .title:after{
-  content: '';
   display: block;
+  content: '';
   width: 120px;
-  height: 5px;
+  height: 3px;
   margin: 20px 0;
   background: #005EFE
 }
@@ -233,10 +220,10 @@ body{
 }
 
 .home-project-info:before{
-  content: '';
   display: block;
+  content: '';
   width: 120px;
-  height: 5px;
+  height: 3px;
   margin: 20px 0;
   background: #005EFE;
   margin-right: 10px;
@@ -283,6 +270,44 @@ body{
   top: 10%
 }
 
+.home-contacts{
+  text-align: center;
+  margin-top: 120px
+
+}
+
+.home-contacts > .title{
+  text-transform: uppercase;
+  margin-bottom: 40px
+}
+
+.home-contacts > .title:before, .home-contacts > .title:after{
+  content: '';
+  width: 120px;
+  height: 3px;
+  margin: 20px 0;
+  background: #005EFE;
+  display: inline-block;
+  margin: 20px;
+  vertical-align: middle
+}
+
+.home-contacts-container{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-around
+}
+
+.home-contacts-container > .contact{
+  text-transform: uppercase
+}
+
+.home-contacts-container > .contact > svg{
+  display: block;
+  margin-bottom: 10px
+}
+
 /***************** contacts icon animation ********************/
 
 .contact:hover{
@@ -299,8 +324,8 @@ body{
 }
 
 .contact:hover #balloon{
-  -webkit-animation: floating alternate 2s ease-in-out infinite;
-          animation: floating alternate 2s ease-in-out infinite
+  -webkit-animation: floating alternate 1s ease-in-out infinite;
+          animation: floating alternate 1s ease-in-out infinite
 }
 
 .contact:hover .bubble{
@@ -411,19 +436,19 @@ body{
 }
 
 .home-project.-project-1{
-  background-image: url(/assets/_bg/bg1.png)
+  background-image: url(/assets/_bg/home-bg1.png)
 }
 
 .home-project.-project-2{
-  background-image: url(/assets/_bg/bg2.png)
+  background-image: url(/assets/_bg/home-bg2.png)
 }
 
 .home-project.-project-3{
-  background-image: url(/assets/_bg/bg3.png)
+  background-image: url(/assets/_bg/home-bg3.png)
 }
 
 .home-project.-project-4{
-  background-image: url(/assets/_bg/bg4.png)
+  background-image: url(/assets/_bg/home-bg4.png)
 }
 
 .flying-bg{
@@ -478,6 +503,150 @@ body{
   left: 95%;
   top: 63%
 }
+.other-section{
+    position: relative
+}
 
+.other-section:before{
+    content: '';
+    width: 120px;
+    height: 3px;
+    margin: 20px 0;
+    background: #005EFE;
+    display: block;
+    margin: 100px auto 30px;
+    width: 2px;
+    height: 60px
+}
+
+.other-section > .title{
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: normal
+}
+
+.other-container{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.other-prototype{
+    position: relative;
+    background: #F5FAFF;
+    padding: 60px 40px 0;
+    margin: 20px;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+            align-items: flex-end
+}
+
+.other-prototype.-desktop{
+    -webkit-box-flex: 1;
+            flex: 1 0 calc(70% - 40px)
+}
+
+.other-prototype.-mobile{
+    -webkit-box-flex: 1;
+            flex: 1 0 calc(30% - 40px)
+}
+
+.other-prototype > .mask{
+    display: none;
+    position: absolute;
+    background: rgba(0, 0, 0, .8);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0
+}
+
+.other-prototype > .mask > .info{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    text-transform: capitalize;
+    color: #fff;
+    font-size: .8em
+}
+
+.other-prototype > .mask > .info > .title{
+    font-weight: normal
+}
+
+.other-prototype:hover > .mask{
+    display: block
+}
+
+.other-container.-column-3{
+}
+
+.other-container.-column-3 > .other-project{
+    -webkit-box-flex: 1;
+            flex: 1 0 calc(33% - 40px)
+}
+
+.other-container.-column-2{
+}
+
+.other-container.-column-2 > .other-project{
+    -webkit-box-flex: 1;
+            flex: 1 0 calc(50% - 40px)
+}
+
+.other-project{
+    text-align: center;
+    margin: 20px;
+}
+
+.other-container.-icons{
+}
+
+.other-container.-icons > .other-project > img{
+    max-width: 160px
+}
+
+.other-container.-illustrations{
+}
+
+.other-container.-illustrations > .other-project > img{
+    max-width: 300px
+}
+
+.other-bg{
+    position: absolute;
+    z-index: -1
+}
+
+.other-bg.-section-1{
+    right: -8%;
+    top: 3%
+}
+
+.other-bg.-section-2{
+    left: -10%;
+    top: 3%
+}
+
+.other-bg.-section-3{
+    right: -8%;
+    top: 3%
+}
+
+.other-bg.-section-4{
+    left: -8%;
+    top: 3%
+}
+
+.other-bg.-section-5{
+    right: -8%;
+    bottom: -3%
+}
 
 /*# sourceMappingURL=styles.css.map */

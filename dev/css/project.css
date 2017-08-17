@@ -1,1 +1,101 @@
 @import './_variables';
+
+.other-section{
+    position: relative;
+
+    &:before{
+        @apply --line;
+        display: block;
+        margin: 100px auto 30px;
+        width: 2px;
+        height: 60px;
+    }
+    & > .title{
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: normal;
+    }
+}
+
+.other-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.other-prototype{
+    position: relative;
+    background: #F5FAFF;
+    padding: 60px 40px 0;
+    margin: 20px;
+    text-align: center;
+    display: flex;
+    align-items: flex-end;
+
+    &.-desktop{
+        flex: 1 0 calc(70% - 40px);
+    }
+    &.-mobile{
+        flex: 1 0 calc(30% - 40px);
+    }
+
+    & > .mask{
+        display: none;
+        position: absolute;
+        background: rgba(0,0,0,.8);
+        top: 0;bottom: 0;left: 0;right: 0;
+
+        & > .info{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-transform: capitalize;
+            color: #fff;
+            font-size: .8em;
+
+            & > .title{
+                font-weight: normal;
+            }
+        }
+    }
+
+    &:hover > .mask{
+        display: block;
+    }
+}
+.other-container.-column-3{
+    & > .other-project{
+        flex: 1 0 calc(33% - 40px);
+    }
+}
+.other-container.-column-2{
+    & > .other-project{
+        flex: 1 0 calc(50% - 40px);
+    }
+}
+
+.other-project{
+    text-align: center;
+    margin: 20px;
+}
+
+
+.other-container.-icons{
+    & > .other-project > img{
+        max-width: 160px;
+    }
+}
+.other-container.-illustrations{
+    & > .other-project > img{
+        max-width: 300px;
+    }
+}
+.other-bg{
+    position: absolute;
+    z-index: -1;
+
+    &.-section-1{ right: -8%; top: 3%; }
+    &.-section-2{ left: -10%; top: 3%; }
+    &.-section-3{ right: -8%; top: 3%; }
+    &.-section-4{ left: -8%; top: 3%; }
+    &.-section-5{ right: -8%; bottom: -3%; }
+}

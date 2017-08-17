@@ -43,6 +43,7 @@ a{
   color: inherit;
   opacity: .8;
   transition: .2s opacity ease;
+  cursor: pointer;
 }
 a:hover{
   opacity: 1;
