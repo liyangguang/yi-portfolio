@@ -16,7 +16,6 @@ $(function(){
     var position = $(document).scrollTop();
 
     // for the header
-    console.log(position)
     if (position > 300){
       $('.site-header').addClass('-collapse');
     }

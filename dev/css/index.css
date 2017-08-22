@@ -31,7 +31,8 @@
   }
 
   & > div{
-    flex: 1 0 0;
+    flex: 1 1 50%;
+    width: 50%;
     padding: 20px;
   }
 }
@@ -102,7 +103,7 @@
   }
 
   &.-desktop{
-    transform: translateX(-6%);
+    transform: translateX(-13%);
 
     & > .frame,
     & > .frame-shadow {
@@ -116,7 +117,7 @@
     }
 
     &:hover {
-      transform: translate(-6%, -5px);
+      transform: translate(-13%, -5px);
       & .frame-shadow{ opacity: 1; }
     }
   }
@@ -126,18 +127,19 @@
   text-align: center;
   margin-top: 120px;
 
-  & > .title{
-    text-transform: uppercase;
-    margin-bottom: 40px;
+  & > .title-line-container{
+    margin: 0 auto 50px;
+    width: 90%;
+    max-width: 320px;
+    background-image: linear-gradient(to bottom, #fff 45%, var(--main) 46%, var(--main) 54%, #fff 55%);
 
-    &:before, &:after{
-      @apply --line;
-      display: inline-block;
-      margin: 20px;
-      vertical-align: middle;
+    & > .title{
+      background: #fff;
+      text-transform: uppercase;
+      display: inline;
+      padding: 0 10px;
     }
   }
-
 }
 
 .home-contacts-container{
@@ -145,6 +147,7 @@
   justify-content: space-around;
 
   & > .contact{
+    margin-bottom: 30px;
     text-transform: uppercase;
 
     & > svg{
