@@ -1,7 +1,7 @@
 @import './_variables';
 
 .home-intro{
-  padding: 5em 0 12em;
+  padding: 5em 0 20%;
   position: relative;
 
   & > .title{
@@ -225,12 +225,12 @@
     position: absolute;
   }
 
-  & > .shape-1 { top: 5%; left: 43%; }
-  & > .shape-2 { top: 10%; left: 80%; }
-  & > .shape-3 { top: 60%; left: 46%; }
-  & > .shape-4 { top: 71%; left: 74%; }
-  & > .shape-5 { left: 29%; top: 16%; }
-  & > .shape-6 { left: 0; top: 60%; }
-  & > .shape-7 { top: 80%; left: 30%; }
-  & > .shape-8 { left: 95%; top: 63%; }
+  & > .shape-1 { top: 5%; left: 43%; width: 17%;}
+  & > .shape-2 { top: 10%; left: 80%; width: 13%;}
+  & > .shape-3 { top: 60%; left: 46%; width: 10%;}
+  & > .shape-4 { top: 71%; left: 74%; width: 11%;}
+  & > .shape-5 { left: 29%; top: 16%; width: 4%;}
+  & > .shape-6 { left: 0; top: 60%; width: 7%;}
+  & > .shape-7 { top: 80%; left: 30%; width: 5%;}
+  & > .shape-8 { left: 95%; top: 63%; width: 6%;}
 }

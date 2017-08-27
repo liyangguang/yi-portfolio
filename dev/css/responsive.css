@@ -6,7 +6,7 @@ body,
 @media screen and (max-width: 600px){
   /**************** header *****************/
   .site-header > .container{
-    padding: 12px 16px;
+    padding: 12px;
   }
   .site-header.-collapse > .container{
     padding: 6px 16px;
@@ -45,8 +45,17 @@ body,
     flex-direction: column;
     align-items: center;
   }
+  .contact{
+    & #flag{ transform: rotate(-90deg); }
+    & #mail{ animation: mail alternate .8s ease-in-out infinite; }
+    & #balloon{ animation: floating alternate 1s ease-in-out infinite; }
+    & .bubble{ opacity: 1; }
+    & .dot1{ animation: dot1 1s ease-in-out infinite; }
+    & .dot2{ animation: dot2 1s ease-in-out infinite; }
+    & .dot3{ animation: dot3 1s ease-in-out infinite; }
+  }
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 300px){
   .site-nav{
     text-align: right;
   }

@@ -54,6 +54,10 @@
   }
 }
 
+#home-page .site-header{
+  background: #fff;
+}
+
 .logo-link{
   display: block;
   width: 50px;
