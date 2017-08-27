@@ -7,7 +7,7 @@ $(function () {
     var position = $(document).scrollTop();
 
     // for the header
-    if (position > 300) {
+    if (position > 100) {
       $('.site-header').addClass('-collapse');
     } else {
       $('.site-header').removeClass('-collapse');
@@ -41,17 +41,10 @@ $(function () {
     $('#competitor .tab-content-' + $(this).attr('data-tab')).show();
   });
 
-  // prototype video view
-  $('#side-page .mask').click(function (e) {
-    var videoURL = $(e.target).parent().find('source').attr('src');
-    window.open(videoURL, '_blank');
-  });
-
   // images view
   $('#side-page .side-project img').click(function (e) {
     var imageURL = $(e.target).attr('src');
     $('.image-preview-container .image').css('background-image', 'url(' + imageURL + ')');
-    console.log(imageURL, $('.image-preview-container .image'));
     $('.image-preview-container').fadeIn(500);
   });
   $('.image-preview-container').click(function (e) {

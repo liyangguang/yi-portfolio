@@ -61,12 +61,12 @@
 }
 .side-container.-column-3{
     & > .side-project{
-        flex: 1 0 calc(33% - 40px);
+        flex: 1 0 30%;
     }
 }
 .side-container.-column-2{
     & > .side-project{
-        flex: 1 0 calc(50% - 40px);
+        flex: 1 0 45%;
     }
 }
 
