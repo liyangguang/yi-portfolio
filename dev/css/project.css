@@ -1,0 +1,40 @@
+@import './_variables';
+
+.-shading{
+  background: #f5faff;
+}
+
+.project-hero-line{
+  @apply --vert-line;
+  margin-top: 200px;
+}
+
+.project-hero{
+  padding-top: 60px;
+  padding-bottom: 0;
+}
+
+.section-type{
+  &:before{
+    @apply --vert-line;
+  }
+}
+
+.section-type + h2{
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: .1em;
+}
+
+.iterations{
+  padding: 40px;
+}
+
+footer{
+  padding: 40px 20px 0 !important;
+  margin-bottom: 10px !important;
+
+  & > .footer-copy{
+    padding: 0 20px;
+  }
+}

@@ -1,21 +1,17 @@
 include ../_mixin.pug
 +base('Credible offer dashboard redesign - Yi Nie - Product Designer', true)
- 
-    //- intro
-    section.intro.center
-        h1.font-gilroy credible offer dashboard redesign
-        p.project-subtitle Which offer should I choose?
-        img.project-cover.full-width(src="/assets/credible_dashboard/header.png")
+    .page-banner
+        img.bg(src="/assets/credible_dashboard/_banner-bg.png")
+        .content
+            p.small-title web app
+            h1.big-title._gilroy-title Credible Offer Dashboard Redesign
+            p.more Led the redesign of Credible's co-signing experience for student loan refinancing, including user flow, interaction design and visual design for both desktop and mobile.
+    
+    .project-hero-line
 
-    //- info
-    section.bg-shading.section-info
-        .flex-container.direction.top.even-2
-            .flex-item
-                p.font-gilroy.dark overview
-                p Credible is a marketplace for student loan refinancing. We partner with multiple lenders so that users can get their personalized rates without filling all these tedious application forms. I redesign the dashboard to help users make better decisions on choosing their loan options.
-            .flex-item
-                p.font-gilroy.dark my role
-                p Independently worked from conducting user research and creating low-fidelity wireframes to usability test and high-fidelity visual design.
+    //- intro
+    section.project-hero.-shading
+        img(src="/assets/credible_dashboard/_hero.png")
 
     //- problem
     section
@@ -25,7 +21,7 @@ include ../_mixin.pug
         img.full-width(src="/assets/credible_dashboard/problem.png")
 
     //- research
-    section.bg-shading
+    section
         p.section-type.font-gilroy user research
         h2 how do people make choices?
         p In order to better meet users' needs, it's important to understand how do people make their choice among several options. I conducted user interviews to gather insights about the process of choosing a product and factors influence decision making.
@@ -43,7 +39,7 @@ include ../_mixin.pug
             p For users who are shopping around, they really want to make sure they choose the best option. But it's quite difficult to find the best at once. Users prefer to eliminate options that they are not interested in and finally get to their favorite one.
 
     //- design overview
-    section.bg-arrow
+    section
         p.section-type.font-gilroy Solutions
         h2 Design Goals and Key Consideration
         .flex-container.three-points.center.top
@@ -68,7 +64,7 @@ include ../_mixin.pug
 
 
     //- design goal 1 - img
-    section.flex-container.iterations.bg-shading
+    section.flex-container.iterations.-shading
         .flex-item
             p.iteration-title
                 span.number.no-space 1
@@ -128,7 +124,7 @@ include ../_mixin.pug
                 img.img-with-shadow.full-width(src="/assets/credible_dashboard/design3-compare.png")
     
     //- usability testing
-    section.bg-shading
+    section
         p.section-type.font-gilroy usability testing
         h2 listen to user's voice and keep iterating
 

@@ -1,49 +1,11 @@
 @import './_variables';
 
-.side-banner{
-    background-color: #F1F6FF;
-    text-align: center;
-    padding: 7em 1em 0;
-    margin-top: -100px;
-    position: relative;
-
-    & > .content {
-        position: absolute;
-        left: 50%;
-        bottom: 0;
-        transform: translate(-50%, 50%);
-        width: 80%;
-        background: #fff;
-        max-width: 900px;
-        padding: 60px 50px 20px;
-
-        & > .small-title{
-            color: var(--main);
-            font-weight: 500;
-            text-transform: uppercase;
-            font-size: .8em;
-            letter-spacing: 5px;
-        }
-        & > .big-title{
-            text-transform: uppercase;
-            font-size: 1.8em;
-            font-weight: 400;
-        }
-        & > .more{
-            font-size: .9em;
-        }
-    }
-}
-
 .side-section{
     position: relative;
 
     &:before{
-        @apply --line;
-        display: block;
-        margin: 160px auto 30px;
-        width: 2px;
-        height: 60px;
+        @apply --vert-line;
+        margin-top: 160px;
     }
     & > .title{
         text-transform: uppercase;

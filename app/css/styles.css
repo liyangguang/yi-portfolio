@@ -161,6 +161,46 @@ body{
   width: 30px;
 }
 
+/* ---------------- page banner -------------------- */
+
+.page-banner{
+    background-color: #F1F6FF;
+    text-align: center;
+    padding: 7em 1em 0;
+    margin-top: -100px;
+    position: relative
+}
+
+.page-banner > .content{
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+  width: 80%;
+  background: #fff;
+  max-width: 900px;
+  padding: 60px 50px 20px;
+}
+
+.page-banner > .content > .small-title{
+  color: #005EFE;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: .8em;
+  letter-spacing: 5px;
+}
+
+.page-banner > .content > .big-title{
+  text-transform: uppercase;
+  font-size: 2em;
+  font-weight: 400;
+}
+
+.page-banner > .content > .more{
+  font-size: .9em;
+}
+
 /* ---------------- site footer ---------------- */
 
 .site-footer{
@@ -570,6 +610,55 @@ body{
   width: 6%
 }
 
+.-shading{
+  background: #f5faff;
+}
+
+.project-hero-line{
+  content: '';
+  display: block;
+  margin: 30px auto;
+  width: 2px;
+  height: 60px;
+  background: #005EFE;
+  margin-top: 200px;
+}
+
+.project-hero{
+  padding-top: 60px;
+  padding-bottom: 0;
+}
+
+.section-type{
+}
+
+.section-type:before{
+  content: '';
+  display: block;
+  margin: 30px auto;
+  width: 2px;
+  height: 60px;
+  background: #005EFE;
+}
+
+.section-type + h2{
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: .1em;
+}
+
+.iterations{
+  padding: 40px;
+}
+
+footer{
+  padding: 40px 20px 0 !important;
+  margin-bottom: 10px !important
+}
+
+footer > .footer-copy{
+  padding: 0 20px;
+}
 body,
 .site-header{
   min-width: 300px;
@@ -679,58 +768,18 @@ body,
     max-width: 300px;
   }
 }
-.side-banner{
-    background-color: #F1F6FF;
-    text-align: center;
-    padding: 7em 1em 0;
-    margin-top: -100px;
-    position: relative
-}
-
-.side-banner > .content{
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    -webkit-transform: translate(-50%, 50%);
-            transform: translate(-50%, 50%);
-    width: 80%;
-    background: #fff;
-    max-width: 900px;
-    padding: 60px 50px 20px
-}
-
-.side-banner > .content > .small-title{
-    color: #005EFE;
-    font-weight: 500;
-    text-transform: uppercase;
-    font-size: .8em;
-    letter-spacing: 5px
-}
-
-.side-banner > .content > .big-title{
-    text-transform: uppercase;
-    font-size: 1.8em;
-    font-weight: 400
-}
-
-.side-banner > .content > .more{
-    font-size: .9em
-}
-
 .side-section{
     position: relative
 }
 
 .side-section:before{
     content: '';
-    width: 120px;
-    height: 3px;
-    margin: 20px 0;
-    background: #005EFE;
     display: block;
-    margin: 160px auto 30px;
+    margin: 30px auto;
     width: 2px;
-    height: 60px
+    height: 60px;
+    background: #005EFE;
+    margin-top: 160px
 }
 
 .side-section > .title{
