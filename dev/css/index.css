@@ -103,7 +103,12 @@
   }
 
   &.-desktop{
-    transform: translateX(-13%);
+    &.-left{
+      transform: translateX(-13%);
+    }
+    &.-right{
+      transform: translateX(13%);
+    }
 
     & > .frame,
     & > .frame-shadow {
@@ -117,7 +122,13 @@
     }
 
     &:hover {
-      transform: translate(-13%, -5px);
+      &.-left{
+        transform: translate(-13%, -5px);
+      }
+      &.-right{
+        transform: translate(13%, -5px);
+      }
+      
       & .frame-shadow{ opacity: 1; }
     }
   }

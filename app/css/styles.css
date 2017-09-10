@@ -345,8 +345,16 @@ body{
 }
 
 .home-project-preview.-desktop{
+}
+
+.home-project-preview.-desktop.-left{
   -webkit-transform: translateX(-13%);
           transform: translateX(-13%)
+}
+
+.home-project-preview.-desktop.-right{
+  -webkit-transform: translateX(13%);
+          transform: translateX(13%)
 }
 
 .home-project-preview.-desktop > .frame,
@@ -362,8 +370,16 @@ body{
 }
 
 .home-project-preview.-desktop:hover{
+}
+
+.home-project-preview.-desktop:hover.-left{
   -webkit-transform: translate(-13%, -5px);
           transform: translate(-13%, -5px)
+}
+
+.home-project-preview.-desktop:hover.-right{
+  -webkit-transform: translate(13%, -5px);
+          transform: translate(13%, -5px)
 }
 
 .home-project-preview.-desktop:hover .frame-shadow{

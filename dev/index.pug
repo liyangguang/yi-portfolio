@@ -18,18 +18,6 @@ include _mixin.pug
 
         section.home-project.-project-1
             .home-project-content
-                p.type._gilroy-title web app
-                h2._gilroy-title: a.title(href="/projects/credible_cosigner.html") CO-SIGNER PRE-QUALIFICATION
-                .home-project-info: .wrap
-                    p.text Led the redesign of Credible's co-signing experience for student loan refinancing, including user flow, interaction design and visual design for both desktop and mobile.
-                    a._primary-link(href="/projects/credible_cosigner.html") read more
-            .home-project-preview.-desktop
-                img.frame-shadow(src="/assets/laptop-shadow.png")
-                img.frame(src="/assets/laptop.png")
-                img.screen(src="/assets/credible_cosigner/_preview.png")
-
-        section.home-project.-project-2
-            .home-project-content
                 p.type._gilroy-title mobile app
                 h2._gilroy-title: a.title(href="/projects/photo.html") photo management mobile app
                 .home-project-info: .wrap
@@ -40,6 +28,17 @@ include _mixin.pug
                 img.frame(src="/assets/phone.png")
                 img.screen(src="/assets/photo/_preview.png")
 
+        section.home-project.-project-2
+            .home-project-content
+                p.type._gilroy-title web app
+                h2._gilroy-title: a.title(href="/projects/credible_cosigner.html") CO-SIGNER PRE-QUALIFICATION
+                .home-project-info: .wrap
+                    p.text Led the redesign of Credible's co-signing experience for student loan refinancing, including user flow, interaction design and visual design for both desktop and mobile.
+                    a._primary-link(href="/projects/credible_cosigner.html") read more
+            .home-project-preview.-desktop.-right
+                img.frame-shadow(src="/assets/laptop-shadow.png")
+                img.frame(src="/assets/laptop.png")
+                img.screen(src="/assets/credible_cosigner/_preview.png")
 
         section.home-project.-project-3
             .home-project-content
@@ -48,7 +47,7 @@ include _mixin.pug
                 .home-project-info: .wrap
                     p.text Redesigned Credible's offer dashboard to help borrowers choose offers easily.
                     a._primary-link(href="/projects/credible_dashboard.html") read more
-            .home-project-preview.-desktop
+            .home-project-preview.-desktop.-left
                 img.frame-shadow(src="/assets/laptop-shadow.png")
                 img.frame(src="/assets/laptop.png")
                 img.screen(src="/assets/credible_dashboard/_preview.png")
