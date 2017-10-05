@@ -2,10 +2,10 @@
 
 .side-section{
     position: relative;
+    margin-bottom: 120px;
 
     &:before{
         @apply --vert-line;
-        margin-top: 160px;
     }
     & > .title{
         text-transform: uppercase;

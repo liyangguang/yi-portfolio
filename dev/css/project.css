@@ -1,8 +1,129 @@
 @import './_variables';
 
+section p{
+  margin: 1em 0;
+  font-size: 16px;
+}
+
+.project-cover{
+  padding-top: 60px;
+  padding-bottom: 0;
+}
+
 .-shading{
   background: #f5faff;
+  margin: 1em 0;
+  & > img{
+    max-width: 1200px;
+    padding: 30px 0;
+  }
 }
+section.-with-vert-line:before{
+  @apply --vert-line;
+}
+.-content-width{
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.quote{
+  color: var(--main);
+  font-size: 32px;
+  margin: 2em 3em;
+  font-style: italic;
+  opacity: .6;
+}
+.section-title{
+  font-size: 32px;
+  color: #555;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: .1em;
+  margin: 1em;
+
+  & > p{
+    color: var(--main);
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+  }
+}
+
+.sub-section-title{
+  text-align: center;
+  font-size: 32px;
+  color: var(--main);
+  font-weight: 300;
+
+  & > .step{
+    font-size: 45px;
+    font-weight: 500;
+    color: var(--main);
+    opacity: .3;
+    margin: 0;
+  }
+}
+
+.two-column{
+  font-size: 0;
+  margin: 40px 0;
+
+  & > div{
+    vertical-align: middle;
+    font-size: 16px;
+    display: inline-block;
+    width: 50%;
+    padding: 20px;
+  }
+}
+
+.list-number{
+  color: var(--main);
+}
+
+.bullet{
+  font-size: 18px;
+  font-weight: 500;
+  color: #555;
+}
+/******************** project footer **************************/
+.footer-nav-wrap{
+  display: flex;
+  margin: 60px 0;
+
+  & > a{
+    padding: 24px;
+    display: block;
+    &:first-child{
+      text-align: left;
+    }
+    &:last-child{
+      text-align: right;
+    }
+    &:hover{
+      background: #fafafa;
+    }
+
+    & > .arrow{
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+    & > .name{
+      font-size: 20px;
+      font-weight: 400;
+    }
+  }
+}
+
+.footer-copy{
+  text-align: center;
+  margin: 16px 24px;
+  font-size: 14px;
+}
+
+/******************** start of older css **************************/
 
 .project-hero-line{
   @apply --vert-line;
@@ -28,13 +149,4 @@
 
 .iterations{
   padding: 40px;
-}
-
-footer{
-  padding: 40px 20px 0 !important;
-  margin-bottom: 10px !important;
-
-  & > .footer-copy{
-    padding: 0 20px;
-  }
 }

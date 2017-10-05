@@ -51,7 +51,10 @@ a:hover{
 }
 p, li{
   color: #999;
+  font-weight: 300;
 }
 video, img{
   max-width: 100%;
+  display: block;
+  margin: 0 auto;
 }

@@ -49,9 +49,12 @@ a:hover{
 }
 p, li{
   color: #999;
+  font-weight: 300;
 }
 video, img{
   max-width: 100%;
+  display: block;
+  margin: 0 auto;
 }
 
 /* ---------------- helper ---------------- */
@@ -166,9 +169,25 @@ body{
 .page-banner{
     background-color: #F1F6FF;
     text-align: center;
-    padding: 7em 1em 0;
+    padding: 5em 1em 0;
     margin-top: -100px;
+    margin-bottom: 180px;
     position: relative
+}
+
+.page-banner.-with-vert-line{
+  margin-bottom: 260px;
+}
+
+.page-banner.-with-vert-line:after{
+  content: '';
+  display: block;
+  margin: 30px auto;
+  width: 2px;
+  height: 60px;
+  background: #005EFE;
+  position: relative;
+  top: 230px;
 }
 
 .page-banner > .content{
@@ -626,9 +645,147 @@ body{
   width: 6%
 }
 
+section p{
+  margin: 1em 0;
+  font-size: 16px;
+}
+
+.project-cover{
+  padding-top: 60px;
+  padding-bottom: 0;
+}
+
 .-shading{
   background: #f5faff;
+  margin: 1em 0
 }
+
+.-shading > img{
+  max-width: 1200px;
+  padding: 30px 0;
+}
+
+section.-with-vert-line:before{
+  content: '';
+  display: block;
+  margin: 30px auto;
+  width: 2px;
+  height: 60px;
+  background: #005EFE;
+}
+
+.-content-width{
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.quote{
+  color: #005EFE;
+  font-size: 32px;
+  margin: 2em 3em;
+  font-style: italic;
+  opacity: .6;
+}
+
+.section-title{
+  font-size: 32px;
+  color: #555;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: .1em;
+  margin: 1em
+}
+
+.section-title > p{
+  color: #005EFE;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.sub-section-title{
+  text-align: center;
+  font-size: 32px;
+  color: #005EFE;
+  font-weight: 300
+}
+
+.sub-section-title > .step{
+  font-size: 45px;
+  font-weight: 500;
+  color: #005EFE;
+  opacity: .3;
+  margin: 0;
+}
+
+.two-column{
+  font-size: 0;
+  margin: 40px 0
+}
+
+.two-column > div{
+  vertical-align: middle;
+  font-size: 16px;
+  display: inline-block;
+  width: 50%;
+  padding: 20px;
+}
+
+.list-number{
+  color: #005EFE;
+}
+
+.bullet{
+  font-size: 18px;
+  font-weight: 500;
+  color: #555;
+}
+
+/******************** project footer **************************/
+
+.footer-nav-wrap{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 60px 0
+}
+
+.footer-nav-wrap > a{
+  padding: 24px;
+  display: block;
+}
+
+.footer-nav-wrap > a:first-child{
+  text-align: left;
+}
+
+.footer-nav-wrap > a:last-child{
+  text-align: right;
+}
+
+.footer-nav-wrap > a:hover{
+  background: #fafafa;
+}
+
+.footer-nav-wrap > a > .arrow{
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.footer-nav-wrap > a > .name{
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.footer-copy{
+  text-align: center;
+  margin: 16px 24px;
+  font-size: 14px;
+}
+
+/******************** start of older css **************************/
 
 .project-hero-line{
   content: '';
@@ -667,14 +824,6 @@ body{
   padding: 40px;
 }
 
-footer{
-  padding: 40px 20px 0 !important;
-  margin-bottom: 10px !important
-}
-
-footer > .footer-copy{
-  padding: 0 20px;
-}
 body,
 .site-header{
   min-width: 300px;
@@ -785,7 +934,8 @@ body,
   }
 }
 .side-section{
-    position: relative
+    position: relative;
+    margin-bottom: 120px
 }
 
 .side-section:before{
@@ -794,8 +944,7 @@ body,
     margin: 30px auto;
     width: 2px;
     height: 60px;
-    background: #005EFE;
-    margin-top: 160px
+    background: #005EFE
 }
 
 .side-section > .title{
