@@ -61,7 +61,7 @@ video, img{
 
 ._body-width{
   width: 100%;
-  max-width: 800px;
+  max-width: 1280px;
   padding: 0 60px;
   margin: 0 auto;
 }
@@ -251,6 +251,7 @@ body{
 }
 
 .home-intro > .description{
+  margin: 0;
   font-size: 1.2em
 }
 
@@ -277,6 +278,11 @@ body{
           flex: 1 1 50%;
   width: 50%;
   padding: 20px
+}
+
+.home-project p{
+  margin: 0;
+  font-size: 18px
 }
 
 .home-project-content{
@@ -694,7 +700,7 @@ section.-with-vert-line:before{
   font-weight: 600;
   text-transform: uppercase;
   text-align: center;
-  letter-spacing: .1em;
+  letter-spacing: .05em;
   margin: 1em
 }
 
@@ -709,7 +715,9 @@ section.-with-vert-line:before{
   text-align: center;
   font-size: 32px;
   color: #005EFE;
-  font-weight: 300
+  font-weight: 300;
+  letter-spacing: .05em;
+  text-transform: capitalize
 }
 
 .sub-section-title > .step{
