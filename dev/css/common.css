@@ -3,7 +3,7 @@
 /* ---------------- helper ---------------- */
 ._body-width{
   width: 100%;
-  max-width: 1280px;
+  max-width: 800px;
   padding: 0 60px;
   margin: 0 auto;
 }
