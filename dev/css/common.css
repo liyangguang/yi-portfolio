@@ -13,6 +13,9 @@
 ._round{
   border-radius: 50%;
 }
+._center{
+  text-align: center;
+}
 ._full-width{
   width: 100%;
 }
@@ -33,6 +36,45 @@
 ._primary-link:after{
   content: '>';
   padding-left: 5px;
+}
+
+.two-column{
+  font-size: 0;
+  margin: 40px 0;
+
+  & > div{
+    vertical-align: middle;
+    font-size: 16px;
+    display: inline-block;
+    width: 50%;
+    padding: 20px;
+  }
+}
+
+.three-column{
+  font-size: 0;
+  margin: 40px 0;
+
+  & > div{
+    vertical-align: middle;
+    font-size: 16px;
+    display: inline-block;
+    width: 33%;
+    padding: 20px;
+  }
+}
+
+.four-column{
+  font-size: 0;
+  margin: 40px 0;
+
+  & > div{
+    vertical-align: middle;
+    font-size: 16px;
+    display: inline-block;
+    width: 25%;
+    padding: 20px;
+  }
 }
 
 /* ---------------- site header ---------------- */

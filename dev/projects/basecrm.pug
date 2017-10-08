@@ -1,34 +1,159 @@
 include ../_mixin.pug
-+base('Base Mobile CRM Redesign - Yi Nie - Product Designer', true)
++base('Base Mobile CRM Redesign - Yi Nie - Product Designer')
 
-    //- intro
-    section.intro.center
-        h1.font-gilroy Base Mobile CRM Redesign
-        p.project-subtitle What's the status of my deals?
-        img.project-cover.full-width(src="/assets/basecrm/cover_base_crm.png")
+    .page-banner.-with-vert-line
+        img.bg(src="/assets/basecrm/_banner_bg.png")
+        .content
+            p.small-title mobile app
+            h1.big-title._gilroy-title Base CRM Redesign
+            p.more Redesign the deal profile of current Base mobile application.
 
-    //- info
-    section.bg-shading.section-info
-        .flex-container.direction.top.even-2
-            .flex-item
-                p.font-gilroy.dark overview
-                p This project is the redesigning of the deal profile part of the Base CRM mobile app.
-            .flex-item
-                p.font-gilroy.dark my role
-                p It's an individual project. I conducted user research, designed the interfaces and interactions from sketch to hi-fidelity mocks, and created interaction prototypes.
+    section.-shading
+        img.project-cover(src="/assets/basecrm/_cover.png")
+
+    section.-with-vert-line.-content-width
+        h2.section-title
+            p.sub THE CHALLENGE
+            | Efficiency and Scalability
+        p The current Deal profile in Base needs improvement. Customers want to be more productive, and based on feedback they are looking for an improved profile that addresses these three issues.
+        .three-column._center
+            div
+                img(src="/assets/basecrm/challenge-1.png", alt="")
+                p Improved organization of information
+            div
+                img(src="/assets/basecrm/challenge-2.png", alt="")
+                p Scalability
+            div
+                img(src="/assets/basecrm/challenge-3.png", alt="")
+                p A quicker way to add objects to a Deal
+
+    section.-with-vert-line.-content-width
+        h2.section-title
+            p.sub FRAME THE PROBLEM
+            | Start From Asking Questions
+        p After analyzing the design challenge prompt, asking questions help me determine further research direction and discover what is the real problem. Asking question also help me aware of my own assumptions. I asked questions like:
+        ul
+            li What is the process of a deal?
+            li What is sales pipeline and how does it help sales person?
+            li What information involved when working on a deal?
+            li How can Base fit into sales person’s process?
+            li What are the scenarios and contexts of using mobile CRM application?
+            li When and why does sales need certain kind of information? 
+
+    section.-with-vert-line.-content-width
+        h2.section-title
+            p.sub SECONDARY RESEARCH
+            | Understand CRM System
+        .two-column
+            div
+                img(src="/assets/basecrm/research-secondary.png", alt="")
+            div
+                p In order to design the deal profile page, it's important to understand the big picture first such as how the CRM works and what are current products? I looked through the following materials to understand how CRM works:
+                ul
+                    li BASE website: general information, support page and eBook
+                    li BASE mobile APP
+                    li Competitor website: Salesforce, Microsoft Dynamic
+                    li Medium Articles of CRM design
+
+    section.-with-vert-line.-content-width
+        h2.section-title
+            p.sub USER RESEARCH
+            | Understand THE USER
+        p In order to understand what are the needs of sales people? How do they work currently, I conducted user interviews to better understand users' motivation and work flow:
+
+        h3 PROVIDE MORE INFORMATION AT A GLANCE
+        p Before meeting or a call, sales person always need to do research on their client about their background information, the company’s updates as well as their problems, so it is important for them to recap the all information right before the meeting or call.
+        h3 QUICK INTERACTION ON MOBILE
+        p Sales have to work with a lot of deals at the same time so efficient is pretty important for them especially when they are using mobile device, which means they are probably heading to a meeting. So providing efficient and quick interaction is important.
+
+    section.-with-vert-line.-content-width
+        h2.section-title
+            p.sub IDEATION
+            | HOW TO SOLVE FOR Efficiency and Scalability
+        .two-column
+            div
+                img(src="/assets/basecrm/ideation-1.png", alt="")
+            div
+                h3 Reorganize the information architecture
+                p According to the user research and my understanding of how CRM works, I regroup the information of current deal profile based on the frequency users will view or add data. One participant mentioned that he will use activities and collaborator when there is new team members involved in the deal, so I put these information into second tab.
+        .two-column
+            div
+                h3 Interface With Scalability
+                p In order to solve the scalability issue as well as provide possibility to customize deal profile, I sketch out several concepts. Base on sales person’s needs of view more information at one time and quick interaction, I organized these concepts and select one to develop further.
+            div
+                img(src="/assets/basecrm/ideation-2.png", alt="")
+        .two-column
+            div
+                img(src="/assets/basecrm/ideation-3.png", alt="")
+            div
+                h3 Quick Ways to Add Objects
+                p I explored several ways to quick add objects within the main page. How I decide on using which concept depends if the interaction is clear or intuitive to users and how the concept can work well with scalability.
     
-    section
-        a.primary-button.center(href="/assets/basecrm/base-design-doc.pdf", target="_blank", style="display: block") view document
+    section.-with-vert-line.-content-width
+        h2.section-title
+            p.sub ITERATIVE PROCESS
+            | Iterate on "Stage Change" Interaction
+        p The concept of present different stage first comes from the “steps” and “progress” design pattern. But during wireframe I found this concept doesn’t provide enough interaction affordance for users. So then I turn into using “slider” and start to iterate on the it to make it not only clear to interact with but also can present the stage information
+
+    section.-shading
+        .four-column._center
+            div
+                img(src="/assets/basecrm/iteration-1.png", alt="")
+                p Iteration 1
+            div
+                img(src="/assets/basecrm/iteration-2.png", alt="")
+                p Iteration 2
+            div
+                img(src="/assets/basecrm/iteration-3.png", alt="")
+                p Iteration 3
+            div
+                img(src="/assets/basecrm/iteration-4.png", alt="")
+                p Iteration 4
+
+    section.-with-vert-line.-content-width
+        h2.section-title
+            p.sub final design
+            | new experience
+        .two-column
+            div
+                img(src="/assets/basecrm/design-1.png", alt="")
+            div
+                h3 INTERFACE OVERVIEW
+                p The categories are organized in a list view and users will be able to take a look at the latest items within them so that users will have a better understanding of where this deal is and what they need to do with a glance. In the "Contact" card, the name showed is this deals’ primary contact.
+        .two-column
+            div
+                h3 MOVE DEAL TO NEXT STAGE
+                p By providing the earlier and next stage users will have a better context of this deal's stage. There are only three stages included because it will give user enough space to swipe to avoid making mistakes.
+            div
+                video.-smaller-video(src="/assets/basecrm/design-2.mp4", loop, autoplay)
+        .two-column
+            div
+                video.-smaller-video(src="/assets/basecrm/design-3.mp4", loop, autoplay)
+            div
+                h3 EFFICIENT WAY TO VIEW INFORMATION
+                p When users want to see more information within each category, they can expand the list. Users can open multiple categories and they can scroll down and up to view the information as opposed to navigate through several pages.
+        .two-column
+            div
+                h3 EASY DATA-ENTRY
+                p Users can add new objects into each category simply by using the add button. The animation will give users a clue of which category this object is added to.
+            div
+                video.-smaller-video(src="/assets/basecrm/design-4.mp4", loop, autoplay)
+        .two-column
+            div
+                video.-smaller-video(src="/assets/basecrm/design-5.mp4", loop, autoplay)
+            div
+                h3 ADD MORE CATEGORIES
+                p The list of category supports adding more category. To provide user enough space to view these information, basic deal information will collapse but also display the most important information of this deal. When user want to change the stage, they can go back simply by scrolling back.
 
     footer
-        .footer-nav-wrap.flex-container
-            a(href="/projects/credible_dashboard.html").flex-item.footer-nav-left
-                p.footer-nav-arrow < previous
-                p.footer-nav-name credible offer dashboard
-            .flex-space
-            a(href="/projects/credible_cosigner.html").flex-item.footer-nav-right
-                p.footer-nav-arrow next >
-                p.footer-nav-name credible cosigner pre-qualification
-        .footer-copy.flex-container
-            p.flex-space Designed and Coded by Yi Nie.
-            a(target="_blank" href="mailto:yinie.ux@gmail.com") yinie.ux@gmail.com
+        .footer-nav-wrap
+            a(href="/projects/credible_cosigner.html")
+                p.arrow < previous
+                p.name Credible Co-signer Pre-qualification
+            ._flex-space
+            a(href="/projects/credible_dashboard.html")
+                p.arrow next >
+                p.name Credible Offer Dashboard
+        .footer-copy
+            p Designed and Coded by Yi Nie.
+            p:a(target="_blank" href="mailto:yinie.ux@gmail.com") yinie.ux@gmail.com

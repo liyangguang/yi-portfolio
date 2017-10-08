@@ -75,6 +75,10 @@ video, img{
   border-radius: 50%;
 }
 
+._center{
+  text-align: center;
+}
+
 ._full-width{
   width: 100%;
 }
@@ -97,6 +101,45 @@ video, img{
 ._primary-link:after{
   content: '>';
   padding-left: 5px;
+}
+
+.two-column{
+  font-size: 0;
+  margin: 40px 0
+}
+
+.two-column > div{
+  vertical-align: middle;
+  font-size: 16px;
+  display: inline-block;
+  width: 50%;
+  padding: 20px;
+}
+
+.three-column{
+  font-size: 0;
+  margin: 40px 0
+}
+
+.three-column > div{
+  vertical-align: middle;
+  font-size: 16px;
+  display: inline-block;
+  width: 33%;
+  padding: 20px;
+}
+
+.four-column{
+  font-size: 0;
+  margin: 40px 0
+}
+
+.four-column > div{
+  vertical-align: middle;
+  font-size: 16px;
+  display: inline-block;
+  width: 25%;
+  padding: 20px;
 }
 
 /* ---------------- site header ---------------- */
@@ -728,19 +771,6 @@ section.-with-vert-line:before{
   margin: 0;
 }
 
-.two-column{
-  font-size: 0;
-  margin: 40px 0
-}
-
-.two-column > div{
-  vertical-align: middle;
-  font-size: 16px;
-  display: inline-block;
-  width: 50%;
-  padding: 20px;
-}
-
 .list-number{
   color: #005EFE;
 }
@@ -749,6 +779,10 @@ section.-with-vert-line:before{
   font-size: 18px;
   font-weight: 500;
   color: #555;
+}
+
+.-smaller-video{
+  max-height: 500px;
 }
 
 /******************** project footer **************************/
