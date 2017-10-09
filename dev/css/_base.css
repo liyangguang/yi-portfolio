@@ -3,20 +3,6 @@
   font-family: Gilroy;
   src: url(../assets/_font/Gilroy_ExtraBold.otf);
 }
-@font-face {
-  font-family: Gotham_Narrow;
-  src: url(../assets/_font/Gotham_Narrow_Book.otf);
-}
-@font-face {
-  font-family: Gotham_Narrow;
-  src: url(../assets/_font/Gotham_Narrow_Bold.otf);
-  font-weight: 500;
-}
-@font-face {
-  font-family: Gotham_Narrow;
-  src: url(../assets/_font/Gotham_Narrow_Light.otf);
-  font-weight: 300;
-}
 
 /* ---------------- normalize ---------------- */
 *, *:after, *:before{
@@ -26,8 +12,8 @@
   max-width: 100%;
 }
 
-html{
-  font-family: 'Gotham_Narrow', 'Helvetica', sans-serif;
+html, body{
+  font-family: 'Karla', 'Helvetica', sans-serif;
   line-height: 1.6;
   color: #222;
   font-size: 16px;
@@ -35,7 +21,7 @@ html{
   overflow-x: hidden;
 }
 @media screen and (max-width: 1000px){
-  html {
+  html, body{
     font-size: 16px;
   }
 }

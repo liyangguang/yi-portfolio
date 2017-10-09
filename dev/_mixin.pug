@@ -10,6 +10,7 @@ mixin base(title, old)
             link(rel='stylesheet', href='/css/styles.css')
             if old
                 link(rel='stylesheet', href='/css/project.css')
+            link(href="https://fonts.googleapis.com/css?family=Karla:400,700", rel="stylesheet")
             script(defer, src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js')
             script(defer, src='/js/scripts.js')
         body(id!=attributes.id)
@@ -26,6 +27,8 @@ mixin footer
     footer.site-footer
         p Designed and Coded by Yi Nie.
         a(target="_blank" href="mailto:yinie.ux@gmail.com") yinie.ux@gmail.com
+    .image-preview-container
+        .image
 
 mixin svg-email
     <svg width="216px" height="210px" viewBox="0 0 216 210" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">

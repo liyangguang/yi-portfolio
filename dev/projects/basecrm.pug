@@ -18,13 +18,13 @@ include ../_mixin.pug
         p The current Deal profile in Base needs improvement. Customers want to be more productive, and based on feedback they are looking for an improved profile that addresses these three issues.
         .three-column._center
             div
-                img(src="/assets/basecrm/challenge-1.png", alt="")
+                img.js-img-preview(src="/assets/basecrm/challenge-1.png", alt="")
                 p Improved organization of information
             div
-                img(src="/assets/basecrm/challenge-2.png", alt="")
+                img.js-img-preview(src="/assets/basecrm/challenge-2.png", alt="")
                 p Scalability
             div
-                img(src="/assets/basecrm/challenge-3.png", alt="")
+                img.js-img-preview(src="/assets/basecrm/challenge-3.png", alt="")
                 p A quicker way to add objects to a Deal
 
     section.-with-vert-line.-content-width
@@ -46,7 +46,7 @@ include ../_mixin.pug
             | Understand CRM System
         .two-column
             div
-                img(src="/assets/basecrm/research-secondary.png", alt="")
+                img.js-img-preview(src="/assets/basecrm/research-secondary.png", alt="")
             div
                 p In order to design the deal profile page, it's important to understand the big picture first such as how the CRM works and what are current products? I looked through the following materials to understand how CRM works:
                 ul
@@ -72,7 +72,7 @@ include ../_mixin.pug
             | HOW TO SOLVE FOR Efficiency and Scalability
         .two-column
             div
-                img(src="/assets/basecrm/ideation-1.png", alt="")
+                img.js-img-preview(src="/assets/basecrm/ideation-1.png", alt="")
             div
                 h3 Reorganize the information architecture
                 p According to the user research and my understanding of how CRM works, I regroup the information of current deal profile based on the frequency users will view or add data. One participant mentioned that he will use activities and collaborator when there is new team members involved in the deal, so I put these information into second tab.
@@ -81,10 +81,10 @@ include ../_mixin.pug
                 h3 Interface With Scalability
                 p In order to solve the scalability issue as well as provide possibility to customize deal profile, I sketch out several concepts. Base on sales person’s needs of view more information at one time and quick interaction, I organized these concepts and select one to develop further.
             div
-                img(src="/assets/basecrm/ideation-2.png", alt="")
+                img.js-img-preview(src="/assets/basecrm/ideation-2.png", alt="")
         .two-column
             div
-                img(src="/assets/basecrm/ideation-3.png", alt="")
+                img.js-img-preview(src="/assets/basecrm/ideation-3.png", alt="")
             div
                 h3 Quick Ways to Add Objects
                 p I explored several ways to quick add objects within the main page. How I decide on using which concept depends if the interaction is clear or intuitive to users and how the concept can work well with scalability.
@@ -98,16 +98,16 @@ include ../_mixin.pug
     section.-shading
         .four-column._center
             div
-                img(src="/assets/basecrm/iteration-1.png", alt="")
+                img.js-img-preview(src="/assets/basecrm/iteration-1.png", alt="")
                 p Iteration 1
             div
-                img(src="/assets/basecrm/iteration-2.png", alt="")
+                img.js-img-preview(src="/assets/basecrm/iteration-2.png", alt="")
                 p Iteration 2
             div
-                img(src="/assets/basecrm/iteration-3.png", alt="")
+                img.js-img-preview(src="/assets/basecrm/iteration-3.png", alt="")
                 p Iteration 3
             div
-                img(src="/assets/basecrm/iteration-4.png", alt="")
+                img.js-img-preview(src="/assets/basecrm/iteration-4.png", alt="")
                 p Iteration 4
 
     section.-with-vert-line.-content-width
@@ -116,7 +116,7 @@ include ../_mixin.pug
             | new experience
         .two-column
             div
-                img(src="/assets/basecrm/design-1.png", alt="")
+                img.js-img-preview(src="/assets/basecrm/design-1.png", alt="")
             div
                 h3 INTERFACE OVERVIEW
                 p The categories are organized in a list view and users will be able to take a look at the latest items within them so that users will have a better understanding of where this deal is and what they need to do with a glance. In the "Contact" card, the name showed is this deals’ primary contact.
@@ -154,6 +154,4 @@ include ../_mixin.pug
             a(href="/projects/credible_dashboard.html")
                 p.arrow next >
                 p.name Credible Offer Dashboard
-        .footer-copy
-            p Designed and Coded by Yi Nie.
-            p:a(target="_blank" href="mailto:yinie.ux@gmail.com") yinie.ux@gmail.com
+        +footer

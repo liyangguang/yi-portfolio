@@ -18,7 +18,7 @@ include ../_mixin.pug
         p.section-type.font-gilroy the problem
         h2 which offer should I choose?
         p Credible is a marketplace for student loan refinancing. It helps borrowers get personalized rates from multiple lenders. It's great that users can receive multiple offers by providing data once. But the terms and benefits of each offer are very different. How to design the offer dashboard to help users find the best offer?
-        img.full-width(src="/assets/credible_dashboard/problem.png")
+        img.js-img-preview.full-width(src="/assets/credible_dashboard/problem.png")
 
     //- research
     section
@@ -44,13 +44,13 @@ include ../_mixin.pug
         h2 Design Goals and Key Consideration
         .flex-container.three-points.center.top
             .flex-item
-                img.full-width(src="/assets/credible_dashboard/solution-icon1.png")
+                img.js-img-preview.full-width(src="/assets/credible_dashboard/solution-icon1.png")
                 p.dark Include current loan information
             .flex-item
-                img.full-width(src="/assets/credible_dashboard/solution-icon2.png")
+                img.js-img-preview.full-width(src="/assets/credible_dashboard/solution-icon2.png")
                 p.dark Improve usability of filters
             .flex-item
-                img.full-width(src="/assets/credible_dashboard/solution-icon3.png")
+                img.js-img-preview.full-width(src="/assets/credible_dashboard/solution-icon3.png")
                 p.dark Archive options not interested
 
     //- design goal 1
@@ -63,25 +63,25 @@ include ../_mixin.pug
             li Show new updates of the dashboard and current loan information on top
 
 
-    //- design goal 1 - img
+    //- design goal 1
     section.flex-container.iterations.-shading
         .flex-item
             p.iteration-title
                 span.number.no-space 1
                 | st iteration
-            img.full-width(src="/assets/credible_dashboard/design1-iteration1.png")
+            img.js-img-preview.full-width(src="/assets/credible_dashboard/design1-iteration1.png")
         .step-triangle
         .flex-item
             p.iteration-title
                 span.number.no-space 2
                 | nd iteration
-            img.full-width(src="/assets/credible_dashboard/design1-iteration2.png")
+            img.js-img-preview.full-width(src="/assets/credible_dashboard/design1-iteration2.png")
         .step-triangle
         .flex-item
             p.iteration-title
                 span.number.no-space 3
                 | rd iteration
-            img.full-width(src="/assets/credible_dashboard/design1-iteration3.png")
+            img.js-img-preview.full-width(src="/assets/credible_dashboard/design1-iteration3.png")
 
     //- design goal 2
     section
@@ -93,7 +93,7 @@ include ../_mixin.pug
                     | Slider v.s. input
                 p The sliders provide a clear visual cue of what it is and how to use it. However, adjusting the sliders to a specific number can be a difficult task. So I decide to keep the slider pattern but also give users the ability to type in they desired number directly.
             .flex-item
-                img.img-with-shadow.full-width(src="/assets/credible_dashboard/design2-filter1.png")
+                img.js-img-preview.img-with-shadow.full-width(src="/assets/credible_dashboard/design2-filter1.png")
         .flex-container.direction
             .flex-item
                 p.bold.dark
@@ -101,7 +101,7 @@ include ../_mixin.pug
                     | Checkbox, dropdown or radio
                 p The old checkboxes for rate type can be confusing when both are unchecked. I explored checkboxes, radio buttons, drop down and pills, and decide on the current solution, which is easiest to understand and apply.    
             .flex-item
-                img.img-with-shadow.full-width(src="/assets/credible_dashboard/design2-filter2.png")
+                img.js-img-preview.img-with-shadow.full-width(src="/assets/credible_dashboard/design2-filter2.png")
 
     //- design goal 3
     section
@@ -113,7 +113,7 @@ include ../_mixin.pug
                     | Archive offers that users are not interested in
                 p After filtering the offers with criteria, users can mark the offers as "not interested". Then the offer will be put into the archive category. If users change their mind, these offers can be put out of the archive.
             .flex-item
-                img.img-with-shadow.full-width(src="/assets/credible_dashboard/design3-archive.png")
+                img.js-img-preview.img-with-shadow.full-width(src="/assets/credible_dashboard/design3-archive.png")
         .flex-container.direction
             .flex-item
                 p.bold.dark
@@ -121,7 +121,7 @@ include ../_mixin.pug
                     | Compare options in viewport
                 p One challenge here is providing detailed information about each offer, but also saving space of each offer. So that users can view and compare multiple offer details without scrolling up and down. I arranged information into sections and removed duplicated information with the filters to same move space.
             .flex-item
-                img.img-with-shadow.full-width(src="/assets/credible_dashboard/design3-compare.png")
+                img.js-img-preview.img-with-shadow.full-width(src="/assets/credible_dashboard/design3-compare.png")
     
     //- usability testing
     section
@@ -137,10 +137,10 @@ include ../_mixin.pug
         h3 iteration
         .flex-container.direction
             .flex-item
-                img.img-with-shadow.full-width(src="/assets/credible_dashboard/test-iteration1.png")
+                img.js-img-preview.img-with-shadow.full-width(src="/assets/credible_dashboard/test-iteration1.png")
             .step-triangle
             .flex-item
-                img.img-with-shadow.full-width(src="/assets/credible_dashboard/test-iteration2.png")
+                img.js-img-preview.img-with-shadow.full-width(src="/assets/credible_dashboard/test-iteration2.png")
         p First, I changed the label "Apply discounts" to "APR discounts", so that users can understand what this filter is related to. Then I started to really think about users mental model - users would like to know possible discounts, then filter out if they don't meet requirements. So I decide to make the default to show both discounts, and users can un-check if they don't meet requirements.
 
     //- visual
@@ -148,10 +148,10 @@ include ../_mixin.pug
         p.section-type.font-gilroy visual design
         h2 refresh the look
         p I refined the visual of my design based on Credible's branding, to make it feel clean, modern, approachable and trustworthy.
-        img.full-width(src="/assets/credible_dashboard/final-full.png", style="margin-top: 1em;")
+        img.js-img-preview.full-width(src="/assets/credible_dashboard/final-full.png", style="margin-top: 1em;")
 
     section.bg-shading
-        img.full-width(src="/assets/credible_dashboard/final-guide.png")
+        img.js-img-preview.full-width(src="/assets/credible_dashboard/final-guide.png")
 
     section
         p.section-type.font-gilroy the end
@@ -168,9 +168,7 @@ include ../_mixin.pug
                 p.footer-nav-arrow next >
                 p.footer-nav-name photo management app
             .flex-space
-        .footer-copy.flex-container
-            p.flex-space Designed and Coded by Yi Nie.
-            a(target="_blank" href="mailto:yinie.ux@gmail.com") yinie.ux@gmail.com
+        +footer
 
     style.
         .quote-wrap{
