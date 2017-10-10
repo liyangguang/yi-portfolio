@@ -9,7 +9,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  max-width: 100%;
 }
 
 html, body{
@@ -17,7 +16,7 @@ html, body{
   line-height: 1.6;
   color: #222;
   font-size: 16px;
-  font-size: calc(8px + .8vw);
+  font-size: calc(12px + .3vw);
   overflow-x: hidden;
 }
 @media screen and (max-width: 1000px){
@@ -36,10 +35,15 @@ a:hover{
   opacity: 1;
 }
 p, li{
-  color: #999;
-  font-weight: 300;
+  color: #aaa;
+  font-size: 1rem;
+}
+p{
+  margin: .5em 0;
 }
 video, img{
   display: block;
+  width: 100%;
   margin: 0 auto;
+  max-width: 100%;
 }
