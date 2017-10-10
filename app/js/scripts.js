@@ -43,37 +43,32 @@ $(function () {
 
   // co-signer project - steps carousel
   if ($('.js-step-button').length) {
-    var videoLength;
+    var switchVideo = function switchVideo(i) {
+      var index = parseInt(i);
+      if (stepVideoTimer) {
+        clearTimeout(stepVideoTimer);
+      }
+      $('.js-step-button').removeClass('-active');
+      $('.step-video').removeClass('-active');
+      $('.js-step-button[data-step=' + index + ']').addClass('-active');
+      $('.step-video[data-step=' + index + ']').addClass('-active');
+      $('.step-video[data-step=' + index + ']')[0].load();
+      $('.step-video[data-step=' + index + ']')[0].play();
+      var next = index + 1;
+      if (next >= 4) next = 1;
+      stepVideoTimer = setTimeout(function () {
+        switchVideo(next);
+      }, videoLength[index] * 1000);
+    };
+
+    var videoLength = [undefined, 14, 24, 18]; // index start from 1
     var stepVideoTimer;
+    $('.js-step-button').click(function (e) {
+      var index = e.currentTarget.dataset.step;
+      switchVideo(index);
+    });
 
-    (function () {
-      var switchVideo = function switchVideo(i) {
-        var index = parseInt(i);
-        if (stepVideoTimer) {
-          clearTimeout(stepVideoTimer);
-        }
-        $('.js-step-button').removeClass('-active');
-        $('.step-video').removeClass('-active');
-        $('.js-step-button[data-step=' + index + ']').addClass('-active');
-        $('.step-video[data-step=' + index + ']').addClass('-active');
-        $('.step-video[data-step=' + index + ']')[0].load();
-        $('.step-video[data-step=' + index + ']')[0].play();
-        var next = index + 1;
-        if (next >= 4) next = 1;
-        stepVideoTimer = setTimeout(function () {
-          switchVideo(next);
-        }, videoLength[index] * 1000);
-      };
-
-      videoLength = [undefined, 14, 24, 18]; // index start from 1
-
-      $('.js-step-button').click(function (e) {
-        var index = e.currentTarget.dataset.step;
-        switchVideo(index);
-      });
-
-      switchVideo(1);
-    })();
+    switchVideo(1);
   }
 
   // images view
