@@ -2,6 +2,10 @@
 !lib/README.md
 .DS_Store
 node_modules
+app/index.html
+app/projects
+app/js
+app/css
 
 # Logs
 logs
