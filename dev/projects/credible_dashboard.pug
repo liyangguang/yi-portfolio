@@ -1,13 +1,11 @@
 include ../_mixin.pug
-+base('Credible offer dashboard redesign - Yi Nie - Product Designer', true)
++base('Credible offer dashboard redesign - Yi Nie - Product Designer')
     .page-banner
-        img.bg(src="/assets/credible_dashboard/_banner-bg.png")
-        .content
+        img.bg(src="/assets/credible_dashboard/_banner_bg.png")
+        .content.-content-width
             p.small-title web app
             h1.big-title._gilroy-title Credible Offer Dashboard Redesign
             p.more Led the redesign of Credible's co-signing experience for student loan refinancing, including user flow, interaction design and visual design for both desktop and mobile.
-    
-    .project-hero-line
 
     //- intro
     section.project-hero.-shading
@@ -168,45 +166,3 @@ include ../_mixin.pug
                 p.footer-nav-arrow next >
                 p.footer-nav-name photo management app
             .flex-space
-        +footer
-
-    style.
-        .quote-wrap{
-          margin: 2em 0;
-        }
-        .quote-wrap > p{
-          padding-left: 1.5em;
-        }
-        p.quote-title{
-          padding-left: .8em;
-          font-size: 1.2em;
-          border-left: 4px solid #005EFE;
-          font-weight: lighter;
-          margin: .3em 0;
-        }
-
-        .number.no-space{
-            margin: 0;
-        }
-
-        .three-points .flex-item{
-            max-width: 300px;
-        }
-        @media screen and (max-width: 600px){
-          .flex-container.three-points{
-            flex-direction: column;
-            align-items: center;
-          }
-        }
-        
-        .iterations .flex-item{
-            max-width: 600px;
-        }
-        @media screen and (max-width: 900px){
-          .iterations{
-            flex-direction: column;
-          }
-          .iterations .step-triangle{
-            transform: rotate(90deg);
-          }
-        }

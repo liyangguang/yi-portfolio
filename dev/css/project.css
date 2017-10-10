@@ -1,95 +1,135 @@
 @import './_variables';
 
-section p{
-  margin: 1em 0;
-  font-size: 16px;
+.-content-width{
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1.5rem;
 }
 
-.project-cover{
-  padding-top: 60px;
+.project-cover.-shading{
+  padding-top: 4rem;
   padding-bottom: 0;
 }
 
 .-shading{
   background: #f5faff;
-  margin: 1em 0;
-  & > img{
+  margin: 3em 0;
+  padding: 2rem 1rem;
+  & > *{
+    width: 100%;
     max-width: 1000px;
-    padding: 30px 0;
+    margin: 0 auto;
   }
 }
-section.-with-vert-line:before{
-  @apply --vert-line;
+
+.two-column{
+  font-size: 0;
+  margin-top: 2rem;
+
+  & > *{
+    vertical-align: top;
+    font-size: 16px;
+    display: inline-block;
+    width: 50%;
+    padding: 20px;
+  }
 }
-.-content-width{
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+@media screen and (max-width: 600px) {
+  .two-column > * {
+    display: block;
+    width: auto;
+  }
 }
 
-.quote{
-  color: var(--main);
-  font-size: 32px;
-  margin: 2em 3em;
-  font-style: italic;
-  opacity: .6;
+.three-column{
+  font-size: 0;
+  margin-top: 2rem;
+
+  & > *{
+    vertical-align: top;
+    font-size: 16px;
+    display: inline-block;
+    width: 33%;
+    padding: 20px;
+  }
 }
+
+.four-column{
+  font-size: 0;
+  margin-top: 2rem;
+
+  & > *{
+    vertical-align: top;
+    font-size: 16px;
+    display: inline-block;
+    width: 25%;
+    padding: 20px;
+  }
+}
+
+.-vert-center > div{
+  vertical-align: middle;
+}
+/******************** font **************************/
+
 .section-title{
-  font-size: 32px;
+  font-family: 'Gilroy', 'Gotham_Narrow', 'Helvetica', sans-serif;
+  font-size: 2rem;
   color: #555;
-  font-weight: 600;
-  text-transform: uppercase;
   text-align: center;
-  letter-spacing: .05em;
-  margin: 1em;
+  letter-spacing: .02em;
+  margin: 4em .5em .8em;
 
   & > p{
+    text-transform: uppercase;
     color: var(--main);
-    font-size: 16px;
-    font-weight: 500;
-    margin: 0;
+    font-size: .9rem;
+    margin-bottom: 1em;
+    opacity: .25;
+    letter-spacing: .35em;
   }
 }
 
 .sub-section-title{
-  text-align: center;
-  font-size: 32px;
+  font-family: 'Gilroy', 'Gotham_Narrow', 'Helvetica', sans-serif;
+  font-size: 1.3rem;
   color: var(--main);
-  font-weight: 300;
   letter-spacing: .05em;
-  text-transform: capitalize;
+  text-transform: uppercase;
+  position: relative;
+  margin: 3.5em 0 .8em;
+  letter-spacing: .1em;
 
-  & > .step{
-    font-size: 45px;
-    font-weight: 500;
+  & > span{
+    position: absolute;
+    bottom: -.3em;
+    font-size: 4rem;
     color: var(--main);
-    opacity: .3;
-    margin: 0;
+    opacity: .1;
   }
 }
 
-.list-number{
-  color: var(--main);
-}
-
-.bullet{
-  font-size: 18px;
-  font-weight: 500;
+.item-title{
+  font-size: 1.2rem;
+  font-weight: 700;
   color: #555;
+  margin: 1.8em 0 .3rem;
 }
 
-.-smaller-video{
-  max-height: 500px;
+.quote{
+  color: var(--main);
+  font-size: 1.6rem;
+  margin: 1.5em 3em;
+  font-style: italic;
+  opacity: .4;
 }
 
 /******************** project footer **************************/
-.footer-nav-wrap{
-  display: flex;
-  margin: 60px 0;
+.footer-nav{
+  margin: 60px auto;
 
   & > a{
-    padding: 24px;
-    display: block;
     &:first-child{
       text-align: left;
     }
@@ -111,6 +151,12 @@ section.-with-vert-line:before{
   }
 }
 
+/******************** mobile video (in base) **************************/
+.-smaller-video{
+  max-height: 500px;
+}
+
+/******************** step video (in co-signer) **************************/
 .-steps{
   min-height: 500px;
   display: flex;
@@ -144,33 +190,41 @@ section.-with-vert-line:before{
 
 .step-button{
   cursor: pointer;
+  position: relative;
   & > span{
-    font-weight: 400;
-    font-size: 30px;
-    color: #c3c3c3;
-    opacity: .6;
-    margin-right: 6px;
+    font-family: 'Gilroy', 'Gotham_Narrow', 'Helvetica', sans-serif;
+    position: absolute;
+    color: #d8d8d8;
+    font-size: 1.3rem;
   }
   & > h3{
-    color: #c3c3c3;
-    font-size: 26px;
-    display: inline-block;
-    font-weight: 400;
+    font-family: 'Gilroy', 'Gotham_Narrow', 'Helvetica', sans-serif;
+    color: #d8d8d8;
+    font-size: 1.2rem;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    margin-left: 1.5em;
+    margin-top: .8em;
   }
   & > p{
     max-height: 0;
     overflow: hidden;
     margin: 0;
-    transition: max-height .3s ease;
+    transition: max-height .5s ease;
   }
 
   &.-active{
     & > span{
+      top: -.75em;
+      font-size: 4rem;
       color: var(--main);
-      opacity: .6;
+      opacity: .1;
     }
     & > h3{
       color: var(--main);
+      margin-left: 0;
+      margin-top: 2em;
     }
     & > p{
       max-height: 100px;
@@ -179,36 +233,6 @@ section.-with-vert-line:before{
   }
 }
 
-.footer-copy{
-  text-align: center;
-  margin: 16px 24px;
-  font-size: 14px;
-}
-
-/******************** start of older css **************************/
-
-.project-hero-line{
-  @apply --vert-line;
-  margin-top: 200px;
-}
-
-.project-hero{
-  padding-top: 60px;
-  padding-bottom: 0;
-}
-
-.section-type{
-  &:before{
-    @apply --vert-line;
-  }
-}
-
-.section-type + h2{
-  text-transform: uppercase;
-  font-weight: normal;
-  letter-spacing: .1em;
-}
-
-.iterations{
-  padding: 40px;
+.-smaller{
+  width: 70%;
 }
