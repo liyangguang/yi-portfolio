@@ -1,7 +1,7 @@
 @import './_variables';
 
 .home-intro{
-  padding: 10em 0 20%;
+  padding: 15rem 0 20%;
   position: relative;
 
   & > .title{

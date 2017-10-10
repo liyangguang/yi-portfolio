@@ -234,7 +234,8 @@ video, img{
 }
 
 .home-intro{
-  padding: 10em 0 20%;
+  padding: 240px 0 20%;
+  padding: 15rem 0 20%;
   position: relative
 }
 
@@ -656,22 +657,26 @@ video, img{
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 24px;
+  padding: 0 1.5rem;
 }
 
-.project-cover{
-  padding-top: 60px;
+.project-cover.-shading{
+  padding-top: 64px;
+  padding-top: 4rem;
   padding-bottom: 0;
 }
 
 .-shading{
   background: #f5faff;
-  margin: 3em 0
+  margin: 3em 0;
+  padding: 32px 16px;
+  padding: 2rem 1rem
 }
 
 .-shading > *{
   width: 100%;
   max-width: 1000px;
-  padding: 30px 0;
   margin: 0 auto;
 }
 
@@ -687,6 +692,13 @@ video, img{
   display: inline-block;
   width: 50%;
   padding: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .two-column > * {
+    display: block;
+    width: auto;
+  }
 }
 
 .three-column{

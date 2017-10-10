@@ -4,20 +4,21 @@
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 1.5rem;
 }
 
-.project-cover{
-  padding-top: 60px;
+.project-cover.-shading{
+  padding-top: 4rem;
   padding-bottom: 0;
 }
 
 .-shading{
   background: #f5faff;
   margin: 3em 0;
+  padding: 2rem 1rem;
   & > *{
     width: 100%;
     max-width: 1000px;
-    padding: 30px 0;
     margin: 0 auto;
   }
 }
@@ -32,6 +33,12 @@
     display: inline-block;
     width: 50%;
     padding: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .two-column > * {
+    display: block;
+    width: auto;
   }
 }
 
