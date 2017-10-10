@@ -121,10 +121,6 @@
   }
 }
 
-body{
-  padding-top: 100px;
-}
-
 .site-header.-collapse{
   box-shadow: 0 0 5px #ddd;
   background: #fff;
@@ -135,35 +131,29 @@ body{
       width: 30px;
     }
   }
-
 }
 
 /* ---------------- page banner -------------------- */
 .page-banner{
     background-color: #F1F6FF;
     text-align: center;
-    padding: 5em 1em 0;
-    margin-top: -100px;
-    margin-bottom: 180px;
     position: relative;
+    padding: 80px 0 60px;
+    margin-bottom: 250px;
 
-    &.-with-vert-line{
-      margin-bottom: 260px;
-      &:after{
-        @apply --vert-line;
-        position: relative;
-        top: 230px;
-      }
+    & > .bg{
+      width: 100%;
+      max-width: 1000px;
     }
 
     & > .content {
         position: absolute;
-        left: 50%;
+        left: 0;
+        right: 0;
         bottom: 0;
-        transform: translate(-50%, 50%);
-        width: 80%;
+        transform: translate(0, 60%);
+        margin: 0 auto;
         background: #fff;
-        max-width: 900px;
         padding: 60px 50px 20px;
 
         & > .small-title{
@@ -186,9 +176,41 @@ body{
 
 /* ---------------- site footer ---------------- */
 .site-footer{
-  margin: 100px 0 20px;
-  padding: 10px 20px;
-  font-size: .8em;
-  display: flex;
-  justify-content: space-between;
+  margin: 100px 10px 20px;
+  text-align: center;
+  font-size: .8rem;
+}
+
+/* ---------------- image preview ---------------- */
+.image-preview-container{
+    position: fixed;
+    top: 0;bottom: 0;left: 0;right: 0;
+    background: rgba(0,0,0,.7);
+    z-index: 20;
+    cursor: pointer;
+    display: none;
+
+    &:after{
+        content: '';
+        position: absolute;
+        top: 20px;right: 20px;
+        width: 30px;height: 30px;
+        background-image: url(/assets/icon-close.svg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        opacity: .95;
+    }
+
+    & > .image{
+        background-size: contain;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 50%;left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        height: 80%;
+        margin: auto;
+        max-width: 600px;
+    }
 }
