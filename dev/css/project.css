@@ -23,16 +23,17 @@
   }
 }
 
+/******************** layout **************************/
 .two-column{
   font-size: 0;
   margin-top: 2rem;
 
   & > *{
-    vertical-align: top;
     font-size: 16px;
     display: inline-block;
     width: 50%;
     padding: 20px;
+    vertical-align: middle;
   }
 }
 @media screen and (max-width: 600px) {
@@ -68,11 +69,7 @@
   }
 }
 
-.-vert-center > div{
-  vertical-align: middle;
-}
 /******************** font **************************/
-
 .section-title{
   font-family: 'Gilroy', 'Gotham_Narrow', 'Helvetica', sans-serif;
   font-size: 2rem;
@@ -115,6 +112,10 @@
   font-weight: 700;
   color: #555;
   margin: 1.8em 0 .3rem;
+
+  &:first-child{
+    margin-top: 0;
+  }
 }
 
 .quote{
@@ -149,11 +150,6 @@
       font-weight: 400;
     }
   }
-}
-
-/******************** mobile video (in base) **************************/
-.-smaller-video{
-  max-height: 500px;
 }
 
 /******************** step video (in co-signer) **************************/
@@ -231,8 +227,4 @@
       transition: max-height .5s ease;
     }
   }
-}
-
-.-smaller{
-  width: 70%;
 }

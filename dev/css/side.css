@@ -4,9 +4,6 @@
     position: relative;
     margin-bottom: 120px;
 
-    &:before{
-        @apply --vert-line;
-    }
     & > .title{
         text-transform: uppercase;
         text-align: center;
@@ -134,10 +131,10 @@
     position: absolute;
     z-index: -1;
 
-    &.-section-1{ right: -8%; top: 3%; }
-    &.-section-2{ left: -10%; top: 3%; }
-    &.-section-3{ right: -8%; top: 3%; }
-    &.-section-4{ left: -8%; top: 3%; }
-    &.-section-5{ left: -12%; top: 80%; }
-    &.-section-6{ right: -10%; bottom: -3%; }
+    &.-section-1{width: 250px; right: -8%; top: 3%; }
+    &.-section-2{width: 250px; left: -10%; top: 3%; }
+    &.-section-3{width: 250px; right: -8%; top: 3%; }
+    &.-section-4{width: 250px; left: -8%; top: 3%; }
+    &.-section-5{width: 250px; left: -12%; top: 80%; }
+    &.-section-6{width: 250px; right: -10%; bottom: -3%; }
 }

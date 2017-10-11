@@ -60,9 +60,9 @@
 
 .site-nav{
   text-transform: uppercase;
-  font-size: .8em;
+  font-size: 1em;
   letter-spacing: .2em;
-  font-weight: 500;
+  font-weight: bold;
 
   & > .item{
     display: inline-block;
@@ -106,11 +106,13 @@
         padding: 60px 50px 20px;
 
         & > .small-title{
-            color: var(--main);
-            font-weight: 500;
+            font-family: 'Gilroy', 'Gotham_Narrow', 'Helvetica', sans-serif;
             text-transform: uppercase;
-            font-size: .8em;
-            letter-spacing: 5px;
+            color: var(--main);
+            font-size: .9rem;
+            margin-bottom: 1em;
+            opacity: .25;
+            letter-spacing: .35em;
         }
         & > .big-title{
             text-transform: uppercase;
@@ -160,6 +162,5 @@
         width: 80%;
         height: 80%;
         margin: auto;
-        max-width: 600px;
     }
 }
