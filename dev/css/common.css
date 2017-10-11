@@ -111,13 +111,14 @@
             color: var(--main);
             font-size: .9rem;
             margin-bottom: 1em;
-            opacity: .25;
             letter-spacing: .35em;
         }
         & > .big-title{
+            font-family: 'Gilroy', 'Gotham_Narrow', 'Helvetica', sans-serif;
             text-transform: uppercase;
             font-size: 2em;
             font-weight: 400;
+            letter-spacing: .1em;
         }
         & > .more{
             font-size: .9em;
