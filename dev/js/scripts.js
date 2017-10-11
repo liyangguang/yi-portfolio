@@ -27,17 +27,17 @@ $(function(){
   });
 
   // photo project tabs
-  $('#ideation .tab').click(function(){
-      $(this).addClass('active');
-      $(this).siblings().removeClass('active');
-      $('#ideation .tab-content').hide();
-      $('#ideation .tab-content-' + $(this).attr('data-tab')).show();
+  $('#js-competitor .js-tab').click(function(){
+      $(this).addClass('-active');
+      $(this).siblings().removeClass('-active');
+      $('#js-competitor-content .js-tab-content').hide();
+      $('#js-competitor-content .js-tab-content').eq(parseInt($(this).attr('data-tab'))).show();
   });
-  $('#competitor .tab').click(function(){
-      $(this).addClass('active');
-      $(this).siblings().removeClass('active');
-      $('#competitor .tab-content').hide();
-      $('#competitor .tab-content-' + $(this).attr('data-tab')).show();
+  $('#js-ideation .js-tab').click(function(){
+      $(this).addClass('-active');
+      $(this).siblings().removeClass('-active');
+      $('#js-ideation-content .js-tab-content').hide();
+      $('#js-ideation-content .js-tab-content').eq(parseInt($(this).attr('data-tab'))).show();
   });
 
   // co-signer project - steps carousel

@@ -22,6 +22,37 @@
     margin: 0 auto;
   }
 }
+.tab-content{
+  background: #2d3e5a;
+  margin: 1em 0;
+  padding: .5rem 1rem;
+  & > *{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  & *{
+    color: rgba(255,255,255,.8) !important;
+  }
+}
+
+.js-tab.-active{
+  position: relative;
+  &:after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    background: #2d3e5a;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -1rem;
+    border-left: 20px solid #fff;
+    border-bottom: 20px solid #2d3e5a;
+    border-right: 20px solid #fff;
+    border-top: 20px solid #fff;
+  }
+}
 
 /******************** layout **************************/
 .two-column{
@@ -69,6 +100,18 @@
   }
 }
 
+.-vert-top > *{
+  vertical-align: top;
+}
+
+.columns{
+  display: flex;
+
+  & > *{
+    margin: 16px;
+    flex: 1 1 0;
+  }
+}
 /******************** font **************************/
 .section-title{
   font-family: 'Gilroy', 'Gotham_Narrow', 'Helvetica', sans-serif;

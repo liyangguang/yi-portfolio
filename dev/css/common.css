@@ -12,9 +12,6 @@
   text-transform: uppercase;
   letter-spacing: .1em;
 }
-.js-img-preview{
-  cursor: pointer;
-}
 ._primary-link{
   display: inline-block;
   margin: 8px 0;
@@ -26,6 +23,11 @@
 ._primary-link:after{
   content: '>';
   padding-left: 5px;
+}
+
+.js-img-preview,
+.js-tab{
+  cursor: pointer;
 }
 
 /* ---------------- site header ---------------- */
