@@ -6,7 +6,7 @@ include ../_mixin.pug
         .content.-content-width
             p.small-title web app
             h1.big-title photo management mobile app
-            p.more It always takes me several hours to organize my photos
+            p.more Viewing and organizing photos are not always easy. In this project, I designed a photo management mobile app to help users organize and view their photos in a better way.
 
     section.-shading.project-cover
         img(src="/assets/photo/_cover.png")
@@ -243,23 +243,18 @@ include ../_mixin.pug
         h2.section-title
             p.sub design details
             | Manage your photos effortlessly
-
-        .two-column
-            div
-                img(src="/assets/photo/design1.png")
-            div
-                p.item-title Different view modes to meet different users' needs
-                p The application can provide five different views for different user needs. The default comfortable view, traditional grid view, map view for travelers and event view for users who took photos during events.
+        p Different view modes to meet different users' needs. The application can provide five different views for different user needs. The default comfortable view, traditional grid view, map view for travelers and event view for users who took photos during events.
+        img.js-img-preview(src="/assets/photo/design1.png")                
 
         .two-column
             div
                 p.item-title Photo organization on your swipe
                 p Use swipe and long press to delete and select photo so that users don't need to enter the slideshow mode. Users also have the flexibility to customize their own gesture preference to boost their own flow.
             div
-                img(src="/assets/photo/design2.png")
+                img.js-img-preview(src="/assets/photo/design2.png")
         .two-column
             div
-                img(src="/assets/photo/design3.png")
+                img.js-img-preview(src="/assets/photo/design3.png")
             div
                 p.item-title Multiple photos selecting and organizing
                 p Grid View is efficient when organizing several photos together. In select mode, users can select multiple photos, share, download, and delete at one time. Existing albums will display at the bottom of the page so that users can add these photos into albums at one time.
@@ -268,10 +263,10 @@ include ../_mixin.pug
                 p.item-title Batching similar photos
                 p From user research, some users like to take several pictures at one time and select one or two from them. The "batch" feature can help them do it efficiently. The similar photos will be combined and users can select one or two then tap "Done". The selected picture will be saved and other picture will be deleted.
             div
-                img(src="/assets/photo/design4.png")
+                img.js-img-preview(src="/assets/photo/design4.png")
         .two-column
             div
-                img(src="/assets/photo/design5.png")
+                img.js-img-preview(src="/assets/photo/design5.png")
             div
                 p.item-title Photos tab and settings tab
                 p In the photos tab, users can view all the photos and albums. In the settings page, users can set up whether they want to use cellular data to back up photos. Considering some photos are taken by DSLR and file size is large, users can set the image quality to view on mobile, which can influence the usage of cellular data and loading speed. Users can also set their own gesture preferences.

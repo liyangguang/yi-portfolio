@@ -39,7 +39,7 @@
 
   & p{
     margin: 0;
-    font-size: 18px;
+    font-size: 1em;
   }
 }
 
@@ -50,6 +50,7 @@
     color: #005efe;
     letter-spacing: .3em;
     text-transform: uppercase;
+    margin-bottom: .5em;
   }
   & .title{
     font-size: 1.3em;
