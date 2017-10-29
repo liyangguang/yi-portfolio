@@ -271,3 +271,37 @@
     }
   }
 }
+
+.password-protected{
+  display: none;
+}
+.password{
+  text-align: center;
+  padding: 8em 0;
+  & a{
+    color: var(--main);
+  }
+  & input{
+    padding: .5em;
+  }
+  & button{
+    text-transform: uppercase;
+    background: var(--main);
+    color: #fff;
+    opacity: .7;
+    border-radius: 3px;
+    border: none;
+    padding: .6em 1.2em;
+    cursor: pointer;
+    &:after{
+      content: 'view';
+    }
+
+    &.-wrong{
+      background: red;
+      &:after{
+        content: 'try again';
+      }
+    }
+  }
+}

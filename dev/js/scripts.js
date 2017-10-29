@@ -40,6 +40,18 @@ $(function(){
       $('#js-ideation-content .js-tab-content').eq(parseInt($(this).attr('data-tab'))).show();
   });
 
+  $('.password form').submit(function(e){
+    e.preventDefault();
+    if ($('.password input').val() === 'yi-ux'){
+      $('.password button').removeClass('-wrong');
+      $('.password').slideUp();
+      $('.password-protected').slideDown();
+    }
+    else{
+      $('.password button').addClass('-wrong');
+    }
+  });
+
   // co-signer project - steps carousel
   if ($('.js-step-button').length){
     var videoLength = [undefined, 14, 24, 18]; // index start from 1

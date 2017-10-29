@@ -10,180 +10,188 @@ include ../_mixin.pug
     section.-shading.project-cover
         img(src="/assets/credible_cosigner/_cover.png")
 
-    section.-content-width
-        h2.section-title
-            p.sub background
-            | Why borrowers need co-signers?
-        p Credible is the marketplace for student loan and student loan re-financing. Users fill one single form and they can compare rates from multiple lenders and choose the one that best fits their need. But not every borrower can find low interest rate so easy.
-        p.quote Adding a credit worthy co-signer help borrowers receive lower rates
-        p If you have good credit(750+), you can get the best lowest rates pay off your student loan as soon as possible. But not all users have 750+ credit score and there even are some users whose credit score is not high enough to get an offer. That's the time you need a co-signer who have better income and credit score to help borrowers get access to lower rates.
+    .password.-content-width
+        p Content of this project is hidden because of NDA. Please 
+            a(href="mailto:yinie.ux@gmail.com", target="_blank") contact me
+            |  for the password.
+        form
+            input(type="password", placeholder="Enter password")
+            button
+    .password-protected
+        section.-content-width
+            h2.section-title
+                p.sub background
+                | Why borrowers need co-signers?
+            p Credible is the marketplace for student loan and student loan re-financing. Users fill one single form and they can compare rates from multiple lenders and choose the one that best fits their need. But not every borrower can find low interest rate so easy.
+            p.quote Adding a credit worthy co-signer help borrowers receive lower rates
+            p If you have good credit(750+), you can get the best lowest rates pay off your student loan as soon as possible. But not all users have 750+ credit score and there even are some users whose credit score is not high enough to get an offer. That's the time you need a co-signer who have better income and credit score to help borrowers get access to lower rates.
 
-    section.-content-width
-        h2.section-title
-            p.sub the problem
-            | Users are not adding co-signers
-        p Even though we provide the option to add co-signers and communicate the benefits of adding co-signer to borrowers, there are only small number of users finish the process of adding co-signer. So I paired with Product Manger and started to investigate the reasons behind it. 
-    section.-shading
-        img(src="/assets/credible_cosigner/user-flow-old.png", alt="user flow old")
+        section.-content-width
+            h2.section-title
+                p.sub the problem
+                | Users are not adding co-signers
+            p Even though we provide the option to add co-signers and communicate the benefits of adding co-signer to borrowers, there are only small number of users finish the process of adding co-signer. So I paired with Product Manger and started to investigate the reasons behind it. 
+        section.-shading
+            img(src="/assets/credible_cosigner/user-flow-old.png", alt="user flow old")
 
-    section.-content-width
-        h2.section-title
-            p.sub user research
-            | The long and nontransparent process
-        p I talked to Client Success team, read chatting transcript and watching screen recordings to better understand the pain points and challenges users are facing on current co-signing experience.
-        .two-column
-            div
-                img.js-img-preview(src="/assets/credible_cosigner/research-1.png", alt="")
-            div
-                h3.item-title Long form and sensitive data
-                p In order get rates from multiple lenders, users have to provide all the required information from multiple lenders, which makes the form really long (20 questions). Users also have to provide every sensitive information like SSN to see their new rates.
-        .two-column
-            div
-                h3.item-title Sometimes leads to worse rates 
-                p Borrowers can only receive better rates if the co-signer they add have better credit score. But not everybody know exactly their credit score so sometimes borrowers even get worse rate after they add co-signers. And the process to remove co-signer is really complex and long.
-            div
-                img(style="width: 70%;", src="/assets/credible_cosigner/research-2.png", alt="")
-        .two-column
-            div
-                img(style="width: 70%;", src="/assets/credible_cosigner/research-3.png", alt="")
-            div
-                h3.item-title Borrower can’t decide who to add
-                p Borrowers can only add one person as their co-signers but because they can’t see the final rates and have no idea how different co-signer will influence the final results. Borrower have hard time decide who to add as their co-signers
+        section.-content-width
+            h2.section-title
+                p.sub user research
+                | The long and nontransparent process
+            p I talked to Client Success team, read chatting transcript and watching screen recordings to better understand the pain points and challenges users are facing on current co-signing experience.
+            .two-column
+                div
+                    img.js-img-preview(src="/assets/credible_cosigner/research-1.png", alt="")
+                div
+                    h3.item-title Long form and sensitive data
+                    p In order get rates from multiple lenders, users have to provide all the required information from multiple lenders, which makes the form really long (20 questions). Users also have to provide every sensitive information like SSN to see their new rates.
+            .two-column
+                div
+                    h3.item-title Sometimes leads to worse rates 
+                    p Borrowers can only receive better rates if the co-signer they add have better credit score. But not everybody know exactly their credit score so sometimes borrowers even get worse rate after they add co-signers. And the process to remove co-signer is really complex and long.
+                div
+                    img(style="width: 70%;", src="/assets/credible_cosigner/research-2.png", alt="")
+            .two-column
+                div
+                    img(style="width: 70%;", src="/assets/credible_cosigner/research-3.png", alt="")
+                div
+                    h3.item-title Borrower can’t decide who to add
+                    p Borrowers can only add one person as their co-signers but because they can’t see the final rates and have no idea how different co-signer will influence the final results. Borrower have hard time decide who to add as their co-signers
 
-    section.-content-width
-        h2.section-title
-            p.sub Reframe the problem
-            | Provide visibility in the earlier process 
-        p All the three research insight all leads to one major problem: users can't see the impact of adding their co-signer before they make a high commitment to Credible or lenders. How can we provide more visibility/transparency to users in the earlier process with low cost.
-        p.quote What if users can see co-signer rates before they submit the application to lenders?
+        section.-content-width
+            h2.section-title
+                p.sub Reframe the problem
+                | Provide visibility in the earlier process 
+            p All the three research insight all leads to one major problem: users can't see the impact of adding their co-signer before they make a high commitment to Credible or lenders. How can we provide more visibility/transparency to users in the earlier process with low cost.
+            p.quote What if users can see co-signer rates before they submit the application to lenders?
 
-    section.-shading
-        img(src="/assets/credible_cosigner/user-flow-new.png", alt="user flow new")
+        section.-shading
+            img(src="/assets/credible_cosigner/user-flow-new.png", alt="user flow new")
 
-    section.-content-width
-        h2.section-title
-            p.sub solution
-            | Co-signer pre-qualification
-        p What is pre-qualification? - Using the basic information to find user's credit profile and compare with lender's criteria and rate table to give user accurate rate that they will get from lenders.
-        p Different from what the lenders do, the process of checking users profile is a soft credit inquiry, which will not stay on user's credit profile and won't affect their credit score. So borrowers and co-signers can check their pre-qualified rates on Credible first without submitting to lenders. Thus, 
+        section.-content-width
+            h2.section-title
+                p.sub solution
+                | Co-signer pre-qualification
+            p What is pre-qualification? - Using the basic information to find user's credit profile and compare with lender's criteria and rate table to give user accurate rate that they will get from lenders.
+            p Different from what the lenders do, the process of checking users profile is a soft credit inquiry, which will not stay on user's credit profile and won't affect their credit score. So borrowers and co-signers can check their pre-qualified rates on Credible first without submitting to lenders. Thus, 
 
-        h3.item-title The borrower can always get better rates
-        p If the co-signed rates are lower, a borrower can move forward with current co-signer, if not borrower can try another co-signer. 
+            h3.item-title The borrower can always get better rates
+            p If the co-signed rates are lower, a borrower can move forward with current co-signer, if not borrower can try another co-signer. 
 
-        h3.item-title Only 8 questions (no SSN) needed to check rates
-        p Among the original form, only 8 questions will affect the rates users will get, so we only asked these question at this stage to reduce the effort and friction and make the process easier
+            h3.item-title Only 8 questions (no SSN) needed to check rates
+            p Among the original form, only 8 questions will affect the rates users will get, so we only asked these question at this stage to reduce the effort and friction and make the process easier
 
-        h3.item-title Borrower is able to compare co-signer rates and choose the best co-signer. 
-        p Checking co-signer rates with an easy process without affecting credit score enables a borrower to compare different co-signed rates and help them to get the best rate possible.
+            h3.item-title Borrower is able to compare co-signer rates and choose the best co-signer. 
+            p Checking co-signer rates with an easy process without affecting credit score enables a borrower to compare different co-signed rates and help them to get the best rate possible.
 
-    section.-content-width
-        h2.section-title
-            p.sub the design
-            | New experience overview
-    section.-shading
-        .-steps
-            .screen
-                img.laptop(src="/assets/laptop-browser.png", alt="")
-                video.step-video.-active(src="/assets/credible_cosigner/step-1.mp4", data-step="1")
-                video.step-video(src="/assets/credible_cosigner/step-2.mp4", data-step="2")
-                video.step-video(src="/assets/credible_cosigner/step-3.mp4", data-step="3")
-            .buttons
-                .step-button.js-step-button.-active(data-step="1")
-                    span 01
-                    h3 Borrower initiate
-                    p Borrower initiate adding a co-signer by filling our some simple questions like co-signer’s name and email address.
-                .step-button.js-step-button(data-step="2")
-                    span 02
-                    h3 Co-signer fill simple form 
-                    p Co-signer fill 8 simple questions and to check new rate
-                .step-button.js-step-button(data-step="3")
-                    span 03
-                    h3 Get new rates
-                    p Borrower receive co-signed rates and they are able to compare their own rates with co-signer’s
-    
-    section.-content-width
-        h2.section-title
-            p.sub the process
-            | How did we get there?
-        p After having the co-signer pre-qualification concept, I worked with a product manager and went through creating user flows, low fidelity wireframe and high fidelity mocks. During the process, we also involved engineer and loan operation team early in the process to provide us feedback.
+        section.-content-width
+            h2.section-title
+                p.sub the design
+                | New experience overview
+        section.-shading
+            .-steps
+                .screen
+                    img.laptop(src="/assets/laptop-browser.png", alt="")
+                    video.step-video.-active(src="/assets/credible_cosigner/step-1.mp4", data-step="1")
+                    video.step-video(src="/assets/credible_cosigner/step-2.mp4", data-step="2")
+                    video.step-video(src="/assets/credible_cosigner/step-3.mp4", data-step="3")
+                .buttons
+                    .step-button.js-step-button.-active(data-step="1")
+                        span 01
+                        h3 Borrower initiate
+                        p Borrower initiate adding a co-signer by filling our some simple questions like co-signer’s name and email address.
+                    .step-button.js-step-button(data-step="2")
+                        span 02
+                        h3 Co-signer fill simple form 
+                        p Co-signer fill 8 simple questions and to check new rate
+                    .step-button.js-step-button(data-step="3")
+                        span 03
+                        h3 Get new rates
+                        p Borrower receive co-signed rates and they are able to compare their own rates with co-signer’s
+        
+        section.-content-width
+            h2.section-title
+                p.sub the process
+                | How did we get there?
+            p After having the co-signer pre-qualification concept, I worked with a product manager and went through creating user flows, low fidelity wireframe and high fidelity mocks. During the process, we also involved engineer and loan operation team early in the process to provide us feedback.
 
-    section.-content-width
-        h3.sub-section-title
-            span 01
-            | Mapping out the flow
-        p Before jumping into the design, I worked with PM to mapped out the user flow from adding co-signer to submit to the lender. We check-in with engineer and loan operation teams often to get feedbacks on how much work will involve and if our partner lenders agree on the plan. During the process, we made these key decisions:
+        section.-content-width
+            h3.sub-section-title
+                span 01
+                | Mapping out the flow
+            p Before jumping into the design, I worked with PM to mapped out the user flow from adding co-signer to submit to the lender. We check-in with engineer and loan operation teams often to get feedbacks on how much work will involve and if our partner lenders agree on the plan. During the process, we made these key decisions:
 
-        h4.item-title Different flows based on if co-signer and borrower are together
-        p The questions for co-signer pre-qualification are personal and need to be answer by co-signer. So we ask borrowers if co-signer are with them first. If they are not together, co-signer will get email invite and start form through email. But our data shows that most of time borrower and co-signer were together and we really want to streamline the process. We decide to put the form in the dashboard on the modal so that users don’t need to leave the page and can see the results right on their dashboard
-        h4.item-title Where do co-signers create accounts?
-        p The product support checking rates with multiple co-signer so it doesn’t make sense for co-signer to create account if borrower are not moving forward with them. So co-signers account is create only after borrowers have chosen the co-signer and are submitting the application to lenders
-        h4.item-title How do borrower and co-signer decide which option to choose?
-        p Our research shows that for refinancing user, borrower is usually the one who makes decision so we only provide one dashboard to the borrower and they can pick the loan and drive the whole application process. Also for transparency purpose, co-signer will get an email with their co-signer rates.
-        h4.item-title Design for borrowers who don’t have rates
-        p For borrower with a credit score from 550 - 660, they can’t get offer from lender by themselves. But adding co-signer can help them receive rates and refinance their student loans so we also provide co-signer pre-qualification path for them to check rates
+            h4.item-title Different flows based on if co-signer and borrower are together
+            p The questions for co-signer pre-qualification are personal and need to be answer by co-signer. So we ask borrowers if co-signer are with them first. If they are not together, co-signer will get email invite and start form through email. But our data shows that most of time borrower and co-signer were together and we really want to streamline the process. We decide to put the form in the dashboard on the modal so that users don’t need to leave the page and can see the results right on their dashboard
+            h4.item-title Where do co-signers create accounts?
+            p The product support checking rates with multiple co-signer so it doesn’t make sense for co-signer to create account if borrower are not moving forward with them. So co-signers account is create only after borrowers have chosen the co-signer and are submitting the application to lenders
+            h4.item-title How do borrower and co-signer decide which option to choose?
+            p Our research shows that for refinancing user, borrower is usually the one who makes decision so we only provide one dashboard to the borrower and they can pick the loan and drive the whole application process. Also for transparency purpose, co-signer will get an email with their co-signer rates.
+            h4.item-title Design for borrowers who don’t have rates
+            p For borrower with a credit score from 550 - 660, they can’t get offer from lender by themselves. But adding co-signer can help them receive rates and refinance their student loans so we also provide co-signer pre-qualification path for them to check rates
 
-    section.-shading
-        img(src="/assets/credible_cosigner/whole-flow.png", alt="whole flow")
-    
-    section.-content-width
-        h3.sub-section-title
-            span 02
-            | Iterations on pre-qualification form
-        p Pre-qualification form for co-signer is a very important part of the whole flow. As mentioned above, the design goal for the form is to streamline the process. First I separate the form into three steps to try to fit each step into the view point(avoid scrolling) and then went through several iterations:
+        section.-shading
+            img(src="/assets/credible_cosigner/whole-flow.png", alt="whole flow")
+        
+        section.-content-width
+            h3.sub-section-title
+                span 02
+                | Iterations on pre-qualification form
+            p Pre-qualification form for co-signer is a very important part of the whole flow. As mentioned above, the design goal for the form is to streamline the process. First I separate the form into three steps to try to fit each step into the view point(avoid scrolling) and then went through several iterations:
 
-    section.-shading
-        .four-column
-            div
-                img.js-img-preview(src="/assets/credible_cosigner/form-iteration-1.png", alt="")
-                p Iteration 1
-            div
-                img.js-img-preview(src="/assets/credible_cosigner/form-iteration-2.png", alt="")
-                p Iteration 2
-            div
-                img.js-img-preview(src="/assets/credible_cosigner/form-iteration-3.png", alt="")
-                p Iteration 3
-            div
-                img.js-img-preview(src="/assets/credible_cosigner/form-iteration-4.png", alt="")
-                p Iteration 4
-    
-    section.-content-width
-        h3.sub-section-title
-            span 03
-            | Design details
-        .two-column
-            div
-                img.js-img-preview(src="/assets/credible_cosigner/detail-1.png", alt="")
-            div
-                h4.item-title Tooltip to help borrower choose a co-signer
-                p On the modal of initiate adding co-signer, we provide tooltip of who is an ideal co-signer to help borrower choose a good co-signer.
-        .two-column
-            div
-                h4.item-title Summary of rates
-                p Adding co-signed rates directly into borrower’s dashboard will overwhelm borrower. In order to help borrower digest the information better, I decide to add a summary of co-signed rates. The lowest rate of different product will be listed in the table with comparison to borrower’s own rates. So that borrower is able to decide whether to consider this co-signed rates
-            div
-                img.js-img-preview(src="/assets/credible_cosigner/detail-2.png", alt="")
-        .two-column
-            div
-                img.js-img-preview(src="/assets/credible_cosigner/detail-3.png", alt="")
-            div
-                h4.item-title Compare borrower's rates with co-signer's
-                p Toggle on the right side indicates whether the current rates are co-signer’s rates. Borrower’s rates are also shown on top with strike through to illustrate the differences between co-signer’s rates and borrowers’.
-    
-    section.-content-width
-        h2.section-title
-            p.sub THE DEVLOPMENT
-            | Communicating the design with other teams
-        p After we have the flow and design flesh out, one of the challenges is how to communicate the design with other team, operations, engineers and QA teams. The whole flow is complexed because it involves several branches(when co-signer together or not) and different stages pre-qualification, check rates and final application). I've tried used Invision first but found out the audience will completely lose in the screens without having seen the big picture. So I tried the flow chart but the audience has difficulty connecting the different points of the flow with detail design and product requirements. Engineers and QA team really like the way it was structured and end it up using the master flow chart to plan and track the development process.
-    
-    section.-shading
-        img(src="/assets/credible_cosigner/tracking-flow.png", alt="")
+        section.-shading
+            .four-column
+                div
+                    img.js-img-preview(src="/assets/credible_cosigner/form-iteration-1.png", alt="")
+                    p Iteration 1
+                div
+                    img.js-img-preview(src="/assets/credible_cosigner/form-iteration-2.png", alt="")
+                    p Iteration 2
+                div
+                    img.js-img-preview(src="/assets/credible_cosigner/form-iteration-3.png", alt="")
+                    p Iteration 3
+                div
+                    img.js-img-preview(src="/assets/credible_cosigner/form-iteration-4.png", alt="")
+                    p Iteration 4
+        
+        section.-content-width
+            h3.sub-section-title
+                span 03
+                | Design details
+            .two-column
+                div
+                    img.js-img-preview(src="/assets/credible_cosigner/detail-1.png", alt="")
+                div
+                    h4.item-title Tooltip to help borrower choose a co-signer
+                    p On the modal of initiate adding co-signer, we provide tooltip of who is an ideal co-signer to help borrower choose a good co-signer.
+            .two-column
+                div
+                    h4.item-title Summary of rates
+                    p Adding co-signed rates directly into borrower’s dashboard will overwhelm borrower. In order to help borrower digest the information better, I decide to add a summary of co-signed rates. The lowest rate of different product will be listed in the table with comparison to borrower’s own rates. So that borrower is able to decide whether to consider this co-signed rates
+                div
+                    img.js-img-preview(src="/assets/credible_cosigner/detail-2.png", alt="")
+            .two-column
+                div
+                    img.js-img-preview(src="/assets/credible_cosigner/detail-3.png", alt="")
+                div
+                    h4.item-title Compare borrower's rates with co-signer's
+                    p Toggle on the right side indicates whether the current rates are co-signer’s rates. Borrower’s rates are also shown on top with strike through to illustrate the differences between co-signer’s rates and borrowers’.
+        
+        section.-content-width
+            h2.section-title
+                p.sub THE DEVLOPMENT
+                | Communicating the design with other teams
+            p After we have the flow and design flesh out, one of the challenges is how to communicate the design with other team, operations, engineers and QA teams. The whole flow is complexed because it involves several branches(when co-signer together or not) and different stages pre-qualification, check rates and final application). I've tried used Invision first but found out the audience will completely lose in the screens without having seen the big picture. So I tried the flow chart but the audience has difficulty connecting the different points of the flow with detail design and product requirements. Engineers and QA team really like the way it was structured and end it up using the master flow chart to plan and track the development process.
+        
+        section.-shading
+            img(src="/assets/credible_cosigner/tracking-flow.png", alt="")
 
-    section.-content-width
-        h2.section-title
-            p.sub THE RESULT
-            | Happy user feedbacks
-        p After the co-signer new flow launched, more users are using the pre-qualification tool and finish the process. (I can't reveal the exact number due to NDA) The new flow is also adopted by another product, student loan. Last but not least, receiving feedbacks from happy users is one of best thing could happen to a designer :)
-        p.quote You made the process easy for us to get a new loan with my daughter as a co-signer. We got a better interest rate and my daughter and I got just what we were looking for. <br><br>- Credible customer review
+        section.-content-width
+            h2.section-title
+                p.sub THE RESULT
+                | Happy user feedbacks
+            p After the co-signer new flow launched, more users are using the pre-qualification tool and finish the process. The new flow is also adopted by another product, student loan. Last but not least, receiving feedbacks from happy users is one of best thing could happen to a designer :)
+            p.quote You made the process easy for us to get a new loan with my daughter as a co-signer. We got a better interest rate and my daughter and I got just what we were looking for. <br><br>- Credible customer review
 
     section.footer-nav.-content-width.two-column
         a(href="/projects/photo.html")
