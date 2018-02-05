@@ -106,8 +106,6 @@ $(function(){
       move = move + $('.home-carousel li').eq(carouselIndex).width() / 2 - viewWidth / 2;
     }
     $('.home-carousel li').css({left: -move + 'px'});
-    $('.home-carousel li').removeClass('-active');
-    $('.home-carousel li').eq(carouselIndex).addClass('-active');
   }
 
   // images view
