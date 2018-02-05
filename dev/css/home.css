@@ -141,12 +141,26 @@
   }
 }
 
+.title-line-container{
+  margin: 120px auto 50px;
+  width: 90%;
+  max-width: 320px;
+  text-align: center;
+  background-image: linear-gradient(to bottom, #fff 45%, var(--main) 46%, var(--main) 54%, #fff 55%);
+
+  & > .title{
+    background: #fff;
+    text-transform: uppercase;
+    display: inline;
+    padding: 0 10px;
+  }
+}
+
 .home-carousel {
   position: relative;
 
   & ul {
     padding: 0;
-      margin: 100px 0;
       list-style: none;
       white-space: nowrap;
       font-size: 0;
@@ -202,21 +216,6 @@
 
 .home-contacts{
   text-align: center;
-  margin-top: 120px;
-
-  & > .title-line-container{
-    margin: 0 auto 50px;
-    width: 90%;
-    max-width: 320px;
-    background-image: linear-gradient(to bottom, #fff 45%, var(--main) 46%, var(--main) 54%, #fff 55%);
-
-    & > .title{
-      background: #fff;
-      text-transform: uppercase;
-      display: inline;
-      padding: 0 10px;
-    }
-  }
 }
 
 .home-contacts-container{
