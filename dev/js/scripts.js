@@ -76,6 +76,40 @@ $(function(){
     switchVideo(1);
   }
 
+  // carousel
+  let carouselIndex = 0;
+  const carouselLength = $('.home-carousel li').length;
+  $('.js-carousel-left').click(() => { carouselTo('left'); });
+  $('.js-carousel-right').click(() => { carouselTo('right'); });
+  $('.home-carousel li:eq(0)').addClass('-active');
+
+  function carouselTo(direction) {
+    const viewWidth = $('.home-carousel ul').width();
+
+    if (direction === 'left') carouselIndex = (carouselIndex + carouselLength - 1) % carouselLength;
+    else {carouselIndex = (carouselIndex + 1) % carouselLength;}
+
+    let move = 0;
+    if (carouselIndex === 0) {
+      // nothing, just use 0
+    }
+    else if (carouselIndex === carouselLength - 1) {
+      $('.home-carousel li').each((index, elem) => {
+        move += $(elem).width();
+      });
+      move -= viewWidth;
+    }
+    else {
+      for (let i = 0; i < carouselIndex; i++){
+        move += $('.home-carousel li').eq(i).width();
+      }
+      move = move + $('.home-carousel li').eq(carouselIndex).width() / 2 - viewWidth / 2;
+    }
+    $('.home-carousel li').css({left: -move + 'px'});
+    $('.home-carousel li').removeClass('-active');
+    $('.home-carousel li').eq(carouselIndex).addClass('-active');
+  }
+
   // images view
   $('.js-img-preview').click(function(e){
     var imageURL = $(e.target).attr('src');
