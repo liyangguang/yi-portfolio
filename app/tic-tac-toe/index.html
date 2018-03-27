@@ -6,15 +6,25 @@
     <title>Prototype</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css?v=1522124072286">
   </head>
   <body>
+    <style>
+      .item {
+        font-family: 'Karla', 'Helvetica', sans-serif;
+        color: #222;
+        font-size: 17px;
+        font-weight: 600;
+      }
+    </style>
+    <header class="site-header">
+      <div class="container _body-width"><a class="logo-link" href="/index.html"><img src="/assets/logo.png"></a>
+        <nav class="site-nav"><a class="item" href="/index.html">projects</a><a class="item" href="/sideworks.html">side works</a><a class="item" target="_blank" href="/resume-Yi-Nie.pdf">resume</a></nav>
+      </div>
+    </header>
     <div id="container"></div>
     <script src="./dist/main.d3243ae430544525ad18.js"></script>
-    <script>
-      window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-      ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
-    </script>
-    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
   </body>
 </html>
