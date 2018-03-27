@@ -240,7 +240,7 @@
 .contact{
   & #flag{
     transition: transform .5s ease;
-    transform-origin: 9% 117%;
+    transform-origin: 42.5% 7%;
   }
   & .bubble{
     transition: opacity .5s ease;
