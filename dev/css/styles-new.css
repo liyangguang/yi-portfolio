@@ -1,0 +1,152 @@
+:root {
+  --primary: #FDB92D;
+}
+
+section {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3em 2em;
+}
+
+.left {
+  flex: 1 0 30%;
+  padding-right: 2em;
+}
+
+.right {
+  flex: 1 0 70%;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h1, h2 {
+  position: relative;
+}
+h1:before, h2:before {
+  content: '';
+  position: absolute;
+  top: -.8em;
+  left: 0;
+  background: var(--primary);
+  height: .2em;
+  width: 5em;
+}
+
+.left > h2 {
+  max-width: 80%;
+}
+
+h2.-standalone {
+  font-size: 2em;
+  display: inline-block;
+
+  &:first-letter{
+    font-size: 1.3em;
+  }
+
+  &:before {
+    width: initial;
+    top: 70%;
+    right: -.5em;
+    opacity: .3;
+    height: .5em;
+  }
+}
+
+section.-top {
+  padding-top: 0;
+  padding-bottom: 0;
+
+  & > .left{
+    position: relative;
+  }
+
+  & > .left > .content {
+    position: absolute;
+    left: 0;
+    top: 15em;
+    width: 25em;
+  }
+
+  & > .right > .content {
+    padding-top: 10em;
+    padding-bottom: 5em;
+    /* set the bg color */
+    background: #FFE0E3;
+    padding-right: 102em;
+    margin-right: -100em;
+  }
+
+  & .hero-image {
+    transform: translateX(25%) scale(1.1);
+  }
+}
+
+/****************** need to be combined into common.css ******************/
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+}
+
+/****************** copied from common.css ******************/
+.site-header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: transparent;
+  z-index: 10;
+  transition: box-shadow .5s ease;
+
+  & > .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 60px;
+    transition: padding .5s ease;
+  }
+}
+
+.logo-link{
+  display: block;
+  width: 50px;
+  transition: width .5s ease;
+
+  & > img{
+    width: 100%;
+    vertical-align: middle;
+  }
+}
+
+.site-nav{
+  text-transform: uppercase;
+  font-size: 1em;
+  letter-spacing: .2em;
+  font-weight: bold;
+
+  & > .item{
+    display: inline-block;
+    margin: 8px 20px;
+  }
+}
+
+.site-header.-collapse{
+  box-shadow: 0 0 5px #ddd;
+  background: #fff;
+
+  & > .container{
+    padding: 8px 60px;
+    & > .logo-link{
+      width: 30px;
+    }
+  }
+}
+
+/* ---------------- site footer ---------------- */
+.site-footer{
+  margin: 100px 10px 20px;
+  text-align: center;
+  font-size: .8rem;
+}

@@ -1,19 +1,21 @@
-mixin base(title, old)
+mixin base(title, type)
     doctype html
     html
         head
             meta(charset='utf-8')
-            meta(http-equiv='x-ua-compatible', content='ie=edge')
             title= title
+            meta(name='viewport', content='width=device-width, initial-scale=1')
+            meta(http-equiv='x-ua-compatible', content='ie=edge')
             meta(name='description', content='Yi Nie\'s portfolio. Product designer.')
             meta(http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate")
             meta(http-equiv="Pragma" content="no-cache")
             meta(http-equiv="Expires" content="0")
-            meta(name='viewport', content='width=device-width, initial-scale=1')
-            link(rel='stylesheet', href=`/css/styles.css?v=${Date.now()}`)
-            if old
-                link(rel='stylesheet', href=`/css/project.css?v=${Date.now()}`)
-            link(href="https://fonts.googleapis.com/css?family=Karla:400,700", rel="stylesheet")
+            if (type === 'v3')
+                link(rel='stylesheet', href=`/css/styles.css?v=${Date.now()}`)
+                link(href="https://fonts.googleapis.com/css?family=Karla:400,700", rel="stylesheet")
+            else
+                link(rel='stylesheet', href=`/css/styles-new.css?v=${Date.now()}`)
+                link(href="https://fonts.googleapis.com/css?family=Karla:400,700|Playfair+Display:900", rel="stylesheet")
             script(defer, src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js')
             script(defer, src=`/js/scripts.js?v=${Date.now()}`)
         body(id!=attributes.id)

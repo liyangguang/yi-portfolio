@@ -27,7 +27,7 @@ gulp.task('build-html', function() {
 });
 
 gulp.task('build-css', function() {
-  return gulp.src(['dev/css/_base.css', 'dev/**/*.css'])
+  return gulp.src(['dev/css/_base.css', 'dev/css/*.css', '!dev/css/styles-new.css'])
     .pipe(sourcemaps.init())
     .pipe(postcss([
       cssimport(),
@@ -36,6 +36,20 @@ gulp.task('build-css', function() {
       // require('cssnano')
     ]))
     .pipe(concat('styles.css'))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('app/css'));
+});
+
+gulp.task('build-css-new', function() {
+  return gulp.src(['dev/css/_base.css', 'dev/css/styles-new.css'])
+    .pipe(sourcemaps.init())
+    .pipe(postcss([
+      cssimport(),
+      cssnext(),
+      autoprefixer({browsers: ['> 5%']})
+      // require('cssnano')
+    ]))
+    .pipe(concat('styles-new.css'))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('app/css'));
 });
@@ -53,7 +67,7 @@ gulp.task('build-js', function() {
     .pipe(gulp.dest('app/js'));
 });
 
-gulp.task('serve', ['build-html', 'build-css', 'build-js'], function() {
+gulp.task('serve', ['build-html', 'build-css', 'build-css-new', 'build-js'], function() {
   browserSync({
     server: {
       baseDir: 'app'
@@ -61,6 +75,7 @@ gulp.task('serve', ['build-html', 'build-css', 'build-js'], function() {
   });
 
   gulp.watch(['dev/**/*.css'], ['build-css']);
+  gulp.watch(['dev/**/*.css'], ['build-css-new']);
   gulp.watch(['dev/**/*.js'], ['build-js']);
   gulp.watch(['dev/**/*.pug'], ['build-html']);
   gulp.watch('app/**/*.*').on('change', browserSync.reload);
