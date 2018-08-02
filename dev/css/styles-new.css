@@ -1,52 +1,90 @@
+/* ---------------- colors ---------------- */
 :root {
   --primary: #FDB92D;
 }
 
-section {
-  display: flex;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 3em 2em;
+.load_form .bleeding,
+.load_form .hero-container {
+  /*background: #FFE0E3;*/
+  background: lightgreen;
 }
 
-.left {
-  flex: 1 0 30%;
-  padding-right: 2em;
+/* ---------------- base ---------------- */
+*, *:after, *:before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.right {
-  flex: 1 0 70%;
+html, body{
+  font-family: 'Karla', 'Helvetica', sans-serif;
+  line-height: 1.6;
+  color: #374135;
+  font-size: 18px;
+}
+@media screen and (max-width: 1000px){
+  html, body{
+    font-size: 16px;
+  }
 }
 
+a{
+  text-decoration: none;
+  color: inherit;
+  opacity: .8;
+  transition: .2s opacity ease;
+}
+a:hover{
+  opacity: 1;
+}
+p{
+  margin: .5em 0;
+}
+h3:not(:first-child), h4:not(:first-child) {
+  margin-top: 1.5em;
+}
+
+img {
+  width: 100%;
+}
+
+/****************** typograph ******************/
 h1 {
-  font-size: 2.5em;
-}
-
-h1, h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4em;
   position: relative;
 }
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  position: relative;
+  top: -.1em;  /* Offset to align with small font on the right */
+}
+/* Add the line */
 h1:before, h2:before {
   content: '';
   position: absolute;
-  top: -.8em;
+  top: -.6em;
   left: 0;
   background: var(--primary);
   height: .2em;
-  width: 5em;
+  width: 4em;
 }
-
-.left > h2 {
-  max-width: 80%;
+h2, h3 {
+  font-size: 1.8em;
+}
+h4 {
+  font-size: 1.2em;
 }
 
 h2.-standalone {
-  font-size: 2em;
+  /* Set inline-block, so the underline is not full-width */
   display: inline-block;
 
   &:first-letter{
     font-size: 1.3em;
   }
-
+  /* Set the underline */
   &:before {
     width: initial;
     top: 70%;
@@ -56,41 +94,71 @@ h2.-standalone {
   }
 }
 
-section.-top {
-  padding-top: 0;
-  padding-bottom: 0;
+/****************** layout ******************/
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-gap: 5em 2em;
+  padding: 0 2em;
+}
 
-  & > .left{
-    position: relative;
+.grid-both {
+  grid-column: 1/3;
+}
+.grid-right {
+  grid-column: 2/3;
+}
+
+/****************** page title ******************/
+.title-container {
+  grid-row: 1/2;  /* Force to stay in the 1st row */
+  align-self: center;
+  max-width: 25em;
+  z-index: 1;  /* On top of the hero image */
+}
+
+.hero-container {
+  grid-row: 1/2;  /* Force to stay in the 1st row */
+  /* Bleed background color */
+  margin-right: -500%;
+  padding: 15% 505% 8% 0;
+}
+.hero-image {
+  transform: translateX(15%);
+}
+
+.bleeding {
+  margin: 0 -500%;
+  padding: 5% 500%;
+}
+
+/****************** responsive ******************/
+@media screen and (max-width: 800px) {
+  main {
+    display: block;
+
+    & > * {
+      margin-top: 5em;
+    }
+    & > h2 + div {
+      margin-top: 1em;
+    }
   }
-
-  & > .left > .content {
-    position: absolute;
-    left: 0;
-    top: 15em;
-    width: 25em;
+  .title-container {
+    margin-top: 10em;
   }
-
-  & > .right > .content {
-    padding-top: 10em;
-    padding-bottom: 5em;
-    /* set the bg color */
-    background: #FFE0E3;
-    padding-right: 102em;
-    margin-right: -100em;
+  .hero-container {
+    margin: 0 -500%;
+    padding: 3% 500%;
   }
-
-  & .hero-image {
-    transform: translateX(25%) scale(1.1);
+  .hero-image {
+    transform: none;
   }
 }
 
-/****************** need to be combined into common.css ******************/
-h1, h2 {
-  font-family: 'Playfair Display', serif;
-}
-
-/****************** copied from common.css ******************/
+/****************** header and footer ******************/
 .site-header{
   position: fixed;
   top: 0;

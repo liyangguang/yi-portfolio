@@ -41,7 +41,7 @@ gulp.task('build-css', function() {
 });
 
 gulp.task('build-css-new', function() {
-  return gulp.src(['dev/css/_base.css', 'dev/css/styles-new.css'])
+  return gulp.src(['dev/css/styles-new.css'])
     .pipe(sourcemaps.init())
     .pipe(postcss([
       cssimport(),
