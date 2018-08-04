@@ -6,11 +6,15 @@
 
 .cosigner .bleeding,
 .cosigner .hero-container {
-  background: #ffb188;
+  background: #fbbb9a;
+}
+.dashboard .bleeding,
+.dashboard .hero-container {
+  background: #b0caf5;
 }
 .photo .bleeding,
 .photo .hero-container {
-  background: #77dfff;
+  background: #9ce8ff;
 }
 .load_form .bleeding,
 .load_form .hero-container {
@@ -18,7 +22,7 @@
 }
 .base_crm .bleeding,
 .base_crm .hero-container {
-  background: #1bc09b;
+  background: #5ae0c2;
 }
 
 /* ---------------- base ---------------- */
@@ -130,7 +134,7 @@ main {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1fr 5fr;
   grid-gap: 5em 2em;
   padding: 0 2em;
 }
@@ -164,10 +168,14 @@ main {
 
 .quote{
   color: var(--main);
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   margin: 1.5em 3em;
   font-style: italic;
   opacity: .4;
+}
+.quote:before,
+.quote:after {
+  content: '"';
 }
 
 /****************** page title ******************/
