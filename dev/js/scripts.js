@@ -27,17 +27,17 @@ $(function(){
   });
 
   // photo project tabs
-  $('#js-competitor .js-tab').click(function(){
+  $('#js-competitor-tabs .js-tab').click(function(){
       $(this).addClass('-active');
       $(this).siblings().removeClass('-active');
-      $('#js-competitor-content .js-tab-content').hide();
-      $('#js-competitor-content .js-tab-content').eq(parseInt($(this).attr('data-tab'))).show();
+      $('#js-competitor-tabs .js-tab-content').hide();
+      $('#js-competitor-tabs .js-tab-content').eq(parseInt($(this).attr('data-tab'))).show();
   });
-  $('#js-ideation .js-tab').click(function(){
+  $('#js-ideation-tabs .js-tab').click(function(){
       $(this).addClass('-active');
       $(this).siblings().removeClass('-active');
-      $('#js-ideation-content .js-tab-content').hide();
-      $('#js-ideation-content .js-tab-content').eq(parseInt($(this).attr('data-tab'))).show();
+      $('#js-ideation-tabs .js-tab-content').hide();
+      $('#js-ideation-tabs .js-tab-content').eq(parseInt($(this).attr('data-tab'))).show();
   });
 
   $('.password form').submit(function(e){

@@ -1,21 +1,17 @@
 include ../_mixin.pug
-+base('Base Mobile CRM Redesign - Yi Nie - Product Designer', 'v3')
-    .page-banner
-        img.bg(src="/assets/basecrm/_banner_bg.png")
-        .content.-content-width
-            p.small-title mobile app
-            h1.big-title Base CRM Redesign
-            p.more Redesign the deal profile of the current Base mobile application.
++base('Yi Nie - Base Mobile CRM Redesign', 'v4')
+  main.base_crm
+    .title-container.grid-both
+        h1 Base CRM Redesign
+        p Redesign the deal profile of the current Base mobile application.
+    .hero-container.grid-right
+        img.hero-image(src="/assets/basecrm/_cover.png", alt="Hero image")
 
-    section.-shading.project-cover
-        img.project-cover(src="/assets/basecrm/_cover.png")
-
-    section.-content-width
-        h2.section-title
-            p.sub THE CHALLENGE
-            | Efficiency and scalability
+    h2 Challenge
+    div
+        h3 Efficiency and scalability
         p The current Deal profile in Base needs improvement. Customers want to be more productive. Based on feedback they are looking for an improved profile that addresses these three issues.
-        .three-column(style="text-align: center;")
+        .equal-col.center(style="margin-top: 2em;")
             div
                 img(style="max-width: 100px;", src="/assets/basecrm/challenge-1.png", alt="")
                 p Improved organization of information
@@ -26,10 +22,9 @@ include ../_mixin.pug
                 img(style="max-width: 100px;", src="/assets/basecrm/challenge-3.png", alt="")
                 p A quicker way to add objects to a Deal
 
-    section.-content-width
-        h2.section-title
-            p.sub FRAME THE PROBLEM
-            | Start By Asking Questions
+    h2 Problem
+    div
+        h3 Frame the problem by asking questions
         p After analyzing the design challenge prompt, asking questions helps me determine further research direction and discover what is the real problem. Asking question also help me aware of my own assumptions. I asked questions like:
         ul
             li What is the process of a deal?
@@ -39,11 +34,9 @@ include ../_mixin.pug
             li What are the scenarios and contexts of using mobile CRM application?
             li When and why do sales people need certain kind of information? 
 
-    section.-content-width
-        h2.section-title
-            p.sub SECONDARY RESEARCH
-            | Understand CRM System
-        .two-column
+    h2 Secondary Research
+    div
+        .equal-col.vert-center
             div
                 img.js-img-preview(src="/assets/basecrm/research-secondary.png", alt="")
             div
@@ -54,97 +47,90 @@ include ../_mixin.pug
                     li Competitor website: Salesforce, Microsoft Dynamic
                     li Medium Articles of CRM design
 
-    section.-content-width
-        h2.section-title
-            p.sub USER RESEARCH
-            | Understand the users
+    h2 User Research
+    div
         p In order to understand what are the needs of sales people? How do they work currently, I conducted user interviews to better understand users' motivation and work flow:
 
-        h3.item-title Provide more information at a glance
+        h4 Provide more information at a glance
         p Before a meeting or a call, sales person always need to do research on their client about their background information, the company’s updates as well as their problems, so it is important for them to recap all information right before the meeting or call.
-        h3.item-title Quick interaction on mobile
+        h4 Quick interaction on mobile
         p Sales have to work with a lot of deals at the same time so efficient is pretty important for them especially when they are using a mobile device, which means they are probably heading to a meeting. So providing efficient and quick interaction is important.
 
-    section.-content-width
-        h2.section-title
-            p.sub IDEATION
-            | How to solve for efficiency and scalability
-        .two-column
+    h2 Ideation
+    div
+        .equal-col.vert-center
             div
                 img.js-img-preview(src="/assets/basecrm/ideation-1.png", alt="")
             div
-                h3.item-title Reorganize the information architecture
+                h4 Reorganize the information architecture
                 p According to the user research and my understanding of how CRM works, I regroup the information of current deal profile based on the frequency users will view or add data. One participant mentioned that he will use activities and collaborator when there are new team members involved in the deal, so I put this information into the second tab.
-        .two-column
+        .equal-col.vert-center
             div
-                h3.item-title Interface With Scalability
+                h4 Interface With Scalability
                 p In order to solve the scalability issue as well as provide the possibility to customize deal profile, I sketch out several concepts. Base on sales person’s needs of viewing more information at one time and quick interaction, I organized these concepts and select one to develop further.
             div
                 img.js-img-preview(src="/assets/basecrm/ideation-2.png", alt="")
-        .two-column
+        .equal-col.vert-center
             div
                 img.js-img-preview(src="/assets/basecrm/ideation-3.png", alt="")
             div
-                h3.item-title Quick Ways to Add Objects
+                h4 Quick Ways to Add Objects
                 p I explored several ways to quickly add objects within the main page. How I decide on using which concept depends if the interaction is clear or intuitive to users and how the concept can work well with scalability.
     
-    section.-content-width
-        h2.section-title
-            p.sub ITERATIVE PROCESS
-            | Iterate on "Stage Change" Interaction
+    h2 Iterations
+    div
+        h3 Iterate on "Stage Change" Interaction
         p The concept of present different stage first comes from the “steps” and “progress” design pattern. But during wireframing, I found this concept doesn’t provide enough interaction affordance for users. So then I turn into using “slider” and start to iterate on it to make it not only clear to interact with but also can present the stage information
 
-    section.-shading
-        .four-column
-            div
-                img.js-img-preview(src="/assets/basecrm/iteration-1.png", alt="")
-                p Iteration 1
-            div
-                img.js-img-preview(src="/assets/basecrm/iteration-2.png", alt="")
-                p Iteration 2
-            div
-                img.js-img-preview(src="/assets/basecrm/iteration-3.png", alt="")
-                p Iteration 3
-            div
-                img.js-img-preview(src="/assets/basecrm/iteration-4.png", alt="")
-                p Iteration 4
+    .grid-both.bleeding.equal-col
+        div
+            img.js-img-preview(src="/assets/basecrm/iteration-1.png", alt="")
+            p Iteration 1
+        div
+            img.js-img-preview(src="/assets/basecrm/iteration-2.png", alt="")
+            p Iteration 2
+        div
+            img.js-img-preview(src="/assets/basecrm/iteration-3.png", alt="")
+            p Iteration 3
+        div
+            img.js-img-preview(src="/assets/basecrm/iteration-4.png", alt="")
+            p Iteration 4
 
-    section.-content-width
-        h2.section-title
-            p.sub final design
-            | New experience
+    h2 Final design
+    div
         p The categories are organized in a list view and users will be able to take a look at the latest items within them so that users will have a better understanding of where this deal is and what they need to do with a glance. In the "Contact" card, the name showed is this deals’ primary contact.
         img.js-img-preview(src="/assets/basecrm/design-1.png", style="width: 80%;")
                 
-        .two-column
+        .equal-col.vert-center
             div
-                h3.item-title Move deals to the next stage
+                h4 Move deals to the next stage
                 p By providing the earlier and next stage users will have a better context of this deal's stage. There are only three stages included because it will give users enough space to swipe to avoid making mistakes.
             div
                 video(style="max-height: 500px;", src="/assets/basecrm/design-2.mp4", loop, autoplay)
-        .two-column
+        .equal-col.vert-center
             div
                 video(style="max-height: 500px;", src="/assets/basecrm/design-3.mp4", loop, autoplay)
             div
-                h3.item-title Efficient ways to view information
+                h4 Efficient ways to view information
                 p When users want to see more information within each category, they can expand the list. Users can open multiple categories and they can scroll down and up to view the information as opposed to navigating through several pages.
-        .two-column
+        .equal-col.vert-center
             div
-                h3.item-title Easy data entry
+                h4 Easy data entry
                 p Users can add new objects into each category simply by using the add button. The animation will give users a clue of which category this object is added to.
             div
                 video(style="max-height: 500px;", src="/assets/basecrm/design-4.mp4", loop, autoplay)
-        .two-column
+        .equal-col.vert-center
             div
                 video(style="max-height: 500px;", src="/assets/basecrm/design-5.mp4", loop, autoplay)
             div
-                h3.item-title Adding more categories
+                h4 Adding more categories
                 p The list of category supports adding more category. To provide user enough space to view this information, basic deal information will collapse but also display the most important information of this deal. When user wants to change the stage, they can go back simply by scrolling back.
 
-    section.footer-nav.-content-width.two-column
-        a(href="/projects/credible_cosigner.html")
-            p.arrow < previous
-            p.name Co-signer pre-qualification
-        a(href="/projects/credible_dashboard.html")
-            p.arrow next >
-            p.name Loan offer dashboard
+    .grid-both
+        .footer-nav.equal-col
+            a(href="/projects/credible_cosigner.html")
+                p.arrow < previous
+                p.name Co-signer pre-qualification
+            a(href="/projects/credible_dashboard.html")
+                p.arrow next >
+                p.name Loan offer dashboard

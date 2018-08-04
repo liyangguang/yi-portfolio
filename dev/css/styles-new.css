@@ -1,12 +1,21 @@
 /* ---------------- colors ---------------- */
 :root {
   --primary: #FDB92D;
+  --tab-background: #ccc;
+}
+
+.photo .bleeding,
+.photo .hero-container {
+  background: #77dfff;
 }
 
 .load_form .bleeding,
 .load_form .hero-container {
-  /*background: #FFE0E3;*/
-  background: lightgreen;
+  background: #FFE0E3;
+}
+.base_crm .bleeding,
+.base_crm .hero-container {
+  background: #1bc09b;
 }
 
 /* ---------------- base ---------------- */
@@ -43,6 +52,9 @@ p{
 h3:not(:first-child), h4:not(:first-child) {
   margin-top: 1.5em;
 }
+ul {
+  padding-left: 1.5em;
+}
 
 img {
   width: 100%;
@@ -70,8 +82,11 @@ h1:before, h2:before {
   height: .2em;
   width: 4em;
 }
-h2, h3 {
+h2 {
   font-size: 1.8em;
+}
+h3 {
+  font-size: 1.5em;
 }
 h4 {
   font-size: 1.2em;
@@ -94,6 +109,19 @@ h2.-standalone {
   }
 }
 
+._primary-link{
+  display: inline-block;
+  margin: 8px 0;
+  padding: 4px 0;
+  color: var(--main);
+  font-weight: bold;
+  text-transform: capitalize;
+}
+._primary-link:after{
+  content: '>';
+  padding-left: 5px;
+}
+
 /****************** layout ******************/
 main {
   max-width: 1200px;
@@ -109,6 +137,26 @@ main {
 }
 .grid-right {
   grid-column: 2/3;
+}
+
+.equal-col {
+  display: flex;
+
+  &.vert-center {
+    align-items: center;
+  }
+
+  & > * {
+    width: 0;
+    flex: 1 0 0;
+  }
+  & > * + * {
+    padding-left: 2em;
+  }
+}
+
+.center {
+  text-align: center;
 }
 
 /****************** page title ******************/
@@ -156,6 +204,24 @@ main {
   .hero-image {
     transform: none;
   }
+}
+
+
+.tab-container {
+  background: var(--tab-background);
+}
+.tab {
+  padding: 0;
+  cursor: pointer;
+  border-bottom: .5em solid transparent;
+
+  &.-active{
+    border-bottom-color: var(--primary);
+  }
+}
+.tab-content {
+  margin: 2em 0;
+  padding: .5rem 1rem;
 }
 
 /****************** header and footer ******************/
@@ -217,4 +283,30 @@ main {
   margin: 100px 10px 20px;
   text-align: center;
   font-size: .8rem;
+}
+
+.footer-nav{
+  margin: 60px auto;
+
+  & > a{
+    padding: 1em;
+    &:first-child{
+      text-align: left;
+    }
+    &:last-child{
+      text-align: right;
+    }
+    &:hover{
+      background: #fafafa;
+    }
+
+    & > .arrow{
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+    & > .name{
+      font-size: 20px;
+      font-weight: 400;
+    }
+  }
 }

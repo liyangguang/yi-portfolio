@@ -1,26 +1,19 @@
 include ../_mixin.pug
-+base('Photo management app - Yi Nie - Product Designer', 'v3')
++base('Yi Nie - Photo management app', 'v4')
+  main.photo
+    .title-container.grid-both
+        h1 Photo Management Mobile App
+        p Viewing and organizing photos are not always easy. In this project, I designed a photo management mobile app to help users organize and view their photos in a better way.
+    .hero-container.grid-right
+        img.hero-image(src="/assets/photo/_cover.png", alt="Hero image")
 
-    .page-banner
-        img.bg(src="/assets/photo/_banner_bg.png")
-        .content.-content-width
-            p.small-title web app
-            h1.big-title photo management mobile app
-            p.more Viewing and organizing photos are not always easy. In this project, I designed a photo management mobile app to help users organize and view their photos in a better way.
-
-    section.-shading.project-cover
-        img(src="/assets/photo/_cover.png")
-
-    //- problem
-    section.-content-width
-        h2.section-title
-            p.sub reframe the problem
-            | Why a mobile photo management app?
+    h2 Problem
+    div
         p The first brainstorming session of my process is always asking a lot of questions. Asking questions and analyze them can help me better understand the context and figure out next steps. On the other hand, asking a lot "why" questions helps me to better understand users needs and reframe research questions.
         
-        .two-column.-vert-top
+        .equal-col
             div
-                p.item-title Questions I asked
+                h4 Questions I asked
                 ul
                     li What do users want to achieve on mobile devices? 
                     li What are the scenarios that users use photo management application on phone? Where and When? 
@@ -28,7 +21,7 @@ include ../_mixin.pug
                     li Do they use any similar products? 
                     li What are their pain points that haven't been covered by current products?
             div
-                p.item-title Research questions
+                h4 Research questions
                 ul
                     li What devices do you have to take and store photos? 
                     li What kind of photos do you usually take?
@@ -37,90 +30,86 @@ include ../_mixin.pug
                     li Can you walk me through how you use these applications last time?
 
     //- research
-    section.-content-width
-        h2.section-title
-            p.sub user research
-            | Find the common pain points
+    h2 User Research
+    div
         p After six user interviews. I took notes on different colored sticky notes for each interview and organized them according to different functions of photo organizing application.
-        .two-column
+        .equal-col
             div
                 img(src="/assets/photo/research.png")
             div
                 p Affinity diagram of the interview notes helps me to better understand what is the main pain point and what are the different needs of different users. I found that the most common pain point is users need an efficient and effective way to organize and search photos but they all have different using context and motivations behind it.
 
     //- competitor
-    section.-content-width#js-competitor
-        h2.section-title
-            p.sub competitor analysis
-            | Understand existing products
+    h2 Competitor Analysis
+    div
         p Competitive analysis helps me understand the current marketplace and what are the issues that these products didn't cover, then identify potential market opportunity. I chose Google Photo, Apple Photo, QuickPics, Slidebox according to online reviews. During the competitor Analysis, I tried these applications, listed out their main functions, mapped out their information architecture, took notes of their UI and IxD design.
-        .four-column(style="text-align:center;")
-            div.js-tab.-active(data-tab='0')
+    .grid-both.bleeding.tab-container#js-competitor-tabs
+        .equal-col.center
+            .tab.js-tab.-active(data-tab='0')
                 img(style="max-width: 100px;", src="/assets/photo/competitor1-icon.png")
                 p Google Photos
-            div.js-tab(data-tab='1')
+            .tab.js-tab(data-tab='1')
                 img(style="max-width: 100px;", src="/assets/photo/competitor2-icon.png")
                 p iOS Photos
-            div.js-tab(data-tab='2')
+            .tab.js-tab(data-tab='2')
                 img(style="max-width: 100px;", src="/assets/photo/competitor3-icon.png")
                 p Slidebox
-            div.js-tab(data-tab='3')
+            .tab.js-tab(data-tab='3')
                 img(style="max-width: 100px;", src="/assets/photo/competitor4-icon.png")
                 p Quickpics
-    #js-competitor-content
-        section.tab-content.js-tab-content
-            .two-column
+        .tab-content.js-tab-content
+            .equal-col
                 div
-                    p.item-title Positives:
+                    h4 Positives:
                     ul
                         li Auto back-up
                         li Image recognition: users are able to directly search subject in their photos
                         li Multiple ways to search: by places, by people, etc.
                         li Easy sharing: sharing via email, link, etc.
-                    p.item-title Negatives:
+                    h4 Negatives:
                     ul
                         li Information architecture and tab labels are not clear enough
                         li Auto stylized photo and auto-classification are not accurate for pro users
                         li Only one way to view photos
                 div
                     img(style="max-width: 400px;", src="/assets/photo/competitor1-ia.png")
-        section.tab-content.js-tab-content(style="display:none")
-            .two-column
+        .tab-content.js-tab-content(style="display:none")
+            .equal-col
                 div
-                    p.item-title Positives:
+                    h4 Positives:
                     ul
                         li Showing geology information to each photo
                         li Map view is useful for users who like traveling
                         li Preview bar at the bottom of slideshow mode is easy for user to navigate through different photos
                         li Categorize photo into selfies, screen shots, etc
-                    p.item-title Negatives:
+                    h4 Negatives:
                     ul
                         li Search by time can only search by month 
                         li Map view can only be accessed through the place tags and users can only view the certain area, they can't zoom in or zoom out.
                 div
                     img(style="max-width: 400px;", src="/assets/photo/competitor2-ia.png")
-        section.tab-content.js-tab-content(style="display:none")
-            .two-column
+        .tab-content.js-tab-content(style="display:none")
+            .equal-col
                 div
-                    p.item-title Positives:
+                    h4 Positives:
                     ul
                         li The application provide user enough flexibility to organize photos
                         li Use tags to organize photos 
                         li Multiple way to sort photos 
-                    p.item-title Negatives:
+                    h4 Negatives:
                     ul
                         li Renaming all photo names are time consuming
                         li "Home" and "Tags" tab will switch to each other when users tabbing it
                 div
                     img(style="max-width: 400px;", src="/assets/photo/competitor3-ia.png")
-        section.tab-content.js-tab-content(style="display:none")
-            .two-column
+        .tab-content.js-tab-content(style="display:none")
+            .equal-col
                 div
-                    p.item-title Positives:
+                    h4 Positives:
                     ul
                         li Convenient and easy way to add photos into albums
                         li Use gesture to delete photos 
-                    p.item-title Negatives:
+                    h4 Negatives:
                     ul
                         li Only show unsorted photos. Users have to view other photos in albums
                         li Users can only put these photos into different albums, there is no more actions users can take
@@ -129,14 +118,12 @@ include ../_mixin.pug
                     img(style="max-width: 400px;", src="/assets/photo/competitor4-ia.png")
 
     //- synthesis
-    section.-content-width
-        h2.section-title
-            p.sub research synthesis
-            | Putting findings together
+    h2 Research Synthesis
+    div
         p After the interview notes analysis and competitor analysis, I synthesize all the information I had now, which can help me with initial ideation. Below are research insights and design guidelines.
-        .two-column.-vert-top
+        .equal-col
             div
-                p.item-title Research insights
+                h4 Research insights
                 ul
                     li Different users have different habit of viewing and finding their photos, such as by trip and by events
                     li Most users would like to do complex editing using third applications. They may do basic editing like rotate and crop in the photo management tool
@@ -144,7 +131,7 @@ include ../_mixin.pug
                     li Sync and back-up of photos are important. Many users have more than one device
                     li How to organize photos efficiently is not well designed by most of the application but it is important for users   
             div
-                p.item-title Design guidelines
+                h4 Design guidelines
                 ul
                     li Provide different view modes according to different users' habits
                     li Provide basic edit tool instead of complex editing options 
@@ -152,138 +139,132 @@ include ../_mixin.pug
                     li Provide auto-sync and back-up between multiple devices
 
     //- ideation
-    section.-content-width#js-ideation
-        h2.section-title
-            p.sub initial ideation
-            | Design goals and key consideration
-        .three-column(style="text-align: center;")
-            div.js-tab.-active(data-tab='0')
+    h2 Ideation
+    div
+        h3 Design goals and key consideration
+    .grid-both.bleeding.tab-container#js-ideation-tabs
+        .equal-col.center
+            .tab.js-tab.-active(data-tab='0')
                 img(style="max-width: 100px;", src="/assets/photo/idea1-icon.png")
                 p Organizing efficiently
-            div.js-tab(data-tab='1')
+            .tab.js-tab(data-tab='1')
                 img(style="max-width: 100px;", src="/assets/photo/idea2-icon.png")
                 p Viewing freely
-            div.js-tab(data-tab='2')
+            .tab.js-tab(data-tab='2')
                 img(style="max-width: 100px;", src="/assets/photo/idea3-icon.png")
                 p Searching easily
-    #js-ideation-content
-        section.tab-content.js-tab-content
-            .columns
+        .tab-content.js-tab-content
+            .equal-col
                 div
                     img(src="/assets/photo/idea1-1.png")
-                    p.item-title Timeline View
+                    h4 Timeline View
                     p <b>Pros:</b> Photos are organized by events so that users can find view and share with friends easier
                     p <b>Cons:</b> Can't view every photo with one glance
                 div
                     img(src="/assets/photo/idea1-2.png")
-                    p.item-title Device categories
+                    h4 Device categories
                     p <b>Pros:</b> It's easier for users who have multiple devices to organize their photos
                     p <b>Cons:</b> Not useful for user who owns one device
                 div
                     img(src="/assets/photo/idea1-3.png")
-                    p.item-title One Photo One Line
+                    h4 One Photo One Line
                     p <b>Pros:</b> Users can view their photos without tapping on pics, integrate gesture for quick interaction
                     p <b>Cons:</b> Can only view a few photos at one time
                 div
                     img(src="/assets/photo/idea1-4.png")
-                    p.item-title Map View
+                    h4 Map View
                     p <b>Pros:</b> Photos are organized in map view providing better experience for users who like traveling
                     p <b>Cons:</b> Can't view every photo with one glance
                 div
                     img(src="/assets/photo/idea1-5.png")
-                    p.item-title Time Order
+                    h4 Time Order
                     p <b>Pros:</b> Users are familiar with the UI pattern. they can find photos via time 
                     p <b>Cons:</b> Hard to find photos for user who took a lot of photos
-        section.tab-content.js-tab-content(style="display:none")
-            .columns
-                div
+        .tab-content.js-tab-content(style="display:none")
+            .equal-col
+                div(style="flex-grow: 2;")
                     img(src="/assets/photo/idea2-1.png")
-                    p.item-title Image Search
+                    h4 Image Search
                     p <b>Pros:</b>  Users can find subject easily by typing the word
                     p <b>Cons:</b> Require accurate image recognition technology 
                 div
                     img(src="/assets/photo/idea2-2.png")
-                    p.item-title Timeline View
+                    h4 Timeline View
                     p <b>Pros:</b> Search result is displayed in different categories, users can choose from the results
                     p <b>Cons:</b> Users need to find the exact photo by themselves within each category 
                 div
                     img(src="/assets/photo/idea2-3.png")
-                    p.item-title Specify Search Requirements
+                    h4 Specify Search Requirements
                     p <b>Pros:</b> Users input type and time before search via keywords to get more accurate result
                     p <b>Cons:</b> Users need to input more information 
-        section.tab-content.js-tab-content(style="display:none")
-            .columns
+        .tab-content.js-tab-content(style="display:none")
+            .equal-col
                 div
                     img(src="/assets/photo/idea3-1.png")
-                    p.item-title Photo Batch
+                    h4 Photo Batch
                     p <b>Pros:</b> Put similar photos together and users can select one or two from several photos
                     p <b>Cons:</b> Require image recognition technology 
                 div
                     img(src="/assets/photo/idea3-2.png")
-                    p.item-title Swipe to Organize 
+                    h4 Swipe to Organize 
                     p <b>Pros:</b> Users can swipe right to delete the photo and swipe left to add photo to an existing albums. Provide efficient interaction 
                     p <b>Cons:</b> Users can only control one photo each time
                 div
                     img(src="/assets/photo/idea3-3.png")
-                    p.item-title Select Mode
+                    h4 Select Mode
                     p <b>Pros:</b> Users can select several photos tighter and add them to albums or delete. Users can control multiple photos at one time
                     p <b>Cons:</b> Sometimes user still need to view the detail of photos via slideshow mode
 
     //- information architecture
-    section.-content-width
-        h2.section-title
-            p.sub information architecture
-            | Clear hierarchy of information
+    h2 Information Architecture
+    div
         p With these ideas in mind, I started to consider how these ideas can fit into the system. I created three different information architecture  and sketched out key screens. In this way, I'm able to see how the ideas I came up can fit into different IA and what are the pros and cons of different structures. Then I made paper prototypes and conducted usability tests.
-    section.-shading    
+    
+    .grid-both.bleeding
         img(src="/assets/photo/ia.png")
 
     //- visual and interaction
-    section.-content-width
-        h2.section-title
-            p.sub design details
-            | Manage your photos effortlessly
+    h2 Design Details
+    div
         p Different view modes to meet different users' needs. The application can provide five different views for different user needs. The default comfortable view, traditional grid view, map view for travelers and event view for users who took photos during events.
-        img.js-img-preview(src="/assets/photo/design1.png")                
-
-        .two-column
+        img.js-img-preview(src="/assets/photo/design1.png")
+        .equal-col
             div
-                p.item-title Photo organization on your swipe
+                h4 Photo organization on your swipe
                 p Use swipe and long press to delete and select photo so that users don't need to enter the slideshow mode. Users also have the flexibility to customize their own gesture preference to boost their own flow.
             div
                 img.js-img-preview(src="/assets/photo/design2.png")
-        .two-column
+        .equal-col
             div
                 img.js-img-preview(src="/assets/photo/design3.png")
             div
-                p.item-title Multiple photos selecting and organizing
+                h4 Multiple photos selecting and organizing
                 p Grid View is efficient when organizing several photos together. In select mode, users can select multiple photos, share, download, and delete at one time. Existing albums will display at the bottom of the page so that users can add these photos into albums at one time.
-        .two-column
+        .equal-col
             div
-                p.item-title Batching similar photos
+                h4 Batching similar photos
                 p From user research, some users like to take several pictures at one time and select one or two from them. The "batch" feature can help them do it efficiently. The similar photos will be combined and users can select one or two then tap "Done". The selected picture will be saved and other picture will be deleted.
             div
                 img.js-img-preview(src="/assets/photo/design4.png")
-        .two-column
+        .equal-col
             div
                 img.js-img-preview(src="/assets/photo/design5.png")
             div
-                p.item-title Photos tab and settings tab
+                h4 Photos tab and settings tab
                 p In the photos tab, users can view all the photos and albums. In the settings page, users can set up whether they want to use cellular data to back up photos. Considering some photos are taken by DSLR and file size is large, users can set the image quality to view on mobile, which can influence the usage of cellular data and loading speed. Users can also set their own gesture preferences.
 
     //- learn more
-    section.-content-width
-        h2.section-title
-            p.sub the end
-            | Want to learn more?
+    h2 The End
+    div
         p There are still some details I didn't show here. If you are interested, check the full document here or try the prototype.
         a._primary-link(style="display: block; text-align: center;", href="https://marvelapp.com/e22jc2", target="_blank") prototype link
         a._primary-link(style="display: block; text-align: center;", href="/assets/photo/photo-manager-doc.pdf", target="_blank") view document
 
-    section.footer-nav.-content-width.two-column
-        a(href="/projects/credible_dashboard.html")
-            p.arrow < previous
-            p.name Loan offer dashboard
-        a(href="/projects/credible_cosigner.html")
-            p.arrow next >
-            p.name Cosigner pre-qualification
+    .grid-both
+        .footer-nav.equal-col
+            a(href="/projects/credible_dashboard.html")
+                p.arrow < previous
+                p.name Loan offer dashboard
+            a(href="/projects/credible_cosigner.html")
+                p.arrow next >
+                p.name Cosigner pre-qualification
