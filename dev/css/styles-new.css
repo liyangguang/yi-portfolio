@@ -4,11 +4,14 @@
   --tab-background: #ccc;
 }
 
+.cosigner .bleeding,
+.cosigner .hero-container {
+  background: #ffb188;
+}
 .photo .bleeding,
 .photo .hero-container {
   background: #77dfff;
 }
-
 .load_form .bleeding,
 .load_form .hero-container {
   background: #FFE0E3;
@@ -52,7 +55,7 @@ p{
 h3:not(:first-child), h4:not(:first-child) {
   margin-top: 1.5em;
 }
-ul {
+ul, ol {
   padding-left: 1.5em;
 }
 
@@ -159,6 +162,14 @@ main {
   text-align: center;
 }
 
+.quote{
+  color: var(--main);
+  font-size: 1.6rem;
+  margin: 1.5em 3em;
+  font-style: italic;
+  opacity: .4;
+}
+
 /****************** page title ******************/
 .title-container {
   grid-row: 1/2;  /* Force to stay in the 1st row */
@@ -206,7 +217,6 @@ main {
   }
 }
 
-
 .tab-container {
   background: var(--tab-background);
 }
@@ -222,6 +232,77 @@ main {
 .tab-content {
   margin: 2em 0;
   padding: .5rem 1rem;
+}
+
+/******************** step video (in co-signer) **************************/
+.-steps{
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  & > .screen{
+    flex: 1 1 60%;
+    position: relative;
+    & > .laptop{
+      width: 100%;
+    }
+    & > video{
+      display: none;
+      position: absolute;
+      width: 68.5%;
+      left: 50%;
+      top: 63px;
+      transform: translateX(-50%);
+      &.-active{
+        display: block;
+      }
+    }
+  }
+
+  & > .buttons{
+    flex: 1 1 40%;
+  }
+}
+
+.step-button{
+  cursor: pointer;
+  position: relative;
+  & > span{
+    position: absolute;
+    font-size: 1.3rem;
+  }
+  & > h3{
+    font-size: 1.2rem;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    margin-left: 1.5em;
+    margin-top: .8em;
+  }
+  & > p{
+    max-height: 0;
+    overflow: hidden;
+    margin: 0;
+    transition: max-height .5s ease;
+  }
+
+  &.-active{
+    & > span{
+      top: -.75em;
+      font-size: 4rem;
+      opacity: .1;
+    }
+    & > h3{
+      margin-left: 0;
+      margin-top: 2em;
+    }
+    & > p{
+      max-height: 100px;
+      transition: max-height .5s ease;
+    }
+  }
 }
 
 /****************** header and footer ******************/
