@@ -1,125 +1,123 @@
 include ../_mixin.pug
-+base('Credible offer dashboard redesign - Yi Nie - Product Designer', 'v4')
-  main.dashboard
-    .title-container.grid-both
-        h1 Credible Offer Dashboard Redesign
-        p Led the redesign of Credible's co-signing experience for student loan refinancing, including user flow, interaction design and visual design for both desktop and mobile.
-    .hero-container.grid-right
-        img.hero-image(src="/assets/credible_dashboard/_cover.png", alt="Hero image")
++base('Credible offer dashboard redesign - Yi Nie - Product Designer', 'v4').dashboard
+    main.grid-container
+        .title-container.grid-both
+            h1.upper-line Credible Offer Dashboard Redesign
+            p Led the redesign of Credible's co-signing experience for student loan refinancing, including user flow, interaction design and visual design for both desktop and mobile.
+        .hero-container.grid-right
+            img.hero-image(src="/assets/credible_dashboard/_cover.png", alt="Hero image")
 
-    h2 Problem
-    div
-        p Credible is a marketplace for student loan refinancing. It helps borrowers get personalized rates from multiple lenders. It's great that users can receive multiple offers by providing data once. But the terms and benefits of each offer are very different. How to design the offer dashboard to help users find the best offer?
-        img(src="/assets/credible_dashboard/problem.png")
-
-    h2 User Research
-    div
-        p In order to better meet users' needs, it's important to understand how do people make their choice among several options. I conducted user interviews to gather insights about the process of choosing a product and factors influence decision making.
-        h4 Need current loan information for reference
-        p For student loan refinancing users, they have very a clear goal that the refinancing offer should offer more benefit than their current loan. So users need their current loan information for reference.  
-        p.quote The refinancing offer should be better than my current loan
-        h4 Filter the options with fixed criteria in mind
-        p Before choosing the product, people usually have fixed criteria in mind. For example, their income situation will determine the maximum monthly payment. Some users are clear that they don't want to choose variable rate because they don't want to take the risk of APR getting higher.
-        p.quote I can only pay up to $600 a month
-        h4 Eliminate options that users are not interested in
-        p For users who are shopping around, they really want to make sure they choose the best option. But it's quite difficult to find the best at once. Users prefer to eliminate options that they are not interested in and finally get to their favorite one.
-        p.quote I can't tell what I want right now but I know what I don't
-
-    h2 Solutions
-    div
-        h3 Design goals and key consideration
-        .equal-col.center
-            div
-                img(src="/assets/credible_dashboard/solution-icon1.png")
-                p Include current loan information
-            div
-                img(src="/assets/credible_dashboard/solution-icon2.png")
-                p Improve usability of filters
-            div
-                img(src="/assets/credible_dashboard/solution-icon3.png")
-                p Archive options not interested
-
-        h3 1. Include current loan information
-        h4 What is the page structure?
-        p Structure and information architecture of the offer dashboard really affects how users process the information and where should current loan information live? So I decide to think about the how the page is structured instead of figuring out all the details of design at one time. I took these questions into consideration to make sure users can understand and navigate through dashboard easily.
-        ul
-            li Use tab structure for different loan type navigation
-            li Put filter above offers instead of on the left side
-            li Show new updates of the dashboard and current loan information on top
-
-    .grid-both.bleeding.equal-col
+        h2.upper-line Problem
         div
-            img.js-img-preview(src="/assets/credible_dashboard/design1-iteration1.png")
-            p 1st iteration
+            p Credible is a marketplace for student loan refinancing. It helps borrowers get personalized rates from multiple lenders. It's great that users can receive multiple offers by providing data once. But the terms and benefits of each offer are very different. How to design the offer dashboard to help users find the best offer?
+            img(src="/assets/credible_dashboard/problem.png")
+
+        h2.upper-line User Research
         div
-            img.js-img-preview(src="/assets/credible_dashboard/design1-iteration2.png")
-            p 2nd iteration
+            p In order to better meet users' needs, it's important to understand how do people make their choice among several options. I conducted user interviews to gather insights about the process of choosing a product and factors influence decision making.
+            h4 Need current loan information for reference
+            p For student loan refinancing users, they have very a clear goal that the refinancing offer should offer more benefit than their current loan. So users need their current loan information for reference.  
+            p.quote The refinancing offer should be better than my current loan
+            h4 Filter the options with fixed criteria in mind
+            p Before choosing the product, people usually have fixed criteria in mind. For example, their income situation will determine the maximum monthly payment. Some users are clear that they don't want to choose variable rate because they don't want to take the risk of APR getting higher.
+            p.quote I can only pay up to $600 a month
+            h4 Eliminate options that users are not interested in
+            p For users who are shopping around, they really want to make sure they choose the best option. But it's quite difficult to find the best at once. Users prefer to eliminate options that they are not interested in and finally get to their favorite one.
+            p.quote I can't tell what I want right now but I know what I don't
+
+        h2.upper-line Solutions
         div
-            img.js-img-preview(src="/assets/credible_dashboard/design1-iteration3.png")
-            p 3rd iteration
-    
-    .grid-right
-        h3 2. Improve filter usability
-        img(src="/assets/credible_dashboard/design2.png", alt="")
-        .equal-col.vert-center
+            h3 Design goals and key consideration
+            .equal-col.center
+                div
+                    img(src="/assets/credible_dashboard/solution-icon1.png")
+                    p Include current loan information
+                div
+                    img(src="/assets/credible_dashboard/solution-icon2.png")
+                    p Improve usability of filters
+                div
+                    img(src="/assets/credible_dashboard/solution-icon3.png")
+                    p Archive options not interested
+
+            h3 1. Include current loan information
+            h4 What is the page structure?
+            p Structure and information architecture of the offer dashboard really affects how users process the information and where should current loan information live? So I decide to think about the how the page is structured instead of figuring out all the details of design at one time. I took these questions into consideration to make sure users can understand and navigate through dashboard easily.
+            ul
+                li Use tab structure for different loan type navigation
+                li Put filter above offers instead of on the left side
+                li Show new updates of the dashboard and current loan information on top
+
+        .grid-both.bleeding.equal-col
             div
-                h4 Slider v.s. input
-                p The sliders provide a clear visual cue of what it is and how to use it. However, adjusting the sliders to a specific number can be a difficult task. So I decide to keep the slider pattern but also give users the ability to type in their desired number directly.
-            .center
-                img.js-img-preview(src="/assets/credible_dashboard/design2-filter1.png")
-        .equal-col.vert-center
-            .center
-                img.js-img-preview(src="/assets/credible_dashboard/design2-filter2.png")
+                img.js-img-preview(src="/assets/credible_dashboard/design1-iteration1.png")
+                p 1st iteration
             div
-                h4 Checkbox, dropdown or radio
-                p The old checkboxes for rate type can be confusing when both are unchecked. I explored checkboxes, radio buttons, drop down and pills, and decide on the current solution, which is easiest to understand and apply.    
-
-        h3 Archive and compare offers
-        .equal-col.vert-center
+                img.js-img-preview(src="/assets/credible_dashboard/design1-iteration2.png")
+                p 2nd iteration
             div
-                h4 Archive offers that users are not interested in
-                p After filtering the offers with criteria, users can mark the offers as "not interested". Then the offer will be put into the archive category. If users change their mind, these offers can be put out of the archive.
-            .center
-                img.js-img-preview(src="/assets/credible_dashboard/design3-archive.png")
-        .equal-col.vert-center
-            .center
-                img.js-img-preview(src="/assets/credible_dashboard/design3-compare.png")
-            div
-                h4 Compare options in viewport
-                p One challenge here is providing detailed information about each offer, but also saving space of each offer. So that users can view and compare multiple offer details without scrolling up and down. I arranged information into sections and removed duplicated information with the filters to same move space.
-    
-    h2 Usability Testing
-    div
-        ul
-            li The participant found the overall page structure clear and easy to navigate. 
-            li The participant still had to think for a while about how to use "discount filter". He didn't understand what "apply discount" would do here before he applied it, nor what each option means before explanations.
-            li The participant liked that he can archive offers he doesn't like, but he felt the "not interested" button call too much attention.
+                img.js-img-preview(src="/assets/credible_dashboard/design1-iteration3.png")
+                p 3rd iteration
+        
+        .grid-right
+            h3 2. Improve filter usability
+            img(src="/assets/credible_dashboard/design2.png", alt="")
+            .equal-col.vert-center
+                div
+                    h4 Slider v.s. input
+                    p The sliders provide a clear visual cue of what it is and how to use it. However, adjusting the sliders to a specific number can be a difficult task. So I decide to keep the slider pattern but also give users the ability to type in their desired number directly.
+                .center
+                    img.js-img-preview(src="/assets/credible_dashboard/design2-filter1.png")
+            .equal-col.vert-center
+                .center
+                    img.js-img-preview(src="/assets/credible_dashboard/design2-filter2.png")
+                div
+                    h4 Checkbox, dropdown or radio
+                    p The old checkboxes for rate type can be confusing when both are unchecked. I explored checkboxes, radio buttons, drop down and pills, and decide on the current solution, which is easiest to understand and apply.    
 
-        .equal-col
-            .center
-                img.js-img-preview(src="/assets/credible_dashboard/test-iteration1.png")
-            .center
-                img.js-img-preview(src="/assets/credible_dashboard/test-iteration2.png")
-        p First, I changed the label "Apply discounts" to "APR discounts", so that users can understand what this filter is related to. Then I started to really think about users mental model - users would like to know possible discounts, then filter out if they don't meet requirements. So I decided to make the default to show both discounts, and users can un-check if they don't meet requirements.
+            h3 Archive and compare offers
+            .equal-col.vert-center
+                div
+                    h4 Archive offers that users are not interested in
+                    p After filtering the offers with criteria, users can mark the offers as "not interested". Then the offer will be put into the archive category. If users change their mind, these offers can be put out of the archive.
+                .center
+                    img.js-img-preview(src="/assets/credible_dashboard/design3-archive.png")
+            .equal-col.vert-center
+                .center
+                    img.js-img-preview(src="/assets/credible_dashboard/design3-compare.png")
+                div
+                    h4 Compare options in viewport
+                    p One challenge here is providing detailed information about each offer, but also saving space of each offer. So that users can view and compare multiple offer details without scrolling up and down. I arranged information into sections and removed duplicated information with the filters to same move space.
+        
+        h2.upper-line Usability Testing
+        div
+            ul
+                li The participant found the overall page structure clear and easy to navigate. 
+                li The participant still had to think for a while about how to use "discount filter". He didn't understand what "apply discount" would do here before he applied it, nor what each option means before explanations.
+                li The participant liked that he can archive offers he doesn't like, but he felt the "not interested" button call too much attention.
 
-    h2 Visual Design
-    div
-        p I refined the visual of my design based on Credible's branding, to make it feel clean, modern, approachable and trustworthy.
-        img(src="/assets/credible_dashboard/final-full.png", style="margin-top: 1em;")
+            .equal-col
+                .center
+                    img.js-img-preview(src="/assets/credible_dashboard/test-iteration1.png")
+                .center
+                    img.js-img-preview(src="/assets/credible_dashboard/test-iteration2.png")
+            p First, I changed the label "Apply discounts" to "APR discounts", so that users can understand what this filter is related to. Then I started to really think about users mental model - users would like to know possible discounts, then filter out if they don't meet requirements. So I decided to make the default to show both discounts, and users can un-check if they don't meet requirements.
 
-    .grid-both.bleeding
-        img(src="/assets/credible_dashboard/final-guide.png")
+        h2.upper-line Visual Design
+        div
+            p I refined the visual of my design based on Credible's branding, to make it feel clean, modern, approachable and trustworthy.
+            img(src="/assets/credible_dashboard/final-full.png", style="margin-top: 1em;")
 
-    h2 The End
-    div
-        p Whoo, this is a really long post, and this is not all of this project. There are some detailed interaction decisions I didn't cover on this page, but you can find them in the full document. This is only one of the small project when I was worked at Credible. If you are interested in more work, contact me to learn more!
+        .grid-both.bleeding
+            img(src="/assets/credible_dashboard/final-guide.png")
 
+        h2.upper-line The End
+        div
+            p Whoo, this is a really long post, and this is not all of this project. There are some detailed interaction decisions I didn't cover on this page, but you can find them in the full document. This is only one of the small project when I was worked at Credible. If you are interested in more work, contact me to learn more!
 
-    .grid-both
-        .footer-nav.equal-col
-            a(href="/projects/basecrm.html")
-                p.arrow < previous
-                p.name Base CRM redesign
-            a(href="/projects/photo.html")
-                p.arrow next >
-                p.name Photo management app
+    .project-nav.equal-col
+        a(href="/projects/basecrm.html")
+            p.arrow < previous
+            p.name Base CRM redesign
+        a(href="/projects/photo.html")
+            p.arrow next >
+            p.name Photo management app

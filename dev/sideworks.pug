@@ -1,97 +1,55 @@
 include _mixin.pug
-+base('Yi Nie - Product Designer', 'v3')#side-page
-    .page-banner
-        img.bg(src="/assets/_bg/side-banner.png")
-        .content.-content-width
-            p.small-title side works
-            h1.big-title._gilroy-title Learning through Making
-            p.more Sometimes making some random things - animation, prototyping, illustration, drawing is a good way to keep creative and learn new skills.
-    main._body-width
-        section.side-section
-            h1.section-title Prototypes and animations
-            img.side-bg.-section-1(src="/assets/_bg/side-bg1.png")
-            .side-container.-prototype
-                .side-prototype.-mobile
-                    video(autoplay, loop, preload="auto"): source(src="/assets/prototypes/yelp_1080p.mp4")
-                    a(target="_blank", href="/assets/prototypes/yelp_1080p.mp4").mask: .info
-                        h2.title recipe prototype
-                        p.tool Tool - Framer.js
-                .side-prototype.-desktop
-                    video(autoplay, loop, preload="auto"): source(src="/assets/prototypes/paper_plane_1080p.mp4")
-                    a(target="_blank", href="/assets/prototypes/paper_plane_1080p.mp4").mask: .info
-                        h2.title paper plane
-                        p.tool Coding - SVG animation
-                .side-prototype.-desktop
-                    video(autoplay, loop, preload="auto"): source(src="/assets/prototypes/simple_task_1080p.mp4")
-                    a(target="_blank", href="/assets/prototypes/simple_task_1080p.mp4").mask: .info
-                        h2.title todo app interaction
-                        p.tool Coding - HTML, CSS, JavaScript
-                .side-prototype.-mobile
-                    video(autoplay, loop, preload="auto"): source(src="/assets/prototypes/snooze_prototype.mp4")
-                    a(target="_blank", href="/assets/prototypes/snooze_prototype.mp4").mask: .info
-                        h2.title alarm snoozing interaction
-                        p.tool Tool - Principle
++base('Yi Nie - Side works', 'v4').sideworks
+    section.sideworks-group
+        .sideworks-title
+            h1 Visual Design and Illustrations
+            img.letter(src="/assets/sideworks/title_v.png")
+        img.js-img-preview(src="/assets/sideworks/ui_admin_blue.png")
+        img.js-img-preview(src="/assets/sideworks/ui_admin_gold.png")
+        img.js-img-preview(src="/assets/sideworks/ui_halloween.jpg")
+        img.js-img-preview(src="/assets/sideworks/ui_invest.png")
+        img.js-img-preview(src="/assets/sideworks/ui_landing_page.jpg")
+        img.js-img-preview(src="/assets/sideworks/ui_log_in.jpg")
+        img.js-img-preview(src="/assets/sideworks/ui_material_design.jpg")
+        img.js-img-preview(src="/assets/sideworks/ui_sleep.jpg")
+        img.js-img-preview(src="/assets/sideworks/ui_task.jpg")
+        img.js-img-preview(src="/assets/sideworks/ui_time_up.jpg")
+        img.js-img-preview(src="/assets/sideworks/illustration_bubble_tea.png")
+        img.js-img-preview(src="/assets/sideworks/illustration_korean_bbq.png")
+        img.js-img-preview(src="/assets/sideworks/illustration_milk_tea.png")
+        img.js-img-preview(src="/assets/sideworks/illustration_mountain.png")
+        img.js-img-preview(src="/assets/sideworks/illustration_popsicles.png")
+        img.js-img-preview(src="/assets/sideworks/illustration_survey.jpg")
+        img.js-img-preview(src="/assets/sideworks/illustration_tamagoyaki.png")
 
-        section.side-section
-            h1.section-title Icons
-            img.side-bg.-section-2(src="/assets/_bg/side-bg2.png")
-            .side-container.-column-3.-icons
-                .side-project: img._full-width.js-img-preview(src="/assets/illustration/business1.png")
-                .side-project: img._full-width.js-img-preview(src="/assets/illustration/business2.png")
-                .side-project: img._full-width.js-img-preview(src="/assets/illustration/business3.png")
-                .side-project: img._full-width.js-img-preview(src="/assets/illustration/life2.png")
-                .side-project: img._full-width.js-img-preview(src="/assets/illustration/life3.png")
-                .side-project: img._full-width.js-img-preview(src="/assets/illustration/life4.png")
-                .side-project: img._full-width.js-img-preview(src="/assets/illustration/process1.png")
-                .side-project: img._full-width.js-img-preview(src="/assets/illustration/process2.png")
-                .side-project: img._full-width.js-img-preview(src="/assets/illustration/process3.png")
+    section.sideworks-group
+        .sideworks-title
+            h1 Animations and Prototypes
+            img.letter(src="/assets/sideworks/title_a.png")
+        .mobile-video: video.js-img-preview(autoplay, loop, preload="auto"): source(src="/assets/sideworks/prototype_snooze.mp4")
+        video.js-img-preview(autoplay, loop, preload="auto"): source(src="/assets/sideworks/prototype_todo.mp4")
+        .mobile-video: video.js-img-preview(autoplay, loop, preload="auto"): source(src="/assets/sideworks/prototype_yelp.mp4")
+        video.js-img-preview(autoplay, loop, preload="auto"): source(src="/assets/sideworks/animation_paper_plane.mp4")
+        img.js-img-preview(src="/assets/sideworks/prototype_tic-tac-toe.gif")
+        img.js-img-preview(src="/assets/sideworks/animation_clock.gif")
+        img.js-img-preview(src="/assets/sideworks/animation_wave.gif")
 
-        section.side-section
-            h1.section-title Illustrations       
-            img.side-bg.-section-3(src="/assets/_bg/side-bg3.png") 
-            .side-container.-column-2.-illustrations
-                .side-project: img._full-width.js-img-preview(src="/assets/illustration/user1.png")
-                .side-project: img._full-width.js-img-preview(src="/assets/illustration/fun1.png")
-                .side-project: img._full-width.js-img-preview(src="/assets/illustration/fun2.png")
-                .side-project: img._full-width.js-img-preview(src="/assets/illustration/fun3.png")
-
-        section.side-section
-            h1.section-title Design beyond screens
-            img.side-bg.-section-4(src="/assets/_bg/side-bg4.png")
-            .side-container.-beyond
-                .side-beyond
-                    img.img(src="/assets/beyond/take-a-step-back.jpg")
-                    h2.title take a step back
-                    p.description Combine traditional tools - whiteboard and markers - with technologies to streamline creative process.
-                    a.link(target="_blank", href="https://vimeo.com/147277038") watch demo video
-                .side-beyond
-                    img.img(src="/assets/beyond/your-world-you-way.jpg")
-                    h2.title your world you way
-                    p.description A concept of curiosity-driven learning experience for Children’s Museum.
-                    a.link(target="_blank", href="https://www.youtube.com/watch?v=FNBE-fclpBs") watch demo video
-                
-
-        section.side-section
-            h1.section-title Lettering
-            img.side-bg.-section-5(src="/assets/_bg/side-bg5.png")
-            .side-container.-column-3
-                .side-project: img._full-width.js-img-preview(src="/assets/lettering/1.png")
-                .side-project: img._full-width.js-img-preview(src="/assets/lettering/2.png")
-                .side-project: img._full-width.js-img-preview(src="/assets/lettering/3.png")
-                .side-project: img._full-width.js-img-preview(src="/assets/lettering/4.png")
-                .side-project: img._full-width.js-img-preview(src="/assets/lettering/5.png")
-                .side-project: img._full-width.js-img-preview(src="/assets/lettering/6.png")
-                .side-project: img._full-width.js-img-preview(src="/assets/lettering/7.png")
-                .side-project: img._full-width.js-img-preview(src="/assets/lettering/8.png")
-                .side-project: img._full-width.js-img-preview(src="/assets/lettering/9.png")
-
-        section.side-section
-            h1.section-title Drawing
-            img.side-bg.-section-6(src="/assets/_bg/side-bg6.png")
-            .side-container.-column-3
-                .side-project: img._full-width.js-img-preview(src="/assets/drawing/1.png")
-                .side-project: img._full-width.js-img-preview(src="/assets/drawing/2.png")
-                .side-project: img._full-width.js-img-preview(src="/assets/drawing/3.png")
-                .side-project: img._full-width.js-img-preview(src="/assets/drawing/4.png")
-                .side-project: img._full-width.js-img-preview(src="/assets/drawing/5.png")
-                .side-project: img._full-width.js-img-preview(src="/assets/drawing/6.png")
+    section.sideworks-group
+        .sideworks-title
+            h1 Lettering and Drawings
+            img.letter(src="/assets/sideworks/title_l.png")
+        img.js-img-preview(src="/assets/sideworks/lettering_1.png")
+        img.js-img-preview(src="/assets/sideworks/lettering_2.png")
+        img.js-img-preview(src="/assets/sideworks/lettering_3.png")
+        img.js-img-preview(src="/assets/sideworks/lettering_4.png")
+        img.js-img-preview(src="/assets/sideworks/lettering_5.png")
+        img.js-img-preview(src="/assets/sideworks/lettering_6.png")
+        img.js-img-preview(src="/assets/sideworks/lettering_7.png")
+        img.js-img-preview(src="/assets/sideworks/lettering_8.png")
+        img.js-img-preview(src="/assets/sideworks/lettering_9.png")
+        img.js-img-preview(src="/assets/sideworks/drawing_1.png")
+        img.js-img-preview(src="/assets/sideworks/drawing_2.png")
+        img.js-img-preview(src="/assets/sideworks/drawing_3.png")
+        img.js-img-preview(src="/assets/sideworks/drawing_4.png")
+        img.js-img-preview(src="/assets/sideworks/drawing_5.png")
+        img.js-img-preview(src="/assets/sideworks/drawing_6.png")

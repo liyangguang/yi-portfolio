@@ -14,6 +14,18 @@ $(function(){
 
     // for the home banner
     var areaHeight = $('.flying-bg').outerHeight();
+
+    var animationEndState = [
+      {x: -110, y: -200, scale: 3, rotate: 80},
+      {x: 140, y: -200, scale: 3, rotate: 60},
+      {x: -200, y: 300, scale: 3, rotate: -60},
+      {x: 110, y: 200, scale: 3, rotate: 0},
+      {x: -510, y: -300, scale: 2, rotate: 0},
+      {x: -310, y: 0, scale: 2, rotate: 80},
+      {x: 710, y: 200, scale: 2, rotate: -100},
+      {x: 310, y: -100, scale: 2, rotate: -100}
+    ];
+
     if (position < areaHeight){
       var ratio = position / areaHeight;
       animationEndState.forEach(function(data, index){
@@ -40,6 +52,7 @@ $(function(){
       $('#js-ideation-tabs .js-tab-content').eq(parseInt($(this).attr('data-tab'))).show();
   });
 
+  // password
   $('.password form').submit(function(e){
     e.preventDefault();
     if ($('.password input').val() === 'yi-ux'){
@@ -76,56 +89,27 @@ $(function(){
     switchVideo(1);
   }
 
-  // carousel
-  let carouselIndex = 0;
-  const carouselLength = $('.home-carousel li').length;
-  $('.js-carousel-left').click(() => { carouselTo('left'); });
-  $('.js-carousel-right').click(() => { carouselTo('right'); });
-  $('.home-carousel li:eq(0)').addClass('-active');
-
-  function carouselTo(direction) {
-    const viewWidth = $('.home-carousel ul').width();
-
-    if (direction === 'left') carouselIndex = (carouselIndex + carouselLength - 1) % carouselLength;
-    else {carouselIndex = (carouselIndex + 1) % carouselLength;}
-
-    let move = 0;
-    if (carouselIndex === 0) {
-      // nothing, just use 0
-    }
-    else if (carouselIndex === carouselLength - 1) {
-      $('.home-carousel li').each((index, elem) => {
-        move += $(elem).width();
-      });
-      move -= viewWidth;
-    }
-    else {
-      for (let i = 0; i < carouselIndex; i++){
-        move += $('.home-carousel li').eq(i).width();
-      }
-      move = move + $('.home-carousel li').eq(carouselIndex).width() / 2 - viewWidth / 2;
-    }
-    $('.home-carousel li').css({left: -move + 'px'});
-  }
-
-  // images view
+  // image/video view
   $('.js-img-preview').click(function(e){
-    var imageURL = $(e.target).attr('src');
-    $('.image-preview-container .image').css('background-image', 'url(' + imageURL + ')');
-    $('.image-preview-container').fadeIn(500);
+    const $target = $(e.target);
+    switch ($target.prop("tagName")) {
+      case 'IMG':
+        $('.image-preview-container .image').show();
+        $('.image-preview-container video').hide();
+        const imageURL = $target.attr('src');
+        $('.image-preview-container .image').css('background-image', 'url(' + imageURL + ')');
+        $('.image-preview-container').fadeIn(500);
+        break;
+      case 'VIDEO':
+        $('.image-preview-container .image').hide();
+        $('.image-preview-container video').show();
+        const videoURL = $target.find('source').attr('src');
+        $('.image-preview-container video').attr('src', videoURL);
+        $('.image-preview-container').fadeIn(500);
+    }
+
   })
   $('.image-preview-container').click(function(e){
     $('.image-preview-container').fadeOut(500);
   })
 });
-
-var animationEndState = [
-  {x: -110, y: -200, scale: 3, rotate: 80},
-  {x: 140, y: -200, scale: 3, rotate: 60},
-  {x: -200, y: 300, scale: 3, rotate: -60},
-  {x: 110, y: 200, scale: 3, rotate: 0},
-  {x: -510, y: -300, scale: 2, rotate: 0},
-  {x: -310, y: 0, scale: 2, rotate: 80},
-  {x: 710, y: 200, scale: 2, rotate: -100},
-  {x: 310, y: -100, scale: 2, rotate: -100}
-];

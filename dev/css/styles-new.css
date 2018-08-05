@@ -63,7 +63,7 @@ ul, ol {
   padding-left: 1.5em;
 }
 
-img {
+img, video {
   width: 100%;
 }
 
@@ -77,26 +77,8 @@ h1 {
 h2 {
   font-family: 'Playfair Display', serif;
   position: relative;
-  top: -.1em;  /* Offset to align with small font on the right */
-}
-/* Add the line */
-h1:before, h2:before {
-  content: '';
-  position: absolute;
-  top: -.6em;
-  left: 0;
-  background: var(--primary);
-  height: .2em;
-  width: 4em;
-}
-h2 {
   font-size: 1.8em;
-}
-h3 {
-  font-size: 1.5em;
-}
-h4 {
-  font-size: 1.2em;
+  top: -.1em;  /* Offset to align with small font on the right */
 }
 
 h2.-standalone {
@@ -116,6 +98,23 @@ h2.-standalone {
   }
 }
 
+.upper-line:before {
+  content: '';
+  position: absolute;
+  top: -.6em;
+  left: 0;
+  background: var(--primary);
+  height: .2em;
+  width: 4em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+h4 {
+  font-size: 1.2em;
+}
+
 ._primary-link{
   display: inline-block;
   margin: 8px 0;
@@ -129,14 +128,33 @@ h2.-standalone {
   padding-left: 5px;
 }
 
+.center {
+  text-align: center;
+}
+
+.quote{
+  color: var(--main);
+  font-size: 1.2rem;
+  margin: 1.5em 3em;
+  font-style: italic;
+  opacity: .4;
+}
+.quote:before,
+.quote:after {
+  content: '"';
+}
+
 /****************** layout ******************/
-main {
+body {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 2em;
+}
+
+.grid-container {
   display: grid;
   grid-template-columns: 1fr 5fr;
   grid-gap: 5em 2em;
-  padding: 0 2em;
 }
 
 .grid-both {
@@ -162,23 +180,32 @@ main {
   }
 }
 
-.center {
-  text-align: center;
+/****************** responsive ******************/
+@media screen and (max-width: 800px) {
+  .grid-container {
+    display: block;
+
+    & > * {
+      margin-top: 5em;
+    }
+    & > h2 + div {
+      margin-top: 1em;
+    }
+  }
+  .title-container {
+    margin-top: 10em;
+  }
+  .hero-container {
+    margin: 0 -500%;
+    padding: 3% 500%;
+  }
+  .hero-image {
+    transform: none;
+  }
 }
 
-.quote{
-  color: var(--main);
-  font-size: 1.2rem;
-  margin: 1.5em 3em;
-  font-style: italic;
-  opacity: .4;
-}
-.quote:before,
-.quote:after {
-  content: '"';
-}
 
-/****************** page title ******************/
+/****************** project title ******************/
 .title-container {
   grid-row: 1/2;  /* Force to stay in the 1st row */
   align-self: center;
@@ -201,30 +228,41 @@ main {
   padding: 5% 500%;
 }
 
-/****************** responsive ******************/
-@media screen and (max-width: 800px) {
-  main {
-    display: block;
+/****************** side works ******************/
+.sideworks-group  {
+  padding-top: 10em;
+  column-count: 2;
+  column-gap: 4em;
 
-    & > * {
-      margin-top: 5em;
-    }
-    & > h2 + div {
-      margin-top: 1em;
-    }
-  }
-  .title-container {
-    margin-top: 10em;
-  }
-  .hero-container {
-    margin: 0 -500%;
-    padding: 3% 500%;
-  }
-  .hero-image {
-    transform: none;
+  & > * {
+    margin-bottom: 4em;
   }
 }
 
+.sideworks-title {
+  position: relative;
+  width: 90%;
+
+  & > .letter {
+    position: absolute;
+    height: 12em;
+    width: auto;
+    right: 0;
+    top: 0;
+    transform: translate(-50%, -30%);
+    z-index: -1;
+  }
+}
+
+.mobile-video {
+  text-align: center;
+
+  & > video {
+    width: 50%;
+  }
+}
+
+/****************** tabs ******************/
 .tab-container {
   background: var(--tab-background);
 }
@@ -374,7 +412,7 @@ main {
   font-size: .8rem;
 }
 
-.footer-nav{
+.project-nav{
   margin: 60px auto;
 
   & > a{
@@ -398,4 +436,44 @@ main {
       font-weight: 400;
     }
   }
+}
+
+/* ---------------- image preview ---------------- */
+.js-img-preview {
+  cursor: zoom-in;
+}
+.image-preview-container{
+    position: fixed;
+    top: 0;bottom: 0;left: 0;right: 0;
+    background: rgba(0,0,0,.7);
+    z-index: 20;
+    cursor: pointer;
+    display: none;
+
+    &:after{
+        content: '';
+        position: absolute;
+        top: 20px;right: 20px;
+        width: 30px;height: 30px;
+        background-image: url(/assets/icon-close.svg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        opacity: .95;
+    }
+
+    & > .image,
+    & > video{
+        position: absolute;
+        top: 50%;left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        height: 80%;
+        margin: auto;
+    }
+
+    & > .image{
+        background-size: contain;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+    }
 }
