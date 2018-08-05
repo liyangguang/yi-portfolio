@@ -1,17 +1,87 @@
-@import './_variables';
+:root {
+  --primary: #FDB92D;
+}
 
-/* ---------------- helper ---------------- */
-._body-width{
+/* ---------------- base ---------------- */
+*, *:after, *:before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+  font-family: 'Karla', 'Helvetica', sans-serif;
+  line-height: 1.6;
+  color: #374135;
+  font-size: 18px;
+}
+@media screen and (max-width: 1000px){
+  html, body{
+    font-size: 16px;
+  }
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+  opacity: .8;
+  transition: .2s opacity ease;
+}
+a:hover{
+  opacity: 1;
+}
+p{
+  margin: .5em 0;
+}
+h3:not(:first-child), h4:not(:first-child) {
+  margin-top: 1.5em;
+}
+ul, ol {
+  padding-left: 1.5em;
+}
+
+img, video {
   width: 100%;
-  max-width: 1280px;
-  padding: 0 60px;
-  margin: 0 auto;
 }
-._gilroy-title{
-  font-family: 'Gilroy', 'Gotham_Narrow', 'Helvetica', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: .1em;
+
+/****************** typography ******************/
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4em;
+  position: relative;
 }
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  position: relative;
+  font-size: 1.8em;
+  top: -.1em;  /* Offset to align with small font on the right */
+}
+
+h2.-standalone {
+  /* Set inline-block, so the underline is not full-width */
+  display: inline-block;
+
+  &:first-letter{
+    font-size: 1.3em;
+  }
+  /* Set the underline */
+  &:before {
+    width: initial;
+    top: 70%;
+    right: -.5em;
+    opacity: .3;
+    height: .5em;
+  }
+}
+
+h3 {
+  font-size: 1.5em;
+}
+h4 {
+  font-size: 1.2em;
+}
+
 ._primary-link{
   display: inline-block;
   margin: 8px 0;
@@ -25,145 +95,29 @@
   padding-left: 5px;
 }
 
-.js-img-preview,
-.js-tab{
-  cursor: pointer;
-}
-
-/* ---------------- site header ---------------- */
-.site-header{
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: transparent;
-  z-index: 10;
-  transition: box-shadow .5s ease;
-
-  & > .container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 60px;
-    transition: padding .5s ease;
-  }
-}
-
-.logo-link{
-  display: block;
-  width: 50px;
-  transition: width .5s ease;
-
-  & > img{
-    width: 100%;
-    vertical-align: middle;
-  }
-}
-
-.site-nav{
-  text-transform: uppercase;
-  font-size: 1em;
-  letter-spacing: .2em;
-  font-weight: bold;
-
-  & > .item{
-    display: inline-block;
-    margin: 8px 20px;
-  }
-}
-
-.site-header.-collapse{
-  box-shadow: 0 0 5px #ddd;
-  background: #fff;
-
-  & > .container{
-    padding: 8px 60px;
-    & > .logo-link{
-      width: 30px;
-    }
-  }
-}
-
-/* ---------------- page banner -------------------- */
-.page-banner{
-    background-color: #F1F6FF;
-    text-align: center;
-    position: relative;
-    padding: 80px 0 60px;
-    margin-bottom: 230px;
-
-    & > .bg{
-      width: 100%;
-      max-width: 1000px;
-    }
-
-    & > .content {
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        transform: translate(0, 60%);
-        margin: 0 auto;
-        background: #fff;
-        padding: 60px 50px 20px;
-
-        & > .small-title{
-            font-family: 'Gilroy', 'Gotham_Narrow', 'Helvetica', sans-serif;
-            text-transform: uppercase;
-            color: var(--main);
-            font-size: .9rem;
-            margin-bottom: 1em;
-            letter-spacing: .35em;
-        }
-        & > .big-title{
-            font-family: 'Gilroy', 'Gotham_Narrow', 'Helvetica', sans-serif;
-            text-transform: uppercase;
-            font-size: 2em;
-            font-weight: 400;
-            letter-spacing: .1em;
-        }
-        & > .more{
-            font-size: .9em;
-        }
-    }
-}
-
-/* ---------------- site footer ---------------- */
-.site-footer{
-  margin: 100px 10px 20px;
+.center {
   text-align: center;
-  font-size: .8rem;
 }
 
-/* ---------------- image preview ---------------- */
-.image-preview-container{
-    position: fixed;
-    top: 0;bottom: 0;left: 0;right: 0;
-    background: rgba(0,0,0,.7);
-    z-index: 20;
-    cursor: pointer;
-    display: none;
+/****************** layout ******************/
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2em;
+}
 
-    &:after{
-        content: '';
-        position: absolute;
-        top: 20px;right: 20px;
-        width: 30px;height: 30px;
-        background-image: url(/assets/icon-close.svg);
-        background-size: 100%;
-        background-repeat: no-repeat;
-        opacity: .95;
-    }
+.equal-col {
+  display: flex;
 
-    & > .image{
-        background-size: contain;
-        background-position: 50% 50%;
-        background-repeat: no-repeat;
-        position: absolute;
-        top: 50%;left: 50%;
-        transform: translate(-50%, -50%);
-        width: 80%;
-        height: 80%;
-        margin: auto;
-    }
+  &.vert-center {
+    align-items: center;
+  }
+
+  & > * {
+    width: 0;
+    flex: 1 0 0;
+  }
+  & > * + * {
+    padding-left: 2em;
+  }
 }

@@ -10,16 +10,10 @@ mixin base(title, type)
             meta(http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate")
             meta(http-equiv="Pragma" content="no-cache")
             meta(http-equiv="Expires" content="0")
-            if (type === 'v3')
-                link(rel='stylesheet', href=`/css/styles.css?v=${Date.now()}`)
-                link(href="https://fonts.googleapis.com/css?family=Karla:400,700", rel="stylesheet")
-            else
-                link(rel='stylesheet', href=`/css/styles-new.css?v=${Date.now()}`)
-                link(href="https://fonts.googleapis.com/css?family=Karla:400,700|Playfair+Display:900", rel="stylesheet")
-            script(defer, src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js')
-            script(defer, src=`/js/scripts.js?v=${Date.now()}`)
+            link(rel='stylesheet', href=`/css/styles.css?v=${Date.now()}`)
+            link(href="https://fonts.googleapis.com/css?family=Karla:400,700|Playfair+Display:900", rel="stylesheet")
         body(id!=attributes.id, class!=attributes.class)
-            header.site-header: .container._body-width
+            header.site-header: .container
                 a.logo-link(href="/index.html")
                     img(src='/assets/logo.png')
                 nav.site-nav
@@ -33,6 +27,8 @@ mixin base(title, type)
             .image-preview-container
                 .image
                 video(autoplay, loop, preload="auto")
+            script(defer, src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js')
+            script(defer, src=`/js/scripts.js?v=${Date.now()}`)
 
 mixin svg-email
     <svg width="216px" height="210px" viewBox="0 0 216 210" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">

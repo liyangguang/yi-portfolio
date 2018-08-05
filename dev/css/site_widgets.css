@@ -1,0 +1,101 @@
+
+/****************** header and footer ******************/
+.site-header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: transparent;
+  z-index: 10;
+  transition: box-shadow .5s ease;
+
+  & > .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 60px;
+    transition: padding .5s ease;
+  }
+}
+
+.logo-link{
+  display: block;
+  width: 50px;
+  transition: width .5s ease;
+
+  & > img{
+    width: 100%;
+    vertical-align: middle;
+  }
+}
+
+.site-nav{
+  text-transform: uppercase;
+  font-size: 1em;
+  letter-spacing: .2em;
+  font-weight: bold;
+
+  & > .item{
+    display: inline-block;
+    margin: 8px 20px;
+  }
+}
+
+.site-header.-collapse{
+  box-shadow: 0 0 5px #ddd;
+  background: #fff;
+
+  & > .container{
+    padding: 8px 60px;
+    & > .logo-link{
+      width: 30px;
+    }
+  }
+}
+
+/* ---------------- site footer ---------------- */
+.site-footer{
+  margin: 100px 10px 20px;
+  text-align: center;
+  font-size: .8rem;
+}
+
+/* ---------------- image preview ---------------- */
+.js-img-preview {
+  cursor: zoom-in;
+}
+.image-preview-container{
+    position: fixed;
+    top: 0;bottom: 0;left: 0;right: 0;
+    background: rgba(0,0,0,.7);
+    z-index: 20;
+    cursor: pointer;
+    display: none;
+
+    &:after{
+        content: '';
+        position: absolute;
+        top: 20px;right: 20px;
+        width: 30px;height: 30px;
+        background-image: url(/assets/icon-close.svg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        opacity: .95;
+    }
+
+    & > .image,
+    & > video{
+        position: absolute;
+        top: 50%;left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        height: 80%;
+        margin: auto;
+    }
+
+    & > .image{
+        background-size: contain;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+    }
+}

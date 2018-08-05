@@ -1,0 +1,33 @@
+/****************** side works ******************/
+.sideworks-group  {
+  padding-top: 10em;
+  column-count: 2;
+  column-gap: 4em;
+
+  & > * {
+    margin-bottom: 4em;
+  }
+}
+
+.sideworks-title {
+  position: relative;
+  width: 90%;
+
+  & > .letter {
+    position: absolute;
+    height: 12em;
+    width: auto;
+    right: 0;
+    top: 0;
+    transform: translate(-50%, -30%);
+    z-index: -1;
+  }
+}
+
+.mobile-video {
+  text-align: center;
+
+  & > video {
+    width: 50%;
+  }
+}

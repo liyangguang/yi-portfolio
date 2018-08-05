@@ -1,0 +1,229 @@
+/* ---------------- colors ---------------- */
+:root {
+  --primary: #FDB92D;
+  --tab-background: #ccc;
+}
+
+.cosigner .bleeding,
+.cosigner .hero-container {
+  background: #fbbb9a;
+}
+.dashboard .bleeding,
+.dashboard .hero-container {
+  background: #b0caf5;
+}
+.photo .bleeding,
+.photo .hero-container {
+  background: #9ce8ff;
+}
+.load_form .bleeding,
+.load_form .hero-container {
+  background: #FFE0E3;
+}
+.base_crm .bleeding,
+.base_crm .hero-container {
+  background: #5ae0c2;
+}
+
+/****************** layout ******************/
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-gap: 5em 2em;
+}
+
+.grid-both {
+  grid-column: 1/3;
+}
+.grid-right {
+  grid-column: 2/3;
+}
+
+/****************** responsive ******************/
+@media screen and (max-width: 800px) {
+  .project-grid {
+    display: block;
+
+    & > * {
+      margin-top: 5em;
+    }
+    & > h2 + div {
+      margin-top: 1em;
+    }
+  }
+  .title-container {
+    margin-top: 10em;
+  }
+  .hero-container {
+    margin: 0 -500%;
+    padding: 3% 500%;
+  }
+  .hero-image {
+    transform: none;
+  }
+}
+
+/****************** project title ******************/
+.title-container {
+  grid-row: 1/2;  /* Force to stay in the 1st row */
+  align-self: center;
+  max-width: 25em;
+  z-index: 1;  /* On top of the hero image */
+}
+
+.hero-container {
+  grid-row: 1/2;  /* Force to stay in the 1st row */
+  /* Bleed background color */
+  margin-right: -500%;
+  padding: 15% 505% 8% 0;
+}
+.hero-image {
+  transform: translateX(15%);
+}
+
+.bleeding {
+  margin: 0 -500%;
+  padding: 5% 500%;
+}
+
+
+/****************** text decoration ******************/
+.upper-line:before {
+  content: '';
+  position: absolute;
+  top: -.6em;
+  left: 0;
+  background: var(--primary);
+  height: .2em;
+  width: 4em;
+}
+
+.quote{
+  color: var(--main);
+  font-size: 1.2rem;
+  margin: 1.5em 3em;
+  font-style: italic;
+  opacity: .4;
+}
+.quote:before,
+.quote:after {
+  content: '"';
+}
+
+
+/****************** tabs ******************/
+.tab-container {
+  background: var(--tab-background);
+}
+.tab {
+  padding: 0;
+  cursor: pointer;
+  border-bottom: .5em solid transparent;
+
+  &.-active{
+    border-bottom-color: var(--primary);
+  }
+}
+.tab-content {
+  margin: 2em 0;
+  padding: .5rem 1rem;
+}
+
+/******************** step video (in co-signer) **************************/
+.-steps{
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  & > .screen{
+    flex: 1 1 60%;
+    position: relative;
+    & > .laptop{
+      width: 100%;
+    }
+    & > video{
+      display: none;
+      position: absolute;
+      width: 68.5%;
+      left: 50%;
+      top: 63px;
+      transform: translateX(-50%);
+      &.-active{
+        display: block;
+      }
+    }
+  }
+
+  & > .buttons{
+    flex: 1 1 40%;
+  }
+}
+
+.step-button{
+  cursor: pointer;
+  position: relative;
+  & > span{
+    position: absolute;
+    font-size: 1.3rem;
+  }
+  & > h3{
+    font-size: 1.2rem;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    margin-left: 1.5em;
+    margin-top: .8em;
+  }
+  & > p{
+    max-height: 0;
+    overflow: hidden;
+    margin: 0;
+    transition: max-height .5s ease;
+  }
+
+  &.-active{
+    & > span{
+      top: -.75em;
+      font-size: 4rem;
+      opacity: .1;
+    }
+    & > h3{
+      margin-left: 0;
+      margin-top: 2em;
+    }
+    & > p{
+      max-height: 100px;
+      transition: max-height .5s ease;
+    }
+  }
+}
+
+
+/* ---------------- footer project nav ---------------- */
+.project-nav{
+  margin: 3em auto;
+
+  & > a{
+    padding: 1em 2em;
+    &:first-child{
+      text-align: left;
+    }
+    &:last-child{
+      text-align: right;
+    }
+    &:hover{
+      background: #fafafa;
+    }
+
+    & > .arrow{
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+    & > .name{
+      font-size: 20px;
+      font-weight: 400;
+    }
+  }
+}
