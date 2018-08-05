@@ -1,0 +1,159 @@
+:root {
+  --primary: #FDB92D;
+}
+
+.home-intro {
+  background-image: url(/assets/home_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 8em 0 8em 30%;
+  margin-bottom: 3em;
+
+  & > h1 {
+    font-size: 2.5em;
+  }
+
+  & > .letter {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: -1;
+    height: 18em;
+    width: auto;
+  }
+}
+
+.home-projects {
+  display: grid;
+  grid-template-columns: 7fr 1fr 1fr 7fr;
+  grid-gap: 5em 3em;
+  align-items: center;
+
+  & h2 {
+    font-size: 2.2em;
+  }
+
+  & > .hero-container {
+    padding: 2em;
+    text-align: center;
+
+    & > img {
+      width: auto;
+      max-width: 100%;
+      max-height: 20em;
+    }
+  }
+
+  & > .grid-left.text{grid-column: 1/3;}
+  & > .grid-left.hero-container {grid-column: 1/4;}
+  & > .grid-right.text{grid-column: 3/5;}
+  & > .grid-right.hero-container {grid-column: 2/5;}
+  & > .grid-row1 {grid-row: 1/2;}
+  & > .grid-row2 {grid-row: 2/3;}
+  & > .grid-row3 {grid-row: 4/4;}
+  & > .grid-row4 {grid-row: 5/5;}
+
+  & .month,
+  & .year {
+    font-family: 'Playfair Display', serif;
+  }
+  & .year {
+    margin-left: 1.5em;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: -1.6em;
+      top: 0;
+      height: 1px;
+      width: 2.5em;
+      background: #000;
+      transform: rotate(135deg);
+    }
+  }
+}
+
+.left-space {
+  margin-left: 4em;
+}
+
+.left-line {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: -4em;
+    top: .7em;
+    background: var(--primary);
+    height: .3em;
+    width: 3em;
+  }
+}
+
+.home-contacts-container{
+  margin-top: 10em;
+  text-transform: uppercase;
+
+  & svg{
+    display: block;
+    margin: 0 auto 1em;
+  }
+}
+
+/***************** contacts icon animation ********************/
+.contact:hover{
+  & #flag{ transform: rotate(-90deg); }
+  & #mail{ animation: mail alternate .8s ease-in-out infinite; }
+  & #balloon{ animation: floating alternate 1s ease-in-out infinite; }
+  & .bubble{ opacity: 1; }
+  & .dot1{ animation: dot1 1s ease-in-out infinite; }
+  & .dot2{ animation: dot2 1s ease-in-out infinite; }
+  & .dot3{ animation: dot3 1s ease-in-out infinite; }
+}
+
+.contact{
+  & #flag{
+    transition: transform .5s ease;
+    transform-origin: 42.5% 7%;
+  }
+  & .bubble{
+    transition: opacity .5s ease;
+  }
+}
+
+@keyframes mail{
+  from { transform: translate(18px, 20px); }
+  to   { transform: translate(29px, 20px); }
+}
+@keyframes floating{
+  from { transform: translate(65px, 25px); }
+  to   { transform: translate(75px, 20px); }
+}
+@keyframes dot1{
+  from { opacity: 0; }
+  10%  { opacity: 0; }
+  20%  { opacity: 1; }
+  90%  { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+@keyframes dot2{
+  from { opacity: 0; }
+  40%  { opacity: 0; }
+  50%  { opacity: 1; }
+  90%  { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+@keyframes dot3{
+  from { opacity: 0; }
+  70%  { opacity: 0; }
+  80%  { opacity: 1; }
+  90%  { opacity: 1; }
+  to   { opacity: 0; }
+}
+

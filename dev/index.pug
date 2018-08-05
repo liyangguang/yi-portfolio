@@ -1,105 +1,62 @@
 include _mixin.pug
-+base('Yi Nie - Product Designer', 'v3')#home-page
-    main._body-width
++base('Yi Nie - Product Designer').home-page
+    main
         section.home-intro
-            h1.title._gilroy-title hello,<br>I'm Yi Nie
-            p.description I'm a Product Designer based in San Francisco Bay Area.
-            p.description I create delightful experiences with empathy for users.
-            a._primary-link(target="_blank", href="/resume-Yi-Nie.pdf") resume
-            .flying-bg
-                img.shape-1(src="/assets/_bg/home-small1.png")
-                img.shape-2(src="/assets/_bg/home-small2.png")
-                img.shape-3(src="/assets/_bg/home-small3.png")
-                img.shape-4(src="/assets/_bg/home-small4.png")
-                img.shape-5(src="/assets/_bg/home-small5.png")
-                img.shape-6(src="/assets/_bg/home-small6.png")
-                img.shape-7(src="/assets/_bg/home-small7.png")
-                img.shape-8(src="/assets/_bg/home-small8.png")
+            h1 Hello,<br>I'm Yi Nie
+            img.letter(src="/assets/title_y.png")
+            p.left-space.left-line I’m a product designer based in San Francisco.
+            p.left-space I create delightful experience with empathy.
+            a.left-space._primary-link(target="_blank", href="/resume-Yi-Nie.pdf") resume
 
-        section.home-project.-project-1
-            .home-project-content
-                p.type._gilroy-title web app
-                h2._gilroy-title: a.title(href="/projects/credible_cosigner.html") CO-SIGNER<br/>PRE-QUALIFICATION
-                .home-project-info: .wrap
-                    p.text Led the redesign of Credible's co-signing experience for student loan refinancing, including user flow, interaction design and visual design for both desktop and mobile.
-                    a._primary-link(href="/projects/credible_cosigner.html") read more
-            .home-project-preview.-desktop.-left
-                img.frame-shadow(src="/assets/laptop-shadow.png")
-                img.frame(src="/assets/laptop.png")
-                img.screen(src="/assets/credible_cosigner/_preview.png")
+        section.home-projects
+            .hero-container.grid-left.grid-row1.credible_cosigner
+                img(src="/assets/credible_cosigner/_preview.png")
+            .text.grid-right.grid-row1
+                div
+                    p.month 06
+                    p.year 2016
+                h2: a(href="/projects/credible_cosigner.html") Streamline Adding Co-signer
+                p.left-space.left-line Led the redesign of Credible's co-signing experience for student loan refinancing, including user flow, interaction design and visual design for both desktop and mobile.
+                a.left-space._primary-link(href="/projects/credible_cosigner.html") read more
+            
+            
+            .hero-container.grid-right.grid-row2.basecrm
+                img(src="/assets/basecrm/_preview.png")
+            .text.grid-left.grid-row2
+                div
+                    p.month 06
+                    p.year 2016
+                h2: a(href="/projects/basecrm.html") Base Mobile CRM redesign
+                p.left-space.left-line Redesign deal profile page of Base CRM mobile app to help salespeople keep track of their deals.
+                a.left-space._primary-link(href="/projects/basecrm.html") read more
 
-        section.home-project.-project-2
-            .home-project-content
-                p.type._gilroy-title mobile app
-                h2._gilroy-title: a.title(href="/projects/basecrm.html") BASE MOBILE CRM REDESIGN 
-                .home-project-info: .wrap
-                    p.text Redesign deal profile page of Base CRM mobile app to help salespeople keep track of their deals.
-                    a._primary-link(href="/projects/basecrm.html") read more
-            .home-project-preview.-mobile
-                img.frame-shadow(src="/assets/phone-shadow.png")
-                img.frame(src="/assets/phone.png")
-                img.screen(src="/assets/basecrm/_preview.png")
+            .hero-container.grid-left.grid-row3.credible_dashboard
+                img(src="/assets/credible_dashboard/_preview.png")
+            .text.grid-right.grid-row3
+                div
+                    p.month 06
+                    p.year 2016
+                h2: a(href="/projects/credible_dashboard.html") Student Loan Offer Dashboard
+                p.left-space.left-line Redesigned Credible's offer dashboard to help borrowers choose offers easily.
+                a.left-space._primary-link(href="/projects/credible_dashboard.html") read more
+            
+            .hero-container.grid-right.grid-row4.photo
+                img(src="/assets/photo/_preview.png")
+            .text.grid-left.grid-row4
+                div
+                    p.month 06
+                    p.year 2016
+                h2: a(href="/projects/photo.html") Photo Management App
+                p.left-space.left-line Designed a mobile application to help people manage their photo effortlessly.
+                a.left-space._primary-link(href="/projects/photo.html") read more
 
-        section.home-project.-project-3
-            .home-project-content
-                p.type._gilroy-title web app
-                h2._gilroy-title: a.title(href="/projects/credible_dashboard.html") STUDENT LOAN OFFER DASHBOARD
-                .home-project-info: .wrap
-                    p.text Redesigned Credible's offer dashboard to help borrowers choose offers easily.
-                    a._primary-link(href="/projects/credible_dashboard.html") read more
-            .home-project-preview.-desktop.-left
-                img.frame-shadow(src="/assets/laptop-shadow.png")
-                img.frame(src="/assets/laptop.png")
-                img.screen(src="/assets/credible_dashboard/_preview.png")
-
-        section.home-project.-project-4
-            .home-project-content
-                p.type._gilroy-title mobile app
-                h2._gilroy-title: a.title(href="/projects/photo.html") photo management mobile app
-                .home-project-info: .wrap
-                    p.text Designed a mobile application to help people manage their photo effortlessly.
-                    a._primary-link(href="/projects/photo.html") read more
-            .home-project-preview.-mobile
-                img.frame-shadow(src="/assets/phone-shadow.png")
-                img.frame(src="/assets/phone.png")
-                img.screen(src="/assets/photo/_preview.png")
-
-        section.home-ui
-            .title-line-container
-                h2.title._gilroy-title visual design
-            .home-carousel
-                ul
-                    li
-                        img.js-img-preview(src="/assets/UI/halloween.jpg")
-                    li
-                        img.js-img-preview(src="/assets/UI/sleep.jpg")
-                    li
-                        img.js-img-preview(src="/assets/UI/material_design.jpg")
-                    li
-                        img.js-img-preview(src="/assets/UI/log_in.jpg")
-                    li
-                        img.js-img-preview(src="/assets/UI/Survey_illustration.jpg")
-                    li
-                        img.js-img-preview(src="/assets/UI/landing_page.jpg")
-                    li
-                        img.js-img-preview(src="/assets/UI/task.jpg")
-                    li
-                        img.js-img-preview(src="/assets/UI/time_up.jpg")
-                button.js-carousel-left.carousel-left
-                    img(src="/assets/icon-left.svg", alt="previous")
-                button.js-carousel-right.carousel-right
-                    img(src="/assets/icon-right.svg", alt="next")
-
-        section.home-contacts
-            .title-line-container
-                h2.title._gilroy-title contact me
-            .home-contacts-container
-                a.contact(target="_blank" href="mailto:yinie.ux@gmail.com")
-                    +svg-email
-                    | email
-                a.contact(target="_blank" href="https://dribbble.com/yinie")
-                    +svg-dribbble
-                    | dribbble
-                a.contact(target="_blank" href="https://www.linkedin.com/in/yinie/")
-                    +svg-linkedin
-                    | linkedin
+        .equal-col.center.home-contacts-container
+            a.contact(target="_blank" href="mailto:yinie.ux@gmail.com")
+                +svg-email
+                | email
+            a.contact(target="_blank" href="https://dribbble.com/yinie")
+                +svg-dribbble
+                | dribbble
+            a.contact(target="_blank" href="https://www.linkedin.com/in/yinie/")
+                +svg-linkedin
+                | linkedin

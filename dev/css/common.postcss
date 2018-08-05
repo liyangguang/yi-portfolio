@@ -58,23 +58,6 @@ h2 {
   top: -.1em;  /* Offset to align with small font on the right */
 }
 
-h2.-standalone {
-  /* Set inline-block, so the underline is not full-width */
-  display: inline-block;
-
-  &:first-letter{
-    font-size: 1.3em;
-  }
-  /* Set the underline */
-  &:before {
-    width: initial;
-    top: 70%;
-    right: -.5em;
-    opacity: .3;
-    height: .5em;
-  }
-}
-
 h3 {
   font-size: 1.5em;
 }
@@ -83,16 +66,31 @@ h4 {
 }
 
 ._primary-link{
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   margin: 8px 0;
-  padding: 4px 0;
-  color: var(--main);
   font-weight: bold;
   text-transform: capitalize;
+  position: relative;
+}
+._primary-link:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: .8em;
+  background: var(--primary);
+  opacity: .3;
 }
 ._primary-link:after{
-  content: '>';
-  padding-left: 5px;
+  content: '';
+  height: 1em;
+  width: 1em;
+  background-image: url(/assets/link_arrow.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: .5em;
 }
 
 .center {
