@@ -12,7 +12,6 @@
 html, body{
   font-family: 'Karla', 'Helvetica', sans-serif;
   line-height: 1.6;
-  color: #374135;
   font-size: 18px;
   overflow-x: hidden;
 }
@@ -25,20 +24,16 @@ html, body{
 a{
   text-decoration: none;
   color: inherit;
-  opacity: .8;
-  transition: .2s opacity ease;
 }
-a:hover{
-  opacity: 1;
-}
-p{
-  margin: .5em 0;
+p, li, h4{
+  color: #666;
+  margin: .8em 0;
 }
 h3:not(:first-child), h4:not(:first-child) {
   margin-top: 1.5em;
 }
 ul, ol {
-  padding-left: 1.5em;
+  padding-left: 1em;
 }
 
 img, video {
@@ -48,7 +43,7 @@ img, video {
 /****************** typography ******************/
 h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 2.4em;
+  font-size: 3em;
   position: relative;
 }
 
@@ -71,7 +66,7 @@ h4 {
   align-items: center;
   margin: 8px 0;
   font-weight: bold;
-  text-transform: capitalize;
+  text-transform: uppercase;
   position: relative;
 }
 ._primary-link:before {

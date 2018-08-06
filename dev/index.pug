@@ -2,15 +2,16 @@ include _mixin.pug
 +base('Yi Nie - Product Designer').home-page
     main
         section.home-intro
-            h1 Hello,<br>I'm Yi Nie
             img.letter(src="/assets/title_y.png")
-            p.left-space.left-line I’m a product designer based in San Francisco.
-            p.left-space I create delightful experience with empathy.
-            a.left-space._primary-link(target="_blank", href="/resume-Yi-Nie.pdf") resume
+            div(style="z-index: 1;")
+                h1 Hello,<br>I'm Yi Nie
+                p.left-space.left-line I’m a product designer based in San Francisco.
+                p.left-space I create delightful experience with empathy.
+                a.left-space._primary-link(target="_blank", href="/resume-Yi-Nie.pdf") resume
 
         section.home-projects
             .hero-container.grid-left.grid-row1.-padding.credible_cosigner
-                img(src="/assets/credible_cosigner/_cover.png")
+                img(src="/assets/credible_cosigner/_cover.png", style="padding-right: 5em;")
             .text.grid-right.grid-row1
                 div
                     p.month 06
@@ -20,17 +21,17 @@ include _mixin.pug
                 a.left-space._primary-link(href="/projects/credible_cosigner.html") read more
             
             
-            .hero-container.grid-right.grid-row2.-padding.basecrm
+            .hero-container.grid-right.grid-row2.basecrm
                 img(src="/assets/basecrm/_cover.png")
             .text.grid-left.grid-row2
                 div
                     p.month 06
                     p.year 2016
-                h2: a(href="/projects/basecrm.html") Base Mobile CRM redesign
+                h2: a(href="/projects/basecrm.html") Base CRM<br>Mobile Redesign
                 p.left-space.left-line Redesign deal profile page of Base CRM mobile app to help salespeople keep track of their deals.
                 a.left-space._primary-link(href="/projects/basecrm.html") read more
 
-            .hero-container.grid-left.grid-row3.-padding.credible_dashboard
+            .hero-container.grid-left.grid-row3.credible_dashboard
                 img(src="/assets/credible_dashboard/_cover.png")
             .text.grid-right.grid-row3
                 div
@@ -41,7 +42,7 @@ include _mixin.pug
                 a.left-space._primary-link(href="/projects/credible_dashboard.html") read more
             
             .hero-container.grid-right.grid-row4.photo
-                img(src="/assets/photo/_cover.png")
+                img(src="/assets/photo/_cover.png", style="padding-left: 3em;")
             .text.grid-left.grid-row4
                 div
                     p.month 06

@@ -7,7 +7,7 @@
 .load_form .bleeding,
 .load_form .hero-container,
 .load_form.hero-container {
-  background: #FFE0E3;
+  background: #fff1f2;
 }
 .credible_cosigner .bleeding,
 .credible_cosigner .hero-container,
@@ -30,11 +30,18 @@
   background: #dff1f8;
 }
 
+.-shadow {
+  box-shadow: 0 5px 15px rgba(0,0,0,.1);
+}
+.-narrower {
+  width: 80%;
+}
+
 /****************** layout ******************/
 .project-grid {
   display: grid;
   grid-template-columns: 1fr 5fr;
-  grid-gap: 5em 2em;
+  grid-gap: 5em 5em;
 
   & > .grid-both {grid-column: 1/3;}
   & > .grid-right {grid-column: 2/3;}
