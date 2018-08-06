@@ -40,6 +40,12 @@
   & > .grid-right {grid-column: 2/3;}
 }
 
+.equal-two-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 4em 6em;
+}
+
 /****************** project title ******************/
 .project-grid {
   & > .title-container {
@@ -53,10 +59,15 @@
     grid-row: 1/2;  /* Force to stay in the 1st row */
     /* Bleed background color */
     margin-right: -500%;
-    padding: 15% 505% 8% 0;
+    padding: 0 500% 0 0;
+
+    &.-padding {
+      padding: 15% 505% 8% 0;
+    }
   }
   & .hero-image {
     transform: translateX(15%);
+    margin-bottom: -.5em;  /* offset the white space gap */
   }
 
   & .bleeding {
@@ -132,7 +143,21 @@ h2.-standalone {
 .quote:after {
   content: '"';
 }
+.-checked {
+  display: flex;
+  align-items: center;
 
+  &:after {
+    content: '';
+    display: inline-block;
+    height: 1em;
+    width: 1em;
+    margin-left: .5em;
+    background-image: url(/assets/icon_check.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
 
 /****************** tabs ******************/
 .tab-container {

@@ -27,10 +27,10 @@ include _mixin.pug
         .sideworks-title
             h1 Animations and Prototypes
             img.letter(src="/assets/sideworks/title_a.png")
-        .mobile-video: video.js-img-preview(autoplay, loop, preload="auto"): source(src="/assets/sideworks/prototype_snooze.mp4")
-        video.js-img-preview(autoplay, loop, preload="auto"): source(src="/assets/sideworks/prototype_todo.mp4")
-        .mobile-video: video.js-img-preview(autoplay, loop, preload="auto"): source(src="/assets/sideworks/prototype_yelp.mp4")
-        video.js-img-preview(autoplay, loop, preload="auto"): source(src="/assets/sideworks/animation_paper_plane.mp4")
+        .mobile-video: video.js-img-preview(playsinline, loop, muted, autoplay, preload="auto"): source(src="/assets/sideworks/prototype_snooze.mp4")
+        video.js-img-preview(playsinline, loop, muted, autoplay, preload="auto"): source(src="/assets/sideworks/prototype_todo.mp4")
+        .mobile-video: video.js-img-preview(playsinline, loop, muted, autoplay, preload="auto"): source(src="/assets/sideworks/prototype_yelp.mp4")
+        video.js-img-preview(playsinline, loop, muted, autoplay, preload="auto"): source(src="/assets/sideworks/animation_paper_plane.mp4")
         img.js-img-preview(src="/assets/sideworks/prototype_tic-tac-toe.gif")
         img.js-img-preview(src="/assets/sideworks/animation_clock.gif")
         img.js-img-preview(src="/assets/sideworks/animation_wave.gif")

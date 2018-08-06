@@ -36,13 +36,16 @@
   }
 
   & > .hero-container {
-    padding: 2em;
     text-align: center;
+    &.-padding {
+      padding: 2em;
+    }
 
     & > img {
       width: auto;
       max-width: 100%;
       max-height: 20em;
+      margin-bottom: -.5em;  /* offset the white space gap */
     }
   }
 

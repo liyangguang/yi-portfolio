@@ -26,7 +26,7 @@ mixin base(title, type)
                 a(target="_blank" href="mailto:yinie.ux@gmail.com") yinie.ux@gmail.com
             .image-preview-container
                 .image
-                video(autoplay, loop, preload="auto")
+                video(playsinline, loop, muted, autoplay, preload="auto")
             script(defer, src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js')
             script(defer, src=`/js/scripts.js?v=${Date.now()}`)
 
