@@ -1,13 +1,30 @@
 include _mixin.pug
 +base('Yi Nie - Product Designer').home-page
     main
-        section.home-intro
-            img.letter(src="/assets/title_y.png")
-            div(style="z-index: 1;")
+        section.home-intro.js-home-intro
+            .content
                 h1 Hello,<br>I'm Yi Nie
                 p.left-space.left-line I’m a product designer based in San Francisco.
                 p.left-space I create delightful experience with empathy.
                 a.left-space._primary-link(target="_blank", href="/resume-Yi-Nie.pdf") resume
+            img.letter(src="/assets/home/title_y.png")
+            .home-bg
+                .bg-line.bg-col-1: img(src="/assets/home/bg_line.svg")
+                .bg-shape.bg-col-1.bg-shape-1: img(src="/assets/home/bg_shape_1.svg")
+                .bg-shape.bg-col-1.bg-shape-2: img(src="/assets/home/bg_shape_4.svg")
+
+                .bg-line.bg-col-2: img(src="/assets/home/bg_line.svg")
+                .bg-shape.bg-col-2.bg-shape-3: img(src="/assets/home/bg_shape_1.svg")
+                
+                .bg-line.bg-col-3: img(src="/assets/home/bg_line.svg")
+                .bg-shape.bg-col-3.bg-shape-4: img(src="/assets/home/bg_shape_3.svg")
+                
+                .bg-line.bg-col-4: img(src="/assets/home/bg_line.svg")
+                .bg-shape.bg-col-4.bg-shape-5: img(src="/assets/home/bg_shape_1.svg")
+                
+                .bg-line.bg-col-5: img(src="/assets/home/bg_line.svg")
+                .bg-shape.bg-col-5.bg-shape-6: img(src="/assets/home/bg_shape_2.svg")
+                .bg-shape.bg-col-5.bg-shape-7: img(src="/assets/home/bg_shape_4.svg")
 
         section.home-projects
             .hero-container.grid-left.grid-row1.-padding.credible_cosigner
