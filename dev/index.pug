@@ -27,9 +27,19 @@ include _mixin.pug
                 .bg-shape.bg-col-5.bg-shape-7: img(src="/assets/home/bg_shape_4.svg")
 
         section.home-projects
-            .hero-container.grid-left.grid-row1.-padding.credible_cosigner
+            #loan_form.hero-container.grid-right.grid-row1
+                img(src="/assets/loan_form/_cover.png")
+            .text.grid-left.grid-row1
+                div
+                    p.month 05
+                    p.year 2018
+                h2: a(href="/projects/loan_form.html") Loan Application form A/B testing
+                p.left-space.left-line Led the design of 3 around a/b testing of Credible’s loan pre-qualification form. 
+                a.left-space._primary-link(href="/projects/loan_form.html") read more
+
+            #credible_cosigner.hero-container.grid-left.grid-row2.-padding
                 img(src="/assets/credible_cosigner/_cover.png", style="padding-right: 5em;")
-            .text.grid-right.grid-row1
+            .text.grid-right.grid-row2
                 div
                     p.month 05
                     p.year 2017
@@ -38,9 +48,9 @@ include _mixin.pug
                 a.left-space._primary-link(href="/projects/credible_cosigner.html") read more
             
             
-            .hero-container.grid-right.grid-row2.basecrm
+            #basecrm.hero-container.grid-right.grid-row3
                 img(src="/assets/basecrm/_cover.png")
-            .text.grid-left.grid-row2
+            .text.grid-left.grid-row3
                 div
                     p.month 03
                     p.year 2016
@@ -48,9 +58,9 @@ include _mixin.pug
                 p.left-space.left-line Redesign deal profile page of Base CRM mobile app to help salespeople keep track of their deals.
                 a.left-space._primary-link(href="/projects/basecrm.html") read more
 
-            .hero-container.grid-left.grid-row3.credible_dashboard
+            #credible_dashboard.hero-container.grid-left.grid-row4
                 img(src="/assets/credible_dashboard/_cover.png")
-            .text.grid-right.grid-row3
+            .text.grid-right.grid-row4
                 div
                     p.month 09
                     p.year 2016
@@ -58,9 +68,9 @@ include _mixin.pug
                 p.left-space.left-line Redesigned Credible's offer dashboard to help borrowers choose offers easily.
                 a.left-space._primary-link(href="/projects/credible_dashboard.html") read more
             
-            .hero-container.grid-right.grid-row4.photo
+            #photo.hero-container.grid-right.grid-row5
                 img(src="/assets/photo/_cover.png", style="padding-left: 3em;")
-            .text.grid-left.grid-row4
+            .text.grid-left.grid-row5
                 div
                     p.month 06
                     p.year 2016

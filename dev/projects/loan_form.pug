@@ -1,341 +1,351 @@
 include ../_mixin.pug
-+base('Yi Nie - Loan Application form A/B testing').load_form
++base('Yi Nie - Loan Application form A/B testing')#loan_form
     main.project-grid
       .title-container.grid-both
         h1.upper-line Loan Application form A/B testing
         p Led the design of 3 around a/b testing of Credible’s loan pre-qualification form. 
       .hero-container.grid-right
         img.hero-image(src="/assets/loan_form/_cover.png", alt="Hero image")
-
-      h2.upper-line Background
-      div
-        p Credible is a marketplace for student loans, student loan refinancing, and personal loan. We help borrowers compare personalized and accurate rates from multiple lenders so that borrowers can choose the one that best fits their need.
-        h4 The important part of the borrowing process
-        p Borrowers land on Credible, finish the pre-qualification form and they will be able to see their rates on dashboards. Then borrowers pick one offer, finish up the rest of the information lenders need. Finally, they will be able to submit their loan request to lenders. 
-        p Pre-qualification form is an important part of the whole process and this project is mostly focusing on pre-qualification form. 
-
-
-      .grid-both.bleeding
-        img(src="/assets/loan_form/borrowing_process.png", alt="Borrowing experience")
-
-
-      h2.upper-line Goal and Metrics
-      div
-        h3 Increase the conversation of pre-qualification form
-        p Before I started, it’s important to understand the problem and make sure all the stakeholders are aligned on the same goal. So I talked to the product manager, loan operation and client success team and listed out the following design success metrics.
-        ol
-          li Increase the conversation rate of pre-qualification form - increase the percentage of user who finished the form compared to the number of users who start the form. 
-          li Improve conversion rates through the full funnel: A success design shouldn’t hurt the conversion of later steps like choosing a loan, submitting the request and closing the loan. On the other hand, if the design has a positive impact on these aspects, we could consider it as successful. 
-        h4 UX goal:
-        ol
-          li Improve the overall experience of the pre-qualification form.  Make the form more efficient and friendly to fill out.
-          li Make sure we can learn from the a/b testing and use the insights for future UX improvements.
-
-
-      .grid-right
-        h2.-standalone 1st round - A broader exploration
-
-
-      h2.upper-line Research
-      div
-        h3 Where are the opportunities?
-        p Conversation data from Google Analytics reveals that there is a large drop off on the first step and third step. To better understand users’ behavior and pain points, I conducted user testing on the old prequalification form.
-        h4 Current form pain points:
-        ol
-          li Users didn’t want to create accounts  
-          li Users had difficulties answering some questions (e.g. income), they need to click tooltips and use the help content. But some users didn’t find tooltips.
-          li Overall, users feel the form is straightforward and standard as other loan application site, they expect they will be asked personal information.
-
-
-      h2.upper-line Hypothesis and Concepts
-      div
-        h3 Explore different concepts 
-        p The important part of A/B testing is to define the hypothesis so that we can control the baseline and test variation to make sure we can confidently learn from these experiments.  Based on our user research insights, I came out with concepts and hypothesis to test:  
-        h4 Direction 1: Different flows of creating accounts
-        p I learned from user research that creating accounts is the biggest friction of the whole process. But having an account is necessary because users will need this to access their rates and finalize the loan with lenders. My first hypothesis is that different flow of creating accounts will impact user’s perception of the process and impact conversion. Here are several options I’ve explored.
-
-      .grid-both.bleeding
-        .equal-col
-          div
-            h4 Current
-            p Create account at end of form
-          div
-            h4 Option 1
-            p Create account at beginning
-          div
-            h4 Option 2
-            p Create account after result summary
-          div
-            h4 Option 3
-            p Separate email and password
-        .equal-col
-          div: img(src="/assets/loan_form/flow1.png", alt="")
-          div: img(src="/assets/loan_form/flow2.png", alt="")
-          div: img(src="/assets/loan_form/flow3.png", alt="")
-          div: img(src="/assets/loan_form/flow4.png", alt="")
-
-      .grid-right
-        h4 Direction 2: Surface helper content to streamline form filling
-        p Users had difficulties answering questions like income, housing payment etc.  This may add extra friction to finish the process. Though users in the user testing click the tooltip to get more information, in real life users may not discover the tooltip and abandon.  Our second hypothesis is that surfacing helper content will streamline the process and reduce drop off.
-
-      .grid-both.bleeding
-        .equal-col
-          div
-            h4 Current
-            p Click tooltip to open help content
-          div
-            h4 Option 1
-            p Focus on field to reveal help content
-          div
-            h4 Option 2
-            p Surface tooltip on right column
-        .equal-col
-          div: img.js-img-preview(src="/assets/loan_form/tooltip1.png", alt="")
-          div: img.js-img-preview(src="/assets/loan_form/tooltip2.png", alt="")
-          div: img.js-img-preview(src="/assets/loan_form/tooltip3.png", alt="")
-
-      .grid-right
-        h4 Direction 3: Humanized form to bring positive feelings to users
-        p The form’s look and feel makes users feel standard and straightforward. But users had the mindset of being asked personal information, which is kind of a negative subconscious. So what if we can make the form look less like a form and bring more humanized into it?  Below are the two concept prototypes I’ve made.
-
-      .grid-both.bleeding
-        .equal-col
-          div(style="flex-grow: 1.6;")
-            h4 Option 1
-            p Nature language form
-          div
-            h4 Option 2
-            p Conversational form
-        .equal-col
-          video.js-img-preview(style="flex-grow: 1.6;", playsinline, loop, muted, autoplay, preload="auto"): source(src="/assets/loan_form/NLF-video.mp4")
-          video.js-img-preview(playsinline, loop, muted, autoplay, preload="auto"): source(src="/assets/loan_form/conversation.mp4")
-
-      h2.upper-line Design and A/B testing
-      div
-        h3 Test creating account flow
-        p One of the challenges we have is that, in order to track different designs impact around the full funnel, the traffic on Credible is not large enough to run multiple ab testing at the same time. So we have to select one direction and run only 2 to 3 testing at the same time to confidently test the hypothesis. We ranked these three directions based on impact and effort.  We choose to test the create account flow because we believe it will have the highest impact with relative low implementation efforts. 
-        h4 Baseline: create accounts at the end of the form  
-        p In the current design, we try to push the difficult part to the end of form so that user will start easily and make through the end with momentum. But we are still seeing a lot of drop-off at the create account step.
-        img.-narrower(src="/assets/loan_form/create_account_baseline.jpg", alt="Create account baseline")
-        h4 Create account first
-        p Creating accounts first will definitely cause a lot of drop-off at the very beginning. But on the other hand, by revealing the most sensitive information at the front, this will filter out low intent users and improve the conversion later in the process. 
-        img.-narrower(src="/assets/loan_form/create_account_v1.jpg", alt="Create account variation 1")
-        h4 Create account after user get results
-        p Give user tease of the result will motivate users to create accounts. For users who receive rates, give users a tease of how many options they have got and overlay the modal on their dashboards. But for users who didn’t receive any rates, we don’t want to mislead them so the main message is “Your result is ready” and it won’t be an overlay of the dashboard.
-        img.-narrower(src="/assets/loan_form/create_account_v2.jpg", alt="Create account variation 2")
-        h4 Ask email at front and password at the end
-        p The hypothesis here is that separating email and password will reduce the feeling of creating accounts so that user feel this is less friction.
-        img.-narrower(src="/assets/loan_form/create_account_v3.jpg", alt="Create account variation 3")
-      h2.upper-line Result
-      div
-        h3 Creating accounts at beginning won
-        p The experiment has been running for about 1 months to make sure we have enough data and draw the conclusion without bias.
-        ol
-          li Variation 1 - creating accounts first, has 1.3% lift on form conversion but 15.7% lift on from starting the form to close a loan. 
-          li Variation 3 has negative performance compared to baseline. It has a 6.4% decrease on form conversion and 1.9% decrease on close loan.
-
-      h2.upper-line Learning
-      div
-        h3 Creating accounts is not the real problem
-        ol
-          li Even though variation 1 and 2 ’s form conversion are pretty similar, but creating accounts first have a more positive impact later in the process with indicates that our hypothesis is correct. Users who are willing to create accounts first have higher intend and will convert better later in the process. 
-          li Separating the email address and password field variation performs worst.  This indicates that “creating account” itself is not the real problem. There is some reason behind “I don’t want to create account”
-
-      .grid-right
-        h2.-standalone 2nd round - Dig deep into the problem
-
-      h2.upper-line Research
-      div
-        h3 Why don’t users want to create accounts?
-        h4 Quantitative
-        p The 1st round experiment has set up a good foundation for us. The data reveals that on creating account page, there is a large amount of drop off,  but after creating accounts, there are very few users abandon the form. So it’s clear that the biggest opportunity is how can get more low intend users filling the form and checking their rates.
-        h4 Qualitative:
-        p The testing result from the first iteration also reveals that what really bothers users is not creating accounts, we need to dip deeper to learn the reason behind that. So I did more depth interview with users. The real insight comes after I asked several why.
-        img.-narrower(src="/assets/loan_form/research.jpg", alt="User research")
-        p The user research reveals the real friction of creating accounts is that we are asking user their personal/private information without offering them any value. Users don’t have any idea of what’s going happen next and what they can get.
-
-      h2.upper-line Hypothesis and Concepts
-      div 
-        h3 Transparency at beginning of the form
-        p Based on user research the primary problem we are trying to address is to build trust with users through bringing more transparency.
-        h4 Choose the testing candidates
-        p Same reason as mentioned above, now we need to choose directions we want to test. Since the improvements are all focusing on create account page, efforts to implement the design are about the same, this time I did internal concept testing. With the testing, I asked participants to rank different concepts based on the helpfulness. Concept 5 and concept 3 get the highest ranking. Below is the summary of this concept evaluation:
       
-      .grid-both.bleeding.equal-two-grid
+      .grid-both.password
+        p The content of this project is hidden because of NDA. Please 
+            a(href="mailto:yinie.ux@gmail.com", target="_blank") contact me
+            |  for the password.
+        form
+            input(type="password", placeholder="Enter password")
+            button
+    
+    .password-protected
+      main.project-grid
+        h2.upper-line Background
         div
-          h4 Option 1 - Value prompt:
-          img.js-img-preview(src="/assets/loan_form/transparency_1.png", alt="")
-          p Participants like it's straightforward but value prompt is too vague and doesn’t resonate with them
-        div
-          h4 Option 2 - Social proof
-          img.js-img-preview(src="/assets/loan_form/transparency_2.png", alt="")
-          p Participants think social proof is important but they prefer reviews from the third party. Participant won’t trust testimonials.
-        div
-          h4.-checked Option 3 -Process Video
-          img.js-img-preview(src="/assets/loan_form/transparency_3.png", alt="")
-          p Participants find it’s very helpful to understand the process, the video makes it easier to understand
-        div
-          h4 Option 4 - Sample dashboard
-          img.js-img-preview(src="/assets/loan_form/transparency_4.png", alt="")
-          p Participants like that they can know what lenders are on our platform but the information is too generic 
-        div
-          h4.-checked Option 5 - Estimator
-          img.js-img-preview(src="/assets/loan_form/transparency_5.png", alt="")
-          p Participants all feel this is really helpful to get an estimated range before jumping into creating accounts they indicated that if the rates are good they are more likely to sign up.
+          p Credible is a marketplace for student loans, student loan refinancing, and personal loan. We help borrowers compare personalized and accurate rates from multiple lenders so that borrowers can choose the one that best fits their need.
+          h4 The important part of the borrowing process
+          p Borrowers land on Credible, finish the pre-qualification form and they will be able to see their rates on dashboards. Then borrowers pick one offer, finish up the rest of the information lenders need. Finally, they will be able to submit their loan request to lenders. 
+          p Pre-qualification form is an important part of the whole process and this project is mostly focusing on pre-qualification form. 
 
-      h2.upper-line Design Iterations
-      div
-        h3 Iterations on rate estimator
-        p After the internal testing, I decided to move forward with the video walkthrough concept and the rate estimator  concept. It’s time to push the details. I did several iterations to make sure users can understand how to use it.
 
-      .grid-both.bleeding.equal-two-grid
+        .grid-both.bleeding
+          img(src="/assets/loan_form/borrowing_process.png", alt="Borrowing experience")
+
+
+        h2.upper-line Goal and Metrics
         div
-          h4 Iteration 1
-          img.js-img-preview(src="/assets/loan_form/transparency_5.png", alt="")
-          p (Option 5 from previous step)
+          h3 Increase the conversation of pre-qualification form
+          p Before I started, it’s important to understand the problem and make sure all the stakeholders are aligned on the same goal. So I talked to the product manager, loan operation and client success team and listed out the following design success metrics.
+          ol
+            li Increase the conversation rate of pre-qualification form - increase the percentage of user who finished the form compared to the number of users who start the form. 
+            li Improve conversion rates through the full funnel: A success design shouldn’t hurt the conversion of later steps like choosing a loan, submitting the request and closing the loan. On the other hand, if the design has a positive impact on these aspects, we could consider it as successful. 
+          h4 UX goal:
+          ol
+            li Improve the overall experience of the pre-qualification form.  Make the form more efficient and friendly to fill out.
+            li Make sure we can learn from the a/b testing and use the insights for future UX improvements.
+
+
+        .grid-right
+          h2.-standalone 1st round - A broader exploration
+
+
+        h2.upper-line Research
         div
-          h4 Iteration 2
-          img.js-img-preview(src="/assets/loan_form/iteration_2.png", alt="")
-          p Design with real content and data 
+          h3 Where are the opportunities?
+          p Conversation data from Google Analytics reveals that there is a large drop off on the first step and third step. To better understand users’ behavior and pain points, I conducted user testing on the old prequalification form.
+          h4 Current form pain points:
+          ol
+            li Users didn’t want to create accounts  
+            li Users had difficulties answering some questions (e.g. income), they need to click tooltips and use the help content. But some users didn’t find tooltips.
+            li Overall, users feel the form is straightforward and standard as other loan application site, they expect they will be asked personal information.
+
+
+        h2.upper-line Hypothesis and Concepts
         div
-          h4 Iteration 3
-          img.js-img-preview(src="/assets/loan_form/iteration_3.png", alt="")
-          p Rate chart add too much cognitive load 
+          h3 Explore different concepts 
+          p The important part of A/B testing is to define the hypothesis so that we can control the baseline and test variation to make sure we can confidently learn from these experiments.  Based on our user research insights, I came out with concepts and hypothesis to test:  
+          h4 Direction 1: Different flows of creating accounts
+          p I learned from user research that creating accounts is the biggest friction of the whole process. But having an account is necessary because users will need this to access their rates and finalize the loan with lenders. My first hypothesis is that different flow of creating accounts will impact user’s perception of the process and impact conversion. Here are several options I’ve explored.
+
+        .grid-both.bleeding
+          .equal-col
+            div
+              h4 Current
+              p Create account at end of form
+            div
+              h4 Option 1
+              p Create account at beginning
+            div
+              h4 Option 2
+              p Create account after result summary
+            div
+              h4 Option 3
+              p Separate email and password
+          .equal-col
+            div: img(src="/assets/loan_form/flow1.png", alt="")
+            div: img(src="/assets/loan_form/flow2.png", alt="")
+            div: img(src="/assets/loan_form/flow3.png", alt="")
+            div: img(src="/assets/loan_form/flow4.png", alt="")
+
+        .grid-right
+          h4 Direction 2: Surface helper content to streamline form filling
+          p Users had difficulties answering questions like income, housing payment etc.  This may add extra friction to finish the process. Though users in the user testing click the tooltip to get more information, in real life users may not discover the tooltip and abandon.  Our second hypothesis is that surfacing helper content will streamline the process and reduce drop off.
+
+        .grid-both.bleeding
+          .equal-col
+            div
+              h4 Current
+              p Click tooltip to open help content
+            div
+              h4 Option 1
+              p Focus on field to reveal help content
+            div
+              h4 Option 2
+              p Surface tooltip on right column
+          .equal-col
+            div: img.js-img-preview(src="/assets/loan_form/tooltip1.png", alt="")
+            div: img.js-img-preview(src="/assets/loan_form/tooltip2.png", alt="")
+            div: img.js-img-preview(src="/assets/loan_form/tooltip3.png", alt="")
+
+        .grid-right
+          h4 Direction 3: Humanized form to bring positive feelings to users
+          p The form’s look and feel makes users feel standard and straightforward. But users had the mindset of being asked personal information, which is kind of a negative subconscious. So what if we can make the form look less like a form and bring more humanized into it?  Below are the two concept prototypes I’ve made.
+
+        .grid-both.bleeding
+          .equal-col
+            div(style="flex-grow: 1.6;")
+              h4 Option 1
+              p Nature language form
+            div
+              h4 Option 2
+              p Conversational form
+          .equal-col
+            video.js-img-preview(style="flex-grow: 1.6;", playsinline, loop, muted, autoplay, preload="auto"): source(src="/assets/loan_form/NLF-video.mp4")
+            video.js-img-preview(playsinline, loop, muted, autoplay, preload="auto"): source(src="/assets/loan_form/conversation.mp4")
+
+        h2.upper-line Design and A/B testing
         div
-          h4 Iteration 4
-          img.js-img-preview(src="/assets/loan_form/iteration_4.png", alt="")
-          p 1. Credit score section took too much space. 2. Too much number to process
+          h3 Test creating account flow
+          p One of the challenges we have is that, in order to track different designs impact around the full funnel, the traffic on Credible is not large enough to run multiple ab testing at the same time. So we have to select one direction and run only 2 to 3 testing at the same time to confidently test the hypothesis. We ranked these three directions based on impact and effort.  We choose to test the create account flow because we believe it will have the highest impact with relative low implementation efforts. 
+          h4 Baseline: create accounts at the end of the form  
+          p In the current design, we try to push the difficult part to the end of form so that user will start easily and make through the end with momentum. But we are still seeing a lot of drop-off at the create account step.
+          img.-narrower(src="/assets/loan_form/create_account_baseline.jpg", alt="Create account baseline")
+          h4 Create account first
+          p Creating accounts first will definitely cause a lot of drop-off at the very beginning. But on the other hand, by revealing the most sensitive information at the front, this will filter out low intent users and improve the conversion later in the process. 
+          img.-narrower(src="/assets/loan_form/create_account_v1.jpg", alt="Create account variation 1")
+          h4 Create account after user get results
+          p Give user tease of the result will motivate users to create accounts. For users who receive rates, give users a tease of how many options they have got and overlay the modal on their dashboards. But for users who didn’t receive any rates, we don’t want to mislead them so the main message is “Your result is ready” and it won’t be an overlay of the dashboard.
+          img.-narrower(src="/assets/loan_form/create_account_v2.jpg", alt="Create account variation 2")
+          h4 Ask email at front and password at the end
+          p The hypothesis here is that separating email and password will reduce the feeling of creating accounts so that user feel this is less friction.
+          img.-narrower(src="/assets/loan_form/create_account_v3.jpg", alt="Create account variation 3")
+        h2.upper-line Result
         div
-          h4 Iteration 5
-          img.js-img-preview(src="/assets/loan_form/iteration_5.png", alt="")
-          p Use red on poor credit score bad may give user negative feeling
+          h3 Creating accounts at beginning won
+          p The experiment has been running for about 1 months to make sure we have enough data and draw the conclusion without bias.
+          ol
+            li Variation 1 - creating accounts first, has 1.3% lift on form conversion but 15.7% lift on from starting the form to close a loan. 
+            li Variation 3 has negative performance compared to baseline. It has a 6.4% decrease on form conversion and 1.9% decrease on close loan.
+
+        h2.upper-line Learning
         div
-          h4 Iteration 6
-          video.js-img-preview(playsinline, loop, muted, autoplay, preload="auto"): source(src="/assets/loan_form/iteration_6.mp4")
-          p Users indicated they don’t know the slider is interactive
+          h3 Creating accounts is not the real problem
+          ol
+            li Even though variation 1 and 2 ’s form conversion are pretty similar, but creating accounts first have a more positive impact later in the process with indicates that our hypothesis is correct. Users who are willing to create accounts first have higher intend and will convert better later in the process. 
+            li Separating the email address and password field variation performs worst.  This indicates that “creating account” itself is not the real problem. There is some reason behind “I don’t want to create account”
 
-      h2.upper-line Final Design
-      div 
-        h4 Variation 1: Video to illustrate the process
-        p This variation features a quick walkthrough video of our process up to a  dashboard. The hypothesis was that showing users our simple process would help users know what to expect, and therefore make the process feel known and simple.
-        video.js-img-preview(playsinline, loop, muted, autoplay, preload="auto"): source(src="/assets/loan_form/video_variation.mp4")
-        h4 Variation 2: Rate estimator
-        p This variation aims to see if showing potential rates would, in fact, increase sign-ups and overall conversion. This variation features an interactive slider where users can estimate their credit score (by 10 point increments), and we will display the lowest possible rate across lenders.
-        video.js-img-preview(playsinline, loop, muted, autoplay, preload="auto"): source(src="/assets/loan_form/estimator_variation.mp4")
+        .grid-right
+          h2.-standalone 2nd round - Dig deep into the problem
 
-      h2.upper-line Result
-      div
-        h4 Video variation won the test
-        ol
-          li Video variation has a slightly 1.8% decrease on account creating compared to baseline, but it has a 2.1% lift on form conversion and 6.6% lift on close loan.
-          li Rate estimator variation has 12.3% decrease on account creating compared to baseline and 3.6% decrease on close loan.
-          li We decided to call V1 Video the winner and allocate 100% traffic to the video variation and shut off the traffic to the baseline page.
+        h2.upper-line Research
+        div
+          h3 Why don’t users want to create accounts?
+          h4 Quantitative
+          p The 1st round experiment has set up a good foundation for us. The data reveals that on creating account page, there is a large amount of drop off,  but after creating accounts, there are very few users abandon the form. So it’s clear that the biggest opportunity is how can get more low intend users filling the form and checking their rates.
+          h4 Qualitative:
+          p The testing result from the first iteration also reveals that what really bothers users is not creating accounts, we need to dip deeper to learn the reason behind that. So I did more depth interview with users. The real insight comes after I asked several why.
+          img.-narrower(src="/assets/loan_form/research.jpg", alt="User research")
+          p The user research reveals the real friction of creating accounts is that we are asking user their personal/private information without offering them any value. Users don’t have any idea of what’s going happen next and what they can get.
 
-      h2.upper-line Learning
-      div
-        h4 Transparency helps to build trust
-        ol
-          li  From the winning variation, we learned that providing users context about the process and what to expect appears to help build trust with users and contribute to higher overall conversion after a user has been prequalified. 
-          li Even though rates estimator concept performs worse than the video we still want to understand why users are leaving. So I put up an exit survey asking users why they are leaving this page. It turns out that the primary reason is that the rates are too high for them. Even though this variation didn’t perform very well, we still think this is an interesting concept that we could evolve and use in other scenarios in the future.
-
-      .grid-right
-        h2.-standalone 3rd round - Opportunities on Mobile
-
-      h2.upper-line Research
-      div
-        h3 Mobile traffic ramped up
-        h4 Quantitative
-        p The loan application is a complex thing that not a lot of people will expect to finish on your phone. However, in 2017 Credible’s mobile traffic start to ramp up and exceed desktop traffic but the form conversion rate on mobile is pretty low. So it’s time to put more investment on mobile and improve the experience on mobile.
-        h4 Qualitative:
-        p In order to understand the pain points and frictions on mobile, I did a usability test on the old mobile form. Here are the key insights:
-        ol
-          li Limited information in viewport causes a lot of scrolling back and forth. 
-          li Users’ initial impression is the form is really long and would take them a while to finish 
-          li Users had difficulties answering some questions (e.g. income), they need to click tooltips and use the help content. But some users didn’t find tooltips.
-          li Overall, users feel the form is straightforward and standard as other loan application site, they expect they will be asked personal information.
-      h2.upper-line Hypothesis and Concepts
-      div
-        h3 More efficient way to fill the form on mobile 
-        p Based on the explorations I did on first round. , here are the approaches we can make form filling more efficient:
-        ol
-          li Reduce scroll back and forth 
-          li Make the form shorter or make the form feel shorter
-          li Surface the help content to streamline the process
-          li Add more humanize factor to the form
-        p I came up with 3 options:  the chat UI, one question per step and linking to other social network to prefill information. In order to pick the which option we are going to implement, we listed out how each concept would solve the problem and how difficult it is to implement and decide to move forward with one question per page option first.
-
-      .grid-both.bleeding
-        .equal-col(style="font-size: .9em;")
+        h2.upper-line Hypothesis and Concepts
+        div 
+          h3 Transparency at beginning of the form
+          p Based on user research the primary problem we are trying to address is to build trust with users through bringing more transparency.
+          h4 Choose the testing candidates
+          p Same reason as mentioned above, now we need to choose directions we want to test. Since the improvements are all focusing on create account page, efforts to implement the design are about the same, this time I did internal concept testing. With the testing, I asked participants to rank different concepts based on the helpfulness. Concept 5 and concept 3 get the highest ranking. Below is the summary of this concept evaluation:
+        
+        .grid-both.bleeding.equal-two-grid
           div
-            h4.-checked Option 1
-            img.-narrower.js-img-preview(src="/assets/loan_form/mobile_concept_1.png", alt="")
-            h4 How does this solve the problem?
-            ol
-              li Reduce scroll back and forth 
-              li Make the form feel shorter
-              li Surface the help content 
-            h4 Effort to implement
-            p Easy
+            h4 Option 1 - Value prompt:
+            img.js-img-preview(src="/assets/loan_form/transparency_1.png", alt="")
+            p Participants like it's straightforward but value prompt is too vague and doesn’t resonate with them
           div
-            h4 Option 2
-            img.-narrower.js-img-preview(src="/assets/loan_form/mobile_concept_2.png", alt="")
-            h4 How does this solve the problem?
-            ol
-              li Reduce scroll back and forth 
-              li Make the form feel shorter
-              li Add more humanize factor to the form
-            h4 Effort to implement
-            p Medium
+            h4 Option 2 - Social proof
+            img.js-img-preview(src="/assets/loan_form/transparency_2.png", alt="")
+            p Participants think social proof is important but they prefer reviews from the third party. Participant won’t trust testimonials.
           div
-            h4 Option 3
-            img.-narrower.js-img-preview(src="/assets/loan_form/mobile_concept_3.png", alt="")
-            h4 How does this solve the problem?
-            ol
-              li Make the form shorter
-              li Surface the help content 
-            h4 Effort to implement
-            p Hard
+            h4.-checked Option 3 -Process Video
+            img.js-img-preview(src="/assets/loan_form/transparency_3.png", alt="")
+            p Participants find it’s very helpful to understand the process, the video makes it easier to understand
+          div
+            h4 Option 4 - Sample dashboard
+            img.js-img-preview(src="/assets/loan_form/transparency_4.png", alt="")
+            p Participants like that they can know what lenders are on our platform but the information is too generic 
+          div
+            h4.-checked Option 5 - Estimator
+            img.js-img-preview(src="/assets/loan_form/transparency_5.png", alt="")
+            p Participants all feel this is really helpful to get an estimated range before jumping into creating accounts they indicated that if the rates are good they are more likely to sign up.
 
-      h2.upper-line Design Iterations
-      div
-        h3 Iterations on one question per page 
-        h4 Iteration 1: Humanized form
-        p One of the issues I didn’t address is to humanize the form to give users a more positive feeling. So I changed the tooltip to a Client Success Specialist explaining how to feel the form.
-        .equal-two-grid.-narrower
-          div: img.-shadow.js-img-preview(src="/assets/loan_form/mobile_concept_1.png", alt="")
-          div: img.-shadow.js-img-preview(src="/assets/loan_form/mobile_iteration1-2.png", alt="")
-        h4 Iteration 2: Turn dropdown to multiple selections
-        p I tested the prototype above, it successfully reduced the back and forth scrolling. But I still found that all the drop-down fields still requires multiple taps. In order to simplify this part, I changed the drop-down fields to multiple selection fields.
-        .equal-two-grid.-narrower
-          div: img.-shadow.js-img-preview(src="/assets/loan_form/mobile_iteration2-1.png", alt="")
-          div: img.-shadow.js-img-preview(src="/assets/loan_form/mobile_iteration2-2.png", alt="")
-        p The challenge here is that if the selection has more than five options, what should we do? The product manager helped me analysis the option selection data. We found out that the first four selected options cover 93.17% of our users. So the solution is to surface the top four selected options and hide other options in “Other”. 
-        .equal-two-grid.-narrower
-          div: img.js-img-preview(src="/assets/loan_form/mobile_iteration2-3.jpg", alt="")
-          div: img.js-img-preview(src="/assets/loan_form/mobile_iteration2-4.jpg", alt="")
-        h4 Iteration 3: Add delight to the product
-        p The last iteration is to add more delight to the design and make the look and feel more friendly for our users. So I added icons on every page and animations on some key pages.
-        .equal-two-grid.-narrower
-          div: img.-shadow.js-img-preview(src="/assets/loan_form/mobile_iteration1-2.png", alt="")
-          div(style="position:relative;")
-            img.-shadow(src="/assets/loan_form/pig_screen.png", alt="")
-            img(src="/assets/loan_form/pig.gif", alt="", style="position: absolute; top: 10%; left: 50%; transform: translateX(-50%); width: 18%;")
-      h2.upper-line Final Design
-      div
-        h3 Test one question per page
-        p We tested the final one question per page design with old design (baseline). Below is the two design’s overall flow.
-        .equal-two-grid.-narrower
-          video.-shadow.js-img-preview(playsinline, loop, muted, autoplay, preload="auto"): source(src="/assets/loan_form/mobile.mp4")
-          video.-shadow.js-img-preview(playsinline, loop, muted, autoplay, preload="auto"): source(src="/assets/loan_form/mobile2.mp4")
-      h2.upper-line Result
-      div
-        h3 One question per page won the test
-        ol
-          li Variation 1 has an 18.5% lift on form conversation compared to baseline and an 8.8% lift on closing loan. 
-          li We decided to call one question per page as the winner and allocate 100% traffic. 
-      h2.upper-line Learning
-      div
-        ol
-          li Overall the analysis validated our hypothesis that asking one question at one time streamline the process.
-          li Another interesting insight is that by surfacing the help content and why we are asking these questions, users have less difficulty answering questions. We see a decreased drop off rate on some “hard” questions.
-          li In the future, we are planning to test the new design also on the desktop.
+        h2.upper-line Design Iterations
+        div
+          h3 Iterations on rate estimator
+          p After the internal testing, I decided to move forward with the video walkthrough concept and the rate estimator  concept. It’s time to push the details. I did several iterations to make sure users can understand how to use it.
+
+        .grid-both.bleeding.equal-two-grid
+          div
+            h4 Iteration 1
+            img.js-img-preview(src="/assets/loan_form/transparency_5.png", alt="")
+            p (Option 5 from previous step)
+          div
+            h4 Iteration 2
+            img.js-img-preview(src="/assets/loan_form/iteration_2.png", alt="")
+            p Design with real content and data 
+          div
+            h4 Iteration 3
+            img.js-img-preview(src="/assets/loan_form/iteration_3.png", alt="")
+            p Rate chart add too much cognitive load 
+          div
+            h4 Iteration 4
+            img.js-img-preview(src="/assets/loan_form/iteration_4.png", alt="")
+            p 1. Credit score section took too much space. 2. Too much number to process
+          div
+            h4 Iteration 5
+            img.js-img-preview(src="/assets/loan_form/iteration_5.png", alt="")
+            p Use red on poor credit score bad may give user negative feeling
+          div
+            h4 Iteration 6
+            video.js-img-preview(playsinline, loop, muted, autoplay, preload="auto"): source(src="/assets/loan_form/iteration_6.mp4")
+            p Users indicated they don’t know the slider is interactive
+
+        h2.upper-line Final Design
+        div 
+          h4 Variation 1: Video to illustrate the process
+          p This variation features a quick walkthrough video of our process up to a  dashboard. The hypothesis was that showing users our simple process would help users know what to expect, and therefore make the process feel known and simple.
+          video.js-img-preview(playsinline, loop, muted, autoplay, preload="auto"): source(src="/assets/loan_form/video_variation.mp4")
+          h4 Variation 2: Rate estimator
+          p This variation aims to see if showing potential rates would, in fact, increase sign-ups and overall conversion. This variation features an interactive slider where users can estimate their credit score (by 10 point increments), and we will display the lowest possible rate across lenders.
+          video.js-img-preview(playsinline, loop, muted, autoplay, preload="auto"): source(src="/assets/loan_form/estimator_variation.mp4")
+
+        h2.upper-line Result
+        div
+          h4 Video variation won the test
+          ol
+            li Video variation has a slightly 1.8% decrease on account creating compared to baseline, but it has a 2.1% lift on form conversion and 6.6% lift on close loan.
+            li Rate estimator variation has 12.3% decrease on account creating compared to baseline and 3.6% decrease on close loan.
+            li We decided to call V1 Video the winner and allocate 100% traffic to the video variation and shut off the traffic to the baseline page.
+
+        h2.upper-line Learning
+        div
+          h4 Transparency helps to build trust
+          ol
+            li  From the winning variation, we learned that providing users context about the process and what to expect appears to help build trust with users and contribute to higher overall conversion after a user has been prequalified. 
+            li Even though rates estimator concept performs worse than the video we still want to understand why users are leaving. So I put up an exit survey asking users why they are leaving this page. It turns out that the primary reason is that the rates are too high for them. Even though this variation didn’t perform very well, we still think this is an interesting concept that we could evolve and use in other scenarios in the future.
+
+        .grid-right
+          h2.-standalone 3rd round - Opportunities on Mobile
+
+        h2.upper-line Research
+        div
+          h3 Mobile traffic ramped up
+          h4 Quantitative
+          p The loan application is a complex thing that not a lot of people will expect to finish on your phone. However, in 2017 Credible’s mobile traffic start to ramp up and exceed desktop traffic but the form conversion rate on mobile is pretty low. So it’s time to put more investment on mobile and improve the experience on mobile.
+          h4 Qualitative:
+          p In order to understand the pain points and frictions on mobile, I did a usability test on the old mobile form. Here are the key insights:
+          ol
+            li Limited information in viewport causes a lot of scrolling back and forth. 
+            li Users’ initial impression is the form is really long and would take them a while to finish 
+            li Users had difficulties answering some questions (e.g. income), they need to click tooltips and use the help content. But some users didn’t find tooltips.
+            li Overall, users feel the form is straightforward and standard as other loan application site, they expect they will be asked personal information.
+        h2.upper-line Hypothesis and Concepts
+        div
+          h3 More efficient way to fill the form on mobile 
+          p Based on the explorations I did on first round. , here are the approaches we can make form filling more efficient:
+          ol
+            li Reduce scroll back and forth 
+            li Make the form shorter or make the form feel shorter
+            li Surface the help content to streamline the process
+            li Add more humanize factor to the form
+          p I came up with 3 options:  the chat UI, one question per step and linking to other social network to prefill information. In order to pick the which option we are going to implement, we listed out how each concept would solve the problem and how difficult it is to implement and decide to move forward with one question per page option first.
+
+        .grid-both.bleeding
+          .equal-col(style="font-size: .9em;")
+            div
+              h4.-checked Option 1
+              img.-narrower.js-img-preview(src="/assets/loan_form/mobile_concept_1.png", alt="")
+              h4 How does this solve the problem?
+              ol
+                li Reduce scroll back and forth 
+                li Make the form feel shorter
+                li Surface the help content 
+              h4 Effort to implement
+              p Easy
+            div
+              h4 Option 2
+              img.-narrower.js-img-preview(src="/assets/loan_form/mobile_concept_2.png", alt="")
+              h4 How does this solve the problem?
+              ol
+                li Reduce scroll back and forth 
+                li Make the form feel shorter
+                li Add more humanize factor to the form
+              h4 Effort to implement
+              p Medium
+            div
+              h4 Option 3
+              img.-narrower.js-img-preview(src="/assets/loan_form/mobile_concept_3.png", alt="")
+              h4 How does this solve the problem?
+              ol
+                li Make the form shorter
+                li Surface the help content 
+              h4 Effort to implement
+              p Hard
+
+        h2.upper-line Design Iterations
+        div
+          h3 Iterations on one question per page 
+          h4 Iteration 1: Humanized form
+          p One of the issues I didn’t address is to humanize the form to give users a more positive feeling. So I changed the tooltip to a Client Success Specialist explaining how to feel the form.
+          .equal-two-grid.-narrower
+            div: img.-shadow.js-img-preview(src="/assets/loan_form/mobile_concept_1.png", alt="")
+            div: img.-shadow.js-img-preview(src="/assets/loan_form/mobile_iteration1-2.png", alt="")
+          h4 Iteration 2: Turn dropdown to multiple selections
+          p I tested the prototype above, it successfully reduced the back and forth scrolling. But I still found that all the drop-down fields still requires multiple taps. In order to simplify this part, I changed the drop-down fields to multiple selection fields.
+          .equal-two-grid.-narrower
+            div: img.-shadow.js-img-preview(src="/assets/loan_form/mobile_iteration2-1.png", alt="")
+            div: img.-shadow.js-img-preview(src="/assets/loan_form/mobile_iteration2-2.png", alt="")
+          p The challenge here is that if the selection has more than five options, what should we do? The product manager helped me analysis the option selection data. We found out that the first four selected options cover 93.17% of our users. So the solution is to surface the top four selected options and hide other options in “Other”. 
+          .equal-two-grid.-narrower
+            div: img.js-img-preview(src="/assets/loan_form/mobile_iteration2-3.jpg", alt="")
+            div: img.js-img-preview(src="/assets/loan_form/mobile_iteration2-4.jpg", alt="")
+          h4 Iteration 3: Add delight to the product
+          p The last iteration is to add more delight to the design and make the look and feel more friendly for our users. So I added icons on every page and animations on some key pages.
+          .equal-two-grid.-narrower
+            div: img.-shadow.js-img-preview(src="/assets/loan_form/mobile_iteration1-2.png", alt="")
+            div(style="position:relative;")
+              img.-shadow(src="/assets/loan_form/pig_screen.png", alt="")
+              img(src="/assets/loan_form/pig.gif", alt="", style="position: absolute; top: 10%; left: 50%; transform: translateX(-50%); width: 18%;")
+        h2.upper-line Final Design
+        div
+          h3 Test one question per page
+          p We tested the final one question per page design with old design (baseline). Below is the two design’s overall flow.
+          .equal-two-grid.-narrower
+            video.-shadow.js-img-preview(playsinline, loop, muted, autoplay, preload="auto"): source(src="/assets/loan_form/mobile.mp4")
+            video.-shadow.js-img-preview(playsinline, loop, muted, autoplay, preload="auto"): source(src="/assets/loan_form/mobile2.mp4")
+        h2.upper-line Result
+        div
+          h3 One question per page won the test
+          ol
+            li Variation 1 has an 18.5% lift on form conversation compared to baseline and an 8.8% lift on closing loan. 
+            li We decided to call one question per page as the winner and allocate 100% traffic. 
+        h2.upper-line Learning
+        div
+          ol
+            li Overall the analysis validated our hypothesis that asking one question at one time streamline the process.
+            li Another interesting insight is that by surfacing the help content and why we are asking these questions, users have less difficulty answering questions. We see a decreased drop off rate on some “hard” questions.
+            li In the future, we are planning to test the new design also on the desktop.

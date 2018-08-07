@@ -4,29 +4,29 @@
   --tab-background: #ccc;
 }
 
-.load_form .bleeding,
-.load_form .hero-container,
-.load_form.hero-container {
+#loan_form .bleeding,
+#loan_form .hero-container,
+#loan_form.hero-container {
   background: #fff1f2;
 }
-.credible_cosigner .bleeding,
-.credible_cosigner .hero-container,
-.credible_cosigner.hero-container {
+#credible_cosigner .bleeding,
+#credible_cosigner .hero-container,
+#credible_cosigner.hero-container {
   background: #EFF0FE;
 }
-.basecrm .bleeding,
-.basecrm .hero-container,
-.basecrm.hero-container {
+#basecrm .bleeding,
+#basecrm .hero-container,
+#basecrm.hero-container {
   background: #effffb;
 }
-.credible_dashboard .bleeding,
-.credible_dashboard .hero-container,
-.credible_dashboard.hero-container {
+#credible_dashboard .bleeding,
+#credible_dashboard .hero-container,
+#credible_dashboard.hero-container {
   background: #fbe5d8;
 }
-.photo .bleeding,
-.photo .hero-container,
-.photo.hero-container {
+#photo .bleeding,
+#photo .hero-container,
+#photo.hero-container {
   background: #dff1f8;
 }
 
@@ -140,7 +140,6 @@ h2.-standalone {
 }
 
 .quote{
-  color: var(--main);
   font-size: 1.2rem;
   margin: 1.5em 3em;
   font-style: italic;
@@ -279,6 +278,42 @@ h2.-standalone {
     & > .name{
       font-size: 20px;
       font-weight: 400;
+    }
+  }
+}
+
+/* ---------------- password ---------------- */
+.password-protected{
+  display: none;
+  padding-top: 5em;
+}
+.password{
+  text-align: center;
+  padding: 4em 0;
+  & a{
+    color: var(--primary);
+  }
+  & input{
+    padding: .5em;
+  }
+  & button{
+    text-transform: uppercase;
+    background: var(--primary);
+    color: #fff;
+    opacity: .7;
+    border-radius: 3px;
+    border: none;
+    padding: .6em 1.2em;
+    cursor: pointer;
+    &:after{
+      content: 'view';
+    }
+
+    &.-wrong{
+      background: red;
+      &:after{
+        content: 'try again';
+      }
     }
   }
 }
