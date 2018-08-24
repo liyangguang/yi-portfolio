@@ -13,13 +13,13 @@ include ../_mixin.pug
             p The current Deal profile in Base needs improvement. Customers want to be more productive. Based on feedback they are looking for an improved profile that addresses these three issues.
             .equal-col.center(style="margin-top: 2em;")
                 div
-                    img(style="max-width: 100px;", src="/assets/basecrm/challenge-1.png", alt="")
+                    img.icon(src="/assets/basecrm/challenge-1.png", alt="")
                     p Improved organization of information
                 div
-                    img(style="max-width: 100px;", src="/assets/basecrm/challenge-2.png", alt="")
+                    img.icon(src="/assets/basecrm/challenge-2.png", alt="")
                     p Scalability
                 div
-                    img(style="max-width: 100px;", src="/assets/basecrm/challenge-3.png", alt="")
+                    img.icon(src="/assets/basecrm/challenge-3.png", alt="")
                     p A quicker way to add objects to a Deal
 
         h2.upper-line Problem
@@ -71,11 +71,11 @@ include ../_mixin.pug
                 div
                     img.js-img-preview(src="/assets/basecrm/ideation-2.png", alt="")
             .equal-col.vert-center
-                div
-                    img.js-img-preview(src="/assets/basecrm/ideation-3.png", alt="")
-                div
+                div(style="order: 1")
                     h4 Quick Ways to Add Objects
                     p I explored several ways to quickly add objects within the main page. How I decide on using which concept depends if the interaction is clear or intuitive to users and how the concept can work well with scalability.
+                div
+                    img.js-img-preview(src="/assets/basecrm/ideation-3.png", alt="")
         
         h2.upper-line Iterations
         div
@@ -108,11 +108,11 @@ include ../_mixin.pug
                 div
                     video(style="max-height: 500px;", src="/assets/basecrm/design-2.mp4", loop, autoplay)
             .equal-col.vert-center
-                div
-                    video(style="max-height: 500px;", src="/assets/basecrm/design-3.mp4", loop, autoplay)
-                div
+                div(style="order: 1")
                     h4 Efficient ways to view information
                     p When users want to see more information within each category, they can expand the list. Users can open multiple categories and they can scroll down and up to view the information as opposed to navigating through several pages.
+                div
+                    video(style="max-height: 500px;", src="/assets/basecrm/design-3.mp4", loop, autoplay)
             .equal-col.vert-center
                 div
                     h4 Easy data entry
@@ -120,11 +120,11 @@ include ../_mixin.pug
                 div
                     video(style="max-height: 500px;", src="/assets/basecrm/design-4.mp4", loop, autoplay)
             .equal-col.vert-center
-                div
-                    video(style="max-height: 500px;", src="/assets/basecrm/design-5.mp4", loop, autoplay)
-                div
+                div(style="order: 1")
                     h4 Adding more categories
                     p The list of category supports adding more category. To provide user enough space to view this information, basic deal information will collapse but also display the most important information of this deal. When user wants to change the stage, they can go back simply by scrolling back.
+                div
+                    video(style="max-height: 500px;", src="/assets/basecrm/design-5.mp4", loop, autoplay)
 
 
     .project-nav.equal-col

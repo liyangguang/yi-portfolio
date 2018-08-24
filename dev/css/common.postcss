@@ -17,7 +17,7 @@ html, body{
 }
 @media screen and (max-width: 1000px){
   html, body{
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
@@ -38,6 +38,7 @@ ul, ol {
 
 img, video {
   width: 100%;
+  max-width: 100%;
 }
 
 /****************** typography ******************/
@@ -114,5 +115,27 @@ main {
   }
   & > * + * {
     padding-left: 3em;
+  }
+}
+
+
+/***************** mobile ********************/
+@media screen and (max-width: 800px) {
+  h3:not(:first-child), h4:not(:first-child) {
+    margin-top: 3em;
+  }
+  
+  main {
+    padding: 0 1em;
+  }
+
+  .equal-col {
+    display: block;
+    & > * {
+      width: auto;
+    }
+    & > * + * {
+      padding-left: initial;
+    }
   }
 }

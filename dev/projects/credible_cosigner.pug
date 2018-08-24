@@ -31,11 +31,11 @@ include ../_mixin.pug
             h3 The process is long and not transparent 
             p I talked to Client Success team, read chatting transcript and watching screen recordings to better understand the pain points and challenges users are facing on current co-signing experience.
             .equal-col.vert-center
-                div
-                    img.js-img-preview(src="/assets/credible_cosigner/research-1.png", alt="")
-                div
+                div(style="order: 1")
                     h4 Long form and sensitive data
                     p In order get rates from multiple lenders, users have to provide all the required information from multiple lenders, which makes the form really long(20+ questions). Users also have to provide every sensitive information like SSN to see their new rates.
+                div
+                    img.js-img-preview(src="/assets/credible_cosigner/research-1.png", alt="")
             .equal-col.vert-center
                 div
                     h4 Sometimes leads to worse rates 
@@ -43,11 +43,11 @@ include ../_mixin.pug
                 .center
                     img(style="width: 70%;", src="/assets/credible_cosigner/research-2.png", alt="")
             .equal-col.vert-center
-                .center
-                    img(style="width: 70%;", src="/assets/credible_cosigner/research-3.png", alt="")
-                div
+                div(style="order: 1")
                     h4 Borrower can’t decide who to add 
                     p Borrowers can only add one person as their co-signers. But borrower can’t see the final rates and have no idea how different co-signers will affect the final results. Because of this borrowers have a hard time deciding who to add as their co-signers.
+                .center
+                    img(style="width: 70%;", src="/assets/credible_cosigner/research-3.png", alt="")
             p All the three research findings all leads to one major problem: users can't see the impact of adding their co-signer before they make a high commitment to Credible or lenders. How can we provide more visibility/transparency to users in the earlier process with low cost? 
             p.quote What if users can see co-signer rates before they submit the application to lenders?
 
@@ -82,7 +82,7 @@ include ../_mixin.pug
         h2.upper-line New Design
 
         .grid-both.bleeding
-            .-steps
+            .steps
                 .screen
                     img.laptop(src="/assets/laptop-browser.png", alt="")
                     video.step-video.-active(src="/assets/credible_cosigner/step-1.mp4", data-step="1")
@@ -104,11 +104,11 @@ include ../_mixin.pug
 
         .grid-right
             .equal-col.vert-center
-                div
-                    img.js-img-preview(src="/assets/credible_cosigner/detail-1.png", alt="")
-                div
+                div(style="order: 1")
                     h4 Tooltip to help borrower choose a co-signer
                     p On the modal of initiate adding co-signer, we provide tooltip of who is an ideal co-signer to help borrower choose a good co-signer.
+                div
+                    img.js-img-preview(src="/assets/credible_cosigner/detail-1.png", alt="")
             .equal-col.vert-center
                 div
                     h4 Summary of rates
@@ -116,11 +116,11 @@ include ../_mixin.pug
                 div
                     img.js-img-preview(src="/assets/credible_cosigner/detail-2.png", alt="")
             .equal-col.vert-center
-                div
-                    img.js-img-preview(src="/assets/credible_cosigner/detail-3.png", alt="")
-                div
+                div(style="order: 1")
                     h4 Compare borrower's rates with co-signer's
                     p Toggle on the right side indicates whether the current rates are co-signer’s rates. Borrower’s rates are also shown on top with strike through to illustrate the differences between co-signer’s rates and borrowers’.
+                div
+                    img.js-img-preview(src="/assets/credible_cosigner/detail-3.png", alt="")
         
         .grid-both.bleeding
             h4 Iterations on pre-qualification form
@@ -187,9 +187,9 @@ include ../_mixin.pug
             p.quote You made the process easy for us to get a new loan with my daughter as a co-signer. We got a better interest rate and my daughter and I got just what we were looking for. <br><br>- Credible customer review
 
     .project-nav.equal-col
-        a(href="/projects/photo.html")
+        a(href="/projects/loan_form.html")
             p.arrow < previous
-            p.name Photo management app
+            p.name Loan Application form
         a(href="/projects/basecrm.html")
             p.arrow next >
             p.name Base CRM redesign

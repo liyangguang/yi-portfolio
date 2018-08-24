@@ -30,13 +30,13 @@ include ../_mixin.pug
             h3 Design goals and key consideration
             .equal-col.center
                 div
-                    img(src="/assets/credible_dashboard/solution-icon1.png")
+                    img.icon(src="/assets/credible_dashboard/solution-icon1.png")
                     p Include current loan information
                 div
-                    img(src="/assets/credible_dashboard/solution-icon2.png")
+                    img.icon(src="/assets/credible_dashboard/solution-icon2.png")
                     p Improve usability of filters
                 div
-                    img(src="/assets/credible_dashboard/solution-icon3.png")
+                    img.icon(src="/assets/credible_dashboard/solution-icon3.png")
                     p Archive options not interested
 
             h3 1. Include current loan information
@@ -68,11 +68,11 @@ include ../_mixin.pug
                 .center
                     img.js-img-preview(src="/assets/credible_dashboard/design2-filter1.png")
             .equal-col.vert-center
-                .center
-                    img.js-img-preview(src="/assets/credible_dashboard/design2-filter2.png")
-                div
+                div(style="order: 1")
                     h4 Checkbox, dropdown or radio
                     p The old checkboxes for rate type can be confusing when both are unchecked. I explored checkboxes, radio buttons, drop down and pills, and decide on the current solution, which is easiest to understand and apply.    
+                .center
+                    img.js-img-preview(src="/assets/credible_dashboard/design2-filter2.png")
 
             h3 Archive and compare offers
             .equal-col.vert-center
@@ -82,11 +82,11 @@ include ../_mixin.pug
                 .center
                     img.js-img-preview(src="/assets/credible_dashboard/design3-archive.png")
             .equal-col.vert-center
-                .center
-                    img.js-img-preview(src="/assets/credible_dashboard/design3-compare.png")
-                div
+                div(style="order: 1")
                     h4 Compare options in viewport
                     p One challenge here is providing detailed information about each offer, but also saving space of each offer. So that users can view and compare multiple offer details without scrolling up and down. I arranged information into sections and removed duplicated information with the filters to same move space.
+                .center
+                    img.js-img-preview(src="/assets/credible_dashboard/design3-compare.png")
         
         h2.upper-line Usability Testing
         div

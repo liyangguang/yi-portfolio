@@ -69,20 +69,19 @@ include ../_mixin.pug
             div
               h4 Current
               p Create account at end of form
+              img(src="/assets/loan_form/flow1.png", alt="")
             div
               h4 Option 1
               p Create account at beginning
+              img(src="/assets/loan_form/flow2.png", alt="")
             div
               h4 Option 2
               p Create account after result summary
+              img(src="/assets/loan_form/flow3.png", alt="")
             div
               h4 Option 3
               p Separate email and password
-          .equal-col
-            div: img(src="/assets/loan_form/flow1.png", alt="")
-            div: img(src="/assets/loan_form/flow2.png", alt="")
-            div: img(src="/assets/loan_form/flow3.png", alt="")
-            div: img(src="/assets/loan_form/flow4.png", alt="")
+              img(src="/assets/loan_form/flow4.png", alt="")
 
         .grid-right
           h4 Direction 2: Surface helper content to streamline form filling
@@ -93,16 +92,15 @@ include ../_mixin.pug
             div
               h4 Current
               p Click tooltip to open help content
+              img.js-img-preview(src="/assets/loan_form/tooltip1.png", alt="")
             div
               h4 Option 1
               p Focus on field to reveal help content
+              img.js-img-preview(src="/assets/loan_form/tooltip2.png", alt="")
             div
               h4 Option 2
               p Surface tooltip on right column
-          .equal-col
-            div: img.js-img-preview(src="/assets/loan_form/tooltip1.png", alt="")
-            div: img.js-img-preview(src="/assets/loan_form/tooltip2.png", alt="")
-            div: img.js-img-preview(src="/assets/loan_form/tooltip3.png", alt="")
+              img.js-img-preview(src="/assets/loan_form/tooltip3.png", alt="")
 
         .grid-right
           h4 Direction 3: Humanized form to bring positive feelings to users
@@ -113,12 +111,11 @@ include ../_mixin.pug
             div(style="flex-grow: 1.6;")
               h4 Option 1
               p Nature language form
+              video.js-img-preview(style="flex-grow: 1.6;", playsinline, loop, muted, autoplay, preload="auto"): source(src="/assets/loan_form/NLF-video.mp4")
             div
               h4 Option 2
               p Conversational form
-          .equal-col
-            video.js-img-preview(style="flex-grow: 1.6;", playsinline, loop, muted, autoplay, preload="auto"): source(src="/assets/loan_form/NLF-video.mp4")
-            video.js-img-preview(playsinline, loop, muted, autoplay, preload="auto"): source(src="/assets/loan_form/conversation.mp4")
+              video.js-img-preview(playsinline, loop, muted, autoplay, preload="auto"): source(src="/assets/loan_form/conversation.mp4")
 
         h2.upper-line Design and A/B testing
         div
@@ -349,3 +346,11 @@ include ../_mixin.pug
             li Overall the analysis validated our hypothesis that asking one question at one time streamline the process.
             li Another interesting insight is that by surfacing the help content and why we are asking these questions, users have less difficulty answering questions. We see a decreased drop off rate on some “hard” questions.
             li In the future, we are planning to test the new design also on the desktop.
+    
+    .project-nav.equal-col
+        a(href="/projects/photo.html")
+            p.arrow < previous
+            p.name Photo management app
+        a(href="/projects/credible_cosigner.html")
+            p.arrow next >
+            p.name Cosigner pre-qualification

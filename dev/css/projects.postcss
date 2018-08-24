@@ -52,6 +52,9 @@
   grid-template-columns: 1fr 1fr;
   grid-gap: 4em 6em;
 }
+.icon {
+  max-width: 150px;
+}
 
 /****************** project title ******************/
 .project-grid {
@@ -80,30 +83,6 @@
   & .bleeding {
     margin: 0 -500%;
     padding: 5% 500%;
-  }
-}
-
-/****************** responsive ******************/
-@media screen and (max-width: 800px) {
-  .project-grid {
-    display: block;
-
-    & > * {
-      margin-top: 5em;
-    }
-    & > h2 + div {
-      margin-top: 1em;
-    }
-    & .title-container {
-      margin-top: 10em;
-    }
-    & .hero-container {
-      margin: 0 -500%;
-      padding: 3% 500%;
-    }
-    & .hero-image {
-      transform: none;
-    }
   }
 }
 
@@ -169,13 +148,28 @@ h2.-standalone {
 .tab-container {
   background: var(--tab-background);
 }
+
+.tab-buttons {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
 .tab {
+  flex: 1 0 0;
+  width: 0;
   padding: 0;
   cursor: pointer;
   border-bottom: .5em solid transparent;
+  max-width: 180px;
+  margin: 0 20px;
 
   &.-active{
     border-bottom-color: var(--primary);
+  }
+
+  & > p {
+    margin: 0 0 .5em;
   }
 }
 .tab-content {
@@ -184,7 +178,7 @@ h2.-standalone {
 }
 
 /******************** step video (in co-signer) **************************/
-.-steps{
+.steps{
   min-height: 500px;
   display: flex;
   align-items: center;
@@ -258,6 +252,7 @@ h2.-standalone {
 /* ---------------- footer project nav ---------------- */
 .project-nav{
   margin: 3em auto;
+  align-items: stretch;
 
   & > a{
     padding: 1em 2em;
@@ -317,3 +312,53 @@ h2.-standalone {
     }
   }
 }
+
+
+
+/***************** mobile ********************/
+@media screen and (max-width: 800px) {
+  .project-nav {
+    display: flex;
+
+    & > a {
+      padding: 1em 10px;
+    }
+  }
+
+  .project-grid {
+    display: block;
+
+    & > * {
+      margin-top: 5em;
+    }
+    & > h2 + div {
+      margin-top: 1em;
+    }
+    & .title-container {
+      margin-top: 10em;
+    }
+    & .hero-container {
+      margin: 0 -500%;
+      padding: 3% 500% !important;
+    }
+    & .hero-image {
+      transform: none;
+    }
+  }
+
+  .steps {
+    display: block;
+  }
+  .steps > .screen > video {
+    top: 16%;
+  }
+
+  .-narrower {
+    width: 100%;
+  }
+
+  .equal-two-grid {
+    display: block;
+  }
+}
+

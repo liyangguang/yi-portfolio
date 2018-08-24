@@ -159,6 +159,10 @@
   }
 }
 
+.-cosigner-hero {
+  padding-right: 5em;
+}
+
 /***************** contacts ********************/
 .home-contacts-container{
   margin-top: 10em;
@@ -222,3 +226,51 @@
   to   { opacity: 0; }
 }
 
+
+/***************** mobile ********************/
+@media screen and (max-width: 800px) {
+  .home-intro {
+    font-size: .9em;
+    & > .content {
+      padding: 8em 0;
+    }
+  }
+
+  .home-projects {
+    display: block;
+    font-size: .9em;
+
+    & h2 {
+      font-size: 2em;
+    }
+    & .text {
+      margin-bottom: 5em;
+      position: relative;
+      top: -4em;
+    }
+  }
+
+  .-cosigner-hero {
+    padding: 0;
+  }
+
+  .home-contacts-container {
+    display: block;
+  }
+  .contact {
+    padding: 0;
+    display: block;
+    width: auto;
+    margin-bottom: 4em;
+  }
+
+  .contact{
+    & #flag{ transform: rotate(-90deg); }
+    & #mail{ animation: mail alternate .8s ease-in-out infinite; }
+    & #balloon{ animation: floating alternate 1s ease-in-out infinite; }
+    & .bubble{ opacity: 1; }
+    & .dot1{ animation: dot1 1s ease-in-out infinite; }
+    & .dot2{ animation: dot2 1s ease-in-out infinite; }
+    & .dot3{ animation: dot3 1s ease-in-out infinite; }
+  }
+}

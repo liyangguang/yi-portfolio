@@ -44,18 +44,18 @@ include ../_mixin.pug
         div
             p Competitive analysis helps me understand the current marketplace and what are the issues that these products didn't cover, then identify potential market opportunity. I chose Google Photo, Apple Photo, QuickPics, Slidebox according to online reviews. During the competitor Analysis, I tried these applications, listed out their main functions, mapped out their information architecture, took notes of their UI and IxD design.
         .grid-both.bleeding.tab-container#js-competitor-tabs
-            .equal-col.center
+            .tab-buttons
                 .tab.js-tab.-active(data-tab='0')
-                    img(style="max-width: 100px;", src="/assets/photo/competitor1-icon.png")
+                    img.icon(src="/assets/photo/competitor1-icon.png")
                     p Google Photos
                 .tab.js-tab(data-tab='1')
-                    img(style="max-width: 100px;", src="/assets/photo/competitor2-icon.png")
+                    img.icon(src="/assets/photo/competitor2-icon.png")
                     p iOS Photos
                 .tab.js-tab(data-tab='2')
-                    img(style="max-width: 100px;", src="/assets/photo/competitor3-icon.png")
+                    img.icon(src="/assets/photo/competitor3-icon.png")
                     p Slidebox
                 .tab.js-tab(data-tab='3')
-                    img(style="max-width: 100px;", src="/assets/photo/competitor4-icon.png")
+                    img.icon(src="/assets/photo/competitor4-icon.png")
                     p Quickpics
             .tab-content.js-tab-content
                 .equal-col
@@ -143,15 +143,15 @@ include ../_mixin.pug
         div
             h3 Design goals and key consideration
         .grid-both.bleeding.tab-container#js-ideation-tabs
-            .equal-col.center
+            .tab-buttons
                 .tab.js-tab.-active(data-tab='0')
-                    img(style="max-width: 100px;", src="/assets/photo/idea1-icon.png")
+                    img.icon(src="/assets/photo/idea1-icon.png")
                     p Organizing efficiently
                 .tab.js-tab(data-tab='1')
-                    img(style="max-width: 100px;", src="/assets/photo/idea2-icon.png")
+                    img.icon(src="/assets/photo/idea2-icon.png")
                     p Viewing freely
                 .tab.js-tab(data-tab='2')
-                    img(style="max-width: 100px;", src="/assets/photo/idea3-icon.png")
+                    img.icon(src="/assets/photo/idea3-icon.png")
                     p Searching easily
             .tab-content.js-tab-content
                 .equal-col
@@ -235,11 +235,11 @@ include ../_mixin.pug
                 div
                     img.js-img-preview(src="/assets/photo/design2.png")
             .equal-col
-                div
-                    img.js-img-preview(src="/assets/photo/design3.png")
-                div
+                div(style="order: 1")
                     h4 Multiple photos selecting and organizing
                     p Grid View is efficient when organizing several photos together. In select mode, users can select multiple photos, share, download, and delete at one time. Existing albums will display at the bottom of the page so that users can add these photos into albums at one time.
+                div
+                    img.js-img-preview(src="/assets/photo/design3.png")
             .equal-col
                 div
                     h4 Batching similar photos
@@ -247,11 +247,11 @@ include ../_mixin.pug
                 div
                     img.js-img-preview(src="/assets/photo/design4.png")
             .equal-col
-                div
-                    img.js-img-preview(src="/assets/photo/design5.png")
-                div
+                div(style="order: 1")
                     h4 Photos tab and settings tab
                     p In the photos tab, users can view all the photos and albums. In the settings page, users can set up whether they want to use cellular data to back up photos. Considering some photos are taken by DSLR and file size is large, users can set the image quality to view on mobile, which can influence the usage of cellular data and loading speed. Users can also set their own gesture preferences.
+                div
+                    img.js-img-preview(src="/assets/photo/design5.png")
 
         h2.upper-line The End
         div
@@ -263,6 +263,6 @@ include ../_mixin.pug
         a(href="/projects/credible_dashboard.html")
             p.arrow < previous
             p.name Loan offer dashboard
-        a(href="/projects/credible_cosigner.html")
+        a(href="/projects/loan_form.html")
             p.arrow next >
-            p.name Cosigner pre-qualification
+            p.name Loan Application form
