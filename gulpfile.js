@@ -52,18 +52,17 @@ gulp.task('build-js', function() {
     .pipe(gulp.dest('app/js'));
 });
 
-gulp.task('serve', ['build-html', 'build-css', 'build-js'], function() {
+gulp.task('build', gulp.series('build-html', 'build-css', 'build-js'));
+
+gulp.task('watch', gulp.series('build', function() {
   browserSync({
     server: {
       baseDir: 'app'
     }
   });
 
-  gulp.watch(['dev/**/*.postcss'], ['build-css']);
-  gulp.watch(['dev/**/*.js'], ['build-js']);
-  gulp.watch(['dev/**/*.pug'], ['build-html']);
+  gulp.watch('dev/**/*.postcss', gulp.series('build-css'));
+  gulp.watch('dev/**/*.js', gulp.series('build-js'));
+  gulp.watch('dev/**/*.pug', gulp.series('build-html'));
   gulp.watch('app/**/*.*').on('change', browserSync.reload);
-});
-
-
-gulp.task('default', ['serve']);
+}));
