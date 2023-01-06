@@ -15,7 +15,7 @@
     "browser-sync": "^2.14.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^3.1.1",
-    "gulp-babel": "^6.1.2",
+    "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.0",
     "gulp-cssimport": "^5.0.0",
     "gulp-gjslint": "^0.1.5",
